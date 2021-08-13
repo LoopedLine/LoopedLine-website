@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>technical guide on LoopedLine</title>
-    <link>http://loopedline.com/tags/technical-guide/</link>
+    <link>https://loopedline.com/tags/technical-guide/</link>
     <description>Recent content in technical guide on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Jul 2021 21:05:55 -0400</lastBuildDate>
     
-	<atom:link href="http://loopedline.com/tags/technical-guide/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://loopedline.com/tags/technical-guide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Building Your First Hugo Website</title>
-      <link>http://loopedline.com/post/building-your-first-hugo-website/</link>
+      <link>https://loopedline.com/post/building-your-first-hugo-website/</link>
       <pubDate>Mon, 19 Jul 2021 21:05:55 -0400</pubDate>
       
-      <guid>http://loopedline.com/post/building-your-first-hugo-website/</guid>
+      <guid>https://loopedline.com/post/building-your-first-hugo-website/</guid>
       <description>Who this is for If you want to build your first website with Hugo, this article is meant to get you started.
 It is not an exhaustive or extensive guide. There are other good resources for that, and several are linked below.
 But here you&amp;rsquo;ll find instructions on the critical path to get a website up and working.

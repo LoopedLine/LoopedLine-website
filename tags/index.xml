@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on LoopedLine</title>
-    <link>http://loopedline.com/tags/</link>
+    <link>https://loopedline.com/tags/</link>
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Jul 2021 12:30:00 -0400</lastBuildDate>
     
-	<atom:link href="http://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo</title>
-      <link>http://loopedline.com/tags/hugo/</link>
+      <link>https://loopedline.com/tags/hugo/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>http://loopedline.com/tags/hugo/</guid>
+      <guid>https://loopedline.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>software development</title>
-      <link>http://loopedline.com/tags/software-development/</link>
+      <link>https://loopedline.com/tags/software-development/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>http://loopedline.com/tags/software-development/</guid>
+      <guid>https://loopedline.com/tags/software-development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>static site generator</title>
-      <link>http://loopedline.com/tags/static-site-generator/</link>
+      <link>https://loopedline.com/tags/static-site-generator/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>http://loopedline.com/tags/static-site-generator/</guid>
+      <guid>https://loopedline.com/tags/static-site-generator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>technical quick reference</title>
-      <link>http://loopedline.com/tags/technical-quick-reference/</link>
+      <link>https://loopedline.com/tags/technical-quick-reference/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>http://loopedline.com/tags/technical-quick-reference/</guid>
+      <guid>https://loopedline.com/tags/technical-quick-reference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web development</title>
-      <link>http://loopedline.com/tags/web-development/</link>
+      <link>https://loopedline.com/tags/web-development/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>http://loopedline.com/tags/web-development/</guid>
+      <guid>https://loopedline.com/tags/web-development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>technical guide</title>
-      <link>http://loopedline.com/tags/technical-guide/</link>
+      <link>https://loopedline.com/tags/technical-guide/</link>
       <pubDate>Mon, 19 Jul 2021 21:05:55 -0400</pubDate>
       
-      <guid>http://loopedline.com/tags/technical-guide/</guid>
+      <guid>https://loopedline.com/tags/technical-guide/</guid>
       <description></description>
     </item>
     

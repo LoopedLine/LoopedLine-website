@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on LoopedLine</title>
-    <link>http://loopedline.com/post/</link>
+    <link>https://loopedline.com/post/</link>
     <description>Recent content in Posts on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Jul 2021 12:30:00 -0400</lastBuildDate>
     
-	<atom:link href="http://loopedline.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://loopedline.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Basic Hugo Terminal Command Quick Reference</title>
-      <link>http://loopedline.com/post/basic-hugo-command-quick-reference/</link>
+      <link>https://loopedline.com/post/basic-hugo-command-quick-reference/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>http://loopedline.com/post/basic-hugo-command-quick-reference/</guid>
+      <guid>https://loopedline.com/post/basic-hugo-command-quick-reference/</guid>
       <description>Check Hugo version In a terminal, enter the command:
 hugo version If Hugo is installed you should see a message indicating the Hugo version number.
 Create a new website In a terminal pointed to the directory where you want Hugo project files to reside, enter the command:
@@ -27,10 +27,10 @@ You should see a message beginning with
     
     <item>
       <title>Building Your First Hugo Website</title>
-      <link>http://loopedline.com/post/building-your-first-hugo-website/</link>
+      <link>https://loopedline.com/post/building-your-first-hugo-website/</link>
       <pubDate>Mon, 19 Jul 2021 21:05:55 -0400</pubDate>
       
-      <guid>http://loopedline.com/post/building-your-first-hugo-website/</guid>
+      <guid>https://loopedline.com/post/building-your-first-hugo-website/</guid>
       <description>Who this is for If you want to build your first website with Hugo, this article is meant to get you started.
 It is not an exhaustive or extensive guide. There are other good resources for that, and several are linked below.
 But here you&amp;rsquo;ll find instructions on the critical path to get a website up and working.
