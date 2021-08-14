@@ -6,10 +6,34 @@
     <description>Recent content in static site generator on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jul 2021 12:30:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 14 Aug 2021 14:44:00 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Disabling Hugo&#39;s Automatic Hyperlinking of Urls [SOLVED]</title>
+      <link>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</link>
+      <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</guid>
+      <description>The Problem When Hugo rendered a webpage from a markdown file it automatically converted text URLs to hyperlinks.
+The Process A web search for how to disable automatic hyperlinking in Hugo led to a few discussions of the issue:
+ Disabling smart quotes, auto code blocks, and auto hyperlinks? Goldmark: How to disable autolinks Configure Markup: Goldmark  Interpolating between them led to a solution.
+The Solution Adding the following to the config.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Site Looks Different Served Locally vs Remotely [SOLVED]</title>
+      <link>https://loopedline.com/post/hugo-site-looks-different-served-locally-vs-remotely/</link>
+      <pubDate>Thu, 12 Aug 2021 22:44:18 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/hugo-site-looks-different-served-locally-vs-remotely/</guid>
+      <description>The Problem When a new website layout generated with Hugo was pushed to production it rendered very differently on the web than it appeared locally.
+It looked like the CSS was only partially applied and some elements overlapped one another.
+The Process First, the source files were compared, but, as expected, they appeared identical.
+Next, DevTools in the Chrome browser was used to compare a sample element on the site running locally vs remotely and showed that the sites were being styled by different CSS rules.</description>
+    </item>
     
     <item>
       <title>Basic Hugo Terminal Command Quick Reference</title>
