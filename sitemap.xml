@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/tags/learning-path/</loc>
+    <lastmod>2021-08-16T09:28:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2021-08-16T09:28:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2021-08-16T09:28:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2021-08-16T09:28:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2021-08-16T09:28:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/visual-studio-code/</loc>
+    <lastmod>2021-08-16T09:28:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/vscode-learning-path/</loc>
+    <lastmod>2021-08-16T09:28:32-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</loc>
     <lastmod>2021-08-14T14:44:00-04:00</lastmod>
   </url>
@@ -13,27 +48,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2021-08-14T14:44:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
-    <lastmod>2021-08-14T14:44:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2021-08-14T14:44:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/static-site-generator/</loc>
-    <lastmod>2021-08-14T14:44:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
     <lastmod>2021-08-14T14:44:00-04:00</lastmod>
   </url>
   

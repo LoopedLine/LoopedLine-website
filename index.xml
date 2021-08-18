@@ -6,13 +6,23 @@
     <description>Recent content on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Aug 2021 14:44:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 16 Aug 2021 09:28:32 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Disabling Hugo&#39;s Automatic Hyperlinking of Urls [SOLVED]</title>
+      <title>Visual Studio Code Learning Path and Recommended Resources</title>
+      <link>https://loopedline.com/post/vscode-learning-path/</link>
+      <pubDate>Mon, 16 Aug 2021 09:28:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/vscode-learning-path/</guid>
+      <description>Learning Path for Visual Studio Code Step 1: Getting Started with Visual Studio Code Perhaps the best place to start learning about Visual Studio Code is the introduction to VS Code by James Q Quick. It also provides an introduction to Visual Studio Code Extensions as well as Emmet.
+Then to get a refresher and a slightly different view, watch Getting started with Visual Studio Code and Get started with VS Code Extensions by the VS Code team.</description>
+    </item>
+    
+    <item>
+      <title>Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</title>
       <link>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</link>
       <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
       
