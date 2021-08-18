@@ -6,10 +6,37 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Aug 2021 14:44:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 16 Aug 2021 09:28:32 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>learning path</title>
+      <link>https://loopedline.com/tags/learning-path/</link>
+      <pubDate>Mon, 16 Aug 2021 09:28:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/learning-path/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software development</title>
+      <link>https://loopedline.com/tags/software-development/</link>
+      <pubDate>Mon, 16 Aug 2021 09:28:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual Studio Code</title>
+      <link>https://loopedline.com/tags/visual-studio-code/</link>
+      <pubDate>Mon, 16 Aug 2021 09:28:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/visual-studio-code/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo</title>
@@ -17,15 +44,6 @@
       <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>software development</title>
-      <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/software-development/</guid>
       <description></description>
     </item>
     
