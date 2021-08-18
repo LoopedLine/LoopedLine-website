@@ -6,10 +6,22 @@
     <description>Recent content in technical troubleshooting on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Aug 2021 14:44:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 18 Aug 2021 14:26:12 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/technical-troubleshooting/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creating and Saving GitHub Personal Access Tokens on Ubuntu Linux [SOLVED]</title>
+      <link>https://loopedline.com/post/github-personal-access-tokens-on-ubuntu/</link>
+      <pubDate>Wed, 18 Aug 2021 14:26:12 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/github-personal-access-tokens-on-ubuntu/</guid>
+      <description>The Problem Pushing repository changes to GitHub via the command line no longer works without a Github Personal Access Token.
+The Process On 2021-08-13 GitHub no longer allowed authentication by account password for Git operations on GitHub.com.
+The error notifications were clear, as were the steps for creating a personal access token.
+The recommendations for Caching your GitHub credentials in Git on Linux required further investigation to confirm their suitability and to confirm the specific steps required for installing on specific flavors of Linux.</description>
+    </item>
     
     <item>
       <title>Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</title>

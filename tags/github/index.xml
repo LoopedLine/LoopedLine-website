@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on LoopedLine</title>
+    <link>https://loopedline.com/tags/github/</link>
+    <description>Recent content in GitHub on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Aug 2021 14:26:12 -0400</lastBuildDate>
+    
+	<atom:link href="https://loopedline.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating and Saving GitHub Personal Access Tokens on Ubuntu Linux [SOLVED]</title>
+      <link>https://loopedline.com/post/github-personal-access-tokens-on-ubuntu/</link>
+      <pubDate>Wed, 18 Aug 2021 14:26:12 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/github-personal-access-tokens-on-ubuntu/</guid>
+      <description>The Problem Pushing repository changes to GitHub via the command line no longer works without a Github Personal Access Token.
+The Process On 2021-08-13 GitHub no longer allowed authentication by account password for Git operations on GitHub.com.
+The error notifications were clear, as were the steps for creating a personal access token.
+The recommendations for Caching your GitHub credentials in Git on Linux required further investigation to confirm their suitability and to confirm the specific steps required for installing on specific flavors of Linux.</description>
+    </item>
+    
+  </channel>
+</rss>

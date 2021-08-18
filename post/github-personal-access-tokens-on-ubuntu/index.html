@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>software development</title>
+        <title>Creating and Saving GitHub Personal Access Tokens on Ubuntu Linux [SOLVED]</title>
         
         
         <style>
@@ -56,9 +56,6 @@
         <meta name="generator" content="Hugo 0.68.3" />
         
     
-        <link href="/tags/software-development/index.xml" rel="alternate" type="application/rss&#43;xml" title="LoopedLine" />
-        <link href="/tags/software-development/index.xml" rel="feed" type="application/rss&#43;xml" title="LoopedLine" />
-    
 
     
 
@@ -74,7 +71,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">software development</a>
+                    <a class="navbar-brand visible-xs" href="#">Creating and Saving GitHub Personal Access Tokens on Ubuntu Linux [SOLVED]</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -107,22 +104,54 @@
 
 <main>
 
-    <h2>software development</h2>
+    <div>
+        <h2>Creating and Saving GitHub Personal Access Tokens on Ubuntu Linux [SOLVED]</h2>
+        <h5>2021 August 18</h5>
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
 
-     <div class="item">
+<a href="https://loopedline.com/tags/git"><kbd class="item-tag">Git</kbd></a>
 
-    
-    
-    
+<a href="https://loopedline.com/tags/github"><kbd class="item-tag">GitHub</kbd></a>
 
-    
-    
+<a href="https://loopedline.com/tags/ubuntu-linux"><kbd class="item-tag">Ubuntu Linux</kbd></a>
 
-    <h4><a href="/post/github-personal-access-tokens-on-ubuntu/">Creating and Saving GitHub Personal Access Tokens on Ubuntu Linux [SOLVED]</a></h4>
-    <h5>2021 August 18</h5>
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
 
+<a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="the-problem">The Problem</h2>
+<p>Pushing repository changes to GitHub via the command line no longer works without a Github Personal Access Token.</p>
+<h2 id="the-process">The Process</h2>
+<p>On 2021-08-13 <a href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/">GitHub no longer allowed authentication by account password</a> for Git operations on GitHub.com.</p>
+<p>The error notifications were clear, as were the steps for <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">creating a personal access token</a>.</p>
+<p>The recommendations for <a href="https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git">Caching your GitHub credentials in Git</a> on Linux required further investigation to confirm their suitability and to confirm the specific steps required for installing on specific flavors of Linux.</p>
+<p>The StackOverflow discussion of <em><a href="https://stackoverflow.com/questions/46645843/where-to-store-the-personal-access-token-from-github">Where to store the personal access token from GitHub?</a></em> was helpful, especially <a href="https://stackoverflow.com/questions/46645843/where-to-store-the-personal-access-token-from-github/67360592#67360592">this answer</a>.</p>
+<p>Installing <a href="https://github.com/microsoft/Git-Credential-Manager-Core#git-credential-manager-core">Git Credential Manager Core</a> appeared to be the best option.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>Per the <a href="https://github.com/microsoft/Git-Credential-Manager-Core#other-ubuntudebian-distributions">instructions for installing on Other Ubuntu/Debian distributions</a>:</p>
+<blockquote>
+<p>Download the latest <a href="https://github.com/microsoft/Git-Credential-Manager-Core/releases/latest">.deb package</a>, and run the following:</p>
+<pre><code>sudo dpkg -i &lt;path-to-package&gt;
+</code></pre></blockquote>
+<p>Then:</p>
+<blockquote>
+<pre><code>git-credential-manager-core configure
+</code></pre></blockquote>
+<p>From there, according to the <a href="https://github.com/microsoft/Git-Credential-Manager-Core#how-to-use">documentation</a>:</p>
+<blockquote>
+<p>Once it&rsquo;s installed and configured, Git Credential Manager Core is called implicitly by Git. You don&rsquo;t have to do anything special, and GCM Core isn&rsquo;t intended to be called directly by the user.*</p>
+</blockquote>
 </div>
-  <div class="item">
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
     
     
@@ -161,38 +190,13 @@
     <h5>2021 August 12</h5>
 
 </div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/basic-hugo-command-quick-reference/">Basic Hugo Terminal Command Quick Reference</a></h4>
-    <h5>2021 July 23</h5>
-
-</div>
  
+    
+
+    
+    
 
 </main>
-
-
-
-<div class="pages">
-
-    
-
-    
-        <a class="icon pages-icon" href="/tags/software-development/page/2/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
