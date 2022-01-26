@@ -6,10 +6,20 @@
     <description>Recent content in Posts on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 09:28:32 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 05 Dec 2021 17:12:50 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bash - Getting Started Working with the Shell</title>
+      <link>https://loopedline.com/post/bash-getting-started-working-with-the-shell/</link>
+      <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/bash-getting-started-working-with-the-shell/</guid>
+      <description>Introduction to Bash When you think of someone expertly working with a computer you might picture them stereotypically entering commands on a black screen with green text, the computer responding with rapidly scrolling walls of characters.
+For a long time I didn&amp;rsquo;t realize the thing they were typing in was called a shell. (The differences between a terminal, console, command line, and shell are nuanced. Many of the responses to this StackExchange question offer some helpful insight and perspective on the topic.</description>
+    </item>
     
     <item>
       <title>Visual Studio Code Learning Path and Recommended Resources</title>
@@ -46,11 +56,11 @@ Next, DevTools in the Chrome browser was used to compare a sample element on the
     </item>
     
     <item>
-      <title>Basic Hugo Terminal Command Quick Reference</title>
-      <link>https://loopedline.com/post/basic-hugo-command-quick-reference/</link>
+      <title>Hugo Basic Terminal Command Quick Reference</title>
+      <link>https://loopedline.com/post/hugo-basic-command-quick-reference/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/basic-hugo-command-quick-reference/</guid>
+      <guid>https://loopedline.com/post/hugo-basic-command-quick-reference/</guid>
       <description>Check Hugo version In a terminal, enter the command:
 hugo version If Hugo is installed you should see a message indicating the Hugo version number.
 Create a new website In a terminal pointed to the directory where you want Hugo project files to reside, enter the command:
