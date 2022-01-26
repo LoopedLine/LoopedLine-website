@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>learning path</title>
+        <title>Hugo Basic Terminal Command Quick Reference</title>
         
         
         <style>
@@ -56,9 +56,6 @@
         <meta name="generator" content="Hugo 0.68.3" />
         
     
-        <link href="/tags/learning-path/index.xml" rel="alternate" type="application/rss&#43;xml" title="LoopedLine" />
-        <link href="/tags/learning-path/index.xml" rel="feed" type="application/rss&#43;xml" title="LoopedLine" />
-    
 
     
 
@@ -74,7 +71,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">learning path</a>
+                    <a class="navbar-brand visible-xs" href="#">Hugo Basic Terminal Command Quick Reference</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -107,22 +104,58 @@
 
 <main>
 
-    <h2>learning path</h2>
+    <div>
+        <h2>Hugo Basic Terminal Command Quick Reference</h2>
+        <h5>2021 July 23</h5>
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
 
-     <div class="item">
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
 
-    
-    
-    
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
 
-    
-    
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
 
-    <h4><a href="/post/bash-getting-started-working-with-the-shell/">Bash - Getting Started Working with the Shell</a></h4>
-    <h5>2021 December 05</h5>
+<a href="https://loopedline.com/tags/technical-quick-reference"><kbd class="item-tag">technical quick reference</kbd></a>
 
+
+    </div>
+
+    <div align="start" class="content"><h3 id="check-hugo-version">Check Hugo version</h3>
+<p>In a terminal, enter the command:</p>
+<pre><code>hugo version
+</code></pre><p>If Hugo is installed you should see a message indicating the Hugo version number.</p>
+<h3 id="create-a-new-website">Create a new website</h3>
+<p>In a terminal pointed to the directory where you want Hugo project files to reside, enter the command:</p>
+<pre><code>hugo new site my-hugo-website
+</code></pre><p>NOTE: Replace <em>my-hugo-website</em> with the site name you want.</p>
+<p>You should see a message beginning with</p>
+<blockquote>
+<p>Congratulations! Your new Hugo site is created in&hellip;</p>
+</blockquote>
+<h3 id="create-a-new-project-file">Create a new project file</h3>
+<p>In a terminal pointed to the directory where your Hugo project files reside, enter the command:</p>
+<pre><code>hugo new /folder/my-file.md
+</code></pre><p>Replace <em>my-file.md</em> with the file name you want.</p>
+<p>Replace <em>folder</em> with the relative path to the directory where you want your new file to reside.</p>
+<h3 id="start-the-hugo-server-to-see-your-website">Start the Hugo server to see your website</h3>
+<p>In a terminal type the command:</p>
+<pre><code>hugo server -D
+</code></pre><p>NOTE: Include the <code>-D</code> flag to see pages marked as drafts.  Leave the flag off to see only pages marked as final.</p>
+<p>Open a web browser to <a href="http://localhost:1313/">http://localhost:1313/</a> to see your new site.</p>
+<p>Leave the server running to see changes applied as you make them.</p>
+<p>Press <code>CTRL + C</code> to stop the server.</p>
+<h3 id="build-a-website-from-your-project-files">Build a website from your project files</h3>
+<p>In a terminal pointed to the directory where your Hugo project files reside, enter the command:</p>
+<pre><code>hugo
+</code></pre><p>The generated files will be output to the <code>/project-folder/public/</code> folder, where <em>project-folder</em> is the main directory of your project.</p>
 </div>
-  <div class="item">
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
     
     
@@ -135,11 +168,39 @@
     <h5>2021 August 16</h5>
 
 </div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/disabling-hugos-automatic-hyperlinking-of-urls/">Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</a></h4>
+    <h5>2021 August 14</h5>
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/hugo-site-looks-different-served-locally-vs-remotely/">Hugo Site Looks Different Served Locally vs Remotely [SOLVED]</a></h4>
+    <h5>2021 August 12</h5>
+
+</div>
  
+    
+
+    
+    
 
 </main>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
