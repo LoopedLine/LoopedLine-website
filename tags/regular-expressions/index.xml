@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bash on LoopedLine</title>
-    <link>https://loopedline.com/tags/bash/</link>
-    <description>Recent content in Bash on LoopedLine</description>
+    <title>regular expressions on LoopedLine</title>
+    <link>https://loopedline.com/tags/regular-expressions/</link>
+    <description>Recent content in regular expressions on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Dec 2021 13:20:10 -0500</lastBuildDate>
     
-	<atom:link href="https://loopedline.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://loopedline.com/tags/regular-expressions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <description>Confusion with rename There are several software packages with the name &amp;ldquo;rename&amp;rdquo; available for Bash.
 That can cause confusion if you&amp;rsquo;re not aware of the fact.
 Adding to the confusion, on many distributions of Linux, like Debian and Ubuntu, the rename command doesn&amp;rsquo;t refer to the &amp;ldquo;rename&amp;rdquo; that is part of the util-linux package. Instead, it likely refers to a &amp;ldquo;perl-rename&amp;rdquo; package. To call the util-linux version you&amp;rsquo;ll likely have to use the rename.</description>
-    </item>
-    
-    <item>
-      <title>Bash - Getting Started Working with the Shell</title>
-      <link>https://loopedline.com/post/bash-getting-started-working-with-the-shell/</link>
-      <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
-      
-      <guid>https://loopedline.com/post/bash-getting-started-working-with-the-shell/</guid>
-      <description>Introduction to Bash When you think of someone expertly working with a computer you might picture them stereotypically entering commands on a black screen with green text, the computer responding with rapidly scrolling walls of characters.
-For a long time I didn&amp;rsquo;t realize the thing they were typing in was called a shell. (The differences between a terminal, console, command line, and shell are nuanced. Many of the responses to this StackExchange question offer some helpful insight and perspective on the topic.</description>
     </item>
     
   </channel>

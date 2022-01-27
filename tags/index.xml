@@ -6,7 +6,7 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Dec 2021 17:12:50 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 08 Dec 2021 13:20:10 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,81 @@
     <item>
       <title>Bash</title>
       <link>https://loopedline.com/tags/bash/</link>
-      <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
+      <pubDate>Wed, 08 Dec 2021 13:20:10 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://loopedline.com/tags/linux/</link>
+      <pubDate>Wed, 08 Dec 2021 13:20:10 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regular expressions</title>
+      <link>https://loopedline.com/tags/regular-expressions/</link>
+      <pubDate>Wed, 08 Dec 2021 13:20:10 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/regular-expressions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://loopedline.com/tags/shell/</link>
+      <pubDate>Wed, 08 Dec 2021 13:20:10 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system administration</title>
+      <link>https://loopedline.com/tags/system-administration/</link>
+      <pubDate>Wed, 08 Dec 2021 13:20:10 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/system-administration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technical troubleshooting</title>
+      <link>https://loopedline.com/tags/technical-troubleshooting/</link>
+      <pubDate>Tue, 07 Dec 2021 15:20:39 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/technical-troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technical troubleshooting - solved</title>
+      <link>https://loopedline.com/tags/technical-troubleshooting-solved/</link>
+      <pubDate>Tue, 07 Dec 2021 15:20:39 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/technical-troubleshooting-solved/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows OS</title>
+      <link>https://loopedline.com/tags/windows-os/</link>
+      <pubDate>Tue, 07 Dec 2021 15:20:39 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/windows-os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows Subsystem for Linux</title>
+      <link>https://loopedline.com/tags/windows-subsystem-for-linux/</link>
+      <pubDate>Tue, 07 Dec 2021 15:20:39 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/windows-subsystem-for-linux/</guid>
       <description></description>
     </item>
     
@@ -30,38 +102,11 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://loopedline.com/tags/linux/</link>
-      <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>recommended resources</title>
       <link>https://loopedline.com/tags/recommended-resources/</link>
       <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/recommended-resources/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>https://loopedline.com/tags/shell/</link>
-      <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>system administration</title>
-      <link>https://loopedline.com/tags/system-administration/</link>
-      <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/system-administration/</guid>
       <description></description>
     </item>
     
@@ -98,24 +143,6 @@
       <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/static-site-generator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technical troubleshooting</title>
-      <link>https://loopedline.com/tags/technical-troubleshooting/</link>
-      <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/technical-troubleshooting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technical troubleshooting - solved</title>
-      <link>https://loopedline.com/tags/technical-troubleshooting-solved/</link>
-      <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/technical-troubleshooting-solved/</guid>
       <description></description>
     </item>
     
