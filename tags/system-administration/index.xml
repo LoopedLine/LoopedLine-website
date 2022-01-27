@@ -6,10 +6,49 @@
     <description>Recent content in system administration on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Dec 2021 17:12:50 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 08 Dec 2021 13:20:10 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/system-administration/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>There&#39;s a Difference Between rename and rename.ul in Bash</title>
+      <link>https://loopedline.com/post/difference-between-rename-and-rename.ul/</link>
+      <pubDate>Wed, 08 Dec 2021 13:20:10 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/difference-between-rename-and-rename.ul/</guid>
+      <description>Confusion with rename There are several software packages with the name &amp;ldquo;rename&amp;rdquo; available for Bash.
+That can cause confusion if you&amp;rsquo;re not aware of the fact.
+Adding to the confusion, on many distributions of Linux, like Debian and Ubuntu, the rename command doesn&amp;rsquo;t refer to the &amp;ldquo;rename&amp;rdquo; that is part of the util-linux package. Instead, it likely refers to a &amp;ldquo;perl-rename&amp;rdquo; package. To call the util-linux version you&amp;rsquo;ll likely have to use the rename.</description>
+    </item>
+    
+    <item>
+      <title>Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</title>
+      <link>https://loopedline.com/post/apt-update-not-working-on-wsl/</link>
+      <pubDate>Tue, 07 Dec 2021 15:20:39 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/apt-update-not-working-on-wsl/</guid>
+      <description>The Problem In Windows Subsystem for Linux (WSL) when running the command
+sudo apt update the following error appears for every package
+ &amp;ldquo;Temporary failure resolving &amp;lsquo;archive.ubuntu.com&amp;rsquo;&amp;rdquo;
+ and nothing is updated.
+Furthermore, nothing can be installed using the command
+sudo apt install &amp;lt;&amp;lt;PACKAGE-NAME&amp;gt;&amp;gt; for the same reason.
+The Process A web search for the error led to a StackExchange question discussing the issue, which offered guidance on the problem.</description>
+    </item>
+    
+    <item>
+      <title>Unable to Open the Bash Shell in Ubuntu via Windows Subsystem for Linux [SOLVED]</title>
+      <link>https://loopedline.com/post/unable-to-open-bash-on-wsl/</link>
+      <pubDate>Tue, 07 Dec 2021 13:15:02 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/unable-to-open-bash-on-wsl/</guid>
+      <description>The Problem When attempting to open the Bash shell in Ubuntu via Windows Subsystem for Linux (WSL) on Windows Terminal only the following message appears:
+ The Windows Subsystem for Linux instance has terminated.
+[process exited with code &amp;hellip;]
+ The Process Part of the resolution process and sources are lost to me now, but I still want to document the solution that seems to resolve the issue.
+A key seems to be running the terminal instance as administrator.</description>
+    </item>
     
     <item>
       <title>Bash - Getting Started Working with the Shell</title>

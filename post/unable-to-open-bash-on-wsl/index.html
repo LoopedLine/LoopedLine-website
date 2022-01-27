@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>Unable to Open the Bash Shell in Ubuntu via Windows Subsystem for Linux [SOLVED]</title>
         
         
         <style>
@@ -56,9 +56,6 @@
         <meta name="generator" content="Hugo 0.68.3" />
         
     
-        <link href="/tags/index.xml" rel="alternate" type="application/rss&#43;xml" title="LoopedLine" />
-        <link href="/tags/index.xml" rel="feed" type="application/rss&#43;xml" title="LoopedLine" />
-    
 
     
 
@@ -74,7 +71,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">Unable to Open the Bash Shell in Ubuntu via Windows Subsystem for Linux [SOLVED]</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -107,9 +104,59 @@
 
 <main>
 
-    <h2>Tags</h2>
+    <div>
+        <h2>Unable to Open the Bash Shell in Ubuntu via Windows Subsystem for Linux [SOLVED]</h2>
+        <h5>2021 December 07</h5>
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
 
-     <div class="item">
+<a href="https://loopedline.com/tags/windows-os"><kbd class="item-tag">Windows OS</kbd></a>
+
+<a href="https://loopedline.com/tags/windows-subsystem-for-linux"><kbd class="item-tag">Windows Subsystem for Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="the-problem">The Problem</h2>
+<p>When attempting to open the Bash shell in Ubuntu via Windows Subsystem for Linux (WSL) on Windows Terminal only the following message appears:</p>
+<blockquote>
+<p>The Windows Subsystem for Linux instance has terminated.</p>
+<p>[process exited with code &hellip;]</p>
+</blockquote>
+<h2 id="the-process">The Process</h2>
+<p>Part of the resolution process and sources are lost to me now, but I still want to document the solution that seems to resolve the issue.</p>
+<p>A key seems to be running the terminal instance as administrator.</p>
+<p>A StackExchange post about <a href="https://stackoverflow.com/questions/62496779/opening-up-windows-terminal-with-elevated-privileges-from-within-windows-termin">Opening up Windows Terminal with elevated privileges</a> offered some insight on how to accomplish that with terminal commands.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>I edited my Windows Terminal settings.json to add two new profiles:</p>
+<pre><code>{
+    &quot;guid&quot;: &quot;{&lt;&lt;GUID1&gt;&gt;}&quot;,
+    &quot;name&quot;: &quot;Ubuntu&quot;,
+    &quot;source&quot;: &quot;Windows.Terminal.Wsl&quot;
+},
+{
+    &quot;guid&quot;: &quot;{&lt;&lt;GUID2&gt;&gt;}&quot;,
+    &quot;name&quot;: &quot;Elevate Terminal&quot;,
+    &quot;commandline&quot;: &quot;powershell.exe Start-Process -Verb RunAs wt&quot;,
+    &quot;icon&quot;: &quot;🔑&quot;,
+    &quot;hidden&quot;: false
+},
+</code></pre><p>Note: <code>&lt;&lt;GUID1&gt;&gt;</code> and <code>&lt;&lt;GUID2&gt;&gt;</code> are stand-in values for the actual guids.</p>
+<p>I set Ubuntu as the default profile by editing defaultProfile:</p>
+<pre><code>&quot;defaultProfile&quot;: &quot;{&lt;&lt;GUID1&gt;&gt;}&quot;,
+</code></pre><p>Now, when I select the &ldquo;Elevate Terminal&rdquo; profile, a new Windows Terminal instance is opened with administrator privileges to the Ubuntu profile.  The profile then is able to access the WSL as expected.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
     
     
@@ -118,7 +165,20 @@
     
     
 
-    <h4><a href="/tags/technical-troubleshooting/">technical troubleshooting</a></h4>
+    <h4><a href="/post/difference-between-rename-and-rename.ul/">There&#39;s a Difference Between rename and rename.ul in Bash</a></h4>
+    <h5>2021 December 08</h5>
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/apt-update-not-working-on-wsl/">Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</a></h4>
     <h5>2021 December 07</h5>
 
 </div>
@@ -131,72 +191,17 @@
     
     
 
-    <h4><a href="/tags/technical-troubleshooting-solved/">technical troubleshooting - solved</a></h4>
-    <h5>2021 December 07</h5>
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/windows-os/">Windows OS</a></h4>
-    <h5>2021 December 07</h5>
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/windows-subsystem-for-linux/">Windows Subsystem for Linux</a></h4>
-    <h5>2021 December 07</h5>
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/learning-path/">learning path</a></h4>
+    <h4><a href="/post/bash-getting-started-working-with-the-shell/">Bash - Getting Started Working with the Shell</a></h4>
     <h5>2021 December 05</h5>
 
 </div>
  
+    
+
+    
+    
 
 </main>
-
-
-
-<div class="pages">
-
-    
-        <a class="icon pages-icon" href="/tags/" rel="prev">
-            <i class="fa fa-arrow-left"></i>
-        </a>
-    
-
-    
-        <a class="icon pages-icon" href="/tags/page/3/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
