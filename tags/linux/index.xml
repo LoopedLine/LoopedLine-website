@@ -6,10 +6,23 @@
     <description>Recent content in Linux on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 13:20:10 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 07 Feb 2022 15:48:06 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using the $RANDOM Variable in Bash</title>
+      <link>https://loopedline.com/post/random-variable-in-bash/</link>
+      <pubDate>Mon, 07 Feb 2022 15:48:06 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/random-variable-in-bash/</guid>
+      <description>Creating Randomness in Bash There are many shell variables used in Bash. One of them is the Bash variable $RANDOM.
+$RANDOM returns a pseudo-random number between 0 and 32767.
+Try it by typing the following command into a Bash command line interpreter:
+echo $RANDOM Run the command multiple times to see different results.
+Changing the possible return range We can reduce the range of the output by using the modulo operator.</description>
+    </item>
     
     <item>
       <title>There&#39;s a Difference Between rename and rename.ul in Bash</title>
