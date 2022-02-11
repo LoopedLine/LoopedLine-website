@@ -6,10 +6,22 @@
     <description>Recent content in software development on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 09:28:32 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Feb 2022 11:37:37 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using sed in a Bash Script to Update Hugo Front Matter</title>
+      <link>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</link>
+      <pubDate>Fri, 11 Feb 2022 11:37:37 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</guid>
+      <description>Background Hugo used to have an undraft command to quickly alter front matter before publishing, but it was removed.
+The command would update &amp;ldquo;the content’s draft status from ‘True’ to ‘False’ and&amp;hellip; the date to the current date and time&amp;rdquo;.
+That&amp;rsquo;s useful functionality, so we&amp;rsquo;ll replicate it with a Bash script.
+For this project we&amp;rsquo;ll use sed, which is one of the basic programs that comes with most distributions of Linux and it&amp;rsquo;s useful for (among other things) replacing segments of text.</description>
+    </item>
     
     <item>
       <title>Visual Studio Code Learning Path and Recommended Resources</title>
