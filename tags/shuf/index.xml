@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shuf on LoopedLine</title>
+    <link>https://loopedline.com/tags/shuf/</link>
+    <description>Recent content in shuf on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Feb 2022 13:57:10 -0500</lastBuildDate>
+    
+	<atom:link href="https://loopedline.com/tags/shuf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started with the shuf Command in Bash</title>
+      <link>https://loopedline.com/post/getting-started-with-shuf-command-in-bash/</link>
+      <pubDate>Tue, 15 Feb 2022 13:57:10 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-shuf-command-in-bash/</guid>
+      <description>There are many, many, ways to create (pseudo)-random strings in Bash, but I found this approach utilizing shuf to be the most understandable. Also, it gives excellent control over the output (avoiding whitespace and special characters) without resorting to the use of the tr command to remove unwanted characters. And it seems to be available for many systems without requiring installation of additional packages.
+The shuf command When first learning about a command like shuf it is helpful to start be reading the tldr and info entries for the command.</description>
+    </item>
+    
+  </channel>
+</rss>

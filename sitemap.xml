@@ -4,7 +4,47 @@
   
   <url>
     <loc>https://loopedline.com/tags/bash/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/getting-started-with-shuf-command-in-bash/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/linux/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/shell/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/shuf/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/system-administration/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
   </url>
   
   <url>
@@ -13,27 +53,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/linux/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/sed/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/shell/</loc>
     <lastmod>2022-02-11T11:37:37-05:00</lastmod>
   </url>
   
@@ -48,16 +68,6 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/system-administration/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</loc>
     <lastmod>2022-02-11T11:37:37-05:00</lastmod>
   </url>
@@ -68,7 +78,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/random-variable-in-bash/</loc>
+    <loc>https://loopedline.com/post/getting-started-with-random-variable-in-bash/</loc>
     <lastmod>2022-02-07T15:48:06-05:00</lastmod>
   </url>
   
