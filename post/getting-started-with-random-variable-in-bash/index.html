@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>There&#39;s a Difference Between rename and rename.ul in Bash</title>
+        <title>Getting started with the $RANDOM Variable in Bash</title>
         
         
         <style>
@@ -71,7 +71,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">There&#39;s a Difference Between rename and rename.ul in Bash</a>
+                    <a class="navbar-brand visible-xs" href="#">Getting started with the $RANDOM Variable in Bash</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -105,8 +105,8 @@
 <main>
 
     <div>
-        <h2>There&#39;s a Difference Between rename and rename.ul in Bash</h2>
-        <h5>2021 December 08</h5>
+        <h2>Getting started with the $RANDOM Variable in Bash</h2>
+        <h5>2022 February 07</h5>
         
 <a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
 
@@ -116,41 +116,51 @@
 
 <a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
 
-<a href="https://loopedline.com/tags/regular-expressions"><kbd class="item-tag">regular expressions</kbd></a>
-
 
     </div>
 
-    <div align="start" class="content"><h2 id="confusion-with-rename">Confusion with rename</h2>
-<p>There are several software packages with the name &ldquo;rename&rdquo; available for Bash.</p>
-<p>That can cause confusion if you&rsquo;re not aware of the fact.</p>
-<p>Adding to the confusion, on many distributions of Linux, like Debian and Ubuntu, the <code>rename</code> command doesn&rsquo;t refer to the &ldquo;rename&rdquo; that is part of the util-linux package.  Instead, it likely refers to a &ldquo;perl-rename&rdquo; package.  To call the util-linux version you&rsquo;ll likely have to use the <code>rename.ul</code> command.</p>
-<p><a href="https://unix.stackexchange.com/questions/444503/why-usr-bin-rename-ul-has-an-extension">There are reasons for this naming structure</a>, but it&rsquo;s important to know which command you&rsquo;re dealing with, especially since they can overwrite filenames without warning.</p>
-<p>Helpfully, the commands <code>tldr rename</code> and <code>tldr perl-rename</code> explicitly draw attention to this distinction and say which version the description refers to.</p>
-<p>The commands <code>man rename</code> and <code>man rename.ul</code> don&rsquo;t make the distinction as obvious, but they do outline the use of each command.</p>
-<p>Many online Q&amp;A and forum discussions about the rename command don&rsquo;t make the distinction clear.  And in some cases discussants seem to conflate the various packages without realizing it.  It&rsquo;s a confusion that&rsquo;s easy to understand.</p>
-<h2 id="renameul">rename.ul</h2>
-<p>For now, most Debian-based Linux distributions use <code>rename.ul</code> to refer to the util-linux command.</p>
-<p>As the man page entry says, rename.ul <em>&ldquo;will rename the specified files by replacing the first occurrence of expression in their name by replacement.&quot;</em></p>
-<p>It has the form</p>
-<pre><code>rename.ul [options] &lt;expression&gt; &lt;replacement&gt; &lt;file&gt;
-</code></pre><p>For example,</p>
-<pre><code>rename.ul -v '_draft' '_final' *.txt
-</code></pre><p>The above would replace the first occurrence of the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt and display a list of which files were renamed.</p>
-<p>That can be risky if you&rsquo;re not sure about what you&rsquo;re doing.  It&rsquo;s a good idea to also add the <code>-n</code> option to first see what changes would be made.  Then, if you like the results, rerun the command without the -n argument.  To see what changes would take place before actually making them just amend the command to the following:</p>
-<pre><code>rename.ul -nv '_draft' '_final' *.txt
-</code></pre><h2 id="rename">rename</h2>
-<p>For now, most Debian-based Linux distributions use <code>rename</code> to refer to the Perl command.</p>
-<p>As the tldr entry says, rename <em>&ldquo;renames files using a Perl Common Regular Expression&rdquo;</em></p>
-<p>It has the form</p>
-<pre><code>rename [options] &lt;expression&gt; &lt;file&gt;
-</code></pre><p>For example,</p>
-<pre><code>rename -nv 's/_draft/_final/' *.txt
-</code></pre><p>Because of the <code>-n</code> argument, the above shows what files (if any) would be renamed and how they would be renamed by replacing the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt.</p>
-<p>Removing the <code>-n</code> argument actually makes the changes and displays a list of which files were renamed.</p>
-<pre><code>rename -v 's/_draft/_final/' *.txt
-</code></pre><p>Because rename accepts regular expressions, it can be very powerful, allowing for complicated file rename tasks.</p>
-<!-- raw HTML omitted -->
+    <div align="start" class="content"><h2 id="creating-randomness-in-bash">Creating Randomness in Bash</h2>
+<p>There are many <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Variables">shell variables</a> used in <a href="https://loopedline.com/post/bash-getting-started-working-with-the-shell/">Bash</a>.  One of them is the Bash variable <code>$RANDOM</code>.</p>
+<p>$RANDOM returns <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#index-RANDOM">a pseudo-random number between 0 and 32767</a>.</p>
+<p>Try it by typing the following command into a Bash command line interpreter:</p>
+<pre><code>echo $RANDOM
+</code></pre><p>Run the command multiple times to see different results.</p>
+<h2 id="changing-the-possible-return-range">Changing the possible return range</h2>
+<p>We can reduce the range of the output by using the <a href="https://linuxhint.com/modulus-bash/">modulo operator</a>.</p>
+<pre><code>echo $((RANDOM % 2))
+</code></pre><p>This will return numbers in the range 0-1.</p>
+<pre><code>echo $((RANDOM % 3))
+</code></pre><p>This will return numbers in the range 0-2.</p>
+<pre><code>echo $((RANDOM % 10))
+</code></pre><p>This will return numbers in the range 0-9.</p>
+<h2 id="changing-the-possible-return-minimum-value">Changing the possible return minimum value</h2>
+<p>We can increase the minimum value of the possible return range by adding a number to the remainder.</p>
+<pre><code>echo $((RANDOM % 3 + 1))
+</code></pre><p>This will return numbers in the range 1-3.</p>
+<pre><code>echo $((RANDOM % 3 + 2))
+</code></pre><p>This will return numbers in the range 2-4.</p>
+<pre><code>echo $((RANDOM % 3 + 10))
+</code></pre><p>This will return numbers in the range 10-12.</p>
+<h2 id="selecting-the-possible-return-range">Selecting the possible return range</h2>
+<p>Using the above examples, you can see that the range can be thought of as a simple formula: <code>$RANDOM % Y + X</code>, where <code>X</code> is the minimum value of the range, and <code>Y</code> is the number of values in the range.</p>
+<p>So, if you want a range going from 100 to 110, the minimum is 100 (X=100) and includes 11 numbers (Y=11):</p>
+<pre><code>echo $((RANDOM % 11 + 100))
+</code></pre><p>Or, a range of 200 to 250, starts at 200 (X=200) and includes 51 numbers (Y=51):</p>
+<pre><code>echo $((RANDOM % 51 + 200))
+</code></pre><p>Or, a range of 5000 to 6000, begins with 5000 (X=5000) and includes 1001 numbers (Y=1001):</p>
+<pre><code>echo $((RANDOM % 1001 + 5000))
+</code></pre><h2 id="a-note-about-bias-in-this-approach">A note about bias in this approach</h2>
+<p>As <a href="https://askubuntu.com/questions/492572/how-do-i-get-randomness-in-command-line/492578#492578">this StackOverflow answer</a> points out, the results of the above techniques will &ldquo;be very slightly biased for any divisor that doesn&rsquo;t divide equally into 32768 (eg, anything that isn&rsquo;t a power of two)&quot;.</p>
+<p>If this matters for your use case you can address this using a slightly different approach.</p>
+<p>As <a href="https://askubuntu.com/questions/1288998/random-variable-in-bash/1289009#1289009">another StackOverflow answer</a> states, &ldquo;To convert this number to an integer in the range 0..2, you can multiply it by 3 and (integer) divide by 32768 (=32767+1).&rdquo;</p>
+<p>So, one approach is to use the formula: <code>$RANDOM * Y / 32768 + X</code>, where <code>X</code> is the minimum value of the range, and <code>Y</code> is the number of values in the range.</p>
+<p>If you want a range going from 100 to 110, the minimum is 100 (X=100) and includes 11 numbers (Y=11):</p>
+<pre><code>echo $((RANDOM * 11 / 32768 + 100))
+</code></pre><p>Or, a range of 200 to 250, starts at 200 (X=200) and includes 51 numbers (Y=51):</p>
+<pre><code>echo $((RANDOM * 51 / 32768 + 200))
+</code></pre><p>Or, a range of 5000 to 6000, begins with 5000 (X=5000) and includes 1001 numbers (Y=1001):</p>
+<pre><code>echo $((RANDOM * 1001 / 32768 + 5000))
+</code></pre><!-- raw HTML omitted -->
 </div>
 
     
@@ -192,8 +202,8 @@
     
     
 
-    <h4><a href="/post/getting-started-with-random-variable-in-bash/">Getting started with the $RANDOM Variable in Bash</a></h4>
-    <h5>2022 February 07</h5>
+    <h4><a href="/post/difference-between-rename-and-rename.ul/">There&#39;s a Difference Between rename and rename.ul in Bash</a></h4>
+    <h5>2021 December 08</h5>
 
 </div>
  

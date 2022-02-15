@@ -6,10 +6,20 @@
     <description>Recent content on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Feb 2022 11:37:37 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 15 Feb 2022 13:57:10 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Started with the shuf Command in Bash</title>
+      <link>https://loopedline.com/post/getting-started-with-shuf-command-in-bash/</link>
+      <pubDate>Tue, 15 Feb 2022 13:57:10 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-shuf-command-in-bash/</guid>
+      <description>There are many, many, ways to create (pseudo)-random strings in Bash, but I found this approach utilizing shuf to be the most understandable. Also, it gives excellent control over the output (avoiding whitespace and special characters) without resorting to the use of the tr command to remove unwanted characters. And it seems to be available for many systems without requiring installation of additional packages.
+The shuf command When first learning about a command like shuf it is helpful to start be reading the tldr and info entries for the command.</description>
+    </item>
     
     <item>
       <title>Using sed in a Bash Script to Update Hugo Front Matter</title>
@@ -24,11 +34,11 @@ For this project we&amp;rsquo;ll use sed, which is one of the basic programs tha
     </item>
     
     <item>
-      <title>Using the $RANDOM Variable in Bash</title>
-      <link>https://loopedline.com/post/random-variable-in-bash/</link>
+      <title>Getting started with the $RANDOM Variable in Bash</title>
+      <link>https://loopedline.com/post/getting-started-with-random-variable-in-bash/</link>
       <pubDate>Mon, 07 Feb 2022 15:48:06 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/random-variable-in-bash/</guid>
+      <guid>https://loopedline.com/post/getting-started-with-random-variable-in-bash/</guid>
       <description>Creating Randomness in Bash There are many shell variables used in Bash. One of them is the Bash variable $RANDOM.
 $RANDOM returns a pseudo-random number between 0 and 32767.
 Try it by typing the following command into a Bash command line interpreter:
