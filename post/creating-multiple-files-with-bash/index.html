@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Creating Multiple Files With Bash</title>
+        
+        
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Creating Multiple Files With Bash</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Creating Multiple Files With Bash</h2>
+        <h5>2022 February 16</h5>
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/shell"><kbd class="item-tag">shell</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shuf"><kbd class="item-tag">shuf</kbd></a>
+
+<a href="https://loopedline.com/tags/tr"><kbd class="item-tag">tr</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="introduction">Introduction</h2>
+<p>When you want to create multiple files, Bash can help do it efficiently.</p>
+<p>Below are several examples for creating files.  To follow along, navigate to an empty folder where you want to create files and enter the commands.</p>
+<h2 id="a-warning">A warning</h2>
+<p>You may wish to remove files after each step, but since the <code>rm</code> command is powerful and can delete more files than you intended without prompting, make sure you understand its use before blindly applying the example commands below.</p>
+<p>If you&rsquo;re not comfortable with that, use a GUI or another method you&rsquo;re familiar with to remove the files.</p>
+<h2 id="example-setup-creating-a-test-directory">Example Setup: Creating a test directory</h2>
+<p>Before we start with creating and deleting files, we&rsquo;ll first create a new directory in which to test these commands.</p>
+<p>This will make it easier to see the effects of the changes we&rsquo;re making and to reduce the risk of impacting files we don&rsquo;t want to alter.</p>
+<p>Navigate to the directory that will contain your test directory and enter the command:</p>
+<pre><code>mkdir test-directory
+</code></pre><p>Then navigate to that directory by entering the command:</p>
+<pre><code>cd test-directory
+</code></pre><p>Finally, to confirm that there aren&rsquo;t any files there that we could unintentionally alter, enter the command:</p>
+<pre><code>ls -la
+</code></pre><p>You should only see two dot file created when the directory was created.</p>
+<h2 id="example-1-creating-a-file">Example 1: Creating a file</h2>
+<p>The <code>touch</code> command allows for the creation of an empty file.</p>
+<hr>
+<p>To create a file called &ldquo;file.txt&rdquo; enter the following command.</p>
+<p><strong>Command</strong></p>
+<pre><code>touch file.txt
+</code></pre><hr>
+<p>Enter the command <code>ls -1</code> and you should see the following result.</p>
+<p><strong>Result</strong></p>
+<pre><code>file.txt
+</code></pre><hr>
+<p>To delete the file enter the following command.</p>
+<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<pre><code>rm -i file.txt
+</code></pre><hr>
+<p>Finally, enter the <code>ls -l</code> command to confirm the file was removed.</p>
+<h2 id="example-2-creating-multiple-files">Example 2: Creating multiple files</h2>
+<p>To create several files at once you can use the <a href="https://wiki.bash-hackers.org/syntax/expansion/brace#ranges">brace expansion with a range</a>.</p>
+<hr>
+<p><strong>Command</strong></p>
+<pre><code>touch file{1..10}
+</code></pre><hr>
+<p><strong>Result</strong></p>
+<pre><code>file1
+file10
+file2
+file3
+file4
+file5
+file6
+file7
+file8
+file9
+</code></pre><p>That will create 10 files, but without a filetype extension.</p>
+<hr>
+<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<pre><code>rm -i file*
+</code></pre><h2 id="example-3-creating-multiple-files-with-an-extension">Example 3: Creating multiple files with an extension</h2>
+<p>To create several files with an extension you only need to add the extension to the end of the command.</p>
+<hr>
+<p><strong>Command</strong></p>
+<pre><code>touch file{1..10}.txt
+</code></pre><hr>
+<p><strong>Result</strong></p>
+<pre><code>file10.txt
+file1.txt
+file2.txt
+file3.txt
+file4.txt
+file5.txt
+file6.txt
+file7.txt
+file8.txt
+file9.txt
+</code></pre><hr>
+<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<pre><code>rm -i file*.txt
+</code></pre><h2 id="example-4-creating-multiple-files-with-leading-zeroes-before-the-number">Example 4: Creating multiple files with leading zeroes before the number</h2>
+<p>Another small adjustment will pad the number with leading zeroes.</p>
+<hr>
+<p><strong>Command</strong></p>
+<pre><code>touch file{01..10}.txt
+</code></pre><hr>
+<p><strong>Result</strong></p>
+<pre><code>file01.txt
+file02.txt
+file03.txt
+file04.txt
+file05.txt
+file06.txt
+file07.txt
+file08.txt
+file09.txt
+file10.txt
+</code></pre><hr>
+<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<pre><code>rm -i file*.txt
+</code></pre><h2 id="example-5-creating-multiple-files-with-random-alphanumeric-strings">Example 5: Creating multiple files with random alphanumeric strings</h2>
+<p>Now let&rsquo;s add some random characters to differentiate the files.</p>
+<p>We&rsquo;ll use the <code>shuf</code> command that we <a href="https://loopedline.com/post/getting-started-with-shuf-command-in-bash/">previously developed</a> to generate random alphanumeric strings.</p>
+<p>Try the following:</p>
+<pre><code>shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9}; echo
+</code></pre><p>Run the command multiple times to see different results.</p>
+<hr>
+<p>Let&rsquo;s first alter the command slightly to form we&rsquo;ll use in file creation and we&rsquo;ll see a potential problem.</p>
+<pre><code>echo $(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9})
+</code></pre><p>Along with the output, you&rsquo;ll see this warning:</p>
+<pre><code>bash: warning: command substitution: ignored null byte in input
+</code></pre><p>The <a href="https://stackoverflow.com/questions/64550414/bash-warning-command-substitution-ignored-null-byte-in-input/64551685#64551685">discussion of null bytes can be a bit involved</a>, but the resolution can be quite simple.</p>
+<p>To use this command in our file creation we&rsquo;ll want to add the <code>tr</code> command to remove the null byte.</p>
+<pre><code>echo $(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9} | tr -d '\0')
+</code></pre><p>Now we can utilize the updated command to create files that contain random alphanumeric strings.</p>
+<!-- raw HTML omitted -->
+<hr>
+<p><strong>Command</strong></p>
+<pre><code>touch file$(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9} | tr -d '\0'){01..10}.txt
+</code></pre><hr>
+<p><strong>Result example</strong></p>
+<pre><code>file07.txt
+file6IJ04.txt
+filec09.txt
+fileE05.txt
+filef03.txt
+fileg06.txt
+fileMv5W01.txt
+fileOZV2i10.txt
+files02.txt
+fileXt08.txt
+</code></pre><hr>
+<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<pre><code>rm -i file*.txt
+</code></pre><h2 id="example-6-creating-files-with-a-specific-ending">Example 6: Creating files with a specific ending</h2>
+<p>If we want to add a specific ending to a file name, that is trivial.  We can add it in the same way we added the file extension in Example 3.</p>
+<p>Let&rsquo;s say we want to add &ldquo;_final&rdquo; to end of our files.</p>
+<hr>
+<p><strong>Command</strong></p>
+<pre><code>touch file$(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9} | tr -d '\0'){01..10}_final.txt
+</code></pre><hr>
+<p><strong>Result example</strong></p>
+<pre><code>file01_final.txt
+file02_final.txt
+file04_final.txt
+file1QS06_final.txt
+file5u05_final.txt
+file8l03_final.txt
+fileG009_final.txt
+fileIRtbH08_final.txt
+filel07_final.txt
+filezm310_final.txt
+</code></pre><hr>
+<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<pre><code>rm -i file*.txt
+</code></pre><h2 id="example-cleanup-removing-the-test-directory">Example Cleanup: Removing the test directory</h2>
+<p>Once you have finished experimenting, you may wish to remove your test directory.  If so, you can use the following command.</p>
+<p>As with the <code>rm</code> command, be aware that the <code>rmdir</code> command is powerful and can delete directories in a way that you can&rsquo;t reverse.  Once again, make sure you understand its use before blindly applying the example below.</p>
+<p>If you&rsquo;re not comfortable with that, use a GUI or another method you&rsquo;re familiar with to remove the directory.</p>
+<p>Navigate to the directory that contains your test directory.  If you&rsquo;re currently in the test directory, enter the command:</p>
+<pre><code>cd ..
+</code></pre><p><strong>Directory deletion command</strong> (See the warning above before using this command.)</p>
+<pre><code>rmdir test-directory
+</code></pre><!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/getting-started-with-shuf-command-in-bash/">Getting Started with the shuf Command in Bash</a></h4>
+    <h5>2022 February 15</h5>
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/using-sed-in-bash-script-to-update-hugo-front-matter/">Using sed in a Bash Script to Update Hugo Front Matter</a></h4>
+    <h5>2022 February 11</h5>
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/getting-started-with-random-variable-in-bash/">Getting started with the $RANDOM Variable in Bash</a></h4>
+    <h5>2022 February 07</h5>
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>
