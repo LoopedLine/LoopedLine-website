@@ -6,7 +6,7 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Feb 2022 13:57:10 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 16 Feb 2022 11:11:18 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Bash</title>
       <link>https://loopedline.com/tags/bash/</link>
-      <pubDate>Tue, 15 Feb 2022 13:57:10 -0500</pubDate>
+      <pubDate>Wed, 16 Feb 2022 11:11:18 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/bash/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>Linux</title>
       <link>https://loopedline.com/tags/linux/</link>
-      <pubDate>Tue, 15 Feb 2022 13:57:10 -0500</pubDate>
+      <pubDate>Wed, 16 Feb 2022 11:11:18 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/linux/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>shell</title>
       <link>https://loopedline.com/tags/shell/</link>
-      <pubDate>Tue, 15 Feb 2022 13:57:10 -0500</pubDate>
+      <pubDate>Wed, 16 Feb 2022 11:11:18 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/shell/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>shuf</title>
       <link>https://loopedline.com/tags/shuf/</link>
-      <pubDate>Tue, 15 Feb 2022 13:57:10 -0500</pubDate>
+      <pubDate>Wed, 16 Feb 2022 11:11:18 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/shuf/</guid>
       <description></description>
@@ -50,9 +50,18 @@
     <item>
       <title>system administration</title>
       <link>https://loopedline.com/tags/system-administration/</link>
-      <pubDate>Tue, 15 Feb 2022 13:57:10 -0500</pubDate>
+      <pubDate>Wed, 16 Feb 2022 11:11:18 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/system-administration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tr</title>
+      <link>https://loopedline.com/tags/tr/</link>
+      <pubDate>Wed, 16 Feb 2022 11:11:18 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/tr/</guid>
       <description></description>
     </item>
     
