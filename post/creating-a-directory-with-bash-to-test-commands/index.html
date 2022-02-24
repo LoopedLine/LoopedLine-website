@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Linux</title>
+        <title>Creating a Directory with Bash to Test Commands</title>
         
         
         <style>
@@ -56,9 +56,6 @@
         <meta name="generator" content="Hugo 0.68.3" />
         
     
-        <link href="/tags/linux/index.xml" rel="alternate" type="application/rss&#43;xml" title="LoopedLine" />
-        <link href="/tags/linux/index.xml" rel="feed" type="application/rss&#43;xml" title="LoopedLine" />
-    
 
     
 
@@ -74,7 +71,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Linux</a>
+                    <a class="navbar-brand visible-xs" href="#">Creating a Directory with Bash to Test Commands</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -107,22 +104,58 @@
 
 <main>
 
-    <h2>Linux</h2>
+    <div>
+        <h2>Creating a Directory with Bash to Test Commands</h2>
+        <h5>2022 February 24</h5>
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
 
-     <div class="item">
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/shell"><kbd class="item-tag">shell</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/mkdir"><kbd class="item-tag">mkdir</kbd></a>
+
+<a href="https://loopedline.com/tags/rmdir"><kbd class="item-tag">rmdir</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="why-create-a-test-directory">Why create a test directory?</h2>
+<p>When learning to work with new commands or programs it makes sense to be careful.</p>
+<p>In particular, command line tools can be especially powerful.  They can allow the user to delete or overwrite data before they realize what has happened.  It makes sense to be careful, especially when learning how to use a command.</p>
+<p>One way to partially limit that risk is to work in a test directory when trying new commands.  The scope of a command&rsquo;s effects is often (but not always) bounded within a directory, so this can provide some protection against unintended consequences.  It can make it easier to see the effects of the command while reducing the risk of impacting files you don&rsquo;t want to alter.</p>
+<p>Nothing offers absolute protection.  Caution and care should still be exercised.  But this is a sensible step to help avoid some trouble when learning to use new commands.</p>
+<h2 id="test-setup-creating-a-test-directory">Test Setup: Creating a test directory</h2>
+<p>To begin, navigate to the directory that will contain your test directory.</p>
+<p>We&rsquo;ll use the <code>mkdir</code> command to create a new directory called &ldquo;test-directory&rdquo;:</p>
+<pre><code>mkdir -v test-directory
+</code></pre><p>Then navigate to that directory by entering the command:</p>
+<pre><code>cd test-directory
+</code></pre><p>Finally, to confirm that there aren&rsquo;t any files in the directory that you could unintentionally alter, enter the command:</p>
+<pre><code>ls -l
+</code></pre><p>You shouldn&rsquo;t see any files and the output should resemble the following:</p>
+<pre><code>total 0
+</code></pre><p>Now you can work in this test directory with some protection for your other files.</p>
+<h2 id="test-cleanup-removing-the-test-directory">Test Cleanup: Removing the test directory</h2>
+<p>Once you have finished experimenting, you may wish to remove your test directory.  If so, you can use the <code>rmdir</code> command.</p>
+<p>Be aware that the rmdir command is powerful and can delete directories in a way that you can&rsquo;t reverse.  Make sure you understand its use before blindly applying the example below.</p>
+<p>If you&rsquo;re not comfortable with that, use a GUI or another method you&rsquo;re familiar with to remove the directory.</p>
+<p>Navigate to the directory that contains your test directory.  If you&rsquo;re currently in the test directory, enter the command:</p>
+<pre><code>cd ..
+</code></pre><p>Then to delete test-directory enter the command:</p>
+<pre><code>rmdir -v test-directory
+</code></pre><p>You should see the output:</p>
+<pre><code>rmdir: removing directory, 'test-directory/'
+</code></pre></div>
 
     
     
     
-
-    
-    
-
-    <h4><a href="/post/creating-a-directory-with-bash-to-test-commands/">Creating a Directory with Bash to Test Commands</a></h4>
-    <h5>2022 February 24</h5>
-
-</div>
-  <div class="item">
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
     
     
@@ -161,38 +194,13 @@
     <h5>2022 February 11</h5>
 
 </div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/getting-started-with-random-variable-in-bash/">Getting started with the $RANDOM Variable in Bash</a></h4>
-    <h5>2022 February 07</h5>
-
-</div>
  
+    
+
+    
+    
 
 </main>
-
-
-
-<div class="pages">
-
-    
-
-    
-        <a class="icon pages-icon" href="/tags/linux/page/2/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>

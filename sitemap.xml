@@ -4,31 +4,56 @@
   
   <url>
     <loc>https://loopedline.com/tags/bash/</loc>
-    <lastmod>2022-02-16T11:11:18-05:00</lastmod>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/creating-multiple-files-with-bash/</loc>
-    <lastmod>2022-02-16T11:11:18-05:00</lastmod>
+    <loc>https://loopedline.com/post/creating-a-directory-with-bash-to-test-commands/</loc>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/linux/</loc>
-    <lastmod>2022-02-16T11:11:18-05:00</lastmod>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/</loc>
-    <lastmod>2022-02-16T11:11:18-05:00</lastmod>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/mkdir/</loc>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-02-16T11:11:18-05:00</lastmod>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/rmdir/</loc>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/shell/</loc>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/system-administration/</loc>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-02-24T13:51:11-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/creating-multiple-files-with-bash/</loc>
     <lastmod>2022-02-16T11:11:18-05:00</lastmod>
   </url>
   
@@ -38,12 +63,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/system-administration/</loc>
-    <lastmod>2022-02-16T11:11:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
+    <loc>https://loopedline.com/tags/touch/</loc>
     <lastmod>2022-02-16T11:11:18-05:00</lastmod>
   </url>
   
