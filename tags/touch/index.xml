@@ -6,10 +6,22 @@
     <description>Recent content in touch on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Feb 2022 11:11:18 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 25 Feb 2022 15:09:52 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/touch/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Automating Bash Shell Commands</title>
+      <link>https://loopedline.com/post/automating-bash-shell-commands/</link>
+      <pubDate>Fri, 25 Feb 2022 15:09:52 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/automating-bash-shell-commands/</guid>
+      <description>Introduction to automating shell commands There is a lot that can be accomplished efficiently with Bash.
+After getting started working with Bash you&amp;rsquo;ll quickly discover commands that you run again and again.
+For some simple commands you can make them even more convenient by creating a shell alias or a shell function.
+Other commands involving multiple steps you can typically use and manage more efficiently by creating a shell script.</description>
+    </item>
     
     <item>
       <title>Creating Multiple Files with Bash</title>
