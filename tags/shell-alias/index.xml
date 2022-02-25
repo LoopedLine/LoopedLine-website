@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell alias on LoopedLine</title>
+    <link>https://loopedline.com/tags/shell-alias/</link>
+    <description>Recent content in shell alias on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Feb 2022 15:09:52 -0500</lastBuildDate>
+    
+	<atom:link href="https://loopedline.com/tags/shell-alias/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automating Bash Shell Commands</title>
+      <link>https://loopedline.com/post/automating-bash-shell-commands/</link>
+      <pubDate>Fri, 25 Feb 2022 15:09:52 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/automating-bash-shell-commands/</guid>
+      <description>Introduction to automating shell commands There is a lot that can be accomplished efficiently with Bash.
+After getting started working with Bash you&amp;rsquo;ll quickly discover commands that you run again and again.
+For some simple commands you can make them even more convenient by creating a shell alias or a shell function.
+Other commands involving multiple steps you can typically use and manage more efficiently by creating a shell script.</description>
+    </item>
+    
+  </channel>
+</rss>

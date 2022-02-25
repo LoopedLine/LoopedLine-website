@@ -125,7 +125,11 @@
 
     </div>
 
-    <div align="start" class="content"><h2 id="introduction">Introduction</h2>
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
 <p>When you want to create multiple files, Bash can help do it efficiently.</p>
 <p>Below are several examples for creating files.  To follow along, navigate to an empty folder where you want to create files and enter the commands.</p>
 <h2 id="a-warning">A warning</h2>
@@ -146,7 +150,7 @@
 <pre><code>file.txt
 </code></pre><hr>
 <p>To delete the file enter the following command.</p>
-<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
 <pre><code>rm -i file.txt
 </code></pre><hr>
 <p>Finally, enter the <code>ls -l</code> command to confirm the file was removed.</p>
@@ -169,7 +173,7 @@ file8
 file9
 </code></pre><p>That will create 10 files, but without a filetype extension.</p>
 <hr>
-<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
 <pre><code>rm -i file*
 </code></pre><h2 id="example-3-creating-multiple-files-with-an-extension">Example 3: Creating multiple files with an extension</h2>
 <p>To create several files with an extension you only need to add the extension to the end of the command.</p>
@@ -189,7 +193,7 @@ file7.txt
 file8.txt
 file9.txt
 </code></pre><hr>
-<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
 <pre><code>rm -i file*.txt
 </code></pre><h2 id="example-4-creating-multiple-files-with-leading-zeroes-before-the-number">Example 4: Creating multiple files with leading zeroes before the number</h2>
 <p>Another small adjustment will pad the number with leading zeroes.</p>
@@ -209,16 +213,16 @@ file08.txt
 file09.txt
 file10.txt
 </code></pre><hr>
-<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
 <pre><code>rm -i file*.txt
 </code></pre><h2 id="example-5-creating-multiple-files-with-random-alphanumeric-strings">Example 5: Creating multiple files with random alphanumeric strings</h2>
 <p>Now let&rsquo;s add some random characters to differentiate the files.</p>
-<p>We&rsquo;ll use the <code>shuf</code> command that we <a href="https://loopedline.com/post/getting-started-with-shuf-command-in-bash/">previously developed</a> to generate random alphanumeric strings.</p>
+<p>We&rsquo;ll use the <code>shuf</code> command that we <a href="https://loopedline.com/post/getting-started-with-shuf-command-in-bash/#example-8-generating-a-random-alphanumeric-string-of-random-length">previously developed</a> to generate random alphanumeric strings.</p>
 <p>Try the following:</p>
 <pre><code>shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9}; echo
 </code></pre><p>Run the command multiple times to see different results.</p>
 <hr>
-<p>Let&rsquo;s first alter the command slightly to form we&rsquo;ll use in file creation and we&rsquo;ll see a potential problem.</p>
+<p>Let&rsquo;s first alter the command slightly to the form we&rsquo;ll use in file creation and we&rsquo;ll see a potential problem.</p>
 <pre><code>echo $(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9})
 </code></pre><p>Along with the output, you&rsquo;ll see this warning:</p>
 <pre><code>bash: warning: command substitution: ignored null byte in input
@@ -243,7 +247,7 @@ fileOZV2i10.txt
 files02.txt
 fileXt08.txt
 </code></pre><hr>
-<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
 <pre><code>rm -i file*.txt
 </code></pre><h2 id="example-6-creating-files-with-a-specific-ending">Example 6: Creating files with a specific ending</h2>
 <p>If we want to add a specific ending to a file name, that is trivial.  We can add it in the same way we added the file extension in Example 3.</p>
@@ -264,7 +268,7 @@ fileIRtbH08_final.txt
 filel07_final.txt
 filezm310_final.txt
 </code></pre><hr>
-<p><strong>File deletion command</strong> (See the warning above before using this command.)</p>
+<p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
 <pre><code>rm -i file*.txt
 </code></pre><!-- raw HTML omitted -->
 </div>
@@ -274,6 +278,19 @@ filezm310_final.txt
     
         <h4 class="page-header">Related</h4>
          <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/automating-bash-shell-commands/">Automating Bash Shell Commands</a></h4>
+    <h5>2022 February 25</h5>
+
+</div>
+  <div class="item">
 
     
     
@@ -297,19 +314,6 @@ filezm310_final.txt
 
     <h4><a href="/post/getting-started-with-shuf-command-in-bash/">Getting Started with the shuf Command in Bash</a></h4>
     <h5>2022 February 15</h5>
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/using-sed-in-bash-script-to-update-hugo-front-matter/">Using sed in a Bash Script to Update Hugo Front Matter</a></h4>
-    <h5>2022 February 11</h5>
 
 </div>
  
