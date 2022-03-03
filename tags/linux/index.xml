@@ -6,10 +6,22 @@
     <description>Recent content in Linux on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Mar 2022 21:21:25 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 03 Mar 2022 14:49:33 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Automating Hugo Website Publishing Workflow with Bash</title>
+      <link>https://loopedline.com/post/automating-hugo-website-publishing-with-bash/</link>
+      <pubDate>Thu, 03 Mar 2022 14:49:33 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/automating-hugo-website-publishing-with-bash/</guid>
+      <description>Introduction Background We first need to define our terms.
+Hugo already builds sites with one quick and easy command.
+The automated website building this post refers to is several additional steps required for website publishing after that process in one particular workflow. Every person&amp;rsquo;s or team&amp;rsquo;s workflow for publishing a website is different. The workflow we&amp;rsquo;ll automate in this post includes the following:
+ rebuilding a specific website with Hugo deleting all files and subdirectories in the website publishing directory except one specified file copying all files from the Hugo website project directory to the publishing directory  We&amp;rsquo;ll handle each step in turn and then bring them all together.</description>
+    </item>
     
     <item>
       <title>Renaming Files with the rename Command (the Perl Version)</title>
