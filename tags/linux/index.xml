@@ -6,10 +6,22 @@
     <description>Recent content in Linux on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Feb 2022 15:09:52 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 02 Mar 2022 21:21:25 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Renaming Files with the rename Command (the Perl Version)</title>
+      <link>https://loopedline.com/post/renaming-files-with-rename-command-the-perl-version/</link>
+      <pubDate>Wed, 02 Mar 2022 21:21:25 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/renaming-files-with-rename-command-the-perl-version/</guid>
+      <description>Renaming files with the rename command Renaming files is a basic and mundane task.
+Fortunately, there are several tools to make it easier.
+The Perl version of rename available in Bash on many Linux distributions is especially powerful since it can utilize regular expressions.
+Confirm which version(s) of rename you have available As previously mentioned there can be more than one version of the rename command on your system. So you&amp;rsquo;ll first want to confirm that you have the Perl version of rename installed and verify how the command is invoked on your system.</description>
+    </item>
     
     <item>
       <title>Automating Bash Shell Commands</title>
