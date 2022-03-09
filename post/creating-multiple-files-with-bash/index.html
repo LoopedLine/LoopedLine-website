@@ -143,25 +143,25 @@
 <hr>
 <p>To create a file called &ldquo;file.txt&rdquo; enter the following command.</p>
 <p><strong>Command</strong></p>
-<pre><code>touch file.txt
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch file.txt
+</code></pre></div><hr>
 <p>Enter the command <code>ls -1</code> and you should see the following result.</p>
 <p><strong>Result</strong></p>
-<pre><code>file.txt
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file.txt
+</code></pre></div><hr>
 <p>To delete the file enter the following command.</p>
 <p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
-<pre><code>rm -i file.txt
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -i file.txt
+</code></pre></div><hr>
 <p>Finally, enter the <code>ls -l</code> command to confirm the file was removed.</p>
 <h2 id="example-2-creating-multiple-files">Example 2: Creating multiple files</h2>
 <p>To create several files at once you can use the <a href="https://wiki.bash-hackers.org/syntax/expansion/brace#ranges">brace expansion with a range</a>.</p>
 <hr>
 <p><strong>Command</strong></p>
-<pre><code>touch file{1..10}
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch file<span style="color:#f92672">{</span>1..10<span style="color:#f92672">}</span>
+</code></pre></div><hr>
 <p><strong>Result</strong></p>
-<pre><code>file1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file1
 file10
 file2
 file3
@@ -171,18 +171,18 @@ file6
 file7
 file8
 file9
-</code></pre><p>That will create 10 files, but without a filetype extension.</p>
+</code></pre></div><p>That will create 10 files, but without a filetype extension.</p>
 <hr>
 <p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
-<pre><code>rm -i file*
-</code></pre><h2 id="example-3-creating-multiple-files-with-an-extension">Example 3: Creating multiple files with an extension</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -i file*
+</code></pre></div><h2 id="example-3-creating-multiple-files-with-an-extension">Example 3: Creating multiple files with an extension</h2>
 <p>To create several files with an extension you only need to add the extension to the end of the command.</p>
 <hr>
 <p><strong>Command</strong></p>
-<pre><code>touch file{1..10}.txt
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch file<span style="color:#f92672">{</span>1..10<span style="color:#f92672">}</span>.txt
+</code></pre></div><hr>
 <p><strong>Result</strong></p>
-<pre><code>file10.txt
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file10.txt
 file1.txt
 file2.txt
 file3.txt
@@ -192,17 +192,17 @@ file6.txt
 file7.txt
 file8.txt
 file9.txt
-</code></pre><hr>
+</code></pre></div><hr>
 <p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
-<pre><code>rm -i file*.txt
-</code></pre><h2 id="example-4-creating-multiple-files-with-leading-zeroes-before-the-number">Example 4: Creating multiple files with leading zeroes before the number</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -i file*.txt
+</code></pre></div><h2 id="example-4-creating-multiple-files-with-leading-zeroes-before-the-number">Example 4: Creating multiple files with leading zeroes before the number</h2>
 <p>Another small adjustment will pad the number with leading zeroes.</p>
 <hr>
 <p><strong>Command</strong></p>
-<pre><code>touch file{01..10}.txt
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch file<span style="color:#f92672">{</span>01..10<span style="color:#f92672">}</span>.txt
+</code></pre></div><hr>
 <p><strong>Result</strong></p>
-<pre><code>file01.txt
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file01.txt
 file02.txt
 file03.txt
 file04.txt
@@ -212,31 +212,31 @@ file07.txt
 file08.txt
 file09.txt
 file10.txt
-</code></pre><hr>
+</code></pre></div><hr>
 <p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
-<pre><code>rm -i file*.txt
-</code></pre><h2 id="example-5-creating-multiple-files-with-random-alphanumeric-strings">Example 5: Creating multiple files with random alphanumeric strings</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -i file*.txt
+</code></pre></div><h2 id="example-5-creating-multiple-files-with-random-alphanumeric-strings">Example 5: Creating multiple files with random alphanumeric strings</h2>
 <p>Now let&rsquo;s add some random characters to differentiate the files.</p>
 <p>We&rsquo;ll use the <code>shuf</code> command that we <a href="https://loopedline.com/post/getting-started-with-shuf-command-in-bash/#example-8-generating-a-random-alphanumeric-string-of-random-length">previously developed</a> to generate random alphanumeric strings.</p>
 <p>Try the following:</p>
-<pre><code>shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9}; echo
-</code></pre><p>Run the command multiple times to see different results.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">shuf -erz -n <span style="color:#66d9ef">$(</span>shuf -e -n <span style="color:#ae81ff">1</span> <span style="color:#f92672">{</span>0..5<span style="color:#f92672">}</span><span style="color:#66d9ef">)</span>  <span style="color:#f92672">{</span>A..Z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>a..z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>0..9<span style="color:#f92672">}</span>; echo
+</code></pre></div><p>Run the command multiple times to see different results.</p>
 <hr>
 <p>Let&rsquo;s first alter the command slightly to the form we&rsquo;ll use in file creation and we&rsquo;ll see a potential problem.</p>
-<pre><code>echo $(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9})
-</code></pre><p>Along with the output, you&rsquo;ll see this warning:</p>
-<pre><code>bash: warning: command substitution: ignored null byte in input
-</code></pre><p>The <a href="https://stackoverflow.com/questions/64550414/bash-warning-command-substitution-ignored-null-byte-in-input/64551685#64551685">discussion of null bytes can be a bit involved</a>, but the resolution can be quite simple.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$(</span>shuf -erz -n <span style="color:#66d9ef">$(</span>shuf -e -n <span style="color:#ae81ff">1</span> <span style="color:#f92672">{</span>0..5<span style="color:#f92672">}</span><span style="color:#66d9ef">)</span>  <span style="color:#f92672">{</span>A..Z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>a..z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>0..9<span style="color:#f92672">}</span><span style="color:#66d9ef">)</span>
+</code></pre></div><p>Along with the output, you&rsquo;ll see this warning:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash: warning: command substitution: ignored null byte in input
+</code></pre></div><p>The <a href="https://stackoverflow.com/questions/64550414/bash-warning-command-substitution-ignored-null-byte-in-input/64551685#64551685">discussion of null bytes can be a bit involved</a>, but the resolution can be quite simple.</p>
 <p>To use this command in our file creation we&rsquo;ll want to add the <code>tr</code> command to remove the null byte.</p>
-<pre><code>echo $(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9} | tr -d '\0')
-</code></pre><p>Now we can utilize the updated command to create files that contain random alphanumeric strings.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$(</span>shuf -erz -n <span style="color:#66d9ef">$(</span>shuf -e -n <span style="color:#ae81ff">1</span> <span style="color:#f92672">{</span>0..5<span style="color:#f92672">}</span><span style="color:#66d9ef">)</span>  <span style="color:#f92672">{</span>A..Z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>a..z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>0..9<span style="color:#f92672">}</span> | tr -d <span style="color:#e6db74">&#39;\0&#39;</span><span style="color:#66d9ef">)</span>
+</code></pre></div><p>Now we can utilize the updated command to create files that contain random alphanumeric strings.</p>
 <!-- raw HTML omitted -->
 <hr>
 <p><strong>Command</strong></p>
-<pre><code>touch file$(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9} | tr -d '\0'){01..10}.txt
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch file<span style="color:#66d9ef">$(</span>shuf -erz -n <span style="color:#66d9ef">$(</span>shuf -e -n <span style="color:#ae81ff">1</span> <span style="color:#f92672">{</span>0..5<span style="color:#f92672">}</span><span style="color:#66d9ef">)</span>  <span style="color:#f92672">{</span>A..Z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>a..z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>0..9<span style="color:#f92672">}</span> | tr -d <span style="color:#e6db74">&#39;\0&#39;</span><span style="color:#66d9ef">)</span><span style="color:#f92672">{</span>01..10<span style="color:#f92672">}</span>.txt
+</code></pre></div><hr>
 <p><strong>Result example</strong></p>
-<pre><code>file07.txt
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file07.txt
 file6IJ04.txt
 filec09.txt
 fileE05.txt
@@ -246,18 +246,18 @@ fileMv5W01.txt
 fileOZV2i10.txt
 files02.txt
 fileXt08.txt
-</code></pre><hr>
+</code></pre></div><hr>
 <p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
-<pre><code>rm -i file*.txt
-</code></pre><h2 id="example-6-creating-files-with-a-specific-ending">Example 6: Creating files with a specific ending</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -i file*.txt
+</code></pre></div><h2 id="example-6-creating-files-with-a-specific-ending">Example 6: Creating files with a specific ending</h2>
 <p>If we want to add a specific ending to a file name, that is trivial.  We can add it in the same way we added the file extension in Example 3.</p>
 <p>Let&rsquo;s say we want to add &ldquo;_final&rdquo; to end of our files.</p>
 <hr>
 <p><strong>Command</strong></p>
-<pre><code>touch file$(shuf -erz -n $(shuf -e -n 1 {0..5})  {A..Z} {a..z} {0..9} | tr -d '\0'){01..10}_final.txt
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch file<span style="color:#66d9ef">$(</span>shuf -erz -n <span style="color:#66d9ef">$(</span>shuf -e -n <span style="color:#ae81ff">1</span> <span style="color:#f92672">{</span>0..5<span style="color:#f92672">}</span><span style="color:#66d9ef">)</span>  <span style="color:#f92672">{</span>A..Z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>a..z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>0..9<span style="color:#f92672">}</span> | tr -d <span style="color:#e6db74">&#39;\0&#39;</span><span style="color:#66d9ef">)</span><span style="color:#f92672">{</span>01..10<span style="color:#f92672">}</span>_final.txt
+</code></pre></div><hr>
 <p><strong>Result example</strong></p>
-<pre><code>file01_final.txt
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file01_final.txt
 file02_final.txt
 file04_final.txt
 file1QS06_final.txt
@@ -267,10 +267,10 @@ fileG009_final.txt
 fileIRtbH08_final.txt
 filel07_final.txt
 filezm310_final.txt
-</code></pre><hr>
+</code></pre></div><hr>
 <p><strong>File deletion command</strong> (See the <a href="https://loopedline.com/post/creating-multiple-files-with-bash/#a-warning">warning above</a> before using this command.)</p>
-<pre><code>rm -i file*.txt
-</code></pre><!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -i file*.txt
+</code></pre></div><!-- raw HTML omitted -->
 </div>
 
     

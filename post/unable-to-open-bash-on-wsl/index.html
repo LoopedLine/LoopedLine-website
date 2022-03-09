@@ -133,22 +133,22 @@
 <p>A StackExchange post about <a href="https://stackoverflow.com/questions/62496779/opening-up-windows-terminal-with-elevated-privileges-from-within-windows-termin">Opening up Windows Terminal with elevated privileges</a> offered some insight on how to accomplish that with terminal commands.</p>
 <h2 id="the-solution">The Solution</h2>
 <p>I edited my Windows Terminal settings.json to add two new profiles:</p>
-<pre><code>{
-    &quot;guid&quot;: &quot;{&lt;&lt;GUID1&gt;&gt;}&quot;,
-    &quot;name&quot;: &quot;Ubuntu&quot;,
-    &quot;source&quot;: &quot;Windows.Terminal.Wsl&quot;
-},
-{
-    &quot;guid&quot;: &quot;{&lt;&lt;GUID2&gt;&gt;}&quot;,
-    &quot;name&quot;: &quot;Elevate Terminal&quot;,
-    &quot;commandline&quot;: &quot;powershell.exe Start-Process -Verb RunAs wt&quot;,
-    &quot;icon&quot;: &quot;🔑&quot;,
-    &quot;hidden&quot;: false
-},
-</code></pre><p>Note: <code>&lt;&lt;GUID1&gt;&gt;</code> and <code>&lt;&lt;GUID2&gt;&gt;</code> are stand-in values for the actual guids.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;guid&#34;</span>: <span style="color:#e6db74">&#34;{&lt;&lt;GUID1&gt;&gt;}&#34;</span>,
+    <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Ubuntu&#34;</span>,
+    <span style="color:#e6db74">&#34;source&#34;</span>: <span style="color:#e6db74">&#34;Windows.Terminal.Wsl&#34;</span>
+<span style="color:#f92672">}</span>,
+<span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;guid&#34;</span>: <span style="color:#e6db74">&#34;{&lt;&lt;GUID2&gt;&gt;}&#34;</span>,
+    <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Elevate Terminal&#34;</span>,
+    <span style="color:#e6db74">&#34;commandline&#34;</span>: <span style="color:#e6db74">&#34;powershell.exe Start-Process -Verb RunAs wt&#34;</span>,
+    <span style="color:#e6db74">&#34;icon&#34;</span>: <span style="color:#e6db74">&#34;🔑&#34;</span>,
+    <span style="color:#e6db74">&#34;hidden&#34;</span>: false
+<span style="color:#f92672">}</span>,
+</code></pre></div><p>Note: <code>&lt;&lt;GUID1&gt;&gt;</code> and <code>&lt;&lt;GUID2&gt;&gt;</code> are stand-in values for the actual guids.</p>
 <p>I set Ubuntu as the default profile by editing defaultProfile:</p>
-<pre><code>&quot;defaultProfile&quot;: &quot;{&lt;&lt;GUID1&gt;&gt;}&quot;,
-</code></pre><p>Now, when I select the &ldquo;Elevate Terminal&rdquo; profile, a new Windows Terminal instance is opened with administrator privileges to the Ubuntu profile.  The profile then is able to access the WSL as expected.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#34;defaultProfile&#34;</span>: <span style="color:#e6db74">&#34;{&lt;&lt;GUID1&gt;&gt;}&#34;</span>,
+</code></pre></div><p>Now, when I select the &ldquo;Elevate Terminal&rdquo; profile, a new Windows Terminal instance is opened with administrator privileges to the Ubuntu profile.  The profile then is able to access the WSL as expected.</p>
 <!-- raw HTML omitted -->
 </div>
 
