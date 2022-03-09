@@ -131,25 +131,25 @@
 <h2 id="test-setup-creating-a-test-directory">Test Setup: Creating a test directory</h2>
 <p>To begin, navigate to the directory that will contain your test directory.</p>
 <p>We&rsquo;ll use the <code>mkdir</code> command to create a new directory called &ldquo;test-directory&rdquo;:</p>
-<pre><code>mkdir -v test-directory
-</code></pre><p>Then navigate to that directory by entering the command:</p>
-<pre><code>cd test-directory
-</code></pre><p>Finally, to confirm that there aren&rsquo;t any files in the directory that you could unintentionally alter, enter the command:</p>
-<pre><code>ls -l
-</code></pre><p>You shouldn&rsquo;t see any files and the output should resemble the following:</p>
-<pre><code>total 0
-</code></pre><p>Now you can work in this test directory with some protection for your other files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -v test-directory
+</code></pre></div><p>Then navigate to that directory by entering the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd test-directory
+</code></pre></div><p>Finally, to confirm that there aren&rsquo;t any files in the directory that you could unintentionally alter, enter the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -l
+</code></pre></div><p>You shouldn&rsquo;t see any files and the output should resemble the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">total <span style="color:#ae81ff">0</span>
+</code></pre></div><p>Now you can work in this test directory with some protection for your other files.</p>
 <h2 id="test-cleanup-removing-the-test-directory">Test Cleanup: Removing the test directory</h2>
 <p>Once you have finished experimenting, you may wish to remove your test directory.  If so, you can use the <code>rmdir</code> command.</p>
 <p>Be aware that the rmdir command is powerful and can delete directories in a way that you can&rsquo;t reverse.  Make sure you understand its use before blindly applying the example below.</p>
 <p>If you&rsquo;re not comfortable with that, use a GUI or another method you&rsquo;re familiar with to remove the directory.</p>
 <p>Navigate to the directory that contains your test directory.  If you&rsquo;re currently in the test directory, enter the command:</p>
-<pre><code>cd ..
-</code></pre><p>Then to delete test-directory enter the command:</p>
-<pre><code>rmdir -v test-directory
-</code></pre><p>You should see the output:</p>
-<pre><code>rmdir: removing directory, 'test-directory/'
-</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ..
+</code></pre></div><p>Then to delete test-directory enter the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir -v test-directory
+</code></pre></div><p>You should see the output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir: removing directory, <span style="color:#e6db74">&#39;test-directory/&#39;</span>
+</code></pre></div></div>
 
     
     

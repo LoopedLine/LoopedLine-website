@@ -133,23 +133,23 @@
 <p>For now, most Debian-based Linux distributions use <code>rename.ul</code> to refer to the util-linux command.</p>
 <p>As the man page entry says, rename.ul <em>&ldquo;will rename the specified files by replacing the first occurrence of expression in their name by replacement.&quot;</em></p>
 <p>It has the form</p>
-<pre><code>rename.ul [options] &lt;expression&gt; &lt;replacement&gt; &lt;file&gt;
-</code></pre><p>For example,</p>
-<pre><code>rename.ul -v '_draft' '_final' *.txt
-</code></pre><p>The above would replace the first occurrence of the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt and display a list of which files were renamed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;expression&gt; &lt;replacement&gt; &lt;file&gt;
+</code></pre></div><p>For example,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul -v <span style="color:#e6db74">&#39;_draft&#39;</span> <span style="color:#e6db74">&#39;_final&#39;</span> *.txt
+</code></pre></div><p>The above would replace the first occurrence of the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt and display a list of which files were renamed.</p>
 <p>That can be risky if you&rsquo;re not sure about what you&rsquo;re doing.  It&rsquo;s a good idea to also add the <code>-n</code> option to first see what changes would be made.  Then, if you like the results, rerun the command without the -n argument.  To see what changes would take place before actually making them just amend the command to the following:</p>
-<pre><code>rename.ul -nv '_draft' '_final' *.txt
-</code></pre><h2 id="rename">rename</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul -nv <span style="color:#e6db74">&#39;_draft&#39;</span> <span style="color:#e6db74">&#39;_final&#39;</span> *.txt
+</code></pre></div><h2 id="rename">rename</h2>
 <p>For now, most Debian-based Linux distributions use <code>rename</code> to refer to the Perl command.</p>
 <p>As the tldr entry says, rename <em>&ldquo;renames files using a Perl Common Regular Expression&rdquo;</em></p>
 <p>It has the form</p>
-<pre><code>rename [options] &lt;expression&gt; &lt;file&gt;
-</code></pre><p>For example,</p>
-<pre><code>rename -nv 's/_draft/_final/' *.txt
-</code></pre><p>Because of the <code>-n</code> argument, the above shows what files (if any) would be renamed and how they would be renamed by replacing the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;expression&gt; &lt;file&gt;
+</code></pre></div><p>For example,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -nv <span style="color:#e6db74">&#39;s/_draft/_final/&#39;</span> *.txt
+</code></pre></div><p>Because of the <code>-n</code> argument, the above shows what files (if any) would be renamed and how they would be renamed by replacing the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt.</p>
 <p>Removing the <code>-n</code> argument actually makes the changes and displays a list of which files were renamed.</p>
-<pre><code>rename -v 's/_draft/_final/' *.txt
-</code></pre><p>Because rename accepts regular expressions, it can be very powerful, allowing for complicated file rename tasks.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -v <span style="color:#e6db74">&#39;s/_draft/_final/&#39;</span> *.txt
+</code></pre></div><p>Because rename accepts regular expressions, it can be very powerful, allowing for complicated file rename tasks.</p>
 <!-- raw HTML omitted -->
 </div>
 
