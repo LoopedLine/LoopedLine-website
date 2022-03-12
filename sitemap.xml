@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/tags/hugo/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/static-site-generator/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/technical-troubleshooting/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/technical-troubleshooting-solved/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/updating-hugo-posts-with-code-syntax-highlighting/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/web-development/</loc>
+    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/post/automating-hugo-website-publishing-with-bash/</loc>
     <lastmod>2022-03-03T14:49:33-05:00</lastmod>
   </url>
@@ -13,22 +63,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/hugo/</loc>
-    <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/linux/</loc>
-    <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
     <lastmod>2022-03-03T14:49:33-05:00</lastmod>
   </url>
   
@@ -38,27 +73,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/static-site-generator/</loc>
-    <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/system-administration/</loc>
-    <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/web-development/</loc>
     <lastmod>2022-03-03T14:49:33-05:00</lastmod>
   </url>
   
@@ -164,16 +179,6 @@
   
   <url>
     <loc>https://loopedline.com/post/apt-update-not-working-on-wsl/</loc>
-    <lastmod>2021-12-07T15:20:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/technical-troubleshooting/</loc>
-    <lastmod>2021-12-07T15:20:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/technical-troubleshooting-solved/</loc>
     <lastmod>2021-12-07T15:20:39-05:00</lastmod>
   </url>
   
