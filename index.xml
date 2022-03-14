@@ -6,10 +6,21 @@
     <description>Recent content on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Mar 2022 22:16:57 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 14 Mar 2022 14:12:31 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Modifying the New Article Template in Hugo</title>
+      <link>https://loopedline.com/post/modifying-the-new-article-template-in-hugo/</link>
+      <pubDate>Mon, 14 Mar 2022 14:12:31 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/modifying-the-new-article-template-in-hugo/</guid>
+      <description>Background After working with Hugo for a while you might find that there are certain pieces of code that you include in every project.
+Once you tire of manually copying and pasting them, it&amp;rsquo;s time to figure out which template file to alter to automatically include those snippets.
+Because Hugo offers so much flexibility and produces pages in such a layered way, it can be difficult to find the right place to make the necessary alterations.</description>
+    </item>
     
     <item>
       <title>Simplifying Hugo Post Creation with a Bash Script</title>
