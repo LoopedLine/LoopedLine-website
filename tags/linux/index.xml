@@ -6,10 +6,21 @@
     <description>Recent content in Linux on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Mar 2022 14:49:33 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 13 Mar 2022 22:16:57 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simplifying Hugo Post Creation with a Bash Script</title>
+      <link>https://loopedline.com/post/simplifying-hugo-post-creation-with-a-bash-script/</link>
+      <pubDate>Sun, 13 Mar 2022 22:16:57 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/simplifying-hugo-post-creation-with-a-bash-script/</guid>
+      <description>Background Creating new posts in Hugo is already pretty simple thanks to the post creation command, but it can help to remove even little bits of friction.
+Two points of friction in the current process are:
+ navigating to the project directory, and properly formatting the new file name by remembering to name the file with dashes (-) instead of spaces and including the .md file extension  In the same way that we simplified updating Hugo front matter with a Bash script, we can use a script to make post creation even simpler as well.</description>
+    </item>
     
     <item>
       <title>Automating Hugo Website Publishing Workflow with Bash</title>
