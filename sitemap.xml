@@ -3,42 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/post/escaping-markdown-code-fences-within-code-fences/</loc>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/tags/hugo/</loc>
-    <lastmod>2022-03-14T14:12:31-04:00</lastmod>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/</loc>
-    <lastmod>2022-03-14T14:12:31-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/modifying-the-new-article-template-in-hugo/</loc>
-    <lastmod>2022-03-14T14:12:31-04:00</lastmod>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-03-14T14:12:31-04:00</lastmod>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-03-14T14:12:31-04:00</lastmod>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/static-site-generator/</loc>
-    <lastmod>2022-03-14T14:12:31-04:00</lastmod>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-03-14T14:12:31-04:00</lastmod>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/technical-troubleshooting/</loc>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/technical-troubleshooting-solved/</loc>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/web-development/</loc>
+    <lastmod>2022-03-16T23:14:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/modifying-the-new-article-template-in-hugo/</loc>
     <lastmod>2022-03-14T14:12:31-04:00</lastmod>
   </url>
   
@@ -68,12 +83,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/technical-troubleshooting/</loc>
-    <lastmod>2022-03-12T15:07:58-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/technical-troubleshooting-solved/</loc>
+    <loc>https://loopedline.com/tags/regular-expressions/</loc>
     <lastmod>2022-03-12T15:07:58-05:00</lastmod>
   </url>
   
@@ -85,11 +95,6 @@
   <url>
     <loc>https://loopedline.com/post/automating-hugo-website-publishing-with-bash/</loc>
     <lastmod>2022-03-03T14:49:33-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/regular-expressions/</loc>
-    <lastmod>2022-03-02T21:21:25-05:00</lastmod>
   </url>
   
   <url>
