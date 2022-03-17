@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>technical troubleshooting - unsolved on LoopedLine</title>
+    <link>https://loopedline.com/tags/technical-troubleshooting-unsolved/</link>
+    <description>Recent content in technical troubleshooting - unsolved on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Mar 2022 11:36:59 -0400</lastBuildDate>
+    
+	<atom:link href="https://loopedline.com/tags/technical-troubleshooting-unsolved/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Regular Expression Syntax Highlighting [UNSOLVED]</title>
+      <link>https://loopedline.com/post/regular-expression-syntax-highlighting/</link>
+      <pubDate>Thu, 17 Mar 2022 11:36:59 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/regular-expression-syntax-highlighting/</guid>
+      <description>The Problem When posting snippets of regular expression code inside code blocks (as in this example) it would be helpful to apply syntax highlighting.
+Because this site uses Hugo, which uses Chroma, which does not yet include support for highlighting regular expressions another approach is required.
+The Process A web search for regular expression syntax highlighting returned some discussions of the general question:
+ Is there a good syntax highlighting hint for regular expressions?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,17 +6,29 @@
     <description>Recent content on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Mar 2022 23:14:22 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 17 Mar 2022 11:36:59 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Escaping Markdown Code Fences Within Code Fences [SOLVED]</title>
-      <link>https://loopedline.com/post/escaping-markdown-code-fences-within-code-fences/</link>
+      <title>Regular Expression Syntax Highlighting [UNSOLVED]</title>
+      <link>https://loopedline.com/post/regular-expression-syntax-highlighting/</link>
+      <pubDate>Thu, 17 Mar 2022 11:36:59 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/regular-expression-syntax-highlighting/</guid>
+      <description>The Problem When posting snippets of regular expression code inside code blocks (as in this example) it would be helpful to apply syntax highlighting.
+Because this site uses Hugo, which uses Chroma, which does not yet include support for highlighting regular expressions another approach is required.
+The Process A web search for regular expression syntax highlighting returned some discussions of the general question:
+ Is there a good syntax highlighting hint for regular expressions?</description>
+    </item>
+    
+    <item>
+      <title>Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</title>
+      <link>https://loopedline.com/post/escaping-markdown-code-fences-nested-within-code-fences/</link>
       <pubDate>Wed, 16 Mar 2022 23:14:22 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/escaping-markdown-code-fences-within-code-fences/</guid>
+      <guid>https://loopedline.com/post/escaping-markdown-code-fences-nested-within-code-fences/</guid>
       <description>The Problem When authoring articles using Markdown that include Markdown special characters in the content, questions can come up about how to escape those special characters.
 For instance, this article about updating Hugo posts with code syntax highlighting includes Markdown code fences within code fences, which required figuring out how to escape code fences within code fences.
 The Process A web search quickly led to this helpful article, which explained the options for escaping code fencing.</description>
