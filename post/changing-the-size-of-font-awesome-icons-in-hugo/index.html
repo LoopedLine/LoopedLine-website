@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</title>
+        <title>Changing the Size of Font Awesome Icons in Hugo</title>
         
         
         <style>
@@ -72,7 +72,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</a>
+                    <a class="navbar-brand visible-xs" href="#">Changing the Size of Font Awesome Icons in Hugo</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -106,8 +106,8 @@
 <main>
 
     <div>
-        <h2>Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</h2>
-        <h5>2021 August 14</h5>
+        <h2>Changing the Size of Font Awesome Icons in Hugo</h2>
+        <h5>2022 March 21</h5>
         
 <a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
 
@@ -117,6 +117,8 @@
 
 <a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
 
+<a href="https://loopedline.com/tags/font-awesome"><kbd class="item-tag">Font Awesome</kbd></a>
+
 <a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
 
 <a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
@@ -124,23 +126,35 @@
 
     </div>
 
-    <div align="start" class="content"><h2 id="the-problem">The Problem</h2>
-<p>When Hugo rendered a webpage from a markdown file it automatically converted text URLs to hyperlinks.</p>
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="the-problem">The Problem</h2>
+<p>Because this project uses a <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> theme, specifically, the <a href="https://themes.gohugo.io/themes/minimal/">Minimal theme</a>, nearly all design choices were initially made by <a href="https://github.com/calintat">the theme&rsquo;s creator</a>.</p>
+<p>Naturally, when selecting a theme, you choose the one that best meets your goals.  But it&rsquo;s not likely to match your intentions in every detail.  As <a href="https://zwbetz.com/override-a-hugo-theme/">Zachary Wade Betz</a> puts it:</p>
+<blockquote>
+<p>We’ve all been there. You’re browsing through the Hugo themes and find one that you really like. It meets all your criteria, except for that one small thing.</p>
+</blockquote>
+<p>Over time it&rsquo;s desirable to make small changes.</p>
+<p>For this post, we&rsquo;ll look at changing the page navigation icons on list pages.  For our purposes, the arrows used at the bottom of each list page are too small, making them difficult to click.</p>
 <h2 id="the-process">The Process</h2>
-<p>A web search for how to disable automatic hyperlinking in Hugo led to a few discussions of the issue:</p>
-<ul>
-<li><a href="https://discourse.gohugo.io/t/disabling-smart-quotes-auto-code-blocks-and-auto-hyperlinks/3691/3">Disabling smart quotes, auto code blocks, and auto hyperlinks?</a></li>
-<li><a href="https://discourse.gohugo.io/t/goldmark-how-to-disable-autolinks/30476">Goldmark: How to disable autolinks</a></li>
-<li><a href="https://gohugo.io/getting-started/configuration-markup#goldmark">Configure Markup: Goldmark</a></li>
-</ul>
-<p>Interpolating between them led to a solution.</p>
+<p>As has been <a href="https://loopedline.com/post/modifying-the-new-article-template-in-hugo/#background">mentioned before</a>, because Hugo offers so much flexibility and produces pages in such a layered way, it can be difficult to find the right place to make the necessary alterations.</p>
+<h3 id="figuring-out-what-to-change">Figuring out what to change</h3>
+<p>Before figuring out how to make a change, we&rsquo;ll first have to figure out what to change.</p>
+<p>One simple approach is to open the website in the Chrome browser, navigate to the page in question, right-click on the element in question, and select <strong>Inspect</strong>.  This will bring up Chrome Developer Tools for that element.</p>
+<p>In this case, if we click on the left arrow we&rsquo;ll see that the element is defined in the line <code>&lt;i class=&quot;fa fa-arrow-left&quot;&gt;&lt;/i&gt;</code></p>
+<p>Searching for that element in our project in VS Code brings us to the <strong>paginator.html</strong> file in our <em>layouts/partials</em> folder.</p>
+<p>A web search for <em>fa-arrow-left</em> reveals that it is <a href="https://fontawesome.com/v5/icons/arrow-left?s=solid">an icon from Font Awesome</a>, which matches what we find in the theme&rsquo;s files.</p>
+<p>Now we know what that we need to change the <strong>fa-arrow-left</strong> and <strong>fa-arrow-right</strong> elements.</p>
+<h3 id="figuring-out-how-to-make-the-change">Figuring out how to make the change</h3>
+<p>Next we need to figure out how to make those icons larger.</p>
+<p>A web search for changing the size of font awesome icons reveals quite a few options, but the most immediately accessible seems to be adding an addendum to the elements class, <a href="https://fontawesome.com/v5/docs/web/style/size">as demonstrated here</a>.</p>
 <h2 id="the-solution">The Solution</h2>
-<p>Adding the following to the config.toml file resolved the issue.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>]
-[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
-[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">extensions</span>]
-<span style="color:#a6e22e">linkify</span> = <span style="color:#66d9ef">false</span>
-</code></pre></div></div>
+<p>Only one small change to each element is necessary to make the icons larger.</p>
+<p>In the <strong>paginator.html</strong> file, we add the <code>fa-3x</code> addedendum to each element.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-arrow-left fa-3x&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-arrow-right fa-3x&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
+</code></pre></div><!-- raw HTML omitted -->
+</div>
 
     
     
@@ -168,8 +182,8 @@
     
     
 
-    <h4><a href="/post/changing-the-size-of-font-awesome-icons-in-hugo/">Changing the Size of Font Awesome Icons in Hugo</a></h4>
-    <h5>2022 March 21</h5>
+    <h4><a href="/post/regular-expression-syntax-highlighting/">Regular Expression Syntax Highlighting [UNSOLVED]</a></h4>
+    <h5>2022 March 17</h5>
 
 </div>
   <div class="item">
@@ -181,8 +195,8 @@
     
     
 
-    <h4><a href="/post/regular-expression-syntax-highlighting/">Regular Expression Syntax Highlighting [UNSOLVED]</a></h4>
-    <h5>2022 March 17</h5>
+    <h4><a href="/post/escaping-markdown-code-fences-nested-within-code-fences/">Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</a></h4>
+    <h5>2022 March 16</h5>
 
 </div>
  

@@ -6,15 +6,24 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Mar 2022 14:36:04 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2022 13:54:32 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Font Awesome</title>
+      <link>https://loopedline.com/tags/font-awesome/</link>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/font-awesome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hugo</title>
       <link>https://loopedline.com/tags/hugo/</link>
-      <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/hugo/</guid>
       <description></description>
@@ -23,7 +32,7 @@
     <item>
       <title>software development</title>
       <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/software-development/</guid>
       <description></description>
@@ -32,7 +41,7 @@
     <item>
       <title>static site generator</title>
       <link>https://loopedline.com/tags/static-site-generator/</link>
-      <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/static-site-generator/</guid>
       <description></description>
@@ -41,7 +50,7 @@
     <item>
       <title>technical troubleshooting</title>
       <link>https://loopedline.com/tags/technical-troubleshooting/</link>
-      <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/technical-troubleshooting/</guid>
       <description></description>
@@ -50,7 +59,7 @@
     <item>
       <title>technical troubleshooting - solved</title>
       <link>https://loopedline.com/tags/technical-troubleshooting-solved/</link>
-      <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/technical-troubleshooting-solved/</guid>
       <description></description>
@@ -59,7 +68,7 @@
     <item>
       <title>web development</title>
       <link>https://loopedline.com/tags/web-development/</link>
-      <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/web-development/</guid>
       <description></description>
