@@ -6,17 +6,28 @@
     <description>Recent content in Hugo on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Mar 2022 14:36:04 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2022 13:54:32 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Changing the Size of Icons in Hugo</title>
-      <link>https://loopedline.com/post/changing-the-size-of-icons-in-hugo/</link>
+      <title>Changing the Spacing of Font Awesome Icons in Hugo</title>
+      <link>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</link>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</guid>
+      <description>The Problem As mentioned in a previous post this project is built with Hugo and uses the Minimal Hugo theme.
+After resolving the problem of Changing the Size of Font Awesome Icons in Hugo discussed in that post, we now want to increase the spacing between the arrow icons used for page navigation icons on list pages.
+The Process From the previous investigation mentioned above we know that the arrow icons are defined in the fa-arrow-left and fa-arrow-right elements of the paginator.</description>
+    </item>
+    
+    <item>
+      <title>Changing the Size of Font Awesome Icons in Hugo</title>
+      <link>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</link>
       <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/changing-the-size-of-icons-in-hugo/</guid>
+      <guid>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</guid>
       <description>The Problem Because this project uses a Hugo theme, specifically, the Minimal theme, nearly all design choices were initially made by the theme&amp;rsquo;s creator.
 Naturally, when selecting a theme, you choose the one that best meets your goals. But it&amp;rsquo;s not likely to match your intentions in every detail. As Zachary Wade Betz puts it:
  We’ve all been there. You’re browsing through the Hugo themes and find one that you really like.</description>
