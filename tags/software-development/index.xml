@@ -6,10 +6,22 @@
     <description>Recent content in software development on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Mar 2022 13:54:32 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 31 Mar 2022 14:17:14 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Changing a Hugo Theme Over Time</title>
+      <link>https://loopedline.com/post/changing-a-hugo-theme-over-time/</link>
+      <pubDate>Thu, 31 Mar 2022 14:17:14 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/changing-a-hugo-theme-over-time/</guid>
+      <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
+Consequently, nearly all design choices were initially made by the theme&amp;rsquo;s creator.
+Naturally, when selecting a theme, you choose the one that best meets your goals. And the Minimal theme was chosen because it is clean and well-written.
+But no theme is likely to match your project&amp;rsquo;s needs in every detail. As Zachary Wade Betz puts it:</description>
+    </item>
     
     <item>
       <title>Changing the Spacing of Font Awesome Icons in Hugo</title>
@@ -17,8 +29,9 @@
       <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</guid>
-      <description>The Problem As mentioned in a previous post this project is built with Hugo and uses the Minimal Hugo theme.
-After resolving the problem of Changing the Size of Font Awesome Icons in Hugo discussed in that post, we now want to increase the spacing between the arrow icons used for page navigation icons on list pages.
+      <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+In this post, after resolving the problem of Changing the Size of Font Awesome Icons in Hugo, we now want to increase the spacing between the arrow icons used for page navigation icons on list pages.
 The Process From the previous investigation mentioned above we know that the arrow icons are defined in the fa-arrow-left and fa-arrow-right elements of the paginator.</description>
     </item>
     
@@ -28,9 +41,10 @@ The Process From the previous investigation mentioned above we know that the arr
       <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
       
       <guid>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</guid>
-      <description>The Problem Because this project uses a Hugo theme, specifically, the Minimal theme, nearly all design choices were initially made by the theme&amp;rsquo;s creator.
-Naturally, when selecting a theme, you choose the one that best meets your goals. But it&amp;rsquo;s not likely to match your intentions in every detail. As Zachary Wade Betz puts it:
- We’ve all been there. You’re browsing through the Hugo themes and find one that you really like.</description>
+      <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+In this post, we&amp;rsquo;ll look at changing the page navigation icons on list pages. For our purposes, the arrows used at the bottom of each list page are too small, making them difficult to click.
+The Process As has been mentioned before, because Hugo offers so much flexibility and produces pages in such a layered way, it can be difficult to find the right place to make the necessary alterations.</description>
     </item>
     
     <item>
@@ -62,9 +76,10 @@ The Process A web search quickly led to this helpful article, which explained th
       <pubDate>Mon, 14 Mar 2022 14:12:31 -0400</pubDate>
       
       <guid>https://loopedline.com/post/modifying-the-new-article-template-in-hugo/</guid>
-      <description>Background After working with Hugo for a while you might find that there are certain pieces of code that you include in every project.
-Once you tire of manually copying and pasting them, it&amp;rsquo;s time to figure out which template file to alter to automatically include those snippets.
-Because Hugo offers so much flexibility and produces pages in such a layered way, it can be difficult to find the right place to make the necessary alterations.</description>
+      <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+After working with Hugo for a while you might find that there are certain pieces of code that you include in every project.
+Once you tire of manually copying and pasting them, it&amp;rsquo;s time to figure out which template file to alter to automatically include those snippets.</description>
     </item>
     
     <item>
@@ -130,10 +145,10 @@ Then to get a refresher and a slightly different view, watch Getting started wit
       <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
       
       <guid>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</guid>
-      <description>The Problem When Hugo rendered a webpage from a markdown file it automatically converted text URLs to hyperlinks.
-The Process A web search for how to disable automatic hyperlinking in Hugo led to a few discussions of the issue:
- Disabling smart quotes, auto code blocks, and auto hyperlinks? Goldmark: How to disable autolinks Configure Markup: Goldmark  Interpolating between them led to a solution.
-The Solution Adding the following to the config.</description>
+      <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+For this post, we&amp;rsquo;ll look at the issue that when Hugo rendered a webpage from a markdown file it automatically converted text URLs to hyperlinks.
+The Process A web search for how to disable automatic hyperlinking in Hugo led to a few discussions of the issue:</description>
     </item>
     
     <item>

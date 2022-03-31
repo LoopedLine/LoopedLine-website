@@ -1,3 +1,84 @@
+
+/* List Pager - phase 1 - Delete after update to phase 2 as it conflicts with responsive spacing in phase 2 */
+
 .pages-icon {
     padding: 0px 100px;
+    color: var(--accent);
+}
+
+.pages-index {
+    display: inline-block;
+    background: blue;
+    color:green;
+}
+
+
+
+
+
+/* List Pager - phase 2 */
+
+div#listpagerholder {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(50px, auto);
+    
+    /* background: gray; */
+}
+
+div#listpager {
+    display: grid;
+    grid-template-areas:
+        "listpager_left_segment listpager_centertop_segment listpager_right_segment"
+        "listpager_left_segment listpager_centerbottom_segment listpager_right_segment";
+    grid-template-columns: repeat(3, minmax(50px, 200px));
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: stretch;
+
+    /* background: gold; */
+}
+
+a#listpager-left {
+    grid-area: listpager_left_segment;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background: red; */
+    
+}
+
+div#listpager-count {
+    grid-area: listpager_centertop_segment;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background: green; */
+}
+
+div#listpager-all {
+    grid-area: listpager_centerbottom_segment;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background: orange; */
+}
+
+a#listpager-right {
+    grid-area: listpager_right_segment;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background: hotpink; */
 }
