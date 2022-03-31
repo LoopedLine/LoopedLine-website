@@ -117,6 +117,8 @@
 
 <a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
 
+<a href="https://loopedline.com/tags/hugo-theme"><kbd class="item-tag">Hugo theme</kbd></a>
+
 <a href="https://loopedline.com/tags/font-awesome"><kbd class="item-tag">Font Awesome</kbd></a>
 
 <a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
@@ -128,14 +130,12 @@
 
     <div align="start" class="content"><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="the-problem">The Problem</h2>
-<p>Because this project uses a <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> theme, specifically, the <a href="https://themes.gohugo.io/themes/minimal/">Minimal theme</a>, nearly all design choices were initially made by <a href="https://github.com/calintat">the theme&rsquo;s creator</a>.</p>
-<p>Naturally, when selecting a theme, you choose the one that best meets your goals.  But it&rsquo;s not likely to match your intentions in every detail.  As <a href="https://zwbetz.com/override-a-hugo-theme/">Zachary Wade Betz</a> puts it:</p>
-<blockquote>
-<p>We’ve all been there. You’re browsing through the Hugo themes and find one that you really like. It meets all your criteria, except for that one small thing.</p>
-</blockquote>
-<p>Over time it&rsquo;s desirable to make small changes.</p>
-<p>For this post, we&rsquo;ll look at changing the page navigation icons on list pages.  For our purposes, the arrows used at the bottom of each list page are too small, making them difficult to click.</p>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<p>In this post, we&rsquo;ll look at changing the page navigation icons on list pages.  For our purposes, the arrows used at the bottom of each list page are too small, making them difficult to click.</p>
 <h2 id="the-process">The Process</h2>
 <p>As has been <a href="https://loopedline.com/post/modifying-the-new-article-template-in-hugo/#background">mentioned before</a>, because Hugo offers so much flexibility and produces pages in such a layered way, it can be difficult to find the right place to make the necessary alterations.</p>
 <h3 id="figuring-out-what-to-change">Figuring out what to change</h3>
@@ -150,7 +150,7 @@
 <p>A web search for changing the size of font awesome icons reveals quite a few options, but the most immediately accessible seems to be adding an addendum to the elements class, <a href="https://fontawesome.com/v5/docs/web/style/size">as demonstrated here</a>.</p>
 <h2 id="the-solution">The Solution</h2>
 <p>Only one small change to each element is necessary to make the icons larger.</p>
-<p>In the <strong>paginator.html</strong> file, we add the <code>fa-3x</code> addedendum to each element.</p>
+<p>In the <strong>paginator.html</strong> file, we add the <code>fa-3x</code> addendum to each element.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-arrow-left fa-3x&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-arrow-right fa-3x&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
 </code></pre></div><!-- raw HTML omitted -->
@@ -161,6 +161,19 @@
     
         <h4 class="page-header">Related</h4>
          <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/changing-a-hugo-theme-over-time/">Changing a Hugo Theme Over Time</a></h4>
+    <h5>2022 March 31</h5>
+
+</div>
+  <div class="item">
 
     
     
@@ -186,23 +199,7 @@
     <h5>2022 March 17</h5>
 
 </div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/escaping-markdown-code-fences-nested-within-code-fences/">Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</a></h4>
-    <h5>2022 March 16</h5>
-
-</div>
  
-    
-
-    
     
 
 </main>

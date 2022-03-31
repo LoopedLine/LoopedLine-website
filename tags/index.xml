@@ -6,33 +6,33 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Mar 2022 13:54:32 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 31 Mar 2022 14:17:14 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Font Awesome</title>
-      <link>https://loopedline.com/tags/font-awesome/</link>
-      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/font-awesome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hugo</title>
       <link>https://loopedline.com/tags/hugo/</link>
-      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
+      <pubDate>Thu, 31 Mar 2022 14:17:14 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Hugo theme</title>
+      <link>https://loopedline.com/tags/hugo-theme/</link>
+      <pubDate>Thu, 31 Mar 2022 14:17:14 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/hugo-theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>software development</title>
       <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
+      <pubDate>Thu, 31 Mar 2022 14:17:14 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/software-development/</guid>
       <description></description>
@@ -41,9 +41,27 @@
     <item>
       <title>static site generator</title>
       <link>https://loopedline.com/tags/static-site-generator/</link>
-      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
+      <pubDate>Thu, 31 Mar 2022 14:17:14 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/static-site-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://loopedline.com/tags/web-development/</link>
+      <pubDate>Thu, 31 Mar 2022 14:17:14 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Font Awesome</title>
+      <link>https://loopedline.com/tags/font-awesome/</link>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/font-awesome/</guid>
       <description></description>
     </item>
     
@@ -62,15 +80,6 @@
       <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/technical-troubleshooting-solved/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web development</title>
-      <link>https://loopedline.com/tags/web-development/</link>
-      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/web-development/</guid>
       <description></description>
     </item>
     
