@@ -6,10 +6,22 @@
     <description>Recent content in static site generator on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Mar 2022 14:17:14 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 01 Apr 2022 14:29:17 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Automatically Building a List of All Posts in Hugo</title>
+      <link>https://loopedline.com/post/automatically-building-a-list-of-all-posts-in-hugo/</link>
+      <pubDate>Fri, 01 Apr 2022 14:29:17 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/automatically-building-a-list-of-all-posts-in-hugo/</guid>
+      <description>The Challenge This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+For this post, we&amp;rsquo;ll look at how to build an automated list of all posts in the /project/content/post/ directory while leaving the existing paginator unaltered.
+Hugo allows one list template per section, and since we want to keep the existing paginator, we need to find another way to automatically build that list.</description>
+    </item>
     
     <item>
       <title>Changing a Hugo Theme Over Time</title>
