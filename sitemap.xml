@@ -53,6 +53,16 @@
   </url>
   
   <url>
+    <loc>https://loopedline.com/map/all-posts/</loc>
+    <lastmod>2022-03-29T12:20:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/map/</loc>
+    <lastmod>2022-03-29T12:20:37-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</loc>
     <lastmod>2022-03-22T13:54:32-04:00</lastmod>
   </url>

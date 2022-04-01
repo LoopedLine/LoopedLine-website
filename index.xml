@@ -36,6 +36,15 @@ But no theme is likely to match your project&amp;rsquo;s needs in every detail. 
     </item>
     
     <item>
+      <title>All Posts</title>
+      <link>https://loopedline.com/map/all-posts/</link>
+      <pubDate>Tue, 29 Mar 2022 12:20:37 -0400</pubDate>
+      
+      <guid>https://loopedline.com/map/all-posts/</guid>
+      <description>All Posts </description>
+    </item>
+    
+    <item>
       <title>Changing the Spacing of Font Awesome Icons in Hugo</title>
       <link>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</link>
       <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
