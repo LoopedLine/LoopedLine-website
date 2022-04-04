@@ -1,0 +1,349 @@
+/* List Page Navigation - Prototype 1 */
+
+/* No style included in Prototype 1 */
+
+
+
+
+
+/* List Page Navigation - Prototype 2 */
+
+div#listpage-navigation-panel-proto02 {
+    display: grid;
+    grid-template-areas: 
+        "left-proto02 pagexofy-proto02 right-proto02"
+        "left-proto02 allpostlink-proto02 right-proto02";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: stretch;
+
+    background: gray;
+}
+
+div#listpage-navigation-left-proto02 {
+    grid-area: left-proto02;
+    text-align: center;
+
+    background: red;
+}
+
+div#listpage-navigation-pagexofy-proto02 {
+    grid-area: pagexofy-proto02;
+    text-align: center;
+
+    background: green;
+}
+
+div#listpage-navigation-allpostlink-proto02 {
+    grid-area: allpostlink-proto02;
+    text-align: center;
+
+    background: orange;
+}
+
+div#listpage-navigation-right-proto02 {
+    grid-area: right-proto02;
+    text-align: center;
+
+    background: hotpink;
+}
+
+
+
+
+
+/* List Page Navigation - Prototype 3 */
+
+div#listpage-navigation-panel-proto03 {
+    display: grid;
+    grid-template-areas: 
+        "left-proto03 pagexofy-proto03 right-proto03"
+        "left-proto03 allpostlink-proto03 right-proto03";
+    grid-template-columns: repeat(3, minmax(50px, 300px));
+    justify-items: stretch;
+
+    background: gray;
+}
+
+div#listpage-navigation-left-proto03 {
+    grid-area: left-proto03;
+    text-align: center;
+
+    background: red;
+}
+
+div#listpage-navigation-pagexofy-proto03 {
+    grid-area: pagexofy-proto03;
+    text-align: center;
+
+    background: green;
+}
+
+div#listpage-navigation-allpostlink-proto03 {
+    grid-area: allpostlink-proto03;
+    text-align: center;
+
+    background: orange;
+}
+
+div#listpage-navigation-right-proto03 {
+    grid-area: right-proto03;
+    text-align: center;
+
+    background: hotpink;
+}
+
+
+
+
+
+/* List Page Navigation - Prototype 4 */
+
+div#listpage-navigation-container-proto04 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(50px, auto);
+
+    background: gold;
+}
+
+div#listpage-navigation-panel-proto04 {
+    display: grid;
+    grid-template-areas: 
+        "left-proto04 pagexofy-proto04 right-proto04"
+        "left-proto04 allpostlink-proto04 right-proto04";
+    grid-template-columns: repeat(3, minmax(50px, 300px));
+    justify-items: stretch;
+
+    background: gray;
+}
+
+div#listpage-navigation-left-proto04 {
+    grid-area: left-proto04;
+    text-align: center;
+
+    background: red;
+}
+
+div#listpage-navigation-pagexofy-proto04 {
+    grid-area: pagexofy-proto04;
+    text-align: center;
+
+    background: green;
+}
+
+div#listpage-navigation-allpostlink-proto04 {
+    grid-area: allpostlink-proto04;
+    text-align: center;
+
+    background: orange;
+}
+
+div#listpage-navigation-right-proto04 {
+    grid-area: right-proto04;
+    text-align: center;
+
+    background: hotpink;
+}
+
+
+
+
+
+/* List Page Navigation - Prototype 5 */
+
+div#listpage-navigation-container-proto05 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(50px, auto);
+
+    background: gold;
+}
+
+div#listpage-navigation-panel-proto05 {
+    display: grid;
+    grid-template-areas: 
+        "left-proto05 pagexofy-proto05 right-proto05"
+        "left-proto05 allpostlink-proto05 right-proto05";
+    grid-template-columns: repeat(3, minmax(50px, 300px));
+    justify-items: stretch;
+
+    background: gray;
+}
+
+div#listpage-navigation-left-proto05 {
+    grid-area: left-proto05;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: red;
+}
+
+div#listpage-navigation-pagexofy-proto05 {
+    grid-area: pagexofy-proto05;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: green;
+}
+
+div#listpage-navigation-allpostlink-proto05 {
+    grid-area: allpostlink-proto05;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: orange;
+}
+
+div#listpage-navigation-right-proto05 {
+    grid-area: right-proto05;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hotpink;
+}
+
+
+
+
+
+/* List Page Navigation - Prototype 6 */
+
+div#listpage-navigation-container-proto06 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(50px, auto);
+
+    background: gold;
+}
+
+div#listpage-navigation-panel-proto06 {
+    display: grid;
+    grid-template-areas: 
+        "left-proto06 pagexofy-proto06 right-proto06"
+        "left-proto06 allpostlink-proto06 right-proto06";
+    grid-template-columns: repeat(3, minmax(50px, 300px));
+    justify-items: stretch;
+
+    background: gray;
+}
+
+a#listpage-navigation-left-proto06 {
+    grid-area: left-proto06;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: red;
+}
+
+div#listpage-navigation-pagexofy-proto06 {
+    grid-area: pagexofy-proto06;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: green;
+}
+
+div#listpage-navigation-allpostlink-proto06 {
+    grid-area: allpostlink-proto06;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: orange;
+}
+
+a#listpage-navigation-right-proto06 {
+    grid-area: right-proto06;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hotpink;
+}
+
+
+
+
+
+/* List Page Navigation - Prototype 7 */
+
+div#listpage-navigation-container-proto07 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(50px, auto);
+}
+
+div#listpage-navigation-panel-proto07 {
+    display: grid;
+    grid-template-areas: 
+        "left-proto07 pagexofy-proto07 right-proto07"
+        "left-proto07 allpostlink-proto07 right-proto07";
+    grid-template-columns: repeat(3, minmax(50px, 300px));
+    justify-items: stretch;
+}
+
+a#listpage-navigation-left-proto07 {
+    grid-area: left-proto07;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: lightblue;
+}
+
+div#listpage-navigation-pagexofy-proto07 {
+    grid-area: pagexofy-proto07;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: lightblue;
+}
+
+div#listpage-navigation-allpostlink-proto07 {
+    grid-area: allpostlink-proto07;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: lightblue;
+}
+
+a#listpage-navigation-right-proto07 {
+    grid-area: right-proto07;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: lightblue;
+}

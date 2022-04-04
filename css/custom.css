@@ -18,28 +18,28 @@
 
 /* List Pager - phase 2 */
 
-div#listpagerholder {
+div#listpage-navigation-container {
     display: grid;
     justify-content: center;
     grid-template-columns: minmax(50px, auto);
     
-    /* background: gray; */
+    /* background: gold; */
 }
 
-div#listpager {
+div#listpage-navigation-panel {
     display: grid;
     grid-template-areas:
-        "listpager_left_segment listpager_centertop_segment listpager_right_segment"
-        "listpager_left_segment listpager_centerbottom_segment listpager_right_segment";
+        "listpage-nav-segment-left listpage-nav-segment-centertop listpage-nav-segment-right"
+        "listpage-nav-segment-left listpage-nav-segment-centerbottom listpage-nav-segment-right";
     grid-template-columns: repeat(3, minmax(50px, 200px));
     grid-template-rows: repeat(2, 1fr);
     justify-items: stretch;
 
-    /* background: gold; */
+    /* background: gray; */
 }
 
-a#listpager-left {
-    grid-area: listpager_left_segment;
+a#listpage-navigation-left {
+    grid-area: listpage-nav-segment-left;
     text-align: center;
 
     display: flex;
@@ -50,8 +50,8 @@ a#listpager-left {
     
 }
 
-div#listpager-count {
-    grid-area: listpager_centertop_segment;
+div#listpage-navigation-pagexofy {
+    grid-area: listpage-nav-segment-centertop;
     text-align: center;
 
     display: flex;
@@ -61,8 +61,8 @@ div#listpager-count {
     /* background: green; */
 }
 
-div#listpager-all {
-    grid-area: listpager_centerbottom_segment;
+div#listpage-navigation-allpostlink {
+    grid-area: listpage-nav-segment-centerbottom;
     text-align: center;
 
     display: flex;
@@ -72,8 +72,8 @@ div#listpager-all {
     /* background: orange; */
 }
 
-a#listpager-right {
-    grid-area: listpager_right_segment;
+a#listpage-navigation-right {
+    grid-area: listpage-nav-segment-right;
     text-align: center;
 
     display: flex;
