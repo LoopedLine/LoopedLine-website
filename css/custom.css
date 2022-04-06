@@ -1,32 +1,12 @@
+/* List Page Navigation Interface - paginator phase 3 */
 
-/* List Pager - phase 1 - Delete after update to phase 2 as it conflicts with responsive spacing in phase 2 */
-
-.pages-icon {
-    padding: 0px 100px;
-    color: var(--accent);
-}
-
-.pages-index {
-    display: inline-block;
-    background: blue;
-    color:green;
-}
-
-
-
-
-
-/* List Pager - phase 2 */
-
-div#listpage-navigation-container {
+/* div#listpage-navigation-container-prev {
     display: grid;
     justify-content: center;
     grid-template-columns: minmax(50px, auto);
-    
-    /* background: gold; */
 }
 
-div#listpage-navigation-panel {
+div#listpage-navigation-panel-prev {
     display: grid;
     grid-template-areas:
         "listpage-nav-segment-left listpage-nav-segment-centertop listpage-nav-segment-right"
@@ -34,51 +14,98 @@ div#listpage-navigation-panel {
     grid-template-columns: repeat(3, minmax(50px, 200px));
     grid-template-rows: repeat(2, 1fr);
     justify-items: stretch;
-
-    /* background: gray; */
 }
 
-a#listpage-navigation-left {
+a#listpage-navigation-left-prev {
     grid-area: listpage-nav-segment-left;
     text-align: center;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* background: red; */
     
 }
 
-div#listpage-navigation-pagexofy {
+div#listpage-navigation-pagexofy-prev {
     grid-area: listpage-nav-segment-centertop;
     text-align: center;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* background: green; */
 }
 
-div#listpage-navigation-allpostlink {
+div#listpage-navigation-allpostlink-prev {
     grid-area: listpage-nav-segment-centerbottom;
     text-align: center;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* background: orange; */
 }
 
-a#listpage-navigation-right {
+a#listpage-navigation-right-prev {
     grid-area: listpage-nav-segment-right;
     text-align: center;
 
     display: flex;
     align-items: center;
     justify-content: center;
+} */
 
-    /* background: hotpink; */
+
+
+
+
+/* List Page Navigation Interface - paginator phase 4 */
+
+div#listpage-navigation-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(50px, auto);
+}
+
+div#listpage-navigation-panel {
+    display: grid;
+    grid-template-areas: 
+        "left pagexofy right"
+        "left allpostlink right";
+    grid-template-columns: repeat(3, minmax(50px, 300px));
+    justify-items: stretch;
+}
+
+a#listpage-navigation-left {
+    grid-area: left;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#listpage-navigation-pagexofy {
+    grid-area: pagexofy;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#listpage-navigation-allpostlink {
+    grid-area: allpostlink;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a#listpage-navigation-right {
+    grid-area: right;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
