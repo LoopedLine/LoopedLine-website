@@ -6,10 +6,22 @@
     <description>Recent content in software development on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Apr 2022 20:25:36 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 30 Apr 2022 20:52:03 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Including Last Modified Date in Hugo Posts</title>
+      <link>https://loopedline.com/post/including-last-modified-date-in-hugo-posts/</link>
+      <pubDate>Sat, 30 Apr 2022 20:52:03 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/including-last-modified-date-in-hugo-posts/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Objective In this post we&amp;rsquo;ll add a last modified date to posts in Hugo.
+We already have a date field that reflects when a post was first published. We want to keep that date and conditionally add a new date that reflects when the post was last updated.</description>
+    </item>
     
     <item>
       <title>Building Improved List Page Navigation for Hugo</title>
