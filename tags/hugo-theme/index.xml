@@ -6,10 +6,22 @@
     <description>Recent content in Hugo theme on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 May 2022 14:43:42 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 04 May 2022 10:02:47 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/hugo-theme/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Overriding Bootstrap CSS in Hugo</title>
+      <link>https://loopedline.com/post/overriding-bootstrap-css-in-hugo/</link>
+      <pubDate>Wed, 04 May 2022 10:02:47 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/overriding-bootstrap-css-in-hugo/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Objective In this post we&amp;rsquo;ll override the CSS styling for certain HTML elements.
+Since this project utilizes a Hugo theme that in turn utilizes Bootstrap, much of the styling for this site comes from Bootstrap. Consequently, to make changes to the CSS styling of this site, we&amp;rsquo;ll need to override some of the styles currently defined by Bootstrap.</description>
+    </item>
     
     <item>
       <title>Including Last Modified Date in Hugo List Pages</title>
