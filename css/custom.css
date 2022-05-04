@@ -109,3 +109,42 @@ a#listpage-navigation-right {
     align-items: center;
     justify-content: center;
 }
+
+
+
+
+
+/*  Overriding Bootstrap Formatting  */
+
+h1, .h1 {
+    margin-top: 100px;
+}
+
+h2, .h2 {
+    margin-top: 80px;
+}
+
+h3, .h3 {
+    margin-top: 40px;
+}
+
+h4, .h4 {
+    margin-top: 40px;
+}
+
+h4#listpage-item {
+    margin-top: 10px;
+}
+
+blockquote {
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+
+/*  TESTING  */
+
+/* * {
+    outline: 1px solid red !important;
+} */

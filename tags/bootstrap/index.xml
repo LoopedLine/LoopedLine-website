@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bootstrap on LoopedLine</title>
+    <link>https://loopedline.com/tags/bootstrap/</link>
+    <description>Recent content in Bootstrap on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 May 2022 10:02:47 -0400</lastBuildDate>
+    
+	<atom:link href="https://loopedline.com/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Overriding Bootstrap CSS in Hugo</title>
+      <link>https://loopedline.com/post/overriding-bootstrap-css-in-hugo/</link>
+      <pubDate>Wed, 04 May 2022 10:02:47 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/overriding-bootstrap-css-in-hugo/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Objective In this post we&amp;rsquo;ll override the CSS styling for certain HTML elements.
+Since this project utilizes a Hugo theme that in turn utilizes Bootstrap, much of the styling for this site comes from Bootstrap. Consequently, to make changes to the CSS styling of this site, we&amp;rsquo;ll need to override some of the styles currently defined by Bootstrap.</description>
+    </item>
+    
+    <item>
+      <title>Building Improved List Page Navigation for Hugo</title>
+      <link>https://loopedline.com/post/building-improved-list-page-navigation-for-hugo/</link>
+      <pubDate>Tue, 05 Apr 2022 20:25:36 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/building-improved-list-page-navigation-for-hugo/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Objective In this post we&amp;rsquo;ll build a new user interface for navigating between list pages.
+As of this writing, the list page has right and left arrows that allow navigating to the list pages for earlier and later posts. We&amp;rsquo;ll keep those, and add a count of the list pages to provide some context, as well as adding a link to the All Posts list page.</description>
+    </item>
+    
+  </channel>
+</rss>

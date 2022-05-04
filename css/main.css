@@ -2,10 +2,6 @@ html, body {
     height: 100%;
 }
 
-/* * {
-    outline: 1px solid red !important;
-} */
-
 body {
     padding-top: 55px;
     display: flex;
