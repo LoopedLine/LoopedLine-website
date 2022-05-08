@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Contact Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="m-4">
+        <h2>What's on your mind?</h2>
+        <form action="POST" data-netlify="true" >
+            <div class="mb-3">
+                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" required="required">
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required="required">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="Subject" required="required">
+            </div>
+            <div class="mb-3">
+                <textarea type="textarea" class="form-control" id="inputMessage" name="message" placeholder="Message" rows="3" required="required"></textarea>
+            </div>
+            <div class="field">
+                <div data-netlify-recaptcha="true"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
