@@ -6,10 +6,19 @@
     <description>Recent content on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 May 2022 10:02:47 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 09 May 2022 10:50:25 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contact</title>
+      <link>https://loopedline.com/contact/contact/</link>
+      <pubDate>Mon, 09 May 2022 10:50:25 -0400</pubDate>
+      
+      <guid>https://loopedline.com/contact/contact/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Overriding Bootstrap CSS in Hugo</title>

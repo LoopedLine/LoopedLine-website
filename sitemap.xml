@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/contact/contact/</loc>
+    <lastmod>2022-05-09T10:50:25-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/contact/</loc>
+    <lastmod>2022-05-09T10:50:25-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-05-09T10:50:25-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/tags/bootstrap/</loc>
     <lastmod>2022-05-04T08:58:56-04:00</lastmod>
   </url>
@@ -19,11 +34,6 @@
   
   <url>
     <loc>https://loopedline.com/tags/hugo-theme/</loc>
-    <lastmod>2022-05-04T10:02:59-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/</loc>
     <lastmod>2022-05-04T10:02:59-04:00</lastmod>
   </url>
   
