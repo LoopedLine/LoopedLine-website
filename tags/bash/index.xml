@@ -6,10 +6,23 @@
     <description>Recent content in Bash on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Mar 2022 22:16:57 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 20 May 2022 12:18:46 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Project - Building a Contact Form With Hugo and Hosting It With Netlify</title>
+      <link>https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</link>
+      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Specifically, this is the first post for a project to build a contact form with Hugo and host it with Netlify.
+Objective In this post we&amp;rsquo;ll outline the overall approach for the project.
+There are many ways to accomplish this task offering various tradeoffs.</description>
+    </item>
     
     <item>
       <title>Simplifying Hugo Post Creation with a Bash Script</title>
