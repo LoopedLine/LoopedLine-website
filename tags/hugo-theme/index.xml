@@ -6,13 +6,26 @@
     <description>Recent content in Hugo theme on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 May 2022 12:18:46 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 21 May 2022 13:53:48 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/hugo-theme/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Project - Building a Contact Form With Hugo and Hosting It With Netlify</title>
+      <title>Building a Prototype Contact Form With Hugo</title>
+      <link>https://loopedline.com/post/building-a-prototype-contact-form-with-hugo/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/building-a-prototype-contact-form-with-hugo/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Specifically, this post is part of a project to build a contact form with Hugo and host it with Netlify.
+Objective In this post we&amp;rsquo;ll build a simple prototype of the contact form we want to use for the project.
+Even though form fields are a basic part of HTML they are strangely complicated to build.</description>
+    </item>
+    
+    <item>
+      <title>Project - Building a Contact Form With Hugo and Hosting it with Netlify</title>
       <link>https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</link>
       <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
       

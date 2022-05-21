@@ -6,10 +6,73 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 May 2022 12:18:46 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 21 May 2022 13:53:48 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bootstrap</title>
+      <link>https://loopedline.com/tags/bootstrap/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://loopedline.com/tags/css/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://loopedline.com/tags/hugo/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo theme</title>
+      <link>https://loopedline.com/tags/hugo-theme/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/hugo-theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software development</title>
+      <link>https://loopedline.com/tags/software-development/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static site generator</title>
+      <link>https://loopedline.com/tags/static-site-generator/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/static-site-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://loopedline.com/tags/web-development/</link>
+      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/web-development/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bash</title>
@@ -21,47 +84,11 @@
     </item>
     
     <item>
-      <title>Bootstrap</title>
-      <link>https://loopedline.com/tags/bootstrap/</link>
-      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/bootstrap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS</title>
-      <link>https://loopedline.com/tags/css/</link>
-      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Github Pages</title>
       <link>https://loopedline.com/tags/github-pages/</link>
       <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://loopedline.com/tags/hugo/</link>
-      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo theme</title>
-      <link>https://loopedline.com/tags/hugo-theme/</link>
-      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/hugo-theme/</guid>
       <description></description>
     </item>
     
@@ -93,38 +120,11 @@
     </item>
     
     <item>
-      <title>software development</title>
-      <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/software-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>static site generator</title>
-      <link>https://loopedline.com/tags/static-site-generator/</link>
-      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/static-site-generator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>system administration</title>
       <link>https://loopedline.com/tags/system-administration/</link>
       <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/system-administration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web development</title>
-      <link>https://loopedline.com/tags/web-development/</link>
-      <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/web-development/</guid>
       <description></description>
     </item>
     
