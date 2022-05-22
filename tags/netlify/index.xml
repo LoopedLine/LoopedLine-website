@@ -6,10 +6,22 @@
     <description>Recent content in Netlify on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 May 2022 12:18:46 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 22 May 2022 13:15:05 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setting Up a Website Subdomain to Host Content With Different Providers</title>
+      <link>https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/</link>
+      <pubDate>Sun, 22 May 2022 13:15:05 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Specifically, this post is part of a project to build a contact form with Hugo and host it with Netlify.
+Objective In this post we&amp;rsquo;ll setup a subdomain for our website so that we can easily host content with two different hosting providers.</description>
+    </item>
     
     <item>
       <title>Project - Building a Contact Form With Hugo and Hosting it with Netlify</title>
