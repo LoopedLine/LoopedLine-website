@@ -6,10 +6,23 @@
     <description>Recent content in software development on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 May 2022 13:15:05 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 23 May 2022 08:12:40 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building a Contact Form with Netlify</title>
+      <link>https://loopedline.com/post/building-a-contact-form-with-netlify/</link>
+      <pubDate>Mon, 23 May 2022 08:12:40 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/building-a-contact-form-with-netlify/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Specifically, this post is part of a project to build a contact form with Hugo and host it with Netlify.
+Objective In this post we&amp;rsquo;ll turn our prototype contact form from a previous post into a functioning contact form using Netlify.
+As previously mentioned, Netlify provides &amp;ldquo;built-in form handling that’s enabled by default.</description>
+    </item>
     
     <item>
       <title>Setting Up a Website Subdomain to Host Content With Different Providers</title>

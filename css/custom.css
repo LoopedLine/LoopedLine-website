@@ -1,62 +1,3 @@
-/* List Page Navigation Interface - paginator phase 3 */
-
-/* div#listpage-navigation-container-prev {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: minmax(50px, auto);
-}
-
-div#listpage-navigation-panel-prev {
-    display: grid;
-    grid-template-areas:
-        "listpage-nav-segment-left listpage-nav-segment-centertop listpage-nav-segment-right"
-        "listpage-nav-segment-left listpage-nav-segment-centerbottom listpage-nav-segment-right";
-    grid-template-columns: repeat(3, minmax(50px, 200px));
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: stretch;
-}
-
-a#listpage-navigation-left-prev {
-    grid-area: listpage-nav-segment-left;
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-div#listpage-navigation-pagexofy-prev {
-    grid-area: listpage-nav-segment-centertop;
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div#listpage-navigation-allpostlink-prev {
-    grid-area: listpage-nav-segment-centerbottom;
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a#listpage-navigation-right-prev {
-    grid-area: listpage-nav-segment-right;
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-
-
-
-
 /* List Page Navigation Interface - paginator phase 4 */
 
 div#listpage-navigation-container {
@@ -148,3 +89,4 @@ blockquote {
 /* * {
     outline: 1px solid red !important;
 } */
+
