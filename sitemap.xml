@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/post/building-a-contact-form-with-netlify/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/netlify/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/web-development/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/web-hosting/</loc>
+    <lastmod>2022-05-23T08:12:40-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/tags/github/</loc>
     <lastmod>2022-05-22T13:15:05-04:00</lastmod>
   </url>
@@ -13,42 +53,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-05-22T13:15:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/netlify/</loc>
-    <lastmod>2022-05-22T13:15:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-05-22T13:15:05-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/</loc>
-    <lastmod>2022-05-22T13:15:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-05-22T13:15:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-05-22T13:15:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/web-development/</loc>
-    <lastmod>2022-05-22T13:15:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/web-hosting/</loc>
     <lastmod>2022-05-22T13:15:05-04:00</lastmod>
   </url>
   
