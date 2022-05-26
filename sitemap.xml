@@ -3,12 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://loopedline.com/tags/bash/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
+    <loc>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo-solved/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/hugo/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/static-site-generator/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/technical-troubleshooting/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/technical-troubleshooting-solved/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/web-development/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/web-hosting/</loc>
+    <lastmod>2022-05-25T22:32:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/bash/</loc>
     <lastmod>2022-05-24T21:30:12-04:00</lastmod>
   </url>
   
@@ -23,16 +73,6 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/post/separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/</loc>
     <lastmod>2022-05-24T21:30:12-04:00</lastmod>
   </url>
@@ -43,27 +83,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/static-site-generator/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/system-administration/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/web-development/</loc>
     <lastmod>2022-05-24T21:30:12-04:00</lastmod>
   </url>
   
@@ -74,11 +94,6 @@
   
   <url>
     <loc>https://loopedline.com/tags/netlify/</loc>
-    <lastmod>2022-05-24T21:30:12-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/web-hosting/</loc>
     <lastmod>2022-05-24T21:30:12-04:00</lastmod>
   </url>
   
@@ -189,16 +204,6 @@
   
   <url>
     <loc>https://loopedline.com/tags/font-awesome/</loc>
-    <lastmod>2022-03-22T13:54:32-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/technical-troubleshooting/</loc>
-    <lastmod>2022-03-22T13:54:32-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/technical-troubleshooting-solved/</loc>
     <lastmod>2022-03-22T13:54:32-04:00</lastmod>
   </url>
   

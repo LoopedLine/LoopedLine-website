@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</title>
+        <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>
         
                 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -70,7 +70,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</a>
+                    <a class="navbar-brand visible-xs" href="#">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -107,11 +107,11 @@
 
     
     <div>
-        <h2>Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</h2>
+        <h2>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</h2>
         
 
 
-<h5>Published: 2021 August 14</h5>
+<h5>Published: 2022 May 25</h5>
 
 
 
@@ -124,7 +124,7 @@
 
 <a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
 
-<a href="https://loopedline.com/tags/hugo-theme"><kbd class="item-tag">Hugo theme</kbd></a>
+<a href="https://loopedline.com/tags/web-hosting"><kbd class="item-tag">web hosting</kbd></a>
 
 <a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
 
@@ -137,59 +137,24 @@
     <div align="start" class="content"><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="the-problem">The Problem</h2>
-<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
-<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
-<p>For this post, we&rsquo;ll look at the issue that when Hugo rendered a webpage from a markdown file it automatically converted text URLs to hyperlinks.</p>
+<p>Because of the design decision to <a href="https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/#building-the-hugo-project">build the website files for sites hosted on two subdomains within the same Hugo project</a> there were several adjustments that had to be made.</p>
+<p>One issue was that within a given subdomain links could be expressed as a relative path (<code>/about/</code> or <code>/post/</code>, for instance), but across different subdomains that didn&rsquo;t work.</p>
+<p>Specifically, on the <strong>page</strong> subdomain those links would point to <strong>page.loopedline.com/about/</strong>, which isn&rsquo;t an actual page.</p>
+<p>One way to resolve that would be to encode absolute links - <code>loopedline.com/about/</code> or <code>loopedline.com/post/</code>, for instance.  But that created problems for testing locally since links on test pages pointed to the public site and not to the local versions.</p>
 <h2 id="the-process">The Process</h2>
-<p>A web search for how to disable automatic hyperlinking in Hugo led to a few discussions of the issue:</p>
-<ul>
-<li><a href="https://discourse.gohugo.io/t/disabling-smart-quotes-auto-code-blocks-and-auto-hyperlinks/3691/3">Disabling smart quotes, auto code blocks, and auto hyperlinks?</a></li>
-<li><a href="https://discourse.gohugo.io/t/goldmark-how-to-disable-autolinks/30476">Goldmark: How to disable autolinks</a></li>
-<li><a href="https://gohugo.io/getting-started/configuration-markup#goldmark">Configure Markup: Goldmark</a></li>
-</ul>
-<p>Interpolating between them led to a solution.</p>
+<p>While examining the <strong>css.html</strong> file for an unrelated reason, a possible solution was spotted.</p>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme, so many of the base files were constructed by others.</p>
+<p>The <strong>css.html</strong> file that is part of the Minimal theme contained the line <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ &quot;css/main.css&quot; | absURL }}&quot;&gt;</code>, which pointed to the use of the <a href="https://gohugo.io/functions/absurl/">Hugo absURL function</a>.</p>
 <h2 id="the-solution">The Solution</h2>
-<p>Adding the following to the config.toml file resolved the issue.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>]
-[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
-[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">extensions</span>]
-<span style="color:#a6e22e">linkify</span> = <span style="color:#66d9ef">false</span>
-</code></pre></div></div>
+<p>Adding <code> | absURL</code> to the relevant link - specifically to the line <code>&lt;li&gt;&lt;a href=&quot;{{ .URL | absURL }}&quot;&gt;{{ .Name }}&lt;/a&gt;&lt;/li&gt;</code> in the <strong>header.html</strong> file - allowed the links to be generated as expected both locally and on the public site.</p>
+<!-- raw HTML omitted -->
+</div>
 
     
     
     
         <h4 class="page-header">Related</h4>
          <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/fixing-site-link-errors-between-subdomains-in-hugo-solved/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 May 25
-        
-    </h5>
-
-
-
-</div>
-  <div class="item">
 
 
 
@@ -241,6 +206,35 @@
     
     <h5>
         Published: 2022 May 23
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/">Setting Up a Website Subdomain to Host Content With Different Providers</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 22
         
     </h5>
 
