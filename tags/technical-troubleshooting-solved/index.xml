@@ -6,10 +6,21 @@
     <description>Recent content in technical troubleshooting - solved on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Mar 2022 13:54:32 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 25 May 2022 22:32:08 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/technical-troubleshooting-solved/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>
+      <link>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo-solved/</link>
+      <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo-solved/</guid>
+      <description>The Problem Because of the design decision to build the website files for sites hosted on two subdomains within the same Hugo project there were several adjustments that had to be made.
+One issue was that within a given subdomain links could be expressed as a relative path (/about/ or /post/, for instance), but across different subdomains that didn&amp;rsquo;t work.
+Specifically, on the page subdomain those links would point to page.</description>
+    </item>
     
     <item>
       <title>Changing the Spacing of Font Awesome Icons in Hugo</title>
