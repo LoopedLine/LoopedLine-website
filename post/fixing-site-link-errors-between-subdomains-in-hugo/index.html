@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>
         
                 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -55,9 +55,6 @@
         <meta name="generator" content="Hugo 0.68.3" />
         
     
-        <link href="/tags/index.xml" rel="alternate" type="application/rss&#43;xml" title="LoopedLine" />
-        <link href="/tags/index.xml" rel="feed" type="application/rss&#43;xml" title="LoopedLine" />
-    
 
     
 
@@ -73,7 +70,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -108,67 +105,56 @@
 
 <main>
 
-    <h2>Tags</h2>
-
-     <div class="item">
-
-
-
     
-    
-
-    
-    <h4 id="listpage-item"><a href="/tags/web-development/">web development</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 May 25
+    <div>
+        <h2>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</h2>
         
-    </h5>
+
+
+<h5>Published: 2022 May 25</h5>
 
 
 
-</div>
-  <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/tags/web-hosting/">web hosting</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 May 25
         
-    </h5>
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+<a href="https://loopedline.com/tags/web-hosting"><kbd class="item-tag">web hosting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
 
 
+    </div>
 
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="the-problem">The Problem</h2>
+<p>Because of the design decision to <a href="https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/#building-the-hugo-project">build the website files for sites hosted on two subdomains within the same Hugo project</a> there were several adjustments that had to be made.</p>
+<p>One issue was that within a given subdomain links could be expressed as a relative path (<code>/about/</code> or <code>/post/</code>, for instance), but across different subdomains that didn&rsquo;t work.</p>
+<p>Specifically, on the <strong>page</strong> subdomain those links would point to <strong>page.loopedline.com/about/</strong>, which isn&rsquo;t an actual page.</p>
+<p>One way to resolve that would be to encode absolute links - <code>loopedline.com/about/</code> or <code>loopedline.com/post/</code>, for instance.  But that created problems for testing locally since links on test pages pointed to the public site and not to the local versions.</p>
+<h2 id="the-process">The Process</h2>
+<p>While examining the <strong>css.html</strong> file for an unrelated reason, a possible solution was spotted.</p>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme, so many of the base files were constructed by others.</p>
+<p>The <strong>css.html</strong> file that is part of the Minimal theme contained the line <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ &quot;css/main.css&quot; | absURL }}&quot;&gt;</code>, which pointed to the use of the <a href="https://gohugo.io/functions/absurl/">Hugo absURL function</a>.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>Adding <code> | absURL</code> to the relevant link - specifically to the line <code>&lt;li&gt;&lt;a href=&quot;{{ .URL | absURL }}&quot;&gt;{{ .Name }}&lt;/a&gt;&lt;/li&gt;</code> in the <strong>header.html</strong> file - allowed the links to be generated as expected both locally and on the public site.</p>
+<!-- raw HTML omitted -->
 </div>
-  <div class="item">
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
 
 
@@ -176,7 +162,7 @@
     
 
     
-    <h4 id="listpage-item"><a href="/tags/hugo-theme/">Hugo theme</a></h4>
+    <h4 id="listpage-item"><a href="/post/separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/">Separating the Content of 2 Websites Generated by 1 Hugo Project with a Bash Script</a></h4>
 
 
 
@@ -205,7 +191,7 @@
     
 
     
-    <h4 id="listpage-item"><a href="/tags/netlify/">Netlify</a></h4>
+    <h4 id="listpage-item"><a href="/post/building-a-contact-form-with-netlify/">Building a Contact Form with Netlify</a></h4>
 
 
 
@@ -221,8 +207,6 @@
     <h5>
         Published: 2022 May 23
         
-                  |     Last edited:  2022 May 24
-        
     </h5>
 
 
@@ -236,7 +220,7 @@
     
 
     
-    <h4 id="listpage-item"><a href="/tags/github/">GitHub</a></h4>
+    <h4 id="listpage-item"><a href="/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/">Setting Up a Website Subdomain to Host Content With Different Providers</a></h4>
 
 
 
@@ -252,73 +236,15 @@
     <h5>
         Published: 2022 May 22
         
-                  |     Last edited:  2022 May 24
-        
     </h5>
 
 
 
 </div>
  
+    
 
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="listpage-navigation-container">
-        <div id="listpage-navigation-panel">
-
-            
-                <a id="listpage-navigation-left" class="icon pages-icon" href="/tags/page/2/" rel="prev">
-                    <i class="fa fa-arrow-left fa-3x"></i>
-                </a>
-            
-
-            <div id="listpage-navigation-pagexofy">List page 3 of 7.</div>
-            <div id="listpage-navigation-allpostlink"><a href="/map/all-posts/">See all 34 posts.</a></div>
-
-            
-                <a id="listpage-navigation-right" class="icon pages-icon" href="/tags/page/4/" rel="next">
-                    <i class="fa fa-arrow-right fa-3x"></i>
-                </a>
-            
-        </div>
-    </div>
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>

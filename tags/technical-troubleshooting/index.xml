@@ -13,10 +13,10 @@
     
     <item>
       <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>
-      <link>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo-solved/</link>
+      <link>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo/</link>
       <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo-solved/</guid>
+      <guid>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo/</guid>
       <description>The Problem Because of the design decision to build the website files for sites hosted on two subdomains within the same Hugo project there were several adjustments that had to be made.
 One issue was that within a given subdomain links could be expressed as a relative path (/about/ or /post/, for instance), but across different subdomains that didn&amp;rsquo;t work.
 Specifically, on the page subdomain those links would point to page.</description>
