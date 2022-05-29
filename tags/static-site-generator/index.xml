@@ -6,10 +6,21 @@
     <description>Recent content in static site generator on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 May 2022 22:32:08 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 29 May 2022 08:14:26 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adding Sequence IDs to Hugo Post Filenames</title>
+      <link>https://loopedline.com/post/042-adding-sequence-ids-to-hugo-post-filenames/</link>
+      <pubDate>Sun, 29 May 2022 08:14:26 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/042-adding-sequence-ids-to-hugo-post-filenames/</guid>
+      <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
+Currently, when new posts are created with the hugo new &amp;lt;file_name&amp;gt; command, a new file is created named with the file_name parameter passed to the command. With the help of the post archetype file, that filename is also used to create the post title.
+That approach is fine for a small number of posts, but as the number of posts grows it becomes harder to find a specific post when looking, because files are sorted alphabetically by filename, which isn&amp;rsquo;t particularly helpful in many cases.</description>
+    </item>
     
     <item>
       <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>
