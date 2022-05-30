@@ -114,6 +114,8 @@
 <h5>Published: 2022 May 27</h5>
 
 
+    <h5>Last edited: 2022 May 29</h5>
+
 
         
 <a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
@@ -129,6 +131,8 @@
 
     
     <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="objective">Objective</h2>
 <p>In this post we&rsquo;ll create a persistent counter for generating unique sequence IDs using a <a href="https://loopedline.com/post/automating-bash-shell-commands/">Bash script</a>.</p>
@@ -175,7 +179,10 @@ incrementer<span style="color:#f92672">()</span> <span style="color:#f92672">{</
 
 <span style="color:#75715e"># MAIN program flow</span>
 incrementer
-</code></pre></div><h2 id="testing-the-solution">Testing the solution</h2>
+</code></pre></div><p>Most of this syntax has been used previously on the project.  The new elements are below.</p>
+<p><code>read next_seqid &lt; &quot;$filepath_of_persistent_counter&quot;</code> - The <code>read</code> command is a <a href="https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins">Bash Builtin command</a> and this line reads a single line from the file referenced by the <strong>filepath_of_persistent_counter</strong> variable and stores it in the <strong>next_seqid</strong> variable.</p>
+<p><code>plus_one=$((next_seqid+1))</code> - This command uses <a href="https://www.gnu.org/software/bash/manual/bash.html#Arithmetic-Expansion">arithmetic expansion</a> to add 1 to the value of <strong>next_seqid</strong>.  This is one of <a href="https://linuxize.com/post/bash-increment-decrement-variable/#using---and---operators">several ways</a> to increment a value.</p>
+<h2 id="testing-the-solution">Testing the solution</h2>
 <p>To test the script we&rsquo;ll use the command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./seqid_incrementer.sh 
 </code></pre></div><p>And we&rsquo;ll see the output below:</p>

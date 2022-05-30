@@ -366,7 +366,8 @@ script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</
 script_info
 
 <span style="display:block;width:100%;background-color:#3c3d38">incrementer <span style="color:#f92672">&amp;&amp;</span> hugo_post_creation
-</span></code></pre></div><p>These updates allow the <strong>hugo-new.sh</strong> script to create a new Hugo post with a filename prepended with a unique incremented seqID.</p>
+</span></code></pre></div><p>The only syntax new to this project is the <code>printf</code> command, which is a <a href="https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins">Bash Builtin command</a>.  There are <a href="https://www.howtogeek.com/781474/how-to-use-the-bash-printf-command-on-linux/">a lot of ways to use <em>printf</em></a>, but to <a href="https://walkingrandomly.com/?p=2850">pad a decimal number with leading zeroes</a> we just use the <em>format</em> <code>&quot;%03d&quot;</code>, to pad up to three characters.</p>
+<p>These updates allow the <strong>hugo-new.sh</strong> script to create a new Hugo post with a filename prepended with a unique incremented seqID.</p>
 <h2 id="updating-the-hugo-project-post-archetype">Updating the Hugo project post archetype</h2>
 <p>Now that the post creation script is creating files with seqIDs in the filename, we need to update our Hugo project files to parse and use that information.</p>
 <p>Specifically, we need to update the frontmatter section of the <strong>post.md</strong> file in the <em>/archetypes/</em> directory.</p>
@@ -374,7 +375,7 @@ script_info
 <p>Previously, post titles were created directly from post filenames.  But now filenames include a seqID that we want to exclude from the post title.</p>
 <p>Currently, the title is created by replacing dashes in the <code>.TranslationBaseName</code> property with spaces via this line of code:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">title</span>: <span style="color:#e6db74">&#34;{{ replace .TranslationBaseName &#34;</span><span style="color:#f92672">-</span><span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
-</code></pre></div><p>Because of the zero padding we added to seqIDs in our <em>hugo-new.sh</em> script, post filenames will always begin with <em>###-</em>, which we don&rsquo;t want to include in the post title.  So, the only change we need to make to create the title from the updated format is first using <a href="https://gohugo.io/functions/slicestr/">slicestr</a> to remove the first 4 characters (<a href="https://discourse.gohugo.io/t/dates-in-post-filenames/26219/4">hanks to maiki for outlining this solution approach.</a>) before passing it to the current process:</p>
+</code></pre></div><p>Because of the zero padding we added to seqIDs in our <em>hugo-new.sh</em> script, post filenames will always begin with <em>###-</em>, which we don&rsquo;t want to include in the post title.  So, the only change we need to make to create the title from the updated format is first using <a href="https://gohugo.io/functions/slicestr/">slicestr</a> to remove the first 4 characters (<a href="https://discourse.gohugo.io/t/dates-in-post-filenames/26219/4">thanks to maiki for outlining this solution approach.</a>) before passing it to the current process:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">title</span>: <span style="color:#e6db74">&#34;{{ replace ( slicestr .TranslationBaseName 4 ) &#34;</span><span style="color:#f92672">-</span><span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
 </code></pre></div><h3 id="step-2-adding-post-seqids">Step 2: Adding post seqIDs</h3>
 <p>Next, we&rsquo;ll add a field for post seqIDs to the frontmatter and we&rsquo;ll again use <em>slicestr</em> - this time to select the first three characters of the filename.</p>
@@ -411,6 +412,8 @@ script_info
     
     <h5>
         Published: 2022 May 27
+        
+                  |     Last edited:  2022 May 29
         
     </h5>
 
