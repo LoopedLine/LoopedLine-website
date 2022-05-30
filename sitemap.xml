@@ -73,7 +73,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo/</loc>
+    <loc>https://loopedline.com/post/040-fixing-site-link-errors-between-subdomains-in-hugo/</loc>
     <lastmod>2022-05-25T22:32:08-04:00</lastmod>
   </url>
   
@@ -98,12 +98,12 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/</loc>
+    <loc>https://loopedline.com/post/039-separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/</loc>
     <lastmod>2022-05-24T21:30:12-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/building-a-contact-form-with-netlify/</loc>
+    <loc>https://loopedline.com/post/038-building-a-contact-form-with-netlify/</loc>
     <lastmod>2022-05-23T08:12:40-04:00</lastmod>
   </url>
   
@@ -123,7 +123,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/</loc>
+    <loc>https://loopedline.com/post/037-setting-up-a-website-subdomain-to-host-content-with-different-providers/</loc>
     <lastmod>2022-05-22T13:15:05-04:00</lastmod>
   </url>
   
@@ -133,7 +133,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/building-a-prototype-contact-form-with-hugo/</loc>
+    <loc>https://loopedline.com/post/036-building-a-prototype-contact-form-with-hugo/</loc>
     <lastmod>2022-05-21T13:53:48-04:00</lastmod>
   </url>
   
@@ -143,7 +143,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</loc>
+    <loc>https://loopedline.com/post/035-project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</loc>
     <lastmod>2022-05-24T21:30:12-04:00</lastmod>
   </url>
   
@@ -158,22 +158,22 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/overriding-bootstrap-css-in-hugo/</loc>
+    <loc>https://loopedline.com/post/034-overriding-bootstrap-css-in-hugo/</loc>
     <lastmod>2022-05-04T08:58:56-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/including-last-modified-date-in-hugo-list-pages/</loc>
+    <loc>https://loopedline.com/post/033-including-last-modified-date-in-hugo-list-pages/</loc>
     <lastmod>2022-05-04T10:02:59-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/including-last-modified-date-in-hugo-posts/</loc>
+    <loc>https://loopedline.com/post/032-including-last-modified-date-in-hugo-posts/</loc>
     <lastmod>2022-04-30T20:48:48-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/building-improved-list-page-navigation-for-hugo/</loc>
+    <loc>https://loopedline.com/post/031-building-improved-list-page-navigation-for-hugo/</loc>
     <lastmod>2022-04-05T20:25:36-04:00</lastmod>
   </url>
   
@@ -188,17 +188,17 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/testing-css-grid/</loc>
+    <loc>https://loopedline.com/post/030-testing-css-grid/</loc>
     <lastmod>2022-04-04T09:44:48-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/automatically-building-a-list-of-all-posts-in-hugo/</loc>
+    <loc>https://loopedline.com/post/029-automatically-building-a-list-of-all-posts-in-hugo/</loc>
     <lastmod>2022-04-01T14:29:17-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/changing-a-hugo-theme-over-time/</loc>
+    <loc>https://loopedline.com/post/028-changing-a-hugo-theme-over-time/</loc>
     <lastmod>2022-05-20T12:18:46-04:00</lastmod>
   </url>
   
@@ -213,7 +213,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</loc>
+    <loc>https://loopedline.com/post/027-changing-the-spacing-of-font-awesome-icons-in-hugo/</loc>
     <lastmod>2022-03-22T13:54:32-04:00</lastmod>
   </url>
   
@@ -223,12 +223,12 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</loc>
+    <loc>https://loopedline.com/post/026-changing-the-size-of-font-awesome-icons-in-hugo/</loc>
     <lastmod>2022-03-21T14:36:04-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/regular-expression-syntax-highlighting/</loc>
+    <loc>https://loopedline.com/post/025-regular-expression-syntax-highlighting/</loc>
     <lastmod>2022-03-17T11:36:59-04:00</lastmod>
   </url>
   
@@ -243,37 +243,37 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/escaping-markdown-code-fences-nested-within-code-fences/</loc>
+    <loc>https://loopedline.com/post/024-escaping-markdown-code-fences-nested-within-code-fences/</loc>
     <lastmod>2022-03-16T23:14:22-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/modifying-the-new-article-template-in-hugo/</loc>
+    <loc>https://loopedline.com/post/023-modifying-the-new-article-template-in-hugo/</loc>
     <lastmod>2022-03-14T14:12:31-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/simplifying-hugo-post-creation-with-a-bash-script/</loc>
+    <loc>https://loopedline.com/post/022-simplifying-hugo-post-creation-with-a-bash-script/</loc>
     <lastmod>2022-03-13T22:16:57-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/updating-hugo-posts-with-code-syntax-highlighting/</loc>
+    <loc>https://loopedline.com/post/021-updating-hugo-posts-with-code-syntax-highlighting/</loc>
     <lastmod>2022-03-12T15:07:58-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/automating-hugo-website-publishing-with-bash/</loc>
+    <loc>https://loopedline.com/post/020-automating-hugo-website-publishing-with-bash/</loc>
     <lastmod>2022-03-03T14:49:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/renaming-files-with-rename-command-the-perl-version/</loc>
+    <loc>https://loopedline.com/post/019-renaming-files-with-rename-command-the-perl-version/</loc>
     <lastmod>2022-03-02T21:21:25-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/automating-bash-shell-commands/</loc>
+    <loc>https://loopedline.com/post/018-automating-bash-shell-commands/</loc>
     <lastmod>2022-02-25T15:09:52-05:00</lastmod>
   </url>
   
@@ -293,17 +293,17 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/creating-a-directory-with-bash-to-test-commands/</loc>
+    <loc>https://loopedline.com/post/017-creating-a-directory-with-bash-to-test-commands/</loc>
     <lastmod>2022-02-24T13:51:11-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/creating-multiple-files-with-bash/</loc>
+    <loc>https://loopedline.com/post/016-creating-multiple-files-with-bash/</loc>
     <lastmod>2022-02-16T11:11:18-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/getting-started-with-shuf-command-in-bash/</loc>
+    <loc>https://loopedline.com/post/015-getting-started-with-shuf-command-in-bash/</loc>
     <lastmod>2022-02-15T13:57:10-05:00</lastmod>
   </url>
   
@@ -313,22 +313,22 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</loc>
+    <loc>https://loopedline.com/post/014-using-sed-in-bash-script-to-update-hugo-front-matter/</loc>
     <lastmod>2022-02-11T11:37:37-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/getting-started-with-random-variable-in-bash/</loc>
+    <loc>https://loopedline.com/post/013-getting-started-with-random-variable-in-bash/</loc>
     <lastmod>2022-02-07T15:48:06-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/difference-between-rename-and-rename.ul/</loc>
+    <loc>https://loopedline.com/post/012-difference-between-rename-and-rename.ul/</loc>
     <lastmod>2021-12-08T13:20:10-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/apt-update-not-working-on-wsl/</loc>
+    <loc>https://loopedline.com/post/011-apt-update-not-working-on-wsl/</loc>
     <lastmod>2021-12-07T15:20:39-05:00</lastmod>
   </url>
   
@@ -343,12 +343,12 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/unable-to-open-bash-on-wsl/</loc>
+    <loc>https://loopedline.com/post/010-unable-to-open-bash-on-wsl/</loc>
     <lastmod>2021-12-07T13:15:02-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/bash-getting-started-working-with-the-shell/</loc>
+    <loc>https://loopedline.com/post/009-bash-getting-started-working-with-the-shell/</loc>
     <lastmod>2021-12-05T17:12:50-05:00</lastmod>
   </url>
   
@@ -368,22 +368,22 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/vscode-learning-path/</loc>
+    <loc>https://loopedline.com/post/005-vscode-learning-path/</loc>
     <lastmod>2021-08-16T09:28:32-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</loc>
+    <loc>https://loopedline.com/post/004-disabling-hugos-automatic-hyperlinking-of-urls/</loc>
     <lastmod>2021-08-14T14:44:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/hugo-site-looks-different-served-locally-vs-remotely/</loc>
+    <loc>https://loopedline.com/post/003-hugo-site-looks-different-served-locally-vs-remotely/</loc>
     <lastmod>2021-08-12T22:44:18-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/hugo-basic-command-quick-reference/</loc>
+    <loc>https://loopedline.com/post/002-hugo-basic-command-quick-reference/</loc>
     <lastmod>2021-07-23T12:30:00-04:00</lastmod>
   </url>
   
@@ -393,7 +393,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/post/building-your-first-hugo-website/</loc>
+    <loc>https://loopedline.com/post/001-building-your-first-hugo-website/</loc>
     <lastmod>2022-05-04T10:02:59-04:00</lastmod>
   </url>
   

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Overriding Bootstrap CSS in Hugo</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Overriding Bootstrap CSS in Hugo</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Overriding Bootstrap CSS in Hugo</h2>
+        
+
+
+<h5>Published: 2022 May 04</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo-theme"><kbd class="item-tag">Hugo theme</kbd></a>
+
+<a href="https://loopedline.com/tags/css"><kbd class="item-tag">CSS</kbd></a>
+
+<a href="https://loopedline.com/tags/bootstrap"><kbd class="item-tag">Bootstrap</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
+<p>This project is built with <a href="https://loopedline.com/post/001-building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/028-changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<h2 id="objective">Objective</h2>
+<p>In this post we&rsquo;ll override the CSS styling for certain HTML elements.</p>
+<p>Since this project utilizes a Hugo theme that in turn utilizes <a href="https://getbootstrap.com/">Bootstrap</a>, much of the styling for this site comes from Bootstrap.  Consequently, to make changes to the CSS styling of this site, we&rsquo;ll need to override some of the styles currently defined by Bootstrap.</p>
+<h2 id="solution-approach">Solution approach</h2>
+<h3 id="general-guidelines">General guidelines</h3>
+<p>There are various online articles and answers that address the question of overriding Bootstrap CSS styles and many of them are useful.</p>
+<p>To quote from one <a href="https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles/52049168#52049168">succinct and helpful StackOverflow answer</a>:</p>
+<blockquote>
+<p>There are 3 rules to follow when overriding Bootstrap CSS..</p>
+<ol>
+<li>import/include <code>bootstrap.css</code> before your CSS rules (overrides)</li>
+<li>use more CSS Specificity (or equal) than the Bootstrap CSS selectors</li>
+<li>if any rule is overridden, use !important attribute to force your rules. If you follow rules 1 &amp; 2 this shouldn&rsquo;t be necessary except for when using <a href="https://stackoverflow.com/questions/49479632/why-is-there-an-important-override-on-the-border-classess-color-property-in-boo/49480060#49480060">Bootstrap utility classes which often contain !important as explained here</a></li>
+</ol>
+<p>Yes, overrides should be put in a separate <code>styles.css</code> (or <code>custom.css</code>) file so that the <code>bootstrap.css</code> remains unmodified. This makes it easier to upgrade the Bootstrap version without impacting the overrides. The reference to the <code>styles.css</code> follows after the <code>bootstrap.css</code> for the overrides to work.</p>
+</blockquote>
+<h3 id="a-note-specific-to-testing-with-the-hugo-server">A note specific to testing with the Hugo server</h3>
+<p>This project encountered one additional wrinkle that initially caused some confusion.</p>
+<p>Even after following the above guidance, page elements did not seem to change when testing updates to custom.css via the Hugo server.</p>
+<p>It was only after manually reloading the page and sometimes stopping and restarting the Hugo server that changes were reflected.</p>
+<p>This is atypical behavior when working with Hugo.  Most changes are reflected immediately and without the need for any manual intervention.</p>
+<p>It&rsquo;s not clear under what circumstances the changes weren&rsquo;t reflected or why.  It well might have been something setup incorrectly on this project.</p>
+<p>Nevertheless, it&rsquo;s something that others may want to consider if they are struggling to test updates to Bootstrap CSS styling via the Hugo server.</p>
+<h2 id="building-the-solution">Building the solution</h2>
+<h3 id="changing-the-order-of-css-imports">Changing the order of CSS imports</h3>
+<p>As the quoted answer indicates, the first step is to confirm that your <strong>custom.css</strong> file is imported after <strong>bootstrap.css</strong>.</p>
+<p>For this project, that required changing the import order in the <strong>css.html</strong> file located in the <em>/layouts/partials/</em> directory.</p>
+<h3 id="updating-the-css-style-of-posts">Updating the CSS style of posts</h3>
+<p>Next, to effect the desired changes to post styling, updates were made to the <strong>custom.css</strong> file in the <em>/static/css/</em> directory.</p>
+<p>Specifically, the following was added:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/*  Overriding Bootstrap Formatting  */</span>
+
+<span style="color:#f92672">h1</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">h1</span> {
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">h2</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">h2</span> {
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">80</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">h3</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">h3</span> {
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">h4</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">h4</span> {
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">blockquote</span> {
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>;
+}
+</code></pre></div><h3 id="maintaining-the-css-style-of-list-pages">Maintaining the CSS style of list pages</h3>
+<p>The above changes also impacted the layout of list pages and created an undesirable spacing.  Specifically, the new styling of the <strong>&lt;h4&gt;</strong> tag created too much space between list elements.</p>
+<p>To fix this an <em>id</em> was added to the <strong>&lt;h4&gt;</strong> tag for list items in the <strong>list-item.html</strong> partial layout file located in the <em>/layouts/partials/</em> directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h4</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-item&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Scratch.Get &#34;</span><span style="color:#a6e22e">link</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h4</span>&gt;
+</code></pre></div><p>Then this id was used to target list items with an additional styling rule in the <strong>custom.css</strong> file to restore the original spacing:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">h4</span>#listpage-item {
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Both post pages and list pages have the desired styling.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/042-adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/040-fixing-site-link-errors-between-subdomains-in-hugo/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 25
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/039-separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/">Separating the Content of 2 Websites Generated by 1 Hugo Project with a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 24
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

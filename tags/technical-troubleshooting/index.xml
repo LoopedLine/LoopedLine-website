@@ -13,10 +13,10 @@
     
     <item>
       <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>
-      <link>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo/</link>
+      <link>https://loopedline.com/post/040-fixing-site-link-errors-between-subdomains-in-hugo/</link>
       <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo/</guid>
+      <guid>https://loopedline.com/post/040-fixing-site-link-errors-between-subdomains-in-hugo/</guid>
       <description>The Problem Because of the design decision to build the website files for sites hosted on two subdomains within the same Hugo project there were several adjustments that had to be made.
 One issue was that within a given subdomain links could be expressed as a relative path (/about/ or /post/, for instance), but across different subdomains that didn&amp;rsquo;t work.
 Specifically, on the page subdomain those links would point to page.</description>
@@ -24,10 +24,10 @@ Specifically, on the page subdomain those links would point to page.</descriptio
     
     <item>
       <title>Changing the Spacing of Font Awesome Icons in Hugo</title>
-      <link>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</link>
+      <link>https://loopedline.com/post/027-changing-the-spacing-of-font-awesome-icons-in-hugo/</link>
       <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</guid>
+      <guid>https://loopedline.com/post/027-changing-the-spacing-of-font-awesome-icons-in-hugo/</guid>
       <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 In this post, after resolving the problem of Changing the Size of Font Awesome Icons in Hugo, we now want to increase the spacing between the arrow icons used for page navigation icons on list pages.
@@ -36,10 +36,10 @@ The Process From the previous investigation mentioned above we know that the arr
     
     <item>
       <title>Changing the Size of Font Awesome Icons in Hugo</title>
-      <link>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</link>
+      <link>https://loopedline.com/post/026-changing-the-size-of-font-awesome-icons-in-hugo/</link>
       <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</guid>
+      <guid>https://loopedline.com/post/026-changing-the-size-of-font-awesome-icons-in-hugo/</guid>
       <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 In this post, we&amp;rsquo;ll look at changing the page navigation icons on list pages. For our purposes, the arrows used at the bottom of each list page are too small, making them difficult to click.
@@ -48,10 +48,10 @@ The Process As has been mentioned before, because Hugo offers so much flexibilit
     
     <item>
       <title>Regular Expression Syntax Highlighting [UNSOLVED]</title>
-      <link>https://loopedline.com/post/regular-expression-syntax-highlighting/</link>
+      <link>https://loopedline.com/post/025-regular-expression-syntax-highlighting/</link>
       <pubDate>Thu, 17 Mar 2022 11:36:59 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/regular-expression-syntax-highlighting/</guid>
+      <guid>https://loopedline.com/post/025-regular-expression-syntax-highlighting/</guid>
       <description>The Problem When posting snippets of regular expression code inside code blocks (as in this example) it would be helpful to apply syntax highlighting.
 Because this site uses Hugo, which uses Chroma, which does not yet include support for highlighting regular expressions another approach is required.
 The Process A web search for regular expression syntax highlighting returned some discussions of the general question:
@@ -60,10 +60,10 @@ The Process A web search for regular expression syntax highlighting returned som
     
     <item>
       <title>Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</title>
-      <link>https://loopedline.com/post/escaping-markdown-code-fences-nested-within-code-fences/</link>
+      <link>https://loopedline.com/post/024-escaping-markdown-code-fences-nested-within-code-fences/</link>
       <pubDate>Wed, 16 Mar 2022 23:14:22 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/escaping-markdown-code-fences-nested-within-code-fences/</guid>
+      <guid>https://loopedline.com/post/024-escaping-markdown-code-fences-nested-within-code-fences/</guid>
       <description>The Problem When authoring articles using Markdown that include Markdown special characters in the content, questions can come up about how to escape those special characters.
 For instance, this article about updating Hugo posts with code syntax highlighting includes Markdown code fences within code fences, which required figuring out how to escape code fences within code fences.
 The Process A web search quickly led to this helpful article, which explained the options for escaping code fencing.</description>
@@ -71,10 +71,10 @@ The Process A web search quickly led to this helpful article, which explained th
     
     <item>
       <title>Updating Hugo Posts with Code Syntax Highlighting [SOLVED]</title>
-      <link>https://loopedline.com/post/updating-hugo-posts-with-code-syntax-highlighting/</link>
+      <link>https://loopedline.com/post/021-updating-hugo-posts-with-code-syntax-highlighting/</link>
       <pubDate>Sat, 12 Mar 2022 15:07:58 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/updating-hugo-posts-with-code-syntax-highlighting/</guid>
+      <guid>https://loopedline.com/post/021-updating-hugo-posts-with-code-syntax-highlighting/</guid>
       <description>The Problem Hugo&amp;rsquo;s code fence syntax produced code blocks but didn&amp;rsquo;t produce code with syntax highlighting.
 The Process A web search for syntax highlighting in Hugo returned some Hugo documentation pages:
  Syntax Highlighting Configure Markup: Highlight  While these offered some background information, they didn&amp;rsquo;t help resolve the issue.
@@ -83,10 +83,10 @@ The Process A web search for syntax highlighting in Hugo returned some Hugo docu
     
     <item>
       <title>Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</title>
-      <link>https://loopedline.com/post/apt-update-not-working-on-wsl/</link>
+      <link>https://loopedline.com/post/011-apt-update-not-working-on-wsl/</link>
       <pubDate>Tue, 07 Dec 2021 15:20:39 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/apt-update-not-working-on-wsl/</guid>
+      <guid>https://loopedline.com/post/011-apt-update-not-working-on-wsl/</guid>
       <description>The Problem In Windows Subsystem for Linux (WSL) when running the command
 sudo apt update the following error appears for every package
  &amp;ldquo;Temporary failure resolving &amp;lsquo;archive.ubuntu.com&amp;rsquo;&amp;rdquo;
@@ -98,10 +98,10 @@ The Process A web search for the error led to a StackExchange question discussin
     
     <item>
       <title>Unable to Open the Bash Shell in Ubuntu via Windows Subsystem for Linux [SOLVED]</title>
-      <link>https://loopedline.com/post/unable-to-open-bash-on-wsl/</link>
+      <link>https://loopedline.com/post/010-unable-to-open-bash-on-wsl/</link>
       <pubDate>Tue, 07 Dec 2021 13:15:02 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/unable-to-open-bash-on-wsl/</guid>
+      <guid>https://loopedline.com/post/010-unable-to-open-bash-on-wsl/</guid>
       <description>The Problem When attempting to open the Bash shell in Ubuntu via Windows Subsystem for Linux (WSL) on Windows Terminal only the following message appears:
  The Windows Subsystem for Linux instance has terminated.
 [process exited with code &amp;hellip;]
@@ -111,10 +111,10 @@ A key seems to be running the terminal instance as administrator.</description>
     
     <item>
       <title>Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</title>
-      <link>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</link>
+      <link>https://loopedline.com/post/004-disabling-hugos-automatic-hyperlinking-of-urls/</link>
       <pubDate>Sat, 14 Aug 2021 14:44:00 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/disabling-hugos-automatic-hyperlinking-of-urls/</guid>
+      <guid>https://loopedline.com/post/004-disabling-hugos-automatic-hyperlinking-of-urls/</guid>
       <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 For this post, we&amp;rsquo;ll look at the issue that when Hugo rendered a webpage from a markdown file it automatically converted text URLs to hyperlinks.
@@ -123,10 +123,10 @@ The Process A web search for how to disable automatic hyperlinking in Hugo led t
     
     <item>
       <title>Hugo Site Looks Different Served Locally vs Remotely [SOLVED]</title>
-      <link>https://loopedline.com/post/hugo-site-looks-different-served-locally-vs-remotely/</link>
+      <link>https://loopedline.com/post/003-hugo-site-looks-different-served-locally-vs-remotely/</link>
       <pubDate>Thu, 12 Aug 2021 22:44:18 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/hugo-site-looks-different-served-locally-vs-remotely/</guid>
+      <guid>https://loopedline.com/post/003-hugo-site-looks-different-served-locally-vs-remotely/</guid>
       <description>The Problem When a new website layout generated with Hugo was pushed to production it rendered very differently on the web than it appeared locally.
 It looked like the CSS was only partially applied and some elements overlapped one another.
 The Process First, the source files were compared, but, as expected, they appeared identical.

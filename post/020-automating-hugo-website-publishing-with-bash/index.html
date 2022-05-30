@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Automating Hugo Website Publishing Workflow with Bash</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Automating Hugo Website Publishing Workflow with Bash</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Automating Hugo Website Publishing Workflow with Bash</h2>
+        
+
+
+<h5>Published: 2022 March 03</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shell-script"><kbd class="item-tag">shell script</kbd></a>
+
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<h2 id="background">Background</h2>
+<p>We first need to define our terms.</p>
+<p>Hugo already builds sites with one quick and easy command.</p>
+<p>The automated website building this post refers to is several additional steps required for website publishing after that process in one particular workflow.  Every person&rsquo;s or team&rsquo;s workflow for publishing a website is different.  The workflow we&rsquo;ll automate in this post includes the following:</p>
+<ol>
+<li>rebuilding a specific website with Hugo</li>
+<li>deleting all files and subdirectories in the website publishing directory except one specified file</li>
+<li>copying all files from the Hugo website project directory to the publishing directory</li>
+</ol>
+<p>We&rsquo;ll handle each step in turn and then bring them all together.</p>
+<h2 id="prerequisite-skills">Prerequisite skills</h2>
+<p>Since we&rsquo;ll be building Bash scripts, [a basic knowledge of Bash]((https://loopedline.com/post/009-bash-getting-started-working-with-the-shell/) and of <a href="https://loopedline.com/post/018-automating-bash-shell-commands/">automating Bash scripts</a> is assumed.  The emphasis here is on basic knowledge - no advanced knowledge is required and you can get up to speed quickly with the two posts linked above.</p>
+<h2 id="development-setup-creating-a-test-directory">Development Setup: Creating a test directory</h2>
+<p>Before we start developing our script, you may wish to first <a href="https://loopedline.com/post/017-creating-a-directory-with-bash-to-test-commands/">create a new directory in which to test these commands</a>.</p>
+<p>This will make it easier to see the effects of the changes we&rsquo;re making and will reduce the risk of impacting files we don&rsquo;t want to alter or delete.</p>
+<p>Since we will be deleting files and folders recursively this is particularly important.</p>
+<h2 id="development-setup-creating-test-files-and-subdirectories">Development Setup: Creating test files and subdirectories</h2>
+<p>After creating a test directory we&rsquo;ll want to create test files and subdirectories.</p>
+<p>We&rsquo;ll need test files and directories for both the website publishing directory and the Hugo website project directory.  We can just copy the real directories into our test directory.</p>
+<p>Once our main test directory, subdirectories, and files are setup we&rsquo;re ready to proceed.</p>
+<h1 id="rebuilding-a-website-with-hugo">Rebuilding a website with Hugo</h1>
+<p>As already mentioned, Hugo offers one command to quickly and simply rebuild a site.</p>
+<p><a href="https://loopedline.com/post/002-hugo-basic-command-quick-reference/#build-a-website-from-your-project-files">The site building command</a> as well of <a href="https://loopedline.com/post/001-building-your-first-hugo-website/">the basics of building your first Hugo website</a> have been discussed in previous posts, so we we&rsquo;ll assume that knowledge.</p>
+<p>What we&rsquo;ll develop here is a script to automatically build a specific website in a specific directory.  This will allow us to run a script from any working directory and build that site in another directory.  This in turn allows us to include the site building in a larger workflow without having to navigate between different working directories.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofhugoproject<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory
+
+<span style="color:#75715e"># MAIN program flow</span>
+echo
+echo <span style="color:#e6db74">&#34;Building Hugo site at </span>$directoryofhugoproject<span style="color:#e6db74">&#34;</span>
+
+cd $directoryofhugoproject
+
+hugo
+
+echo
+</code></pre></div><p>Let&rsquo;s break down the elements of that command.</p>
+<p><code>#!/bin/bash</code> - This must be the first line of the shell script, and <a href="https://linuxize.com/post/bash-shebang/">as Linuxize summarizes it</a>, &ldquo;This sequence of characters (#!) is called shebang and is used to tell the operating system which interpreter to use to parse the rest of the file.&rdquo;</p>
+<p><code>directoryofhugoproject=/home/user/TEMP/test-directory/hugo-project-directory</code> - Here we assign the path to our test Hugo website directory to a variable named &ldquo;directoryofhugoproject&rdquo;.</p>
+<p><code>echo</code> - There are several echo commands with no arguments throughout the script.  These print a new line, which helps to format our output and make it more legible.</p>
+<p><code>echo &quot;Building Hugo site at $directoryofhugoproject&quot;</code> - Print the literal string &ldquo;Building Hugo site at &quot; and the contents of the variable <em>$directoryofhugoproject</em>, which we assigned earlier, in order to provide some additional information to the user.</p>
+<p><code>cd $directoryofhugoproject</code> - Change the working directory to the path we specified in the variable <em>$directoryofhugoproject</em>.</p>
+<p><code>hugo</code> - The Hugo command to rebuild the website in the working directory.</p>
+<p>That is all we need.</p>
+<p>Once you update the variable <em>directoryofhugoproject</em> to the path of your Hugo website project you can use this script to rebuild your site from any working directory.</p>
+<h1 id="deleting-all-files-and-folders-in-the-website-publishing-directory-except-one-specified-file">Deleting all files and folders in the website publishing directory except one specified file</h1>
+<p>Since Hugo rebuilds all pages as necessary to incorporate any changes, we want to replace all the old website files with the new files that Hugo just built.</p>
+<p>We don&rsquo;t merely want to copy and overwrite these files, however, because that would leave in place any files that were deleted by Hugo during the rebuild.</p>
+<p>One additional consideration is that for this workflow we have one website file, <em>other.html</em>, that is built by another process and not by Hugo.  Consequently, we want to leave it intact and not delete it when we delete the other files.</p>
+<p>We&rsquo;ll build to that functionality in several steps.</p>
+<h2 id="deletion-step-1-deleting-all-files-except-one">Deletion Step 1: Deleting all files except one</h2>
+<p><a href="https://unix.stackexchange.com/questions/153862/remove-all-files-directories-except-for-one-file/538623#538623">This answer from StackExchange</a> provides an excellent place to start.</p>
+<p><strong>WARNING</strong>: This script will delete (almost) all files in a directory, so use it only in a directory that contains files you want to delete.  Now is a good time to reconfirm that you are in the <em>test-directory</em> you created.  You may also wish to create a backup copy of those files to make it easier to repeat testing.</p>
+<p>Navigate to the website publishing directory and run the following script.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># MAIN program flow</span>
+ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose
+</code></pre></div><p>Let&rsquo;s break down the new elements of that command.</p>
+<p><code>filetonotdelete=other.html</code> - Here we assign the name of the file that we want to protect from deletion to a variable named <em>filetonotdelete</em>.</p>
+<p><code>ls --hide=$filetonotdelete</code> - List the contents of the working directory except the file listed in the variable <em>$filetonotdelete</em>.</p>
+<p><code>|</code> - Pipe the results of the command on the left as input to the command on the right.</p>
+<p><code>xargs --delimiter='\n'</code> - The xargs command &ldquo;converts input from standard input into arguments to a command&rdquo; <a href="https://en.wikipedia.org/wiki/Xargs">according to Wikipedia</a>.  We use the <code>--delimiter</code> option to tell it to separate arguments based on the newline character, which is represented by <em>\n</em>.  This takes the output piped to it from the previous <em>ls</em> command and passes that output as arguments to the following <em>rm</em> command.</p>
+<p><code>rm --verbose</code> - Remove (that is, delete) the files listed by the previous <em>ls</em> command.  The <code>--verbose</code> option causes the command to output the names of the files it is deleting.</p>
+<p>In summary, the command lists all files in the working directory (except the file named in the <em>filetonotdelete</em> variable), passing that list to the <em>xargs</em> command, which, in turn, passes that list as arguments to the <em>rm</em>, which, finally deletes those files.</p>
+<h2 id="deletion-step-2-deleting-all-files-and-subdirectories-except-one">Deletion Step 2: Deleting all files and subdirectories except one</h2>
+<p>The above script is a good start, but it doesn&rsquo;t yet delete subdirectories or their contents.  We need to make one small modification to accomplish that.</p>
+<p><strong>WARNING</strong>: This script will delete (almost) all files in a directory as well as subdirectories and all their contents, so use it only in a directory that contains files and subdirectories you want to delete.  You need to be especially cautious when using the <em>rm</em> command with the <em>&ndash;recursive</em> option.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># MAIN program flow</span>
+ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose --recursive
+</code></pre></div><p>Let&rsquo;s look at the new element of that command.</p>
+<p><code>--recursive</code> - This option tells the <em>rm</em> command to also delete subdirectories and all of their contents.</p>
+<p>In summary, the script deletes all files (except one specified file), all subdirectories, and the contents of all subdirectory of the working directory.</p>
+<h2 id="deletion-step-3-deleting-the-contents-of-a-specific-directory">Deletion Step 3: Deleting the contents of a specific directory</h2>
+<p>Now we will modify this script to work for a specified directory so that it can be called from anywhere.  This not only simplifies it&rsquo;s use, but also offers some protection from accidentally calling it in the wrong directory and deleting the wrong files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># MAIN program flow</span>
+cd $directoryofwebsiteforpublishing
+
+ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose --recursive
+</code></pre></div><p>Let&rsquo;s break down the new elements of that script.</p>
+<p><code>directoryofwebsiteforpublishing=/home/user/TEMP/test-directory/publishing-site-directory</code> - Assign the path to our test publishing website directory to a variable named <em>directoryofwebsiteforpublishing</em>.</p>
+<p><code>cd $directoryofwebsiteforpublishing</code> - Change the working directory to the path we specified in the variable <em>$directoryofwebsiteforpublishing</em>.</p>
+<p>In summary, the script deletes all files (except one specified file), all subdirectories, and the contents of all subdirectories within a specified directory.</p>
+<h2 id="deletion-step-4-wrapping-program-logic-in-a-function">Deletion Step 4: Wrapping program logic in a function</h2>
+<p>Now we will wrap the main program flow in a function to make it easier to incorporate into the larger workflow.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># FUNCTION deletefilesanddirectories - deletes all files and directories in a specified directory except for a specified file</span>
+deletefilesanddirectories<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose --recursive
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># MAIN program flow</span>
+deletefilesanddirectories
+</code></pre></div><p>Let&rsquo;s break down the new elements of that script.</p>
+<p><code>deletefilesanddirectories() { . . . }</code> - This wraps the logic that was previously in the &ldquo;MAIN program flow&rdquo; section in a function called <em>deletefilesanddirectories</em>.</p>
+<p><code>deletefilesanddirectories</code> - This calls the function called <em>deletefilesanddirectories</em> and executes its commands.</p>
+<p>In summary, this script accomplishes the same things as the previous script, but wraps the logic in a function, which will make it easier to refer to that logic by calling the function as we add additional elements to the script in the following steps.</p>
+<h2 id="deletion-step-5-informing-the-user">Deletion Step 5: Informing the user</h2>
+<p>Now that we have the deletion functionality working, we want to ensure that the user knows what files will be deleted.  So, we&rsquo;ll incorporate some output to notify the user.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># FUNCTION deletefilesanddirectories - deletes all files and directories in a specified directory except for a specified file</span>
+deletefilesanddirectories<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose --recursive
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION indent - indent a line before outputting</span>
+indent<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> sed <span style="color:#e6db74">&#39;s/^/  /&#39;</span>; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION warningwithprompt - prints a warning that the script will delete files and subdirectories and prompts the user before continuing</span>
+warningwithprompt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    echo
+    echo <span style="color:#e6db74">&#34;This script will delete the following files, subdirectories, and ALL subdirectory contents:&#34;</span>
+    echo
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete -1 --color | indent
+
+    echo
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># MAIN program flow</span>
+warningwithprompt
+<span style="color:#75715e">#deletefilesanddirectories</span>
+</code></pre></div><p>Let&rsquo;s examine the new elements of that script.</p>
+<p><code>indent() { sed 's/^/  /'; }</code> - A function that indents a line with two spaces before outputting the result.  The logic here is from <a href="https://stackoverflow.com/questions/17484774/indenting-multi-line-output-in-a-shell-script/29779745#29779745">this StackOverflow answer</a>.</p>
+<p><code>warningwithprompt() { . . . }</code> - A function to provide output about the files that are about to be deleted.  (We will add a user prompt later, which is why the function is named <em>warningwithprompt</em>.)</p>
+<p><code>ls --hide=$filetonotdelete -1 --color | indent</code> -
+Similar to the logic in the earlier command that deletes files, this displays the names of the files and folders that would be deleted.  The <code>-1</code> option calls for outputting one file per line.  The <code>--color</code> option preserves the color output of the <em>ls</em> command when it is piped, which makes it easier to interpret.  The <code>indent</code> command calls the <em>indent</em> function.</p>
+<p><code>warningwithprompt</code> - Calls the <em>warningwithprompt</em> function.</p>
+<p><code>#deletefilesanddirectories</code> - The <em>deletefilesanddirectories</em> call is commented out so that we can focus on the changes to output without actually deleting files while testing.</p>
+<p>In summary, this script outputs a warning to the user about the files and folders that will be deleted.</p>
+<h2 id="deletion-step-6-prompting-the-user-for-permission-to-continue">Deletion Step 6: Prompting the user for permission to continue</h2>
+<p>Now that we can output a warning to the user, we&rsquo;ll want to prompt the user to ask if they wish to continue.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># FUNCTION deletefilesanddirectories - deletes all files and directories in a specified directory except for a specified file</span>
+deletefilesanddirectories<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose --recursive
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION indent - indent a line before outputting</span>
+indent<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> sed <span style="color:#e6db74">&#39;s/^/  /&#39;</span>; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION warningwithprompt - prints a warning that the script will delete files and subdirectories and prompts the user before continuing</span>
+warningwithprompt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    echo
+    echo <span style="color:#e6db74">&#34;This script will delete the following files, subdirectories, and ALL subdirectory contents:&#34;</span>
+    echo
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete -1 --color | indent
+
+    echo
+
+    read -n1 -p <span style="color:#e6db74">&#34;Do you wish to proceed? [y/n] &#34;</span> response
+
+    <span style="color:#75715e"># Convert response to lowercase</span>
+    response<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>response,,<span style="color:#e6db74">}</span>
+
+    echo
+    echo
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># MAIN program flow</span>
+warningwithprompt
+warningwithprompt
+
+<span style="color:#66d9ef">case</span> $response in
+  y|ye|yes<span style="color:#f92672">)</span>
+    echo Executing script.
+    echo
+	
+    <span style="color:#75715e">#deletefilesanddirectories</span>
+	
+    echo
+    echo Script completed.
+  ;;
+  *<span style="color:#f92672">)</span>
+    echo Action cancelled.
+  ;;
+<span style="color:#66d9ef">esac</span>
+</code></pre></div><p>Let&rsquo;s examine the new elements of that script.</p>
+<p>Note that several components of the these new elements are based on <a href="https://stackoverflow.com/questions/23202022/shell-user-prompt-y-n/23202418#23202418">this</a> and <a href="https://stackoverflow.com/questions/23202022/shell-user-prompt-y-n/23202153#23202153">this</a> StackOverflow answer.</p>
+<p><code>read -n1 -p &quot;Do you wish to proceed? [y/n] &quot; response</code> - Read user input from the command line and store it in the <em>response</em> variable.  The <code>-p</code> option prints the literal string that follows it, &ldquo;Do you wish to proceed? [y/n] &ldquo;.  The <code>-n1</code> option tells the <em>read</em> command to only accept 1 character before returning the result.</p>
+<p><code>response=${response,,}</code> - This is a <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion">Bash parameter expansion that modifies the case of the alphabetic characters</a> in the parameter <em>response</em>.  Since this uses the <code>,,</code> expansion, all matching alphabetic character in <em>response</em> will be converted to lowercase.  And since this omits the <em>pattern</em> variable, every charcter will match.  Therefore, all alphabetic character in <em>response</em> will be converted to lowercase.</p>
+<p><code>case $response in . . . esac</code> - This is the <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#index-case">case syntax</a> for Bash and tests the <em>response</em> variable against the following cases sequentially.</p>
+<p><code>y|ye|yes) . . . ;;</code> - This is the first option in the case command that the <em>response</em> variable is compared against.  It is checking if <em>response</em> is equal to &ldquo;y&rdquo; or &ldquo;ye&rdquo; or &ldquo;yes&rdquo;.  If it matches any of those three it executes the commands contained within the <code>)</code> and the <code>;;</code>.  Since the clause is terminated with a <code>;;</code>, if there is a match, no further matches will be searched for.  (NOTE: The &ldquo;ye&rsquo; and &ldquo;yes&rdquo; options will not be used in the current script because the <em>-n1</em> option in the <em>read</em> command means only one character will be read.  These are kept in for flexibility if the <em>-n1</em> option is removed in a later script.)</p>
+<p><code>*) . . . ;;</code> - This is the second option in the case command that the <em>response</em> variable is compared against.  Because of the wildcard <code>*</code> this will always evaluate as true.</p>
+<p>In summary, this script outputs a warning to the user about the files and folders that will be deleted, prompts the user for a response, awaits the response, and then outputs one of two messages to the user depending on the response.</p>
+<h2 id="deletion-step-7-prompting-the-user-for-permission-to-continue">Deletion Step 7: Prompting the user for permission to continue</h2>
+<p>Now all we need to do to complete this script is to uncomment the call to the <em>deletefilesanddirectories</em> function.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># FUNCTION deletefilesanddirectories - deletes all files and directories in a specified directory except for a specified file</span>
+deletefilesanddirectories<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose --recursive
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION indent - indent a line before outputting</span>
+indent<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> sed <span style="color:#e6db74">&#39;s/^/  /&#39;</span>; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION warningwithprompt - prints a warning that the script will delete files and subdirectories and prompts the user before continuing</span>
+warningwithprompt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    echo
+    echo <span style="color:#e6db74">&#34;This script will delete the following files, subdirectories, and ALL subdirectory contents:&#34;</span>
+    echo
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete -1 --color | indent
+
+    echo
+
+    read -n1 -p <span style="color:#e6db74">&#34;Do you wish to proceed? [y/n] &#34;</span> response
+
+    <span style="color:#75715e"># Convert response to lowercase</span>
+    response<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>response,,<span style="color:#e6db74">}</span>
+
+    echo
+    echo
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># MAIN program flow</span>
+warningwithprompt
+
+<span style="color:#66d9ef">case</span> $response in
+  y|ye|yes<span style="color:#f92672">)</span>
+    echo Executing script.
+    echo
+	
+    deletefilesanddirectories
+	
+    echo
+    echo Script completed.
+  ;;
+  *<span style="color:#f92672">)</span>
+    echo Action cancelled.
+  ;;
+<span style="color:#66d9ef">esac</span>
+</code></pre></div><p>In summary, this script outputs a warning to the user about the files and folders that will be deleted, prompts the user for a response, awaits the response, and then outputs one of two messages to the user depending on the response.  If the user enters a &ldquo;y&rdquo; the script deletes all files (except one specified file), all subdirectories, and the contents of all subdirectory of a specified directory.  However, if the user enters any character except &ldquo;y&rdquo; the script terminates.</p>
+<p>By updating the variables <em>directoryofwebsiteforpublishing</em> and <em>filetonotdelete</em> to the relevant values for our production files, we have a script that will delete all the files of the specified directory except the one file we want to preserve.</p>
+<h1 id="copying-all-files-from-the-hugo-website-directory-to-the-publishing-directory">Copying all files from the Hugo website directory to the publishing directory</h1>
+<p>Since we can delete all files (except one protected file) in our website publishing directory, we now want to repopulate the folder with updated files from the Hugo website directory.  We&rsquo;ll look at a script to automatically copy those files from one folder to the other.  The basic logic of this script is from <a href="https://stackoverflow.com/questions/3643848/copy-files-from-one-directory-into-an-existing-directory/4645159#4645159">this StackOverflow answer</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofhugoprojectfiles<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory/public
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
+
+<span style="color:#75715e"># FUNCTION copyfilesanddirectories - copy all files and directories in a specified directory to another specified directory</span>
+copyfilesanddirectories<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	cp --recursive --verbose $directoryofhugoprojectfiles/. $directoryofwebsiteforpublishing/
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># MAIN program flow</span>
+copyfilesanddirectories
+</code></pre></div><p>Let&rsquo;s examine the new elements of that script.</p>
+<p><code>directoryofhugoprojectfiles=/home/user/TEMP/test-directory/hugo-project-directory/public</code> - Note the important distinction between the <code>directoryofhugoproject</code> and <code>directoryofhugoprojectfiles</code> variables.</p>
+<p>The Hugo project is in the directory:</p>
+<ul>
+<li><em>/home/user/TEMP/test-directory/hugo-project-directory</em></li>
+</ul>
+<p>Which is stored in the variable:</p>
+<ul>
+<li><em>directoryofhugoproject</em></li>
+</ul>
+<p>While the website files the project produces are in the directory:</p>
+<ul>
+<li><em>/home/user/TEMP/test-directory/hugo-project-directory/public</em></li>
+</ul>
+<p>Which is stored in the variable:</p>
+<ul>
+<li><em>directoryofhugoprojectfiles</em></li>
+</ul>
+<p><code>cp --recursive --verbose $directoryofhugoprojectfiles/. $directoryofwebsiteforpublishing/</code> - This calls <a href="https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html">the <em>cp</em> command</a>, which copies the contents of the first directory into the second directory.  The <code>--recursive</code> option causes the command to copy all subdirectories and their contents.  The <code>--verbose</code> option causes the command to output the name of each file being copied.  As the StackOverflow answer explains, the dot at the end of the first directory path instructs the <em>cp</em> command &ldquo;to copy the contents of the current directory, not the directory itself. This method also includes hidden files and folders.&rdquo;</p>
+<p>In summary, this script copies all of the contents of first directory into the second directory and outputs the name of each file as it does so.</p>
+<h1 id="putting-it-all-together">Putting it all together</h1>
+<p>We have all three components of functionality necessary to accomplish our objective.  Now we&rsquo;ll bring them together.  Each script could be run individually in sequence, but to make the process simpler and to further reduce the possibility of introducing human error, we&rsquo;ll create one script to call them each in turn.  Alternatively, we could combine the logic of all three scripts into one file, but that would make maintenance more difficult and prevent us from running each script separately if the need ever arose.</p>
+<p>Also, to enhance flexibility and to reduce the risk of unexpected behavior if the scripts are modified in the future, we&rsquo;ll alter each script to remove the hardcoded directory and file references and instead assign those values by passing parameters.  We&rsquo;ll then hardcode those values in the calling script so we don&rsquo;t have to re-enter them every time the main script is run.</p>
+<hr>
+<p><strong>sitebuild_01_rebuildsite.sh</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofhugoproject<span style="color:#f92672">=</span>$1
+
+<span style="color:#75715e"># MAIN program flow</span>
+echo
+echo <span style="color:#e6db74">&#34;Executing </span>$BASH_SOURCE<span style="color:#e6db74">&#34;</span>
+echo
+
+echo <span style="color:#e6db74">&#34;Building Hugo site at </span>$directoryofhugoproject<span style="color:#e6db74">&#34;</span>
+
+cd $directoryofhugoproject
+
+hugo
+
+echo
+</code></pre></div><hr>
+<p><strong>sitebuild_02_deletefiles.sh</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>$1
+filetonotdelete<span style="color:#f92672">=</span>$2
+
+<span style="color:#75715e"># FUNCTION deletefilesanddirectories - deletes all files and directories in a specified directory except for a specified file</span>
+deletefilesanddirectories<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimiter<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\n&#39;</span> rm --verbose --recursive
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION indent - indent a line before outputting</span>
+indent<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> sed <span style="color:#e6db74">&#39;s/^/  /&#39;</span>; <span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION warningwithprompt - prints a warning that the script will delete files and subdirectories and prompts the user before continuing</span>
+warningwithprompt<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    cd $directoryofwebsiteforpublishing
+
+	echo <span style="color:#e6db74">&#34;This script will DELETE the contents of </span>$directoryofwebsiteforpublishing<span style="color:#e6db74">&#34;</span>
+	echo
+	echo <span style="color:#e6db74">&#34;This script will DELETE the following files, subdirectories, and ALL subdirectory contents:&#34;</span>
+	echo
+
+    ls --hide<span style="color:#f92672">=</span>$filetonotdelete -1 --color | indent
+
+    echo
+
+    read -n1 -p <span style="color:#e6db74">&#34;Do you wish to proceed? [y/n] &#34;</span> response
+
+    <span style="color:#75715e"># Convert response to lowercase</span>
+    response<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>response,,<span style="color:#e6db74">}</span>
+
+    echo
+    echo
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># MAIN program flow</span>
+echo
+echo <span style="color:#e6db74">&#34;Executing </span>$BASH_SOURCE<span style="color:#e6db74">&#34;</span>
+echo
+
+warningwithprompt
+
+<span style="color:#66d9ef">case</span> $response in
+  y|ye|yes<span style="color:#f92672">)</span>
+    echo Executing script.
+    echo
+	
+    deletefilesanddirectories
+	
+    echo
+    echo Script completed.
+	echo
+  ;;
+  *<span style="color:#f92672">)</span>
+    echo Deletion cancelled.
+	echo
+	
+	exit
+  ;;
+<span style="color:#66d9ef">esac</span>
+</code></pre></div><hr>
+<p><strong>sitebuild_03_copyfiles.sh</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofhugoprojectfiles<span style="color:#f92672">=</span>$1
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>$2
+
+<span style="color:#75715e"># FUNCTION copyfilesanddirectories - copy all files and directories in a specified directory to another specified directory</span>
+copyfilesanddirectories<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    echo <span style="color:#e6db74">&#34;Copying files.&#34;</span>
+	echo
+	echo <span style="color:#e6db74">&#34;FROM:&#34;</span>
+	echo <span style="color:#e6db74">&#34;</span>$directoryofhugoprojectfiles<span style="color:#e6db74">&#34;</span>
+	echo
+	echo <span style="color:#e6db74">&#34;TO:&#34;</span>
+	echo <span style="color:#e6db74">&#34;</span>$directoryofwebsiteforpublishing<span style="color:#e6db74">&#34;</span>
+	echo
+	
+	cp --recursive $directoryofhugoprojectfiles/. $directoryofwebsiteforpublishing/
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># MAIN program flow</span>
+echo
+echo <span style="color:#e6db74">&#34;Executing </span>$BASH_SOURCE<span style="color:#e6db74">&#34;</span>
+echo
+
+copyfilesanddirectories
+</code></pre></div><hr>
+<p><strong>sitebuild_00_publishsite.sh</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+directoryofhugoproject<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory
+directoryofhugoprojectfiles<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory/public
+directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
+filetonotdelete<span style="color:#f92672">=</span>other.html
+
+<span style="color:#75715e"># FUNCTION sb_rebuildsite - run the sitebuild_01_rebuildsite.sh script with additional output</span>
+sb_rebuildsite<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	echo
+	echo
+	echo ---------- Step 1: Rebuild site - START ----------
+	
+	source sitebuild_01_rebuildsite.sh $directoryofhugoproject
+	
+	echo ---------- Step 1: Rebuild site - END ----------
+	echo
+	echo
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># FUNCTION sb_deletefiles - run the sitebuild_02_deletefiles.sh script with additional output</span>
+sb_deletfiles<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	echo
+	echo
+	echo ---------- Step 2: Delete files - START ----------
+	
+	source sitebuild_02_deletefiles.sh $directoryofwebsiteforpublishing $filetonotdelete
+	
+	echo ---------- Step 2: Delete files - END ----------
+	echo
+	echo
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># FUNCTION sb_copyfiles - run the sitebuild_03_copyfiles.sh script with additional output</span>
+sb_copyfiles<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	echo
+	echo
+	echo ---------- Step 3: Copy files - START ----------
+	
+	source sitebuild_03_copyfiles.sh $directoryofhugoprojectfiles $directoryofwebsiteforpublishing
+	
+	echo ---------- Step 3: Copy files - END ----------
+	echo
+	echo
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># MAIN program flow</span>
+echo
+echo <span style="color:#e6db74">&#34;Executing </span>$BASH_SOURCE<span style="color:#e6db74">&#34;</span>
+echo
+
+sb_rebuildsite <span style="color:#f92672">&amp;&amp;</span> sb_deletfiles <span style="color:#f92672">&amp;&amp;</span> sb_copyfiles
+</code></pre></div><hr>
+<p>Let&rsquo;s examine the new elements of these scripts.</p>
+<p><code>echo &quot;Executing $BASH_SOURCE&quot;</code> - Output the path and filename of the script preceded by the literal string &ldquo;Executing &ldquo;.</p>
+<p><code>exit</code> - Exit the script and the parent script (if any).  If the user chooses not to delete existing files, the script won&rsquo;t proceed to copying files in the next step.</p>
+<p><code>source sitebuild_01_rebuildsite.sh $directoryofhugoproject</code> - The <code>source</code> command runs the script <em>sitebuild_01_rebuildsite.sh</em>, passing the parameter <em>$directoryofhugoproject</em> to it.</p>
+<p><code>sb_rebuildsite &amp;&amp; sb_deletfiles &amp;&amp; sb_copyfiles</code> - The <code>&amp;&amp;</code> operator runs the next command in sequence only if the previous command returns TRUE.  This means that the following commands won&rsquo;t run until the previous command completes successfully.</p>
+<p>There were also several changes and additions to output meant to aid with debugging and making functionality clear to the user.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>We now have the option of running each script individually to execute each portion of functionality, or running a single script to complete each in turn.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/042-adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/041-creating-a-persistent-sequence-id-counter-with-bash/">Creating a Persistent Sequence ID Counter With Bash</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 27
+        
+                  |     Last edited:  2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/040-fixing-site-link-errors-between-subdomains-in-hugo/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 25
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

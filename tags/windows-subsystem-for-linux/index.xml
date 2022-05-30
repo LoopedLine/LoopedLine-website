@@ -13,10 +13,10 @@
     
     <item>
       <title>Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</title>
-      <link>https://loopedline.com/post/apt-update-not-working-on-wsl/</link>
+      <link>https://loopedline.com/post/011-apt-update-not-working-on-wsl/</link>
       <pubDate>Tue, 07 Dec 2021 15:20:39 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/apt-update-not-working-on-wsl/</guid>
+      <guid>https://loopedline.com/post/011-apt-update-not-working-on-wsl/</guid>
       <description>The Problem In Windows Subsystem for Linux (WSL) when running the command
 sudo apt update the following error appears for every package
  &amp;ldquo;Temporary failure resolving &amp;lsquo;archive.ubuntu.com&amp;rsquo;&amp;rdquo;
@@ -28,10 +28,10 @@ The Process A web search for the error led to a StackExchange question discussin
     
     <item>
       <title>Unable to Open the Bash Shell in Ubuntu via Windows Subsystem for Linux [SOLVED]</title>
-      <link>https://loopedline.com/post/unable-to-open-bash-on-wsl/</link>
+      <link>https://loopedline.com/post/010-unable-to-open-bash-on-wsl/</link>
       <pubDate>Tue, 07 Dec 2021 13:15:02 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/unable-to-open-bash-on-wsl/</guid>
+      <guid>https://loopedline.com/post/010-unable-to-open-bash-on-wsl/</guid>
       <description>The Problem When attempting to open the Bash shell in Ubuntu via Windows Subsystem for Linux (WSL) on Windows Terminal only the following message appears:
  The Windows Subsystem for Linux instance has terminated.
 [process exited with code &amp;hellip;]

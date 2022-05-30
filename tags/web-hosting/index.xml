@@ -13,10 +13,10 @@
     
     <item>
       <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>
-      <link>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo/</link>
+      <link>https://loopedline.com/post/040-fixing-site-link-errors-between-subdomains-in-hugo/</link>
       <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/fixing-site-link-errors-between-subdomains-in-hugo/</guid>
+      <guid>https://loopedline.com/post/040-fixing-site-link-errors-between-subdomains-in-hugo/</guid>
       <description>The Problem Because of the design decision to build the website files for sites hosted on two subdomains within the same Hugo project there were several adjustments that had to be made.
 One issue was that within a given subdomain links could be expressed as a relative path (/about/ or /post/, for instance), but across different subdomains that didn&amp;rsquo;t work.
 Specifically, on the page subdomain those links would point to page.</description>
@@ -24,10 +24,10 @@ Specifically, on the page subdomain those links would point to page.</descriptio
     
     <item>
       <title>Building a Contact Form with Netlify</title>
-      <link>https://loopedline.com/post/building-a-contact-form-with-netlify/</link>
+      <link>https://loopedline.com/post/038-building-a-contact-form-with-netlify/</link>
       <pubDate>Mon, 23 May 2022 08:12:40 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/building-a-contact-form-with-netlify/</guid>
+      <guid>https://loopedline.com/post/038-building-a-contact-form-with-netlify/</guid>
       <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 Specifically, this post is part of a project to build a contact form with Hugo and host it with Netlify.
@@ -37,10 +37,10 @@ As previously mentioned, Netlify provides &amp;ldquo;built-in form handling that
     
     <item>
       <title>Setting Up a Website Subdomain to Host Content With Different Providers</title>
-      <link>https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/</link>
+      <link>https://loopedline.com/post/037-setting-up-a-website-subdomain-to-host-content-with-different-providers/</link>
       <pubDate>Sun, 22 May 2022 13:15:05 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/setting-up-a-website-subdomain-to-host-content-with-different-providers/</guid>
+      <guid>https://loopedline.com/post/037-setting-up-a-website-subdomain-to-host-content-with-different-providers/</guid>
       <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 Specifically, this post is part of a project to build a contact form with Hugo and host it with Netlify.
@@ -49,10 +49,10 @@ Objective In this post we&amp;rsquo;ll setup a subdomain for our website so that
     
     <item>
       <title>Project - Building a Contact Form With Hugo and Hosting it with Netlify</title>
-      <link>https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</link>
+      <link>https://loopedline.com/post/035-project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</link>
       <pubDate>Fri, 20 May 2022 12:18:46 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</guid>
+      <guid>https://loopedline.com/post/035-project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/</guid>
       <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 Specifically, this is the first post for a project to build a contact form with Hugo and host it with Netlify.
