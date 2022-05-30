@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</h2>
+        
+
+
+<h5>Published: 2022 March 16</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="the-problem">The Problem</h2>
+<p>When authoring articles using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> that include Markdown special characters in the content, questions can come up about how to escape those special characters.</p>
+<p>For instance, <a href="https://loopedline.com/post/021-updating-hugo-posts-with-code-syntax-highlighting/">this article about updating Hugo posts with code syntax highlighting</a> includes Markdown code fences within code fences, which required figuring out how to escape code fences within code fences.</p>
+<h2 id="the-process">The Process</h2>
+<p>A web search quickly led to <a href="https://markdownmonster.west-wind.com/docs/_5eg1brc0z.htm">this helpful article</a>, which explained the options for escaping code fencing.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>Markdown provides two sets of special characters for escaping code fences:</p>
+<ul>
+<li><code>````</code>, that is, four backticks</li>
+<li><code>~~~</code>, that is, three tildes</li>
+</ul>
+<h3 id="example-1-one-nested-code-fence">Example 1: One nested code fence</h3>
+<p>To display one nested code fence within a code block (like in the examples in the above linked code syntax highlighting article) use one set of the special characters.</p>
+<p><strong>Example 1 display output</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+</code></pre></div><p><strong>Example 1 Markdown input</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````
+</code></pre></div><h3 id="example-2-two-nested-code-fences">Example 2: Two nested code fences</h3>
+<p>To display two nested code fences within a code block (like that shown in the Markdown input in example 1 above) alternate the two sets of special characters.</p>
+<p><strong>Example 2 display output</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````
+</code></pre></div><p><strong>Example 2 Markdown input</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````‎
+~~~
+</code></pre></div><h3 id="example-3-three-nested-code-fences">Example 3: Three nested code fences</h3>
+<p>The first two examples are explained in the linked article.  Some additional testing indicates that it is possible (at least in Visual Studio Code) to produce three nested code fences within a code block by appending text to the inner closing code fence(s).</p>
+<p>The Markdown input in example 2 was produced using this technique.  This was done using an invisible character, specifically the <a href="https://unicodeplus.com/U+200E">Left-To-Right Mark</a>.</p>
+<p><strong>Example 3 display output (with invisible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````‎
+~~~
+</code></pre></div><p><strong>Example 3 Markdown input (with invisible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````markdown
+~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````‎
+~~~‎
+````
+</code></pre></div><p>Because the Left-To-Right Mark has no visual representation it&rsquo;s not obvious what is happening, so let&rsquo;s replace it with an <strong>X</strong> in the following examples to demonstrate the technique.</p>
+<p><strong>Example 3 display output (with visible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````X
+~~~
+</code></pre></div><p><strong>Example 3 Markdown input (with visible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````markdown
+~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````X
+~~~X
+````
+</code></pre></div><h3 id="example-4-arbitrary-n-nested-code-fences">Example 4: Arbitrary N nested code fences</h3>
+<p>In this way, it appears possible to produce an arbitrary number of nested code fences within a code block by appending text to the inner closing code fences.</p>
+<p><strong>Example 4 display output (with invisible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````markdown
+~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````‎
+~~~‎
+````
+</code></pre></div><p><strong>Example 4 Markdown input (with invisible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~~markdown
+````markdown
+~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````‎
+~~~‎
+````‎
+~~~
+</code></pre></div><p><strong>Example 4 display output (with visible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````markdown
+~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````X
+~~~X
+````
+</code></pre></div><p><strong>Example 4 Markdown input (with visible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~~markdown
+````markdown
+~~~markdown
+````markdown
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````X
+~~~X
+````X
+~~~
+</code></pre></div><h3 id="example-5-arbitrary-n-nested-code-fences-without-alternating-special-character-sets">Example 5: Arbitrary N nested code fences without alternating special character sets</h3>
+<p>In fact, it appears possible to produce an arbitrary number of nested code fences within a code block without alternating the escape character sets or using syntax highlighting language tags.</p>
+<p><strong>Example 5 display output (with invisible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````‎
+````‎
+````‎
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````‎
+````‎
+````‎
+</code></pre></div><p><strong>Example 5 Markdown input (with invisible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````‎
+````‎
+````‎
+````‎
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````‎
+````‎
+````‎
+````‎
+</code></pre></div><p><strong>Example 5 display output (with visible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````X
+````X
+````X
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````X
+````X
+````X
+</code></pre></div><p><strong>Example 5 Markdown input (with visible characters)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">````X
+````X
+````X
+````X
+<span style="color:#e6db74">```toml
+</span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
+<span style="color:#e6db74">```</span>
+````X
+````X
+````X
+````X
+</code></pre></div><!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/042-adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/040-fixing-site-link-errors-between-subdomains-in-hugo/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 25
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/039-separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/">Separating the Content of 2 Websites Generated by 1 Hugo Project with a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 24
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

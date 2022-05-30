@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Regular Expression Syntax Highlighting [UNSOLVED]</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Regular Expression Syntax Highlighting [UNSOLVED]</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Regular Expression Syntax Highlighting [UNSOLVED]</h2>
+        
+
+
+<h5>Published: 2022 March 17</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+<a href="https://loopedline.com/tags/regular-expressions"><kbd class="item-tag">regular expressions</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting-unsolved"><kbd class="item-tag">technical troubleshooting - unsolved</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="the-problem">The Problem</h2>
+<p>When posting snippets of regular expression code inside code blocks (as in <a href="https://loopedline.com/post/021-updating-hugo-posts-with-code-syntax-highlighting/#the-search-pattern">this example</a>) it would be helpful to apply syntax highlighting.</p>
+<p>Because this site uses <a href="https://loopedline.com/post/001-building-your-first-hugo-website/">Hugo</a>, which uses <a href="https://gohugo.io/content-management/syntax-highlighting">Chroma</a>, which <a href="https://github.com/alecthomas/chroma#supported-languages">does not yet include support for highlighting regular expressions</a> another approach is required.</p>
+<h2 id="the-process">The Process</h2>
+<p>A web search for regular expression syntax highlighting returned some discussions of the general question:</p>
+<ul>
+<li><a href="https://meta.stackexchange.com/questions/197492/is-there-a-good-syntax-highlighting-hint-for-regular-expressions">Is there a good syntax highlighting hint for regular expressions?</a></li>
+<li><a href="https://meta.stackexchange.com/questions/104005/how-to-handle-regex-syntax-highlighting">How to handle regex syntax highlighting?</a></li>
+</ul>
+<p>The responses are in the specific context of Meta.StackExchange and seem to focus on displaying regular expressions on that site.  Nevertheless, many of the responses seem to miss the larger point.  There are cases where it would be desirable and helpful to highlight syntax and there doesn&rsquo;t appear to be a direct way to do that in that or many other contexts.</p>
+<p>Even attempting to partially highlight the regex through another language&rsquo;s syntax highlighting doesn&rsquo;t appear to provide any useful options.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>There is no clear solution at present.</p>
+<p>There seems to be good options for regular expression syntax highlighting in some contexts.</p>
+<p>For instance, Steven Levithan released a <a href="https://stevenlevithan.com/regex/colorizer/">Regex Colorizer</a> which he discusses in his <a href="https://blog.stevenlevithan.com/archives/regex-syntax-highlighter">Regex Syntax Highlighter post</a>.  This seems a good option for some applications, but doesn&rsquo;t seem applicable for static site generation with programs like Hugo.</p>
+<p>For use in Chroma and Hugo, a solution would likely come in the form of an update to Chroma to include support for a general regular expression syntax.</p>
+<h2 id="the-workaround">The Workaround</h2>
+<p>For now, a workround is necessary.</p>
+<p>In this section we&rsquo;ll use the example from the first linked article to explore some options.</p>
+<p><strong>No language tag</strong></p>
+<pre><code>```\n([#{&quot;\w])
+</code></pre><p>Not providing a language tag leads to an appearance inconsistent with the rest of the site.</p>
+<p>Some sort of language tag seems necessary.</p>
+<hr>
+<p><strong>Perl tag</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">\</span>n([<span style="color:#75715e">#{&#34;\w])</span>
+</code></pre></div><p><strong>JavaScript tag</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">```</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">n([#{&#34;</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">w])
+</span></code></pre></div><p><strong>Bash tag</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">```</span><span style="color:#ae81ff">\n</span><span style="color:#f92672">([</span><span style="color:#75715e">#{&#34;\w])</span>
+</code></pre></div><p>But, as may reasonably be expected, many language tags result in confusing and nonsensical highlighting, which is completely undesirable.</p>
+<p>We need to use a tag that will format the code block without highlighting the text.</p>
+<hr>
+<p><strong>Text tag</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">```\n([#{&#34;\w])
+</code></pre></div><p>The <code>text</code> tag causes Chroma to format the code block but leaves the text itself unhighlighted.</p>
+<p>It is not a great option, but at least it doesn&rsquo;t produce misleading or inconsistent results.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/042-adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/040-fixing-site-link-errors-between-subdomains-in-hugo/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 25
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/039-separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/">Separating the Content of 2 Websites Generated by 1 Hugo Project with a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 24
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

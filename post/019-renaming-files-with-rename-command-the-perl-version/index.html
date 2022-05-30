@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Renaming Files with the rename Command (the Perl Version)</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Renaming Files with the rename Command (the Perl Version)</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Renaming Files with the rename Command (the Perl Version)</h2>
+        
+
+
+<h5>Published: 2022 March 02</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shell"><kbd class="item-tag">shell</kbd></a>
+
+<a href="https://loopedline.com/tags/regular-expressions"><kbd class="item-tag">regular expressions</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="renaming-files-with-the-rename-command">Renaming files with the rename command</h2>
+<p>Renaming files is a basic and mundane task.</p>
+<p>Fortunately, there are several tools to make it easier.</p>
+<p>The Perl version of <code>rename</code> available in Bash on many Linux distributions is especially powerful since it can utilize regular expressions.</p>
+<h2 id="confirm-which-versions-of-rename-you-have-available">Confirm which version(s) of rename you have available</h2>
+<p>As <a href="https://loopedline.com/post/012-difference-between-rename-and-rename.ul/">previously mentioned</a> there can be more than one version of the <code>rename</code> command on your system.  So you&rsquo;ll first want to confirm that you have the Perl version of rename installed and verify how the command is invoked on your system.</p>
+<h2 id="a-warning">A warning</h2>
+<p>Before you begin, note that the rename command can rename files without additional prompting.  And with regular expressions it is easy to misunderstand how the pattern will be applied.  It&rsquo;s a good idea to add the <code>-n</code> options to the command to first see what changes would be made.  Then, if you like the results, rerun the command without the <em>-n</em> argument.  Consequently, all examples on this page will include the <em>-n</em> option.  Just remove the <em>-n</em> argument when you&rsquo;re ready to apply the changes.</p>
+<h2 id="the-command-form">The command form</h2>
+<p>The perl rename command has the form</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;expression&gt; &lt;file&gt;
+</code></pre></div><p>The command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">man rename
+</code></pre></div><p>provides details on how to use the rename command, but, like many man pages, it can be a bit overwhelming at first.</p>
+<p>The command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tldr perl-rename
+</code></pre></div><p>provides a shorter and more approachable introduction into the basic form of the rename command.</p>
+<h2 id="the-perl-substitution-operator">The Perl substitution operator</h2>
+<p>There are <a href="https://www.tutorialspoint.com/perl/perl_regular_expressions.htm">three regular expression operators in Perl</a>.</p>
+<p>This introduction will focus on <code>s///</code>, the substitution operator, because it is useful for renaming, and won&rsquo;t discuss the other operators.</p>
+<p>Regular expressions can be a complex topic and this article seeks only to provide a starting point for using them to rename files.  There is much more that can be accomplished with regular expressions than is shown here and a basic knowledge of their use is assumed.</p>
+<p>Two resources I find helpful when working with regular expressions are this <a href="http://web.mit.edu/hackl/www/lab/turkshop/slides/regex-cheatsheet.pdf">Regular Expressions Cheat Sheet</a> and <a href="https://regexr.com/">RegExr</a>, an online tool to learn, build, and test regular expressions.</p>
+<h2 id="example-setup-creating-a-test-directory">Example Setup: Creating a test directory</h2>
+<p>Before we start creating and deleting files, you may wish to first <a href="https://loopedline.com/post/017-creating-a-directory-with-bash-to-test-commands/">create a new directory in which to test these commands</a>.</p>
+<p>This will make it easier to see the effects of the changes we&rsquo;re making and will reduce the risk of impacting files we don&rsquo;t want to alter.</p>
+<h2 id="example-scenario-unhelpful-podcast-filenames">Example Scenario: Unhelpful podcast filenames</h2>
+<p>There are many wonderful podcasts available, but they often have unhelpful filenames that can make it difficult to manage the files directly.</p>
+<p>For these examples, we&rsquo;ll start by creating dummy files to test the commands on.  We&rsquo;ll utilize <a href="https://loopedline.com/post/016-creating-multiple-files-with-bash/#example-6-creating-files-with-a-specific-ending">the file creation command built at the end of a previous post</a> and alter it for our purposes.</p>
+<p>To create ten example files that each include a random alphanumeric string enter the following:</p>
+<p><strong>Command</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch podcast<span style="color:#66d9ef">$(</span>shuf -erz -n <span style="color:#66d9ef">$(</span>shuf -e -n <span style="color:#ae81ff">1</span> <span style="color:#f92672">{</span>0..5<span style="color:#f92672">}</span><span style="color:#66d9ef">)</span>  <span style="color:#f92672">{</span>A..Z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>a..z<span style="color:#f92672">}</span> <span style="color:#f92672">{</span>0..9<span style="color:#f92672">}</span> | tr -d <span style="color:#e6db74">&#39;\0&#39;</span><span style="color:#66d9ef">)</span><span style="color:#f92672">{</span>01..10<span style="color:#f92672">}</span>-final.mp3
+</code></pre></div><p>There are various outputs that are possible, but let&rsquo;s say we now have the following set of files that are all in the same directory.</p>
+<p><strong>Result example</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">podcast08-final.mp3
+podcast9mak01-final.mp3
+podcastC02-final.mp3
+podcastcYm10-final.mp3
+podcastdzYKV05-final.mp3
+podcastf09-final.mp3
+podcastfUJsd04-final.mp3
+podcasth0a06-final.mp3
+podcastIE07-final.mp3
+podcastU1jGb03-final.mp3
+</code></pre></div><p>We&rsquo;ll say the files are all related and are meant to be listened to sequentially, but they don&rsquo;t have a consistent naming scheme so it&rsquo;s not easy to tell how the files relate or the order in which they should be heard.</p>
+<p>To fix that, we could rename them manually, but that&rsquo;s not efficient.  And while it&rsquo;s doable for 10 files, it doesn&rsquo;t scale to hundreds or thousands of files.</p>
+<p>We can use the Perl rename command in Bash to rename them automatically.</p>
+<h2 id="example-1-adding-a-prefix">Example 1: Adding a prefix</h2>
+<p>Let&rsquo;s get started by adding a prefix to the files.  We&rsquo;ll add &ldquo;ecn-&rdquo; to the start of the filename to help us remember which podcast the files are from.</p>
+<p>For now we&rsquo;ll utilize the <code>-n</code> option (as discussed above).  And we&rsquo;ll limit the scope of files effected by supplying the extension of files we want altered, <code>*.mp3</code> in this example.</p>
+<hr>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -n <span style="color:#e6db74">&#39;s/^/ecn-/&#39;</span> podcast*.mp3
+</code></pre></div><hr>
+<p>Let&rsquo;s break down the elements of that command.</p>
+<p><code>rename</code> - run the rename command.</p>
+<p><code>-n</code> - invoke the &ldquo;no action&rdquo; option to print the file names to be renamed, but don&rsquo;t actually rename them.</p>
+<p><code>'...'</code> - - that is, the <strong>single quotes</strong> and the text within them - contain the pattern text that the rename command is is supposed to match and alter.</p>
+<p><code>podcast*.mp3</code> - is the name pattern of the file(s) we want to modify.  In this case, it should run the rename command against all files in the directory that start with &ldquo;podcast&rdquo;, end with &ldquo;.mp3&rdquo;, and have any number or type of characters inbetween.</p>
+<p>Within the <code>'...'</code> portion is an important element:</p>
+<p><code>s/.../.../</code> - tells rename to use the substitution regular expression pattern, which should find text between the first and second forward slash and replace it with the text between the second and third forward slash.</p>
+<p><code>^</code> - tells rename to find the beginning of each line of text.</p>
+<p><code>ecn-</code> - tells rename to replace the matched segments with the literal string &ldquo;ecn-&quot;.  In this case, since it is matching the beginning of each line, it will append &ldquo;ecn-&rdquo; to the beginning of each line.</p>
+<p>In summary, this command looks at all files in the same directory with filenames that start with &ldquo;podcast&rdquo;, end with &ldquo;.mp3&rdquo;, and have any number or type of characters inbetween, searches for the beginning of the line (which will match all files), and appends the literal string &ldquo;ecn-&quot;.  Since, the <em>-n</em> option is being used, the user will just see which files will be altered and how, without actually changing any files.</p>
+<hr>
+<p>If you are happy with the expected changes you can run the command to alter the files by replacing <code>-n</code> with <code>-v</code>.</p>
+<p><strong>Example Result:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ecn-podcast08-final.mp3
+ecn-podcast9mak01-final.mp3
+ecn-podcastC02-final.mp3
+ecn-podcastcYm10-final.mp3
+ecn-podcastdzYKV05-final.mp3
+ecn-podcastf09-final.mp3
+ecn-podcastfUJsd04-final.mp3
+ecn-podcasth0a06-final.mp3
+ecn-podcastIE07-final.mp3
+ecn-podcastU1jGb03-final.mp3
+</code></pre></div><h2 id="example-2-replacing-part-of-a-string">Example 2: Replacing part of a string</h2>
+<p>Let&rsquo;s say that in seeing the altered files, we don&rsquo;t find the change that helpful.  Since this is for the fictional &ldquo;Econ Hourly&rdquo; podcast, we decide to replace the &ldquo;ecn-podcast&rdquo; with &ldquo;econ-hourly_&rdquo; to make the association clear.</p>
+<hr>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -n <span style="color:#e6db74">&#39;s/ecn-podcast/econ-hourly_/&#39;</span> ecn-podcast*.mp3
+</code></pre></div><p>Most of the elements of this command are the same as those from the first example, but there are a few differences to consider.</p>
+<p><code>ecn-podcast</code> is the pattern we are searching for - in this case the literal string &ldquo;ecn-podcast&rdquo;.</p>
+<p><code>econ-hourly_</code> is the value we want to replace any matched strings with - in this case the literal string &ldquo;econ-hourly_&quot;.</p>
+<p><code>ecn-podcast*.mp3</code> is the name pattern of the file(s) we want to modify.  Since we altered the filenames in the previous example we need to update the command to reflect that.  Otherwise, the command won&rsquo;t match any files and therefore won&rsquo;t change anything.</p>
+<hr>
+<p><strong>Example Result:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">econ-hourly_08-final.mp3
+econ-hourly_9mak01-final.mp3
+econ-hourly_C02-final.mp3
+econ-hourly_cYm10-final.mp3
+econ-hourly_dzYKV05-final.mp3
+econ-hourly_f09-final.mp3
+econ-hourly_fUJsd04-final.mp3
+econ-hourly_h0a06-final.mp3
+econ-hourly_IE07-final.mp3
+econ-hourly_U1jGb03-final.mp3
+</code></pre></div><h2 id="example-3-removing-part-of-a-string">Example 3: Removing part of a string</h2>
+<p>Let&rsquo;s remove the &lsquo;-final&rsquo; suffix.  It may be helpful to the podcast producer, but it&rsquo;s not useful to us.</p>
+<hr>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -n <span style="color:#e6db74">&#39;s/-final//&#39;</span> econ-hourly_*.mp3
+</code></pre></div><p>Let&rsquo;s look at the elements that changed from the previous example.</p>
+<p><code>-final</code> is the pattern we are searching for - in this case the literal string &ldquo;-final&rdquo;.</p>
+<p><code>//</code> - that is, no value between the second and third forward slashes - is the value we want to replace any matched strings with - in this case an empty string, effectively deleting any matched strings.</p>
+<p><code>econ-hourly_*.mp3</code> As the filename changes, we need to change this portion.  We could use a more generalized name, like &ldquo;*.mp3&rdquo; but that risks matching files we don&rsquo;t intend to match.  It makes sense to be careful, especially when learning how to use a command.</p>
+<hr>
+<p><strong>Example Result:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">econ-hourly_08.mp3
+econ-hourly_9mak01.mp3
+econ-hourly_C02.mp3
+econ-hourly_cYm10.mp3
+econ-hourly_dzYKV05.mp3
+econ-hourly_f09.mp3
+econ-hourly_fUJsd04.mp3
+econ-hourly_h0a06.mp3
+econ-hourly_IE07.mp3
+econ-hourly_U1jGb03.mp3
+</code></pre></div><h2 id="example-4-rearranging-the-elements-of-the-string">Example 4: Rearranging the elements of the string</h2>
+<p>Now, we notice that the filename seems to have a portion right before the &ldquo;.mp3&rdquo; that has a two-digit number.  Before that, there is an alphanumeric string of varying length.</p>
+<p>For our purposes, let&rsquo;s assume the two-digit number is an episode number and the alphanumeric string is something like an episode title or name of a guest to the show.  For more consistent and legible names it would be helpful to move the episode number right after the show name and the alphanumeric string to the end of the file.</p>
+<p>To accomplish that we&rsquo;ll utilize the concept of capture groups for regular expressions.</p>
+<hr>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -n <span style="color:#e6db74">&#39;s/(econ-hourly_)(\w*)(\d{2})(.mp3)/$1$3_$2$4/&#39;</span> econ-hourly_*.mp3
+</code></pre></div><p>Here is what changed from the previous example.</p>
+<p><code>(econ-hourly_)(\w*)(\d{2})(.mp3)</code> is the regular expression pattern we are searching for.  Let&rsquo;s examine the elements of the regular expression more closely.</p>
+<p><code>()</code> - <strong>parenthesis</strong> represent a <em>capture group</em>, which can be used in the replacement.  Anything that matches the pattern in the capture group is stored in a variable numbered by the order of the opening parenthesis.</p>
+<p><code>(econ-hourly_)</code> - the first capture group, which will match the literal string &ldquo;econ-hourly_&rdquo; and store the results in the <code>$1</code> variable.</p>
+<p><code>(\w*)</code> - the second capture group, which will match zero or more <em>word characters</em> (that is, anything in the set [A-Za-z0-9_]), and store the results in the <code>$2</code> variable. <code>\w</code> is the symbol for the *word character class*.  <code>*</code> is the quantifier representing *zero or more* of the preceding token.  Taken together, <code>\w*</code> will match a string of zero or more characters in the set [A-Za-z0-9_].</p>
+<p><code>(\d{2})</code> - the third capture group, which will match exactly two <em>digit characters</em> (that is, anything in the set [0-9]), and store the results in the <code>$3</code> variable.  <code>\d</code> is the symbol for the <em>digit character class</em>.  <code>{2}</code> is the quantifier representing <em>exactly two</em> of the preceding token.  Taken together, <code>\d{2}</code> will match a string of exactly two characters in the set [0-9].</p>
+<p><code>(.mp3)</code> - the fourth capture group, which will match the literal string &ldquo;.mp3&rdquo; and store the results in the <code>$4</code> variable.</p>
+<p><code>$1$3_$2$4</code> is the value we want to replace any matched strings with.  This will replace the matched pattern with the following elements:</p>
+<ul>
+<li>the string found in capture group 1</li>
+<li>the string found in capture group 3</li>
+<li>the literal string &ldquo;_&rdquo;</li>
+<li>the string found in capture group 2</li>
+<li>the string found in capture group 4</li>
+</ul>
+<p>This has the effect of rearranging the string portions that match the 4 patterns we specified and adding an underscore.</p>
+<hr>
+<p><strong>Example Result:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">econ-hourly_01_9mak.mp3
+econ-hourly_02_C.mp3
+econ-hourly_03_U1jGb.mp3
+econ-hourly_04_fUJsd.mp3
+econ-hourly_05_dzYKV.mp3
+econ-hourly_06_h0a.mp3
+econ-hourly_07_IE.mp3
+econ-hourly_08_.mp3
+econ-hourly_09_f.mp3
+econ-hourly_10_cYm.mp3
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>This is only an introduction into the use of the rename command.  It is powerful and there is much more you can do.</p>
+<p>There is much room for improvement in these example commands, and if you find yourself repeating these steps, you could simplify and combine them, or include them in a script to automate the process.  Just be careful not to be too clever in your efforts or you might give yourself the opportunity to rediscover <a href="https://github.com/dwmkerr/hacker-laws#kernighans-law">Kernighan&rsquo;s Law</a> anew.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/042-adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/041-creating-a-persistent-sequence-id-counter-with-bash/">Creating a Persistent Sequence ID Counter With Bash</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 27
+        
+                  |     Last edited:  2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/039-separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/">Separating the Content of 2 Websites Generated by 1 Hugo Project with a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 24
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>
