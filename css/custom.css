@@ -10,7 +10,7 @@ div#listpage-navigation-panel {
     display: grid;
     grid-template-areas: 
         "left pagexofy right"
-        /* "left allpostlink right"; */
+        "left allpostlink right";
     grid-template-columns: repeat(3, minmax(50px, 300px));
     justify-items: stretch;
 }
@@ -33,14 +33,14 @@ div#listpage-navigation-pagexofy {
     justify-content: center;
 }
 
-/* div#listpage-navigation-allpostlink {
+div#listpage-navigation-allpostlink {
     grid-area: allpostlink;
     text-align: center;
     
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+}
 
 a#listpage-navigation-right {
     grid-area: right;
