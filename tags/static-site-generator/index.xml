@@ -126,10 +126,9 @@ We already have a date field that reflects when a post was first published. We w
       <pubDate>Tue, 05 Apr 2022 20:25:36 -0400</pubDate>
       
       <guid>https://loopedline.com/post/031-building-improved-list-page-navigation-for-hugo/</guid>
-      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
-This post is part of an ongoing effort to tailor the theme over time.
-Objective In this post we&amp;rsquo;ll build a new user interface for navigating between list pages.
-As of this writing, the list page has right and left arrows that allow navigating to the list pages for earlier and later posts. We&amp;rsquo;ll keep those, and add a count of the list pages to provide some context, as well as adding a link to the All Posts list page.</description>
+      <description>Note of Caution The approach detailed in this post has some problems and produces confusing results for subsection list pages.
+It was replaced and superceded by the approach used in this post.
+Update Note When this post was originally published, it linked to a dynamic version of the All Posts list page. That page has been retired. Consequently, links to that page have been replaced with a links to a saved static version of that page.</description>
     </item>
     
     <item>
@@ -138,10 +137,9 @@ As of this writing, the list page has right and left arrows that allow navigatin
       <pubDate>Fri, 01 Apr 2022 14:29:17 -0400</pubDate>
       
       <guid>https://loopedline.com/post/029-automatically-building-a-list-of-all-posts-in-hugo/</guid>
-      <description>The Challenge This project is built with Hugo and uses the Minimal Hugo theme.
-This post is part of an ongoing effort to tailor the theme over time.
-For this post, we&amp;rsquo;ll look at how to build an automated list of all posts in the /project/content/post/ directory while leaving the existing paginator unaltered.
-Hugo allows one list template per section, and since we want to keep the existing paginator, we need to find another way to automatically build that list.</description>
+      <description>Update Note When this post was originally published, it linked to a dynamic version of the All Posts list page. That page has been retired. Consequently, links to that page have been replaced with a links to a saved static version of that page.
+The Challenge This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.</description>
     </item>
     
     <item>
