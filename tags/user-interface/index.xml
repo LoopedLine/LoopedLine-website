@@ -13,10 +13,10 @@
     
     <item>
       <title>Building Improved List Page Navigation for Hugo</title>
-      <link>https://loopedline.com/post/031-building-improved-list-page-navigation-for-hugo/</link>
+      <link>https://loopedline.com/post/building-improved-list-page-navigation-for-hugo/</link>
       <pubDate>Tue, 05 Apr 2022 20:25:36 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/031-building-improved-list-page-navigation-for-hugo/</guid>
+      <guid>https://loopedline.com/post/building-improved-list-page-navigation-for-hugo/</guid>
       <description>Note of Caution The approach detailed in this post has some problems and produces confusing results for subsection list pages.
 It was replaced and superceded by the approach used in this post.
 Update Note When this post was originally published, it linked to a dynamic version of the All Posts list page. That page has been retired. Consequently, links to that page have been replaced with a links to a saved static version of that page.</description>
@@ -24,10 +24,10 @@ Update Note When this post was originally published, it linked to a dynamic vers
     
     <item>
       <title>Testing CSS Grid</title>
-      <link>https://loopedline.com/post/030-testing-css-grid/</link>
+      <link>https://loopedline.com/post/testing-css-grid/</link>
       <pubDate>Mon, 04 Apr 2022 09:44:48 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/030-testing-css-grid/</guid>
+      <guid>https://loopedline.com/post/testing-css-grid/</guid>
       <description>Update Note When this post was originally published, it linked to a dynamic version of the All Posts list page. That page has been retired. Consequently, links to that page have been replaced with a links to a saved static version of that page.
 Introduction This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.</description>

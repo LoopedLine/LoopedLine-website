@@ -13,10 +13,10 @@
     
     <item>
       <title>Regular Expression Syntax Highlighting [UNSOLVED]</title>
-      <link>https://loopedline.com/post/025-regular-expression-syntax-highlighting/</link>
+      <link>https://loopedline.com/post/regular-expression-syntax-highlighting/</link>
       <pubDate>Thu, 17 Mar 2022 11:36:59 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/025-regular-expression-syntax-highlighting/</guid>
+      <guid>https://loopedline.com/post/regular-expression-syntax-highlighting/</guid>
       <description>The Problem When posting snippets of regular expression code inside code blocks (as in this example) it would be helpful to apply syntax highlighting.
 Because this site uses Hugo, which uses Chroma, which does not yet include support for highlighting regular expressions another approach is required.
 The Process A web search for regular expression syntax highlighting returned some discussions of the general question:
@@ -25,10 +25,10 @@ The Process A web search for regular expression syntax highlighting returned som
     
     <item>
       <title>Updating Hugo Posts with Code Syntax Highlighting [SOLVED]</title>
-      <link>https://loopedline.com/post/021-updating-hugo-posts-with-code-syntax-highlighting/</link>
+      <link>https://loopedline.com/post/updating-hugo-posts-with-code-syntax-highlighting/</link>
       <pubDate>Sat, 12 Mar 2022 15:07:58 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/021-updating-hugo-posts-with-code-syntax-highlighting/</guid>
+      <guid>https://loopedline.com/post/updating-hugo-posts-with-code-syntax-highlighting/</guid>
       <description>The Problem Hugo&amp;rsquo;s code fence syntax produced code blocks but didn&amp;rsquo;t produce code with syntax highlighting.
 The Process A web search for syntax highlighting in Hugo returned some Hugo documentation pages:
  Syntax Highlighting Configure Markup: Highlight  While these offered some background information, they didn&amp;rsquo;t help resolve the issue.
@@ -37,10 +37,10 @@ The Process A web search for syntax highlighting in Hugo returned some Hugo docu
     
     <item>
       <title>Renaming Files with the rename Command (the Perl Version)</title>
-      <link>https://loopedline.com/post/019-renaming-files-with-rename-command-the-perl-version/</link>
+      <link>https://loopedline.com/post/renaming-files-with-rename-command-the-perl-version/</link>
       <pubDate>Wed, 02 Mar 2022 21:21:25 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/019-renaming-files-with-rename-command-the-perl-version/</guid>
+      <guid>https://loopedline.com/post/renaming-files-with-rename-command-the-perl-version/</guid>
       <description>Renaming files with the rename command Renaming files is a basic and mundane task.
 Fortunately, there are several tools to make it easier.
 The Perl version of rename available in Bash on many Linux distributions is especially powerful since it can utilize regular expressions.
@@ -49,10 +49,10 @@ Confirm which version(s) of rename you have available As previously mentioned th
     
     <item>
       <title>Using the sed Command in a Bash Script to Update Hugo Front Matter</title>
-      <link>https://loopedline.com/post/014-using-sed-in-bash-script-to-update-hugo-front-matter/</link>
+      <link>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</link>
       <pubDate>Fri, 11 Feb 2022 11:37:37 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/014-using-sed-in-bash-script-to-update-hugo-front-matter/</guid>
+      <guid>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</guid>
       <description>Background Hugo used to have an undraft command to quickly alter front matter before publishing, but it was removed.
 The command would update &amp;ldquo;the content’s draft status from ‘True’ to ‘False’ and&amp;hellip; the date to the current date and time&amp;rdquo;.
 That&amp;rsquo;s useful functionality, so we&amp;rsquo;ll replicate it with a Bash script.
@@ -61,10 +61,10 @@ For this project we&amp;rsquo;ll use sed, which is one of the basic programs tha
     
     <item>
       <title>There&#39;s a Difference Between rename and rename.ul in Bash</title>
-      <link>https://loopedline.com/post/012-difference-between-rename-and-rename.ul/</link>
+      <link>https://loopedline.com/post/difference-between-rename-and-rename.ul/</link>
       <pubDate>Wed, 08 Dec 2021 13:20:10 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/012-difference-between-rename-and-rename.ul/</guid>
+      <guid>https://loopedline.com/post/difference-between-rename-and-rename.ul/</guid>
       <description>Confusion with rename There are several software packages with the name &amp;ldquo;rename&amp;rdquo; available for Bash.
 That can cause confusion if you&amp;rsquo;re not aware of the fact.
 Adding to the confusion, on many distributions of Linux, like Debian and Ubuntu, the rename command doesn&amp;rsquo;t refer to the &amp;ldquo;rename&amp;rdquo; that is part of the util-linux package. Instead, it likely refers to a &amp;ldquo;perl-rename&amp;rdquo; package. To call the util-linux version you&amp;rsquo;ll likely have to use the rename.</description>

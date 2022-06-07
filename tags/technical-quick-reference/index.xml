@@ -13,10 +13,10 @@
     
     <item>
       <title>Hugo Basic Terminal Command Quick Reference</title>
-      <link>https://loopedline.com/post/002-hugo-basic-command-quick-reference/</link>
+      <link>https://loopedline.com/post/hugo-basic-command-quick-reference/</link>
       <pubDate>Fri, 23 Jul 2021 12:30:00 -0400</pubDate>
       
-      <guid>https://loopedline.com/post/002-hugo-basic-command-quick-reference/</guid>
+      <guid>https://loopedline.com/post/hugo-basic-command-quick-reference/</guid>
       <description>Check Hugo version In a terminal, enter the command:
 hugo version If Hugo is installed you should see a message indicating the Hugo version number.
 Create a new website In a terminal pointed to the directory where you want Hugo project files to reside, enter the command:

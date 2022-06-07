@@ -13,10 +13,10 @@
     
     <item>
       <title>Using the sed Command in a Bash Script to Update Hugo Front Matter</title>
-      <link>https://loopedline.com/post/014-using-sed-in-bash-script-to-update-hugo-front-matter/</link>
+      <link>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</link>
       <pubDate>Fri, 11 Feb 2022 11:37:37 -0500</pubDate>
       
-      <guid>https://loopedline.com/post/014-using-sed-in-bash-script-to-update-hugo-front-matter/</guid>
+      <guid>https://loopedline.com/post/using-sed-in-bash-script-to-update-hugo-front-matter/</guid>
       <description>Background Hugo used to have an undraft command to quickly alter front matter before publishing, but it was removed.
 The command would update &amp;ldquo;the content’s draft status from ‘True’ to ‘False’ and&amp;hellip; the date to the current date and time&amp;rdquo;.
 That&amp;rsquo;s useful functionality, so we&amp;rsquo;ll replicate it with a Bash script.
