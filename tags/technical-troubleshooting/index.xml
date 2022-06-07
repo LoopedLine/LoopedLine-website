@@ -6,10 +6,23 @@
     <description>Recent content in technical troubleshooting on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 May 2022 22:32:08 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jun 2022 11:29:21 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/technical-troubleshooting/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fixed Header Covering On-Page Links [SOLVED]</title>
+      <link>https://loopedline.com/post/fixed-header-covering-on-page-links/</link>
+      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/fixed-header-covering-on-page-links/</guid>
+      <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+The Problem When clicking on-page links the top of the content is covered by the site&amp;rsquo;s fixed header.
+We want linked content to display just below the fixed header.
+The Process This is a common problem with a long history, so a web search quickly led to some helpful discussions of the issue:</description>
+    </item>
     
     <item>
       <title>Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</title>

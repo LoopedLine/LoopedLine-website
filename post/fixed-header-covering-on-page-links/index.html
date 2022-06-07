@@ -1,26 +1,10 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>technical troubleshooting</title>
+        <title>Fixed Header Covering On-Page Links [SOLVED]</title>
         
                 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -71,9 +55,6 @@
         <meta name="generator" content="Hugo 0.68.3" />
         
     
-        <link href="/tags/technical-troubleshooting/index.xml" rel="alternate" type="application/rss&#43;xml" title="LoopedLine" />
-        <link href="/tags/technical-troubleshooting/index.xml" rel="feed" type="application/rss&#43;xml" title="LoopedLine" />
-    
 
     
 
@@ -89,7 +70,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">technical troubleshooting</a>
+                    <a class="navbar-brand visible-xs" href="#">Fixed Header Covering On-Page Links [SOLVED]</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -124,12 +105,63 @@
 
 <main>
 
-    <h2>technical troubleshooting</h2>
-    <h5>11 total posts</h5>
-    <hr>
+    
+    <div>
+        <h2>Fixed Header Covering On-Page Links [SOLVED]</h2>
+        
+
+
+<h5>Published: 2022 June 07</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/user-interface"><kbd class="item-tag">user interface</kbd></a>
+
+<a href="https://loopedline.com/tags/css"><kbd class="item-tag">CSS</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
+
+
+    </div>
 
     
-        <div class="item">
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="background">Background</h1>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<h1 id="the-problem">The Problem</h1>
+<p>When clicking on-page links the top of the content is covered by the site&rsquo;s fixed header.</p>
+<p>We want linked content to display just below the fixed header.</p>
+<h1 id="the-process">The Process</h1>
+<p>This is a common problem with a long history, so a web search quickly led to some helpful discussions of the issue:</p>
+<ul>
+<li><a href="https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/">Fixed Headers, On-Page Links, and Overlapping Content, Oh My!</a> by Chris Coyier on CSS-Tricks.com</li>
+<li><a href="https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors/56467997#56467997">This answer (and its comments)</a> on StackOverflow.com</li>
+</ul>
+<h1 id="the-solution">The Solution</h1>
+<p>To implement the solution mentioned in those articles a simple addition was made to the <strong>css.html</strong> file in the project&rsquo;s <em>/static/css/</em> directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/*  General  */</span>
+
+<span style="color:#f92672">html</span> {
+    scroll-padding-top: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/* This allows on-page linked content to appear below fixed headers.  The value should be the height of the sticky header. */</span>
+}
+</code></pre></div><p>With that change on-page linked content now appears below the fixed header as expected.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
 
 
 
@@ -137,7 +169,7 @@
     
 
     
-    <h4 id="listpage-item"><a href="/post/fixed-header-covering-on-page-links/">Fixed Header Covering On-Page Links [SOLVED]</a></h4>
+    <h4 id="listpage-item"><a href="/post/updating-the-hugo-list-page-layout-to-display-all-posts/">Updating the Hugo List Page Layout to Display All Posts</a></h4>
 
 
 
@@ -151,16 +183,43 @@
     
     
     <h5>
-        Published: 2022 June 07
+        Published: 2022 June 01
         
     </h5>
 
 
 
 </div>
+  <div class="item">
+
+
 
     
-        <div class="item">
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
 
 
 
@@ -189,334 +248,10 @@
 
 
 </div>
-
+ 
     
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/changing-the-spacing-of-font-awesome-icons-in-hugo/">Changing the Spacing of Font Awesome Icons in Hugo</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 March 22
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/changing-the-size-of-font-awesome-icons-in-hugo/">Changing the Size of Font Awesome Icons in Hugo</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 March 21
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/regular-expression-syntax-highlighting/">Regular Expression Syntax Highlighting [UNSOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 March 17
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/escaping-markdown-code-fences-nested-within-code-fences/">Escaping Markdown Code Fences Nested Within Code Fences [SOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 March 16
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/updating-hugo-posts-with-code-syntax-highlighting/">Updating Hugo Posts with Code Syntax Highlighting [SOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2022 March 12
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/apt-update-not-working-on-wsl/">Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2021 December 07
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/unable-to-open-bash-on-wsl/">Unable to Open the Bash Shell in Ubuntu via Windows Subsystem for Linux [SOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2021 December 07
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/disabling-hugos-automatic-hyperlinking-of-urls/">Disabling Hugo&#39;s Automatic Hyperlinking of URLs [SOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2021 August 14
-        
-    </h5>
-
-
-
-</div>
-
-    
-        <div class="item">
-
-
-
-    
-    
-
-    
-    <h4 id="listpage-item"><a href="/post/hugo-site-looks-different-served-locally-vs-remotely/">Hugo Site Looks Different Served Locally vs Remotely [SOLVED]</a></h4>
-
-
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    <h5>
-        Published: 2021 August 12
-        
-    </h5>
-
-
-
-</div>
-
-    
-
-    <hr>
 
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
