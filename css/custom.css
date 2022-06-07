@@ -1,3 +1,13 @@
+/*  General  */
+
+html {
+    scroll-padding-top: 70px /* This allows on-page linked content to appear below fixed headers.  The value should be the height of the sticky header. */
+}
+
+
+
+
+
 /* List Page Navigation Interface - paginator phase 4 */
 
 div#listpage-navigation-container {

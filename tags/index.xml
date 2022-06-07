@@ -6,10 +6,64 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jun 2022 15:32:34 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jun 2022 11:29:21 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS</title>
+      <link>https://loopedline.com/tags/css/</link>
+      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software development</title>
+      <link>https://loopedline.com/tags/software-development/</link>
+      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technical troubleshooting</title>
+      <link>https://loopedline.com/tags/technical-troubleshooting/</link>
+      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/technical-troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technical troubleshooting - solved</title>
+      <link>https://loopedline.com/tags/technical-troubleshooting-solved/</link>
+      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/technical-troubleshooting-solved/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>user interface</title>
+      <link>https://loopedline.com/tags/user-interface/</link>
+      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/user-interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://loopedline.com/tags/web-development/</link>
+      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/web-development/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo</title>
@@ -30,29 +84,11 @@
     </item>
     
     <item>
-      <title>software development</title>
-      <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Wed, 01 Jun 2022 15:32:34 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/software-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>static site generator</title>
       <link>https://loopedline.com/tags/static-site-generator/</link>
       <pubDate>Wed, 01 Jun 2022 15:32:34 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/static-site-generator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web development</title>
-      <link>https://loopedline.com/tags/web-development/</link>
-      <pubDate>Wed, 01 Jun 2022 15:32:34 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/web-development/</guid>
       <description></description>
     </item>
     
@@ -102,24 +138,6 @@
     </item>
     
     <item>
-      <title>technical troubleshooting</title>
-      <link>https://loopedline.com/tags/technical-troubleshooting/</link>
-      <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/technical-troubleshooting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technical troubleshooting - solved</title>
-      <link>https://loopedline.com/tags/technical-troubleshooting-solved/</link>
-      <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/technical-troubleshooting-solved/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>web hosting</title>
       <link>https://loopedline.com/tags/web-hosting/</link>
       <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
@@ -161,24 +179,6 @@
       <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/bootstrap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS</title>
-      <link>https://loopedline.com/tags/css/</link>
-      <pubDate>Sat, 21 May 2022 13:53:48 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>user interface</title>
-      <link>https://loopedline.com/tags/user-interface/</link>
-      <pubDate>Tue, 05 Apr 2022 20:25:36 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/user-interface/</guid>
       <description></description>
     </item>
     
