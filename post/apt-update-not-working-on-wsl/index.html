@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Apt Update Not Working on Windows Subsystem for Linux [SOLVED]</h2>
+        
+
+
+<h5>Published: 2021 December 07</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/windows-os"><kbd class="item-tag">Windows OS</kbd></a>
+
+<a href="https://loopedline.com/tags/windows-subsystem-for-linux"><kbd class="item-tag">Windows Subsystem for Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><h2 id="the-problem">The Problem</h2>
+<p>In Windows Subsystem for Linux (WSL) when running the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+</code></pre></div><p>the following error appears for every package</p>
+<blockquote>
+<p>&ldquo;Temporary failure resolving &lsquo;archive.ubuntu.com&rsquo;&rdquo;</p>
+</blockquote>
+<p>and nothing is updated.</p>
+<p>Furthermore, nothing can be installed using the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install &lt;&lt;PACKAGE-NAME&gt;&gt;
+</code></pre></div><p>for the same reason.</p>
+<h2 id="the-process">The Process</h2>
+<p>A web search for the error led to <a href="https://stackoverflow.com/questions/60269422/windows10-wsl2-ubuntu-debian-no-network/60302925">a StackExchange question discussing the issue</a>, which offered guidance on the problem.</p>
+<h2 id="the-solution">The Solution</h2>
+<h3 id="temporary-solution">Temporary Solution</h3>
+<p>As <a href="https://stackoverflow.com/questions/60269422/windows10-wsl2-ubuntu-debian-no-network/60302925#60302925">this StackExchange answer</a> points out, updating <code>/etc/resolv.conf</code> by editing the nameserver line to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nameserver 8.8.8.8
+</code></pre></div><p>resolves the issue, at least until WSL is restarted.</p>
+<h3 id="durable-solution">Durable Solution</h3>
+<p>As <a href="https://stackoverflow.com/questions/60269422/windows10-wsl2-ubuntu-debian-no-network/63617843#63617843">this other StackExchange answer</a> points out, to make the solution more durable, some additional steps are required.</p>
+<ol>
+<li>Create the file <code>/etc/wsl.conf</code>.</li>
+<li>Add the following to it and save.</li>
+</ol>
+<pre><code>[network]
+generateResolvConf = false
+```bash
+3. Shutdown WSL by opening a `cmd` terminal and running the following.
+
+```bash
+wsl --shutdown
+</code></pre><ol start="4">
+<li>Restart WSL.</li>
+<li>If it exists, delete the <code>/etc/resolv.conf</code> because it&rsquo;s most likely a link to another file.</li>
+<li>Create a new <code>/etc/resolv.conf</code> file.</li>
+<li>Add the following to it and save.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nameserver 8.8.8.8
+</code></pre></div><p>The apt update and apt install processes (as well as other processes that need network name resolution) should now work.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/creating-a-persistent-sequence-id-counter-with-bash/">Creating a Persistent Sequence ID Counter With Bash</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 27
+        
+                  |     Last edited:  2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/fixing-site-link-errors-between-subdomains-in-hugo/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 25
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

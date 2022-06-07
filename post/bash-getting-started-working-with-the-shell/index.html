@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bash - Getting Started Working with the Shell</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Bash - Getting Started Working with the Shell</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Bash - Getting Started Working with the Shell</h2>
+        
+
+
+<h5>Published: 2021 December 05</h5>
+
+
+    <h5>Last edited: 2022 June 05</h5>
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shell"><kbd class="item-tag">shell</kbd></a>
+
+<a href="https://loopedline.com/tags/learning-path"><kbd class="item-tag">learning path</kbd></a>
+
+<a href="https://loopedline.com/tags/recommended-resources"><kbd class="item-tag">recommended resources</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction-to-bash">Introduction to Bash</h2>
+<p>When you think of someone expertly working with a computer you might picture them stereotypically entering commands on a black screen with green text, the computer responding with rapidly scrolling walls of characters.</p>
+<p>For a long time I didn&rsquo;t realize the thing they were typing in was called a shell.  (The differences between a terminal, console, command line, and shell are nuanced.  Many of <a href="https://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line">the responses to this StackExchange question</a> offer some helpful insight and perspective on the topic.)</p>
+<p>Nor did I realize that shell was likely to be a specific program called Bash.</p>
+<h2 id="what-is-bash">What is Bash?</h2>
+<p>According to <a href="https://www.makeuseof.com/tag/best-linux-shells/#:~:text=1.-,Bash,is%20the%20default%20GNU%20shell.">Christian Cawley on MakeUseOf.com</a>:</p>
+<blockquote>
+<p><em>&quot;[Bash] is by a mile the most popular shell among Linux users. It&rsquo;s hard to even think about shells without the Bourne-Again Shell (bash) being a part of the equation. Many Linux distributions ship with bash as the default shell because bash is the default GNU shell. Released in 1989, it also boasts a few decades of healthy development behind it.&quot;</em></p>
+</blockquote>
+<p>And courtesy of <a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Wikipedia&rsquo;s article for Bash</a>:</p>
+<blockquote>
+<p><em>&ldquo;Bash is a Unix shell and command language&rdquo;</em></p>
+</blockquote>
+<p>And the <a href="https://en.wikipedia.org/wiki/Shell_(computing)">Wikipedia article for shell</a>:</p>
+<blockquote>
+<p><em>&ldquo;In computing, a shell is a computer program which exposes an operating system&rsquo;s services to a human user or other programs. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer&rsquo;s role and particular operation. It is named a shell because it is the outermost layer around the operating system.&quot;</em></p>
+</blockquote>
+<p>So, Bash is a popular means for interacting with your operating system that is likely already on, or at least available for, your computer.</p>
+<h2 id="why-learn-to-work-with-bash">Why learn to work with Bash?</h2>
+<p>As <a href="https://linuxhint.com/what_is_bash_script/">Talha Saif Malik points out</a>:</p>
+<blockquote>
+<p><em>&ldquo;If you want more control over your OS and want to perform different OS related tasks then bash is your way to go. By bash, we don’t only refer to the scripting language but also to the tools that come with Linux operating system. Every single tool on Linux has its work and each performs a different task individually. Bash is really useful whenever you need to combine all those tools and chain them together in such a way that they all work in harmony to accomplish a task which is really difficult to do otherwise. For example, anything that has something to do with the Linux OS can also be done in other programming languages such as Python or Perl but it’s very hard to accomplish different OS-related tasks.&quot;</em></p>
+</blockquote>
+<p>He continues:</p>
+<blockquote>
+<p><em>&ldquo;Bash is really useful to perform tasks around different tools and processes with the ability to combine different processes together and make all of them work towards a single goal. Bash is really handy when it comes to dealing and manipulating the inputs and outputs which is a really difficult thing to do in other general-purpose programming languages such as python, C, etc.&quot;</em></p>
+</blockquote>
+<p>And since Bash can be found in so many operating systems, it&rsquo;s a broadly useful tool that is readily accessible.</p>
+<h2 id="an-important-note-of-caution">An important note of caution</h2>
+<p>Because Bash (and scripting generally) is so powerful you need to be cautious what commands you enter.  Make sure you understand commands before you enter them.</p>
+<p>And as <a href="https://cyberhost.uk/dont-copy-paste-into-terminal/">this article helpfully illustrates <strong>you should not blindly copy and paste commands from the internet into your terminal</strong></a>.  Even if the command looks innocent, websites can overwrite what is copied with something dangerous.  If you need to copy and paste, paste it into a text program and examine the command there first.</p>
+<h2 id="getting-started-with-bash">Getting started with Bash</h2>
+<p>While there is much efficency to be gained with Bash, there is a modest learning curve to getting started.</p>
+<p><a href="https://www.youtube.com/watch?v=I4EWvMFj37g">Bash in 100 Seconds</a> by Fireship gives a great introduction.</p>
+<p><a href="https://tldr.sh/">tldr</a> is not included with Bash, but it&rsquo;s a tool that&rsquo;s so incredibly helpful for learning Bash that I recommend <a href="https://itsfoss.com/tldr-linux-man-pages-simplified/">learning about it and installing it immediately</a>.  It can flatten the learning curve substantially.</p>
+<p><a href="https://www.youtube.com/watch?v=ZtqBQ68cfJc">The 50 Most Popular Linux &amp; Terminal Commands - Full Course for Beginners</a> by Colt Steele is a great overview of some of the common tools that are accessible to you via Bash.  Steele&rsquo;s video is based on <a href="https://www.freecodecamp.org/news/the-linux-commands-handbook/">The Linux Command Handbook</a> by Flavio Copes, which offers another format for the same information.</p>
+<h2 id="bash-references">Bash references</h2>
+<p>Below are some helpful references for working with Bash.</p>
+<p>The <a href="https://devhints.io/bash">Bash scripting cheatsheet</a> by devhints.io provides a quick reference for lots of basic Bash commands.</p>
+<p>The <a href="https://github.com/dylanaraps/pure-bash-bible#readme">Pure Bash Bible</a> by Dylan Araps offers a collection of pure bash alternatives to external processes.</p>
+<p>The official <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">Bash Reference Manual</a> gives detailed information on the Bash shell.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/creating-a-persistent-sequence-id-counter-with-bash/">Creating a Persistent Sequence ID Counter With Bash</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 27
+        
+                  |     Last edited:  2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/separating-the-content-of-2-websites-generated-by-1-hugo-project-with-a-bash-script/">Separating the Content of 2 Websites Generated by 1 Hugo Project with a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 24
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

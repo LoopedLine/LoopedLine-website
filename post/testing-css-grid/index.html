@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Testing CSS Grid</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Testing CSS Grid</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Testing CSS Grid</h2>
+        
+
+
+<h5>Published: 2022 April 04</h5>
+
+
+    <h5>Last edited: 2022 June 04</h5>
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/user-interface"><kbd class="item-tag">user interface</kbd></a>
+
+<a href="https://loopedline.com/tags/css"><kbd class="item-tag">CSS</kbd></a>
+
+<a href="https://loopedline.com/tags/css-grid"><kbd class="item-tag">CSS grid</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="update-note">Update Note</h2>
+<p>When this post was originally published, it linked to a dynamic version of the <em>All Posts</em> list page.  That page has been retired.  Consequently, links to that page have been replaced with a links to a saved static version of that page.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<h2 id="objective">Objective</h2>
+<p>For this post, we&rsquo;ll prototype a new user interface for navigating between list pages.</p>
+<p>As of this writing, the list page has right and left arrows that allow navigating to the list pages for earlier and later posts.  We&rsquo;ll keep those, and add a count of the list pages to provide some context, as well as adding a link to the <a href="/bespoke/archive/map-all-posts/map-all-posts.html">All Posts</a> list page.</p>
+<p>We&rsquo;ll arrange those four elements so that they are easy to see, understand, and interact with.</p>
+<h2 id="development-approach">Development Approach</h2>
+<p>Changing the user interface of a Hugo theme can sometimes become complicated.  So, before trying to make the update to the Hugo project, we&rsquo;ll prototype the basic layout in a plain HTML file that isn&rsquo;t built by Hugo.  Once we&rsquo;ve developed and tested an interface we like, we can then merge it into the Hugo theme.</p>
+<h2 id="start-with-the-html">Start with the HTML</h2>
+<p>To work directly with the HTML, we&rsquo;ll create a file inside a separate project folder.</p>
+<h3 id="prototype-1---just-html">Prototype 1 - Just HTML</h3>
+<p>In addition to typical HTML boilerplate, we&rsquo;ll include the following inside the <code>&lt;body&gt;</code> tag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">hr</span>&gt;
+
+    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 1 - Just HTML &lt;/<span style="color:#f92672">h3</span>&gt;
+
+    &lt;<span style="color:#f92672">div</span>&gt;Left Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;List Page X of Y&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;See All Z Posts&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;Right Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+
+    &lt;<span style="color:#f92672">hr</span>&gt;
+</code></pre></div><p>Looking at <a href="/bespoke/project/testing-css-grid/prototype01.html">the first prototype page</a>, it&rsquo;s clear the interface would benefit from additional structure and styling.</p>
+<h2 id="incorporate-css">Incorporate CSS</h2>
+<p>While all the necessary elements for the user interface are defined in the HTML file, the arrangement and styling will occur principally in a linked CSS file.  So, most of our design decisions will focus on CSS.</p>
+<h3 id="css-flexbox-vs-css-grid">CSS Flexbox vs CSS Grid</h3>
+<p>Because we are structuring an interface, the two obvious approaches are <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">CSS Flexbox</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS grid</a>, so the first decision is to select between them.</p>
+<p>In Chris Coyier&rsquo;s excellent article, <em><a href="https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/">Quick! What’s the Difference Between Flexbox and Grid?</a></em>, he points out many of the reasons CSS Grid seems the better choice for this task, but perhaps the simplest articulation comes from a quote that he includes in the article:</p>
+<blockquote>
+<p>flexbox looks like it does what you want</p>
+<p>but grid is usually what you want</p>
+<p>-<a href="https://twitter.com/davatron5000/status/1088852283125886977">Dave Rupert (@davatron5000)</a></p>
+</blockquote>
+<p>With that hypothesis, we need to figure out how to utilize CSS Grid for our task.</p>
+<h3 id="getting-started-with-css-grid">Getting Started with CSS Grid</h3>
+<p>As is often the case, a helpful place to start is the <a href="https://www.youtube.com/c/Fireship/featured">Fireship YouTube channel</a> by Jeff Delaney.  Specifically, he has two excellent videos that provide a great introduction to CSS Grid:</p>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=uuOXPWCh-6o">CSS Grid in 100 Seconds</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=705XCEruZFs">The Joy of CSS Grid - Build 3 Beautifully Simple Responsive Layouts</a></p>
+</li>
+</ul>
+<p>And as we build, another reliable resource, <a href="https://css-tricks.com/">CSS-Tricks</a> offers a very helpful reference:</p>
+<ul>
+<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid">A Complete Guide to Grid</a></li>
+</ul>
+<h3 id="prototype-2---basic-css-grid">Prototype 2 - Basic CSS Grid</h3>
+<p>To test the effect of CSS Grid, we&rsquo;ll start by adding a new section to the <code>&lt;body&gt;</code> of our HTML file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 2 - Basic CSS Grid&lt;/<span style="color:#f92672">h3</span>&gt;
+
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto02&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-left-proto02&#34;</span>&gt;Left Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-pagexofy-proto02&#34;</span>&gt;List Page X of Y&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-allpostlink-proto02&#34;</span>&gt;See All Z Posts&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-right-proto02&#34;</span>&gt;Right Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+
+    &lt;<span style="color:#f92672">hr</span>&gt;
+</code></pre></div><p>Looking more closely:</p>
+<p><code>&lt;div id=&quot;listpage-navigation-panel-proto02&quot;&gt;</code> - We&rsquo;ve added a containing <code>&lt;div&gt;</code> around our existing divs to act as the CSS Grid parent and given it a unique ID.</p>
+<p>We also gave our four child divs unique IDs.</p>
+<p>Next, we&rsquo;ll add a style section to the <code>&lt;head&gt;</code> tag to link our CSS file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">style</span>&gt;
+        @<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;./prototype.css&#39;</span><span style="color:#f92672">)</span>;
+    &lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><p>And for our CSS file we&rsquo;ll include the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* List Page Navigation - Prototype 2 */</span>
+<span style="color:#f92672">div</span>#listpage-navigation-panel-proto02 {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
+    <span style="color:#66d9ef">grid-template-areas</span>: 
+        <span style="color:#e6db74">&#34;left-proto02 pagexofy-proto02 right-proto02&#34;</span>
+        <span style="color:#e6db74">&#34;left-proto02 allpostlink-proto02 right-proto02&#34;</span>;
+    <span style="color:#66d9ef">grid-template-columns</span>: <span style="color:#ae81ff">1</span>fr <span style="color:#ae81ff">1</span>fr <span style="color:#ae81ff">1</span>fr;
+    <span style="color:#66d9ef">justify-items</span>: <span style="color:#66d9ef">stretch</span>;
+
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">gray</span>;
+}
+
+<span style="color:#f92672">div</span>#listpage-navigation-left-proto02 {
+    <span style="color:#66d9ef">grid-area</span>: <span style="color:#66d9ef">left</span><span style="color:#f92672">-</span>proto02;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">red</span>;
+}
+
+<span style="color:#f92672">div</span>#listpage-navigation-pagexofy-proto02 {
+    <span style="color:#66d9ef">grid-area</span>: pagexofy-proto02;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">green</span>;
+}
+
+<span style="color:#f92672">div</span>#listpage-navigation-allpostlink-proto02 {
+    <span style="color:#66d9ef">grid-area</span>: allpostlink-proto02;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">orange</span>;
+}
+
+<span style="color:#f92672">div</span>#listpage-navigation-right-proto02 {
+    <span style="color:#66d9ef">grid-area</span>: <span style="color:#66d9ef">right</span><span style="color:#f92672">-</span>proto02;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">hotpink</span>;
+}
+</code></pre></div><p>We&rsquo;ve added a different background color to each div so that we can easily see what area they occupy.</p>
+<p>Looking at <a href="/bespoke/project/testing-css-grid/prototype02.html">the second prototype page</a>, we can already see that the result is much improved but there are still several issues we&rsquo;ll want to address.</p>
+<h2 id="adjust-the-css">Adjust the CSS</h2>
+<h3 id="prototype-3---making-the-css-grid-responsive">Prototype 3 - Making the CSS Grid Responsive</h3>
+<p>Testing the design by resizing the browser window reveals that the result is not particularly attractive or useful at either large or small sizes.</p>
+<p>To compare our changes we&rsquo;ll again add a new section to our HTML file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 3 - Making the CSS Grid Responsive&lt;/<span style="color:#f92672">h3</span>&gt;
+
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto03&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-left-proto03&#34;</span>&gt;Left Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-pagexofy-proto03&#34;</span>&gt;List Page X of Y&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-allpostlink-proto03&#34;</span>&gt;See All Z Posts&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-right-proto03&#34;</span>&gt;Right Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+
+    &lt;<span style="color:#f92672">hr</span>&gt;
+</code></pre></div><p>There is no structural change to this addition.  We just updated the IDs to end in <strong>-proto03</strong> so that we can target this new section with our changes and make their effect clear.  We&rsquo;ll likewise duplicate and update the IDs of our CSS code for this new example.</p>
+<p>Now, we can fix the resizing issue with a single line change to the CSS:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-panel-proto03 {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
+    <span style="color:#66d9ef">grid-template-areas</span>: 
+        <span style="color:#e6db74">&#34;left-proto03 pagexofy-proto03 right-proto03&#34;</span>
+        <span style="color:#e6db74">&#34;left-proto03 allpostlink-proto03 right-proto03&#34;</span>;
+<span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">grid-template-columns</span>: <span style="color:#a6e22e">repeat</span>(<span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">minmax</span>(<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>, <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>));
+</span>    <span style="color:#66d9ef">justify-items</span>: <span style="color:#66d9ef">stretch</span>;
+
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">gray</span>;
+}
+</code></pre></div><p>We replaced the previous <strong>grid-template-columns:</strong> property with <code>repeat(3, minmax(50px, 300px))</code>.  This keeps the width of each column equal to one another (as in the previous prototype), but it now sets a minimum and maximum width for the columns.</p>
+<p>Testing <a href="/bespoke/project/testing-css-grid/prototype03.html">the third prototype page</a> shows that it resizes appropriately when the screen size changes and it looks good at various sizes.</p>
+<p>A new problem emerges, however, because now the navigation panel always touches the left edge of the viewport.  This isn&rsquo;t obvious on small screens, but once the screen exceeds the maximum navigation panel width, the panel sticks to the left edge.  For our purposes, we&rsquo;ll want to keep the panel centered.</p>
+<h3 id="prototype-4---centering-the-navigation-panel-horizontally">Prototype 4 - Centering the Navigation Panel Horizontally</h3>
+<p>Again, before making changes we&rsquo;ll add a new duplicate section to our HTML and CSS files, updating only the ID suffixes to <strong>-proto04</strong>.</p>
+<p>Now, in our HTML file we&rsquo;ll wrap our navigation panel in an additional <code>&lt;div&gt;</code> element:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 4 - Centering the Navigation Panel Horizontally&lt;/<span style="color:#f92672">h3</span>&gt;
+
+<span style="display:block;width:100%;background-color:#3c3d38">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container-proto04&#34;</span>&gt;
+</span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto04&#34;</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-left-proto04&#34;</span>&gt;Left Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-pagexofy-proto04&#34;</span>&gt;List Page X of Y&lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-allpostlink-proto04&#34;</span>&gt;See All Z Posts&lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-right-proto04&#34;</span>&gt;Right Navigation&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">    &lt;/<span style="color:#f92672">div</span>&gt;
+</span>
+    &lt;<span style="color:#f92672">hr</span>&gt;
+</code></pre></div><p>And we&rsquo;ll style that new div as a CSS grid as well:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-container-proto04 {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
+    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+    <span style="color:#66d9ef">grid-template-columns</span>: <span style="color:#a6e22e">minmax</span>(<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>, <span style="color:#66d9ef">auto</span>);
+
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">gold</span>;
+}
+</code></pre></div><p>As <a href="/bespoke/project/testing-css-grid/prototype04.html">the fourth prototype page</a> shows, this allows us to keep the navigation panel centered even as the page is resized.</p>
+<h3 id="prototype-5---centering-the-navigation-panel-elements-content-vertically">Prototype 5 - Centering the Navigation Panel Elements&rsquo; Content Vertically</h3>
+<p>Now, to center the navigation panel elements&rsquo; content vertically, we&rsquo;ll turn to CSS Flexbox.  We&rsquo;ll add three lines to all four of the panel elements:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-left-proto05 {
+    <span style="color:#66d9ef">grid-area</span>: <span style="color:#66d9ef">left</span><span style="color:#f92672">-</span>proto05;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+    
+<span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span>
+    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">red</span>;
+}
+</code></pre></div><p><a href="/bespoke/project/testing-css-grid/prototype05.html">The fifth prototype page</a> demonstrates that the panel elements&rsquo; content is now vertically centered.</p>
+<h3 id="prototype-6---adding-hyperlinks">Prototype 6 - Adding Hyperlinks</h3>
+<p>Now that we have the structure the way we want it and since this is a prototype of a navigation panel, it&rsquo;s time to add some hyperlinks for navigation.</p>
+<p>For now we&rsquo;ll use empty links because we just want to demonstrate the functionality and don&rsquo;t need or want to leave the prototype page while testing.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 6 - Adding Hyperlinks&lt;/<span style="color:#f92672">h3</span>&gt;
+
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container-proto06&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto06&#34;</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-left-proto06&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;Left Navigation&lt;/<span style="color:#f92672">a</span>&gt;
+</span>            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-pagexofy-proto06&#34;</span>&gt;List Page X of Y&lt;/<span style="color:#f92672">div</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-allpostlink-proto06&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;See All Z Posts&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-right-proto06&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;Right Navigation&lt;/<span style="color:#f92672">a</span>&gt;
+</span>        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+
+    &lt;<span style="color:#f92672">hr</span>&gt;
+</code></pre></div><p>We changed three lines: replacing the <em>left</em> and <em>right</em> navigation div elements with anchor elements and enclosing the <em>allpostlink</em> div element text in an additional anchor element.</p>
+<p>The reason for the differing approaches is that in the case of the <em>left</em> and <em>right</em> elements we want the entire grid area to be the clickable target area, to make forward and backward navigation easy.  Whereas, for the the <em>allpostlink</em> we want to reduce the likelihood of accidentally clicking that element by only making the text in that area clickable.</p>
+<p><a href="/bespoke/project/testing-css-grid/prototype06.html">The sixth prototype page</a> demonstrates the difference.</p>
+<h3 id="prototype-7---example-form">Prototype 7 - Example Form</h3>
+<p>With the basic structure and all core features in place, we can remove/replace the background colors in <a href="/bespoke/project/testing-css-grid/prototype07.html">the seventh prototype page</a> to get a sense for how the navigation panel will look on our site.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We now have a working prototype including all the basic features we want.</p>
+<p>This design isn&rsquo;t perfect and probably has lots of room for improvement and simplification, but as Jeff Delaney says:</p>
+<blockquote>
+<p>When you first become a Junior Developer your code will look like Play-Doh snakes.</p>
+<p>But as you progress to Senior Developer &hellip; your code will look like the Sistine Chapel.</p>
+<p>But when you then progress to Principal Engineer you&rsquo;ll realize that nobody wants to maintain the Sistine Chapel for a silly website and go back to making Play-Doh snakes.</p>
+<p>-<a href="https://www.youtube.com/watch?v=tv-_1er1mWI">Jeff Delaney (Fireship)</a></p>
+</blockquote>
+<p>We have a working and complete prototype.  Let&rsquo;s move on to the next challenge and make more useful Play-Doh snakes.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/updating-the-hugo-list-page-layout-to-display-all-posts/">Updating the Hugo List Page Layout to Display All Posts</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 01
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/fixing-site-link-errors-between-subdomains-in-hugo/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 25
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Setting Up a Website Subdomain to Host Content With Different Providers</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Setting Up a Website Subdomain to Host Content With Different Providers</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Setting Up a Website Subdomain to Host Content With Different Providers</h2>
+        
+
+
+<h5>Published: 2022 May 22</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-hosting"><kbd class="item-tag">web hosting</kbd></a>
+
+<a href="https://loopedline.com/tags/github"><kbd class="item-tag">GitHub</kbd></a>
+
+<a href="https://loopedline.com/tags/github-pages"><kbd class="item-tag">GitHub Pages</kbd></a>
+
+<a href="https://loopedline.com/tags/netlify"><kbd class="item-tag">Netlify</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="background">Background</h2>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<p>Specifically, this post is part of <a href="https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/">a project to build a contact form with Hugo and host it with Netlify</a>.</p>
+<h2 id="objective">Objective</h2>
+<p>In this post we&rsquo;ll setup a <a href="https://en.wikipedia.org/wiki/Subdomain">subdomain</a> for our website so that we can easily host content with two different hosting providers.</p>
+<h2 id="rationale">Rationale</h2>
+<p>The reason for this is that we want to meet several requirements:</p>
+<ol>
+<li>Our project is currently hosted on <a href="https://pages.github.com/">GitHub Pages</a> and we want to try <a href="https://www.netlify.com/">Netlify</a> to test the form handling that is included in their service.</li>
+<li>However, we don&rsquo;t want to move the entire project to Netlify because GitHub Pages has been consistent, fast, and reliable.</li>
+<li>Furthermore, we want to keep all the site&rsquo;s resources accessible under the project&rsquo;s domain name, so we&rsquo;ll need to be able to maintain the custom domain name with GitHub Pages while adding one to Netlify.</li>
+</ol>
+<h2 id="building-the-solution">Building the solution</h2>
+<h3 id="solution-approach">Solution approach</h3>
+<p>To meet those requirements, we kept our <a href="https://www.easyredir.com/blog/what-is-an-apex-domain/"><strong>apex</strong> domain</a> and <strong>www</strong> subdomain pointed to GitHub Pages, and added a new <strong>page</strong> subdomain pointed to Netlify.</p>
+<p>With that configuration we kept our <a href="https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/">A record</a> and existing <a href="https://en.wikipedia.org/wiki/CNAME_record">CNAME record</a> unchanged and added one more CNAME record that points to Netlify.</p>
+<p>The <a href="https://www.youtube.com/watch?v=bjVUqvcCnxM">Netlify deployment walkthrough by Brad Traversy</a> is an excellent outline of this process and shows most of the relevant details for deploying to GitHub, hosting a website with Netlify, and setting up a custom domain.</p>
+<p>With that as a guide, we completed the following steps.</p>
+<h3 id="building-the-hugo-project">Building the Hugo project</h3>
+<p>Though it seems to go against the standard recommendations for Hugo projects, we chose to build the website files for both subdomains within the same Hugo project.</p>
+<p>This allowed for utilizing the same theme, config, and layout files without duplication.  And since we already employ Bash scripts to assist with building the site, we can alter and extend those scripts to separate the files into the relevant deployment directories.  For the prototype build we&rsquo;ll just manually separate those files.</p>
+<p>There may be better options, but this was the best approach we found for our current project needs.</p>
+<h3 id="deploying-to-github">Deploying to GitHub</h3>
+<p>To host with Netlify we first needed to deploy our project files to GitHub.</p>
+<p>While we had our existing project files hosted there, we wanted to create a new, separate repository for the project files that were going to be hosted by Netlify.  This makes the hosting process straightforward and allows us to manage deployments to each subdomain independently.</p>
+<p>For this project that involved creating a new repository and pushing our prototype files to that repository.</p>
+<h3 id="hosting-with-netlify">Hosting with Netlify</h3>
+<p>After creating a Netlify account, we completed the following to setup hosting.</p>
+<h4 id="creating-a-new-netlify-project">Creating a new Netlify project</h4>
+<p>Just as outlined in Travery&rsquo;s video and explained in Netlify&rsquo;s <a href="https://docs.netlify.com/get-started/#deploy-a-project-to-netlify">documentation for deploying a project</a>, we created a new Netlify project from the newly-created GitHub repository that hosted our contact form files.</p>
+<h4 id="updating-records-with-the-domain-registrar">Updating records with the domain registrar</h4>
+<p>As mentioned, we already had an existing A record and CNAME record configured, and we left those unchanged.</p>
+<p>However, we needed to add an additional CNAME record for our new subdomain.  (See Netlify&rsquo;s documentation for <a href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain">configuring a subdomain</a>.)</p>
+<p>That involved logging into the domain registrar for the site and adding a CNAME record that pointed <em>page.loopedline.com</em> to our newly-deployed Netlify page.</p>
+<h4 id="assigning-a-custom-domain">Assigning a custom domain</h4>
+<p>Similarly, on the Netlify project dashbord we added <em>page.loopedline.com</em> as the custom domain for the project.  (See Netlify&rsquo;s documentation for <a href="https://docs.netlify.com/domains-https/custom-domains/#assigning-a-custom-domain">assigning a domain to a site</a>.)</p>
+<h4 id="securing-the-site-with-https">Securing the site with HTTPS</h4>
+<p>Finally, we <a href="https://docs.netlify.com/domains-https/https-ssl/">set up HTTPS (SSL)</a> per Netlify&rsquo;s documentation.</p>
+<h4 id="waiting">Waiting</h4>
+<p>Propagating updated DNS records and provisioning SSL certificates can take a while, so waiting is sometimes a part of the process.</p>
+<p>Once everything updated, the new subdomain was live.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We now have a prototype contact form hosted on Netlify with our custom subdomain pointing to it while the rest of our site remains hosted on GitHub Pages.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/updating-the-hugo-list-page-layout-to-display-all-posts/">Updating the Hugo List Page Layout to Display All Posts</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 01
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/adding-sequence-ids-to-hugo-post-filenames/">Adding Sequence IDs to Hugo Post Filenames</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 29
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/fixing-site-link-errors-between-subdomains-in-hugo/">Fixing Site Link Errors Between Subdomains in Hugo [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 May 25
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>
