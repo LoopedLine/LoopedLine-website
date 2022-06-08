@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Creating a Shared Partial File in a Hugo Project for Term and List Pages</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Creating a Shared Partial File in a Hugo Project for Term and List Pages</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Creating a Shared Partial File in a Hugo Project for Term and List Pages</h2>
+        
+
+
+<h5>Published: 2022 June 08</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo-theme"><kbd class="item-tag">Hugo theme</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="background">Background</h1>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<h1 id="objective">Objective</h1>
+<p>In a <a href="https://loopedline.com/post/updating-the-hugo-list-page-layout-to-display-all-posts/">previous post</a> we updated the <em>list</em> template so that it worked as intended for all sections and subsections.</p>
+<p>The <em>terms</em> template, however, which generates pages like the <a href="/tags/">tags page</a>, used redundant code that still reflected the original interface.</p>
+<p>In this post we&rsquo;ll create a new <em>list-page</em> partial template file with the code from the previously updated <em>list</em> template.  We&rsquo;ll then update both the <em>list</em> and <em>terms</em> templates to reference that new <em>list-page</em> partial template file in order to reduce redundant code and so that both types of pages have a consistent UI.</p>
+<h1 id="building-the-solution">Building the solution</h1>
+<h2 id="step-1-building-the-new-partial-template">Step 1: Building the new partial template</h2>
+<p>First, we&rsquo;ll create the new <strong>list-page</strong> partial template file in the <em>/layouts/partials/</em> directory.</p>
+<p>We&rsquo;ll populate it with most of the code from the updated <em>list</em> template:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#f92672">--</span> <span style="color:#a6e22e">INCLUDE</span> <span style="color:#a6e22e">THIS</span> <span style="color:#a6e22e">LINE</span> <span style="color:#a6e22e">AT</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">TOP</span> <span style="color:#a6e22e">SO</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">PAGINATOR</span> <span style="color:#a6e22e">CORRECTLY</span> <span style="color:#a6e22e">SETS</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">PAGINATION</span> <span style="color:#a6e22e">VALUE</span>: {{ <span style="color:#66d9ef">range</span> (.<span style="color:#a6e22e">Paginator</span> <span style="color:#ae81ff">1000</span>).<span style="color:#a6e22e">Pages</span> }} {{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;list-item&#34;</span> . }} {{ <span style="color:#a6e22e">end</span> }} <span style="color:#f92672">--</span>&gt;
+
+&lt;<span style="color:#a6e22e">main</span>&gt;
+
+    &lt;<span style="color:#a6e22e">h2</span>&gt;{{ .<span style="color:#a6e22e">Title</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">h2</span>&gt;
+    &lt;<span style="color:#a6e22e">h5</span>&gt;{{ .<span style="color:#a6e22e">Paginator</span>.<span style="color:#a6e22e">TotalNumberOfElements</span> }} <span style="color:#a6e22e">total</span> <span style="color:#a6e22e">posts</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">h5</span>&gt;
+    &lt;<span style="color:#a6e22e">hr</span>&gt;
+
+    {{ <span style="color:#66d9ef">range</span> (.<span style="color:#a6e22e">Paginator</span> <span style="color:#ae81ff">1000</span>).<span style="color:#a6e22e">Pages</span> }}
+        {{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;list-item&#34;</span> . }}
+    {{ <span style="color:#a6e22e">end</span> }}
+
+    &lt;<span style="color:#a6e22e">hr</span>&gt;
+
+&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">main</span>&gt;
+
+{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;paginator&#34;</span> . }}
+</code></pre></div><h2 id="step-2-updating-the-existing-templates">Step 2: Updating the existing templates</h2>
+<p>Next, we&rsquo;ll update both the <strong>list</strong> and <strong>terms</strong> templates to reference the new <em>list-page</em> partial template file.</p>
+<p>For both templates, the update is straightforward:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
+
+{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;list-page&#34;</span> . }}
+
+{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer&#34;</span> . }}
+</code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Now, both of our list-like templates reference the same code and produce the desired output.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/css-not-updating-try-a-hard-reload/">CSS Not Updating? Try a Hard Reload</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 08
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/fixed-header-covering-on-page-links/">Fixed Header Covering On-Page Links [SOLVED]</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 07
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/updating-the-hugo-list-page-layout-to-display-all-posts/">Updating the Hugo List Page Layout to Display All Posts</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 01
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>
