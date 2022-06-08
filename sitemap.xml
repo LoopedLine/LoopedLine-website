@@ -3,37 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/post/creating-a-shared-partial-file-in-a-hugo-project-for-term-and-list-pages/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/hugo/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/hugo-theme/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/static-site-generator/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/web-development/</loc>
+    <lastmod>2022-06-08T12:18:15-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/tags/css/</loc>
     <lastmod>2022-06-08T11:07:58-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/post/css-not-updating-try-a-hard-reload/</loc>
-    <lastmod>2022-06-08T11:07:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-06-08T11:07:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-06-08T11:07:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-06-08T11:07:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-06-08T11:07:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/web-development/</loc>
     <lastmod>2022-06-08T11:07:58-04:00</lastmod>
   </url>
   
@@ -55,21 +75,6 @@
   <url>
     <loc>https://loopedline.com/tags/user-interface/</loc>
     <lastmod>2022-06-07T11:29:21-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/hugo/</loc>
-    <lastmod>2022-06-07T11:21:21-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/hugo-theme/</loc>
-    <lastmod>2022-06-07T11:21:21-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/static-site-generator/</loc>
-    <lastmod>2022-06-07T11:21:21-04:00</lastmod>
   </url>
   
   <url>

@@ -6,10 +6,23 @@
     <description>Recent content in Posts on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2022 11:07:58 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jun 2022 12:18:15 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creating a Shared Partial File in a Hugo Project for Term and List Pages</title>
+      <link>https://loopedline.com/post/creating-a-shared-partial-file-in-a-hugo-project-for-term-and-list-pages/</link>
+      <pubDate>Wed, 08 Jun 2022 12:18:15 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/creating-a-shared-partial-file-in-a-hugo-project-for-term-and-list-pages/</guid>
+      <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Objective In a previous post we updated the list template so that it worked as intended for all sections and subsections.
+The terms template, however, which generates pages like the tags page, used redundant code that still reflected the original interface.
+In this post we&amp;rsquo;ll create a new list-page partial template file with the code from the previously updated list template.</description>
+    </item>
     
     <item>
       <title>CSS Not Updating? Try a Hard Reload</title>
