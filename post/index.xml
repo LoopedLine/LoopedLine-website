@@ -6,10 +6,21 @@
     <description>Recent content in Posts on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jun 2022 11:29:21 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jun 2022 11:07:58 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS Not Updating? Try a Hard Reload</title>
+      <link>https://loopedline.com/post/css-not-updating-try-a-hard-reload/</link>
+      <pubDate>Wed, 08 Jun 2022 11:07:58 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/css-not-updating-try-a-hard-reload/</guid>
+      <description>Introduction When testing changes to CSS it can sometimes appear that nothing is happening.
+That can be caused by many issues, but one issue that can be tricky to detect is when the browser is caching old CSS after a reload of the page.
+Even after the page is refreshed and the HTML content is updated, the old CSS styling can still linger. That can be particularly frustrating and confusing. If the page has refreshed, why hasn&amp;rsquo;t the styling updated?</description>
+    </item>
     
     <item>
       <title>Fixed Header Covering On-Page Links [SOLVED]</title>
