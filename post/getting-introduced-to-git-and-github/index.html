@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Getting Introduced to Git and GitHub</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Getting Introduced to Git and GitHub</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Getting Introduced to Git and GitHub</h2>
+        
+
+
+<h5>Published: 2022 July 01</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/git"><kbd class="item-tag">Git</kbd></a>
+
+<a href="https://loopedline.com/tags/github"><kbd class="item-tag">GitHub</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-guide"><kbd class="item-tag">technical guide</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
+<p>This post is part of <a href="https://loopedline.com/post/git-and-github-topic/#our-posts-about-git-and-github">a series about Git and GitHub</a>.</p>
+<p><a href="https://git-scm.com/">Git</a> and <a href="https://github.com/">GitHub</a> are two related but separate tools that are helpful for software development, as well as many other things.</p>
+<p>They are both flexible and powerful, which makes them very useful.</p>
+<p>But that flexibility and power come from some complex features and interactions that can also make them seem intimidating at first.  They do not need to be intimitidating, however.  Even when you are just starting to learn Git, the core features are understandable.</p>
+<p>While some aspects of both tools are complex, many are simple to use.  And like many tools, they don&rsquo;t have to be mastered to be very helpful.  You can start using both tools with a very basic understanding of just a few commands and expand your knowledge as you have need or opportunity.</p>
+<p>Let&rsquo;s start by understanding what each of these tools are for.</p>
+<h2 id="what-is-git">What is Git?</h2>
+<p>From <a href="https://en.wikipedia.org/wiki/Git">Wikipedia&rsquo;s entry for Git</a>:</p>
+<blockquote>
+<p>Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems).</p>
+<p>Git was originally authored by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Since 2005, Junio Hamano has been the core maintainer. As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version-tracking abilities, independent of network access or a central server. Git is free and open-source software distributed under the GPL-2.0-only license.</p>
+</blockquote>
+<p>And from <a href="https://git-scm.com/">Git&rsquo;s homepage</a>:</p>
+<blockquote>
+<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+<p>Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.</p>
+</blockquote>
+<p>So, Git is free and open source software for version control that&rsquo;s designed to be flexible, fast, and reliable.</p>
+<h2 id="what-problems-does-git-solve">What problems does Git solve?</h2>
+<p>Let&rsquo;s look at the question, &ldquo;What is version control software?&rdquo;</p>
+<p>According to <a href="https://about.gitlab.com/topics/version-control/">Gitlab.com</a>:</p>
+<blockquote>
+<p>[Version control]&hellip; tracks changes to a file or set of files over time.</p>
+</blockquote>
+<p>If you&rsquo;ve ever saved multiple versions of a paper you were writing or a file you were updating you have probably seen how it can become tedious and confusing to keep track of multiple files.  This only becomes more complicated if you are working with other people on the same document.</p>
+<p>Version control software attempts to make this process simpler and faster.</p>
+<p>That is what Git was built to help with.</p>
+<p>Both the videos <a href="https://www.youtube.com/watch?v=2ReR1YJrNOM">What is Git?</a> by <em>Programming with Mosh</em> and <a href="https://www.youtube.com/watch?v=M-O8ZNW9icQ">What is Version Control?</a> by <em>Tower</em> help illustrate that key idea.</p>
+<h2 id="what-is-github">What is GitHub?</h2>
+<p>From <a href="https://en.wikipedia.org/wiki/GitHub">Wikipedia&rsquo;s entry for GitHub</a>:</p>
+<blockquote>
+<p>GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, continuous integration, and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018.</p>
+<p>It is commonly used to host open-source projects. As of November 2021, GitHub reports having over 73 million developers and more than 200 million repositories (including at least 28 million public repositories). It is the largest source code host as of November 2021.</p>
+</blockquote>
+<p>And from <a href="https://docs.github.com/en/get-started/using-git/about-git#how-github-works">GitHub&rsquo;s documentation</a>:</p>
+<blockquote>
+<p>GitHub hosts Git repositories and provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 15 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built.</p>
+<p>GitHub builds collaboration directly into the development process. Work is organized into repositories where developers can outline requirements or direction and set expectations for team members. Then, using the GitHub flow, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page.</p>
+</blockquote>
+<p>And as <a href="https://techcrunch.com/2012/07/14/what-exactly-is-github-anyway/">TechCrunch summarized</a>:</p>
+<blockquote>
+<p>GitHub is a Git repository hosting service, but it adds many of its own features. While Git is a command line tool, GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features, such as a wikis and basic task management tools for every project.</p>
+</blockquote>
+<p>From <a href="https://medium.com/gitmadeeasy/difference-between-git-and-github-306cc4cad48f">GitMadeEasy</a></p>
+<blockquote>
+<p>Github is a cloud-based git repository hosting service. This means it’s an online database that allows you to keep track and share your git version control projects outside your local machine.</p>
+</blockquote>
+<p>From <a href="https://pedrorijo.com/blog/git-init/#what-is-not-git">Pedro Rijo</a></p>
+<blockquote>
+<p>GitHub can be seen as a Git server as a service.</p>
+</blockquote>
+<h2 id="what-problems-does-github-solve">What problems does GitHub solve?</h2>
+<p>From <a href="https://techcrunch.com/2012/07/14/what-exactly-is-github-anyway/">TechCrunch</a>:</p>
+<blockquote>
+<p>[B]efore GitHub, if you wanted to contribute to an open source project you had to manually download the project’s source code, make your changes locally, create a list of changes called a “patch” and then e-mail the patch to the project’s maintainer. The maintainer would then have to evaluate this patch, possibly sent by a total stranger, and decide whether to merge the changes.</p>
+</blockquote>
+<p>GitHub offers a central place to host Git repositories, which makes it easier to collaborate on those repositories.</p>
+<p>Additionally, GitHub offers community and colloboration tools that support teams working on Git repositories.</p>
+<p>These features make it easier for teams to work together on projects using Git.</p>
+<h2 id="how-do-git-and-github-compare">How do Git and GitHub compare?</h2>
+<p><a href="https://www.geeksforgeeks.org/difference-between-git-and-github/">GeeksForGeeks</a> offers an excellent tabular comparison of the basic characteristcs of Git and GitHub.</p>
+<h2 id="how-do-git-and-github-work-together">How do Git and GitHub work together?</h2>
+<p>From <a href="https://stackoverflow.com/questions/13321556/difference-between-git-and-github/13321586#13321586">a StackOverflow answer</a></p>
+<blockquote>
+<p>Git is a revision control system, a tool to manage your source code history.</p>
+<p>GitHub is a hosting service for Git repositories.</p>
+</blockquote>
+<p>From <a href="https://www.geeksforgeeks.org/difference-between-git-and-github/">GeeksForGeeks</a></p>
+<blockquote>
+<p>Git: Git is a distributed version control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
+<p>GitHub: GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.</p>
+</blockquote>
+<p>One of the key benefits of Git is that it is decentralized, but this can create challenges for collaboration.</p>
+<p>One of the key benefits of GitHub is that it is a centralized host for decentralized Git repositories.</p>
+<p>In short, using Git with GitHub allows people to use Git in a centralized way when they want and a decentralized way when they don&rsquo;t.</p>
+<p>That&rsquo;s what makes the combination of Git and GitHub so powerful:</p>
+<ul>
+<li>Git offers a lot of efficiency and flexibility for working with multiple versions of files.</li>
+<li>GitHub enhances and extends those benefits with extra tools for colloboration without sacrificing the benefits of decentralization that Git offers.</li>
+</ul>
+<h2 id="how-do-i-get-started-with-git-and-github">How do I get started with Git and GitHub?</h2>
+<p>We&rsquo;ll look at that question in an upcoming post.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/git-and-github-topic/">Git and GitHub - Topic</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 01
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/creating-a-shared-partial-file-in-a-hugo-project-for-term-and-list-pages/">Creating a Shared Partial File in a Hugo Project for Term and List Pages</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 08
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/css-not-updating-try-a-hard-reload/">CSS Not Updating? Try a Hard Reload</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 08
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

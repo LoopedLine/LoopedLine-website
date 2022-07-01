@@ -6,10 +6,32 @@
     <description>Recent content in GitHub on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 May 2022 13:15:05 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jul 2022 14:25:55 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Introduced to Git and GitHub</title>
+      <link>https://loopedline.com/post/getting-introduced-to-git-and-github/</link>
+      <pubDate>Fri, 01 Jul 2022 14:25:55 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-introduced-to-git-and-github/</guid>
+      <description>Introduction This post is part of a series about Git and GitHub.
+Git and GitHub are two related but separate tools that are helpful for software development, as well as many other things.
+They are both flexible and powerful, which makes them very useful.
+But that flexibility and power come from some complex features and interactions that can also make them seem intimidating at first. They do not need to be intimitidating, however.</description>
+    </item>
+    
+    <item>
+      <title>Git and GitHub - Topic</title>
+      <link>https://loopedline.com/post/git-and-github-topic/</link>
+      <pubDate>Fri, 01 Jul 2022 13:40:27 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/git-and-github-topic/</guid>
+      <description>Introduction This post is the start of a series on Git and GitHub.
+There are many uses for Git and GitHub so there&amp;rsquo;s isn&amp;rsquo;t one right path for learning about them. Some users will utilize one set of features, while another group of users may focus on a fairly different set of features. Consequently, an efficient path for learning about Git and GitHub will depend on what you want to do with those tools and how you intend to use them.</description>
+    </item>
     
     <item>
       <title>Setting Up a Website Subdomain to Host Content With Different Providers</title>
