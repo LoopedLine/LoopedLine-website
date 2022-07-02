@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Getting Started with Git</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Getting Started with Git</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Getting Started with Git</h2>
+        
+
+
+<h5>Published: 2022 July 02</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/git"><kbd class="item-tag">Git</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-guide"><kbd class="item-tag">technical guide</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<p>This post is part of <a href="https://loopedline.com/post/git-and-github-topic/#our-posts-about-git-and-github">a series about Git and GitHub</a>.</p>
+<p>In <a href="https://loopedline.com/post/getting-introduced-to-git-and-github/">the previous post</a> we looked at what Git and GitHub are, what problems they solve, and some key differences between them.</p>
+<p>The goal of this post is to get you started working with Git as simply as possible.</p>
+<p>To keep things simple we&rsquo;ll narrow our focus in this post in three ways:</p>
+<ol>
+<li>
+<p>We&rsquo;ll look at <strong>just Git</strong> - not <em>GitHub</em>.  (We&rsquo;ll look at <em>GitHub</em> in a later post.)</p>
+</li>
+<li>
+<p>We&rsquo;ll work <strong>locally</strong> - not <em>remotely</em>.  (We&rsquo;ll look at working with non-local files and repositories later.)</p>
+</li>
+<li>
+<p>We&rsquo;ll focus on the <strong>very basic</strong> commands - not <em>advanced</em> or <em>intermediate</em> or even <em>quasi-basic</em> commands.  (There are other helpful resources for those.)</p>
+</li>
+</ol>
+<p>As previously mentioned, some aspects of Git are complex.  But the basic commands for the core uses of Git don&rsquo;t have to be.</p>
+<p>For this post, we&rsquo;ll just use Git for a simple form of version control so you can get started working with Git immediately.</p>
+<p>For now, that means focusing on the most critical features.</p>
+<ul>
+<li>No cloning, no branching, no merging.</li>
+<li>No fetching, no pulling, no pushing.</li>
+<li>No rebasing, no reseting, no reverting, no rerereing.</li>
+</ul>
+<p>You don&rsquo;t need those features to get started working with Git.</p>
+<p>Later you can learn to use those and many other helpful features as you need them.</p>
+<h1 id="how-do-i-get-started-with-git">How do I get started with Git?</h1>
+<p>So, how do we get started?</p>
+<p>To get started working with Git you need to complete just three steps:</p>
+<ol>
+<li>Install and configure Git.</li>
+<li>Establish a Git repository.</li>
+<li>Use Git in the <em>Version Control Cycle</em>.</li>
+</ol>
+<h1 id="step-1-install-and-configure-git">Step 1: Install and configure Git</h1>
+<h2 id="installing-git">Installing Git</h2>
+<p>The installation steps for Git vary, so check the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">&ldquo;Installing Git&rdquo;</a> section from <em>Pro Git</em> by Scott Chacon and Ben Straub for your operating system.</p>
+<p>Once you have completed the installation steps, enter the following command in a terminal to confirm successful installation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git --version
+</code></pre></div><p>If the installation was successful, you&rsquo;ll see something like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">git version #.##.#
+</code></pre></div><h2 id="configuring-git">Configuring Git</h2>
+<h3 id="basic-configurations">Basic configurations</h3>
+<p>Configure Git with your user name and email.</p>
+<p>Replace <em>John Doe</em> in the following command to set your user name.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;John Doe&#34;</span>
+</code></pre></div><p>Replace <em>johndoe@example.com</em> in the following command to set your user email.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.email johndoe@example.com
+</code></pre></div><p>Enter the following command to confirm your settings.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --list
+</code></pre></div><h3 id="additional-configurations">Additional configurations</h3>
+<p>The following configurations are optional, but they can be helpful.</p>
+<p>To change your default editor to Visual Studio Code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;code --wait&#34;</span>
+</code></pre></div><p>To set main as the default branch name:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global init.defaultBranch main
+</code></pre></div><p>If it helps you to see the process, the <a href="https://www.youtube.com/watch?v=7F9rJCxfd3Q">Installing &amp; Configuring Git</a> video by <em>Tower</em> illustrates these steps.</p>
+<p>If you get stuck or want additional information, see the <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">&ldquo;Getting Started - First-Time Git Setup&rdquo;</a> section from <em>Pro Git</em> for more details on Git configuration.</p>
+<h1 id="step-2-establish-a-git-repository">Step 2: Establish a Git repository</h1>
+<h2 id="start-a-git-repository">Start a Git repository</h2>
+<p>Since Git is a version control system for tracking changes in a set of files we have to tell it what files we want it to track.</p>
+<p>Git tracks files in collections called <em>repositories</em>.</p>
+<p>To initalize (that is, <em>to start</em>) a repository, first navigate in the terminal to the directory containing the files that you want Git to track.  For this post, we&rsquo;ll assume our project is in the <em>/home/user/new-project/</em> directory.</p>
+<p>Next, enter the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>If it is a directory that hasn&rsquo;t been initialized previously, you should see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">fatal: not a git repository (or any of the parent directories): .git
+</code></pre></div><p>That message tells us that Git doesn&rsquo;t have a repository here.</p>
+<p>To create one, enter the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git init
+</code></pre></div><p>You should see a message like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Initialized empty Git repository in /home/user/new-project/.git/
+</code></pre></div><p>Now, run the status command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>Now you should see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use &#34;git add&#34; to track)
+</code></pre></div><p>You now have a Git repository and Git is watching for changes to the files in that directory.  It isn&rsquo;t doing anything to tracks those files yet, however.</p>
+<p>The video <a href="https://www.youtube.com/watch?v=LD_RbfnLpK4&amp;t=13s">Creating a New Local Repository</a> by <em>Tower</em> illustrates this process.</p>
+<h1 id="step-3-use-git-in-the-version-control-cycle">Step 3: Use Git in the Version Control Cycle</h1>
+<p>Once you have a Git repository initialized, Git will watch for changes to files in that directory.  To actually track those changes we will follow the steps in the version control loop.</p>
+<p>Since we are using Git for version control this is where we will spend the majority of our time with Git.</p>
+<h2 id="overview-of-the-version-control-cycle">Overview of the Version Control Cycle</h2>
+<p>At it&rsquo;s simplest, the Version Control Cycle with Git is:</p>
+<ul>
+<li>Modifying files.</li>
+<li>Adding files to Git&rsquo;s staging area.</li>
+<li>Committing the files in the staging area to Git&rsquo;s repository.</li>
+</ul>
+<p>You can repeat this process over and over as you make changes to your files and Git will save the history of those changes for you.</p>
+<p>Since this can seem a little confusing at first, let&rsquo;s discuss the steps of the Version Control Cycle.  We&rsquo;ll take a quick look at those steps and then go over the Version Control Cycle again in more detail.</p>
+<h3 id="modifying-files">Modifying files</h3>
+<p>Modifying files simply refers to the changes you would normally make to files.  But now when you create, delete, or change any file in a directory that Git is watching, Git will see that the file has been changed.</p>
+<p>It won&rsquo;t actually track and save a record of those changes, however, unless you tell it to.</p>
+<h3 id="adding-files-to-gits-staging-area">Adding files to Git&rsquo;s staging area</h3>
+<p>For Git to actually track and save changes, you first need to tell it you want those changes saved.  We do that by adding files to Git&rsquo;s staging area.</p>
+<p>If we don&rsquo;t add files to the staging area Git will see that the files have changed, but won&rsquo;t record those changes.</p>
+<h3 id="committing-files-to-gits-repository">Committing files to Git&rsquo;s repository</h3>
+<p>After we have modified files and then added the files we want tracked to the staging area, it is time to tell Git to make a record of those changes.  We do that by committing the changes to the Git repository.</p>
+<h2 id="the-version-control-cycle-in-action">The Version Control Cycle in action</h2>
+<p>That is the Version Control Cycle:</p>
+<ol>
+<li>Modify files.</li>
+<li>Add the files to Git&rsquo;s staging area if we want Git to record the changes made to those files.</li>
+<li>Commit the changes in those added files to Git&rsquo;s repository.</li>
+</ol>
+<p>That may still seem abstract, but it is a core concept, so let&rsquo;s look at it in action with some examples:</p>
+<ul>
+<li>
+<p>The video <a href="https://www.youtube.com/watch?v=7exFDGHgQcw">Staging &amp; Committing Changes</a> by <em>Tower</em> demonstrates the Version Control Cycle.</p>
+</li>
+<li>
+<p>And the video <a href="https://www.youtube.com/watch?v=QTdi6U6Ua3A&amp;t=70s">Git Introduction for Beginners: Git Repositories</a> by <em>KodeKloud</em> (starting at 1:10) provides another look at this process.</p>
+</li>
+<li>
+<p>The video <a href="https://www.youtube.com/watch?v=9p2d-CuVlgc">git init and git add - Git and GitHub for Poets</a> by <em>The Coding Train</em> illustrates this with additional explanation.</p>
+</li>
+</ul>
+<h2 id="review-of-the-version-control-cycle">Review of the Version Control Cycle</h2>
+<p>Let&rsquo;s take one more look at how to manage the Version Control Cycle with Git.</p>
+<p>From the <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_the_three_states">&ldquo;Getting Started - What is Git?&quot;</a> section from <em>Pro Git</em>:</p>
+<blockquote>
+<p>Git has three main states that your files can reside in: modified, staged, and committed:</p>
+<ul>
+<li>
+<p>Modified means that you have changed the file but have not committed it to your database yet.</p>
+</li>
+<li>
+<p>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.</p>
+</li>
+<li>
+<p>Committed means that the data is safely stored in your local database.</p>
+</li>
+</ul>
+<p>This leads us to the three main sections of a Git project: the working tree, the staging area, and the Git directory.</p>
+<p><img src="https://git-scm.com/book/en/v2/images/areas.png" alt="Image showing the areas of a Git project and the interactions between them." title="Areas of a Git project."></p>
+</blockquote>
+<p>And from the <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">&ldquo;Git Basics - Recording Changes to the Repository&rdquo;</a> section from <em>Pro Git</em>:</p>
+<blockquote>
+<p>Typically, you’ll want to start making changes and committing snapshots of those changes into your repository each time the project reaches a state you want to record.</p>
+<p>Remember that each file in your working directory can be in one of two states: tracked or untracked. Tracked files are files that were in the last snapshot, as well as any newly staged files; they can be unmodified, modified, or staged. In short, tracked files are files that Git knows about.</p>
+<p>Untracked files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area. When you first clone a repository, all of your files will be tracked and unmodified because Git just checked them out and you haven’t edited anything.</p>
+<p>As you edit files, Git sees them as modified, because you’ve changed them since your last commit. As you work, you selectively stage these modified files and then commit all those staged changes, and the cycle repeats.</p>
+<p><img src="https://git-scm.com/book/en/v2/images/lifecycle.png" alt="Image showing the four statuses of a file Git project and how files move between them." title="Status of files in a Git project."></p>
+</blockquote>
+<h2 id="using-the-version-control-cycle">Using the Version Control Cycle</h2>
+<p>Now, let&rsquo;s work through the Version Control Cycle ourselves.</p>
+<h3 id="version-control-cycle-example---cycle-1">Version Control Cycle Example - Cycle 1</h3>
+<p>First, make sure you are in the directory of your project and that your Git repository is initialized as described previously.</p>
+<h4 id="modify-files-cycle-1-step-a">Modify files (Cycle 1, Step A)</h4>
+<p>Next, we need to modify one or more files.</p>
+<p>We&rsquo;ll start by creating a new <strong>index.html</strong> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch index.html
+</code></pre></div><p>We&rsquo;ll add our first line to the file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;Hello World&#34;</span> &gt; index.html
+</code></pre></div><p>Since we initialized a Git repository for this directory Git is already watching for changes.  It isn&rsquo;t doing anything with those changes, but it is watching for them.</p>
+<p>You can confirm this by entering the <em>git status</em> command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should see the following message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+
+No commits yet
+
+Untracked files:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add &lt;file&gt;...&#34;</span> to include in what will be committed<span style="color:#f92672">)</span>
+	index.html
+
+nothing added to commit but untracked files present <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add&#34;</span> to track<span style="color:#f92672">)</span>
+</code></pre></div><h4 id="add-files-to-gits-staging-area-cycle-1-step-b">Add files to Git&rsquo;s staging area (Cycle 1, Step B)</h4>
+<p>As the message indicates, we need to add that file for Git to track it&rsquo;s changes.  Let&rsquo;s do that now:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add index.html
+</code></pre></div><p>Run the git status command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should now see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+
+No commits yet
+
+Changes to be committed:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git rm --cached &lt;file&gt;...&#34;</span> to unstage<span style="color:#f92672">)</span>
+	new file:   index.html
+
+</code></pre></div><p>Now our file is staged, but the changes to it still aren&rsquo;t committed to Git&rsquo;s repository.</p>
+<h4 id="committing-files-to-gits-repository-cycle-1-step-c">Committing files to Git&rsquo;s repository (Cycle 1, Step C)</h4>
+<p>Finally, we&rsquo;ll enter the command to commit those changes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+</code></pre></div><p><code>-m &quot;Initial commit&quot;</code> - This tells Git to attach the message &ldquo;Initial commit&rdquo; to this commit&rsquo;s history.</p>
+<p>You should see a message like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>master <span style="color:#f92672">(</span>root-commit<span style="color:#f92672">)</span> a4b6f1d<span style="color:#f92672">]</span> Initial commit
+ <span style="color:#ae81ff">1</span> file changed, <span style="color:#ae81ff">1</span> insertion<span style="color:#f92672">(</span>+<span style="color:#f92672">)</span>
+ create mode <span style="color:#ae81ff">100644</span> index.html
+</code></pre></div><p>Run the git status command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+nothing to commit, working tree clean
+</code></pre></div><p>That is one loop through the Version Control Cycle.</p>
+<hr>
+<h3 id="version-control-cycle-example---cycle-2">Version Control Cycle Example - Cycle 2</h3>
+<p>You&rsquo;ll likely spend most of your time with Git using these commands in this cycle, so let&rsquo;s work through it again.</p>
+<p>In our first pass we didn&rsquo;t use well-formed HTML, so let&rsquo;s fix that.</p>
+<h4 id="modify-files-cycle-2-step-a">Modify files (Cycle 2, Step A)</h4>
+<p>First, we&rsquo;ll edit our <strong>index.html</strong> file to the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Hello&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;Hello World&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Now, run the git status command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should see the following message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+Changes not staged <span style="color:#66d9ef">for</span> commit:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add &lt;file&gt;...&#34;</span> to update what will be committed<span style="color:#f92672">)</span>
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git restore &lt;file&gt;...&#34;</span> to discard changes in working directory<span style="color:#f92672">)</span>
+	modified:   index.html
+
+no changes added to commit <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add&#34;</span> and/or <span style="color:#e6db74">&#34;git commit -a&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><h4 id="add-files-to-gits-staging-area-cycle-2-step-b">Add files to Git&rsquo;s staging area (Cycle 2, Step B)</h4>
+<p>As before, we need to add this file to the staging area in order for Git to record our changes to it&rsquo;s repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add index.html
+</code></pre></div><p>Run the git status command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should now see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+Changes to be committed:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git restore --staged &lt;file&gt;...&#34;</span> to unstage<span style="color:#f92672">)</span>
+	modified:   index.html
+</code></pre></div><p>Again, our updated file is staged, but the changes to it still aren&rsquo;t committed to Git&rsquo;s repository.</p>
+<h4 id="committing-files-to-gits-repository-cycle-2-step-c">Committing files to Git&rsquo;s repository (Cycle 2, Step C)</h4>
+<p>And again, we&rsquo;ll enter the command to commit those changes with a clear commit message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#e6db74">&#34;Improve format of index.html&#34;</span>
+</code></pre></div><p>You should see a message like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>master 2a8e5e7<span style="color:#f92672">]</span> Improve format of index.html
+ <span style="color:#ae81ff">1</span> file changed, <span style="color:#ae81ff">12</span> insertions<span style="color:#f92672">(</span>+<span style="color:#f92672">)</span>, <span style="color:#ae81ff">1</span> deletion<span style="color:#f92672">(</span>-<span style="color:#f92672">)</span>
+</code></pre></div><p>Run the git status command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+nothing to commit, working tree clean
+</code></pre></div><p>That is our second loop through the Version Control Cycle.</p>
+<hr>
+<h3 id="version-control-cycle-example---cycle-3">Version Control Cycle Example - Cycle 3</h3>
+<p>Let&rsquo;s work through another example and modify more than one file.</p>
+<p>This time we&rsquo;ll add <em>style.css</em> and link it to our <em>index.html</em> file.</p>
+<h4 id="modify-files-cycle-3-step-a">Modify files (Cycle 3, Step A)</h4>
+<p>Create the <strong>style.css</strong> file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch style.css
+</code></pre></div><p>Add some content to the file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;body {background-color: gold;}&#34;</span> &gt; style.css
+</code></pre></div><p>Now, we&rsquo;ll update the <strong>index.html</strong> file to link to the new css file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">	&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
+</span>    &lt;<span style="color:#f92672">title</span>&gt;Hello&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;Hello World&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Run the git status command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should now see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+Changes not staged <span style="color:#66d9ef">for</span> commit:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add &lt;file&gt;...&#34;</span> to update what will be committed<span style="color:#f92672">)</span>
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git restore &lt;file&gt;...&#34;</span> to discard changes in working directory<span style="color:#f92672">)</span>
+	modified:   index.html
+
+Untracked files:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add &lt;file&gt;...&#34;</span> to include in what will be committed<span style="color:#f92672">)</span>
+	style.css
+
+no changes added to commit <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add&#34;</span> and/or <span style="color:#e6db74">&#34;git commit -a&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><h4 id="add-files-to-gits-staging-area-cycle-3-step-b">Add files to Git&rsquo;s staging area (Cycle 3, Step B)</h4>
+<p>Now, we need to add both files to the staging area in order for Git to record our changes to it&rsquo;s repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add index.html style.css
+</code></pre></div><p>Run the git status command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should now see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+Changes to be committed:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git restore --staged &lt;file&gt;...&#34;</span> to unstage<span style="color:#f92672">)</span>
+	modified:   index.html
+	new file:   style.css
+</code></pre></div><p>Yet again, our updated files are staged, but the changes to them aren&rsquo;t committed to Git&rsquo;s repository.</p>
+<h4 id="committing-files-to-gits-repository-cycle-3-step-c">Committing files to Git&rsquo;s repository (Cycle 3, Step C)</h4>
+<p>Finally, we&rsquo;ll enter the commit command with a clear commit message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#e6db74">&#34;Add style.css and link index.html to it.&#34;</span>
+</code></pre></div><p>You should see a message like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>master b6baf2a<span style="color:#f92672">]</span> Add style.css and link index.html to it.
+ <span style="color:#ae81ff">2</span> files changed, <span style="color:#ae81ff">2</span> insertions<span style="color:#f92672">(</span>+<span style="color:#f92672">)</span>
+ create mode <span style="color:#ae81ff">100644</span> style.css
+</code></pre></div><p>Run the git status command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>You should see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">On branch master
+nothing to commit, working tree clean
+</code></pre></div><p>That is our third loop through the Version Control Cycle</p>
+<h3 id="version-control-cycle-example---summary">Version Control Cycle Example - Summary</h3>
+<p>That is the Version Control Cycle.</p>
+<p>There is much more that Git can do generally, and even in this simple workflow specifically.  But that cycle is the basis of working with Git.  If you followed along, you are already using Git for version control of your project with just these few commands.</p>
+<h2 id="a-note-on-the-git-add-command">A note on the git add command</h2>
+<p>As you might have already found, the <code>git add</code> command is used to accomplish several things.</p>
+<p>This note from the <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_staging_modified_files">&ldquo;Git Basics - Recording Changes to the Repository&rdquo;</a> section from <em>Pro Git</em> offers a helpful way to think about this important command:</p>
+<blockquote>
+<p><code>git add</code> is a multipurpose command — you use it to begin tracking new files, to stage files, and to do other things like marking merge-conflicted files as resolved. It may be helpful to think of it more as “add precisely this content to the next commit” rather than “add this file to the project”.</p>
+</blockquote>
+<h2 id="more-useful-commands-in-the-basic-version-control-cycle">More useful commands in the basic Version Control Cycle</h2>
+<p>While we have touched on the basic commands needed to start using Git in the basic Version Control Cycle, there are some additional commands that can be helpful even at this early stage.</p>
+<p>To add all modified files at once, without having to list them individually you can use the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+</code></pre></div><p>To add all modified files that match a particular pattern you can use a wildcard (*):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add *.html
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add article0*.html
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add app.*
+</code></pre></div><p>To amend the last commit message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit --amend -m <span style="color:#e6db74">&#34;New commit message&#34;</span>
+</code></pre></div><p>To see a log of commits in the current repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log
+</code></pre></div><p>To see a log of of only the last 2 commits in the current repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log -2
+</code></pre></div><h2 id="ignoring-files">Ignoring files</h2>
+<p>You are likely to also find files that you don&rsquo;t want to include in your Git repository nor to even see tracked by Git.  You can tell Git to ignore those files with a <code>.gitignore</code> file.</p>
+<p>The video <a href="https://www.youtube.com/watch?v=20QqV9VjU9U">Ignoring Files</a> by <em>Tower</em> demonstrates how to use a .gitignore file.</p>
+<p>The <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring">&ldquo;Git Basics - Recording Changes to the Repository&rdquo;</a> section from <em>Pro Git</em> covers the topic with additional detail.</p>
+<p>And as that section of <em>Pro Git</em> points out:</p>
+<blockquote>
+<p>GitHub maintains a fairly comprehensive list of good <code>.gitignore</code> file examples for dozens of projects and languages at <a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a> if you want a starting point for your project.</p>
+</blockquote>
+<h2 id="next-steps-in-learning-git">Next steps in learning Git</h2>
+<p>There is much more to learn in Git.  This introduction elides all but the most basic features.</p>
+<p>For more detail on just these first basic features, the <a href="https://www.youtube.com/watch?v=8JJ101D3knE">Git Tutorial for Beginners</a> by <em>Programming with Mosh</em> is particularly helpful.  It is a structured and thorough look at just these foundational steps.</p>
+<p>To find a curated list of many more resources for learning about Git you can review our <a href="https://loopedline.com/post/git-and-github-topic/">Git and GitHub Topic</a> post.</p>
+<p>And we’ll look at a few more basic features in upcoming posts.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-introduced-to-git-and-github/">Getting Introduced to Git and GitHub</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 01
+        
+                  |     Last edited:  2022 July 02
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/git-and-github-topic/">Git and GitHub - Topic</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 01
+        
+                  |     Last edited:  2022 July 02
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/creating-a-shared-partial-file-in-a-hugo-project-for-term-and-list-pages/">Creating a Shared Partial File in a Hugo Project for Term and List Pages</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 June 08
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>
