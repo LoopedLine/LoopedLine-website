@@ -6,10 +6,21 @@
     <description>Recent content in software development on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jul 2022 12:52:47 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jul 2022 09:00:03 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Started with Git Branching and Merging</title>
+      <link>https://loopedline.com/post/getting-started-with-git-branching-and-merging/</link>
+      <pubDate>Sun, 03 Jul 2022 09:00:03 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-git-branching-and-merging/</guid>
+      <description>Introduction This post is part of a series about Git and GitHub.
+In the previous post we looked at how to start working with Git as simply as possible. We did that by focusing on only Git, working with it only locally, and using only the most basic commands.
+After installing and setting up Git, the commands we looked at were those for establishing a Git repository and completing the Version Control Cycle.</description>
+    </item>
     
     <item>
       <title>Getting Started with Git</title>

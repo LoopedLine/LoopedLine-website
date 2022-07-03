@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Getting Started with Git Branching and Merging</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Getting Started with Git Branching and Merging</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Getting Started with Git Branching and Merging</h2>
+        
+
+
+<h5>Published: 2022 July 03</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/git"><kbd class="item-tag">Git</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-guide"><kbd class="item-tag">technical guide</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
+<p>This post is part of <a href="https://loopedline.com/post/git-and-github-topic/#our-posts-about-git-and-github">a series about Git and GitHub</a>.</p>
+<p>In <a href="https://loopedline.com/post/getting-started-with-git/">the previous post</a> we looked at how to start working with Git as simply as possible.  We did that by focusing on <em>only Git</em>, working with it <em>only locally</em>, and using <em>only the most basic commands</em>.</p>
+<p>After installing and setting up Git, the commands we looked at were those for establishing a Git repository and completing the Version Control Cycle.  Those are the most critical commands needed for using Git.</p>
+<p>In this post we&rsquo;re going to expand on that understanding to include the next most important feature of Git: branching and merging.</p>
+<h2 id="what-is-branching">What is branching?</h2>
+<p>Branching is Git&rsquo;s way of allowing you to work with more than one version of your files at the same time.</p>
+<p>It&rsquo;s like having two (or more) parallel worlds where your files start the same at the moment you branch them, but diverge as you make changes to one branch or the other.  This allows you to experiment and try things out in one world while keeping the other unchanged.  If you don&rsquo;t like your changes, you can instantly discard them and go back to the other branch.  If you do like the changes you made you can merge one branch into the other.</p>
+<p>Furthermore, since you can have more than two branches, you can experiment with multiple types of changes to your files at the same time without those various changes overlapping or conflicting with one another.</p>
+<p>This means you can always have your files in a known format in one context even while you experiment with making changes to them in another context.</p>
+<p>For files that contain code, that means you can always have a stable, working version of your code even as you experiment with changes to that code in a separate version.</p>
+<h2 id="how-to-branch-in-git">How to branch in Git</h2>
+<p>As a quick outline, the process for branching in Git involves just a few simple actions:</p>
+<ul>
+<li>Create a new branch.</li>
+<li>Switch to a branch (and make some changes).</li>
+<li>Merge one branch into another.</li>
+</ul>
+<h3 id="create-a-branch">Create a branch</h3>
+<p>To use branching in Git you first create one (or more) new branches.</p>
+<p>You can create as many branches as you need.  Typically, you&rsquo;ll create a branch for each type of change you wish to try.</p>
+<h3 id="switch-between-branches">Switch between branches</h3>
+<p>You switch between branches whenever you want to work in the context of a specific branch.</p>
+<p>In Git, there is only one <em>active</em> branch for a repository at a time.  The active branch is also called the <em>HEAD</em> branch or the <em>checked out</em> branch.</p>
+<p>Whatever changes you make on one branch will not effect any other branch.</p>
+<p>If you decide you don&rsquo;t like the changes you can discard the branch and it won&rsquo;t affect any other.</p>
+<h3 id="merge-branches">Merge branches</h3>
+<p>Often the point of branching is to try out changes to your files while keeping the original files intact.</p>
+<p>Once you are satisfied with the changes you&rsquo;ve made to your files, you can then merge them back into your main branch.</p>
+<h2 id="when-to-branch">When to branch</h2>
+<p>If you are not at all familiar with branching it may not be clear when to create a branch or what type of branches to create.</p>
+<p>The video <a href="https://www.youtube.com/watch?v=U_IFGpJDbeU">Branching Strategies Explained</a> by <em>DevOps Toolkit</em> provides an overview of several popular approaches for using branching in Git as well as some of the pros and cons of each approach.  If you want more information on the topic you can follow-up with a web search for <em>&ldquo;Git branching strategies&rdquo;</em> to read more on the topic.  But as Farcic points out in the video, many Git branching strategies are unnecessarily complicated for most situations.</p>
+<p>When getting started with Git branching you should likely just use the <em>Feature branch</em> strategy, that is, creating a branch for each new feature or change you want to make.</p>
+<p>You&rsquo;ll develop more of an intuition for when to create a branch as you gain more experience, but as you get started, if you&rsquo;re wondering if you should create a branch, the answer is most likely &lsquo;yes&rsquo;.  Git is very efficient at creating, switching between, and merging branches, so there&rsquo;s virtually no cost in using them.</p>
+<h2 id="branching-in-action">Branching in action</h2>
+<p>Let&rsquo;s now work through the steps of creating, using, and merging branches so you can see the process in action.</p>
+<h3 id="creating-a-branch-in-git">Creating a branch in Git</h3>
+<p>To create a new branch in Git, first navigate in the terminal to the directory containing the Git repository in which you want to create a new branch.</p>
+<p>To start, you can confirm the presence of a Git repository by running the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>If you are in a directory with a Git repository you should see output like the following (though it might differ in some details):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">On branch master
+nothing to commit, working tree clean
+</code></pre></div><p>One thing to note is that the first line will tell you the currently active branch.  And there will always be some branch, even if you never explicitly created one, because Git creates a default branch when it initializes the repository.</p>
+<p>You can also see a list of branches for the repository using the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch
+</code></pre></div><p>If you haven&rsquo;t created any additional branches, you should see output like the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">* master
+</code></pre></div><p>To create a new branch use the <code>git branch</code> command followed by your desired branch name.  For this example we&rsquo;ll use <em>development</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch development
+</code></pre></div><p>You likely won&rsquo;t see any output, so run the <code>git branch</code> command again to see the change.  You&rsquo;ll see something like the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  development
+* master
+</code></pre></div><p>Now, there are two branches, but notice that there is an asterisk (*) next to the master branch.  This indicates that the master branch is still the active (or &ldquo;HEAD&rdquo;) branch.  Though we created the new development branch, we&rsquo;re still on the master branch.</p>
+<h3 id="switching-to-a-branch-in-git">Switching to a branch in Git</h3>
+<p>To switch to another branch use the <code>git checkout</code> command followed by the name of the branch you want to switch to.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout development
+</code></pre></div><p>You should see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Switched to branch &#39;development&#39;
+</code></pre></div><p>Run the <code>git branch</code> command again to see what happened.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">* development
+  master
+</code></pre></div><p>Now, <em>development</em> is the active (or &ldquo;HEAD&rdquo;) branch.</p>
+<p>You can also see this by running the <code>git status</code> command again, and you&rsquo;ll see output like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">On branch development
+nothing to commit, working tree clean
+</code></pre></div><p>That is all that&rsquo;s required to create and switch between branches in Git.</p>
+<h3 id="making-changes">Making changes</h3>
+<p>Now, let&rsquo;s create a new file in the development branch.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch test.js
+</code></pre></div><p>Run the <code>ls</code> command to see the files in the directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -1
+</code></pre></div><p>You should see output like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">index.html
+style.css
+test.js
+</code></pre></div><p>Now, let&rsquo;s add and commit our changes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add test.js
+git commit -m <span style="color:#e6db74">&#34;Add test feature&#34;</span>
+</code></pre></div><p>Next, let&rsquo;s switch back to the master branch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
+</code></pre></div><p>And run the <code>ls</code> command again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -1
+</code></pre></div><p>Now the output is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">index.html
+style.css
+</code></pre></div><p>As expected, the new <em>test.js</em> file isn&rsquo;t there.</p>
+<p>Let&rsquo;s switch back to the development branch again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout development
+</code></pre></div><p>And again run the <code>ls</code> command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -1
+</code></pre></div><p>Now the output is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">index.html
+style.css
+test.js
+</code></pre></div><p>And once again, the <em>test.js</em> file is there.</p>
+<p>This is what branching allows you to do.  You can have different working sets of files that are isolated from each other in separate contexts.</p>
+<p>If you&rsquo;d like to see review those steps, the <a href="https://www.youtube.com/watch?v=3iO4jxTtGbw">Creating &amp; Checking Out Branches</a> video by <em>Tower</em> illustrates this process.</p>
+<h3 id="merging-a-branch-in-git">Merging a branch in Git</h3>
+<p>Let&rsquo;s say we like the changes we made on the <em>development</em> branch and we want to include them in the <em>master</em> branch.  We can merge them into the master branch from the development branch.</p>
+<p>To get started, we need to confirm that the <em>master</em> branch is the <em>active</em> branch, because <strong>changes are always merged <em>into</em> the active branch</strong>.</p>
+<p>Run the <code>git checkout</code> command to confirm the correct branch is active:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
+</code></pre></div><p>You&rsquo;ll either see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Already on <span style="color:#e6db74">&#39;master&#39;</span>
+</code></pre></div><p>Or:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Switched to branch <span style="color:#e6db74">&#39;master&#39;</span>
+</code></pre></div><p>Either way, the master branch is now the active branch.</p>
+<p>Now you can run the <code>git merge</code> command with the name of the branch you want to merge into the active branch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge development
+</code></pre></div><p>You should see output like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Updating 00375a8..3751218
+Fast-forward
+ test.js | <span style="color:#ae81ff">0</span>
+ <span style="color:#ae81ff">1</span> file changed, <span style="color:#ae81ff">0</span> insertions<span style="color:#f92672">(</span>+<span style="color:#f92672">)</span>, <span style="color:#ae81ff">0</span> deletions<span style="color:#f92672">(</span>-<span style="color:#f92672">)</span>
+ create mode <span style="color:#ae81ff">100644</span> test.js
+</code></pre></div><p>That&rsquo;s it - the branches are merged.</p>
+<p>Once more run the <code>ls</code> command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -1
+</code></pre></div><p>Now the master branch has the <em>test.js</em> file as well:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">index.html
+style.css
+test.js
+</code></pre></div><p><strong>NOTE:</strong> This is a simple example that doesn&rsquo;t include a merge conflict.  Nevertheless, this is reflective of the typical process that you&rsquo;re likely to experience, especially if you&rsquo;re working with Git locally.  If you continue working with Git, especially with others, you&rsquo;ll eventually encounter merge conflicts.  You can learn how to handle that as you advance.</p>
+<p>If you&rsquo;d like to review these steps, the <a href="https://www.youtube.com/watch?v=DDFi_vTlZTI">Merging Branches</a> video by <em>Tower</em> illustrates this process.</p>
+<p>And to see the process for handling merge conflicts, also take a look at the <a href="https://www.youtube.com/watch?v=27tfD2pDZVk">Dealing with Merge Conflicts</a> video by <em>Tower</em>.</p>
+<p>Finally, the entire <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">&ldquo;Git Branching - Basic Branching and Merging&rdquo;</a> section from <em>Pro Git</em> by Scott Chacon and Ben Straub provides another helpful walkthrough with additional details.</p>
+<h2 id="delete-a-branch">Delete a branch</h2>
+<p>After creating, working with, and merging branches, you&rsquo;re likely to eventually want to delete a branch.  Like many things in Git, it&rsquo;s pretty straightforward.</p>
+<p>To delete the <em>development</em> branch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch --delete development 
+</code></pre></div><h2 id="more-useful-commands-for-branching-and-merging">More useful commands for branching and merging</h2>
+<p>While you may not need them immediately, there are some additional commands that can be helpful when branching and merging with Git.</p>
+<h3 id="abort-an-in-progress-merge">Abort an in-progress merge</h3>
+<p>If you start to merge a branch and decide you don&rsquo;t want to complete it you can use the following to revert the merge:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge --abort
+</code></pre></div><h3 id="stash-your-current-work">Stash your current work</h3>
+<p>If you want to save your current work without committing it you can use the <code>stash</code> command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash
+</code></pre></div><p>Watch the video <a href="https://www.youtube.com/watch?v=yOYSu6D5p9Y">Using the Stash</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning">&ldquo;Git Tools - Stashing and Cleaning&rdquo;</a> section from <em>Pro Git</em> to learn more about using the stash command.</p>
+<h3 id="rebase-your-commit-history">Rebase your commit history</h3>
+<p>If you want to apply all the file changes of one branch to another without also applying the commit history of that branch you can use the <code>rebase</code> command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase new-feature-branch
+</code></pre></div><p>This is a command where it&rsquo;s important to know what you&rsquo;re doing, especially if you are working with remote repositories.  So, understand the impact of this command before using it.</p>
+<p>Watch the video <a href="https://www.youtube.com/watch?v=BFszA0io_7M">Rebase as an Alternative to Merge</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">&ldquo;Git Branching - Rebasing&rdquo;</a> section from <em>Pro Git</em> to learn more about using the rebase command.</p>
+<h2 id="next-steps-in-learning-git">Next steps in learning Git</h2>
+<p>As mentioned in the previous post, there is much more to learn in Git.  We&rsquo;ve touched on only the introductory features of this powerful tool.</p>
+<p>To find a curated list of many more resources for learning about Git you can review our <a href="https://loopedline.com/post/git-and-github-topic/">Git and GitHub Topic</a> post.</p>
+<p>And we’ll look at another basic feature in an upcoming post.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-git/">Getting Started with Git</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 02
+        
+                  |     Last edited:  2022 July 03
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-introduced-to-git-and-github/">Getting Introduced to Git and GitHub</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 01
+        
+                  |     Last edited:  2022 July 02
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/git-and-github-topic/">Git and GitHub - Topic</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 01
+        
+                  |     Last edited:  2022 July 03
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>
