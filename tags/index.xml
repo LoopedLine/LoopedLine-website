@@ -6,7 +6,7 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jul 2022 09:00:03 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jul 2022 13:42:42 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>Git</title>
       <link>https://loopedline.com/tags/git/</link>
-      <pubDate>Sun, 03 Jul 2022 09:00:03 -0400</pubDate>
+      <pubDate>Mon, 04 Jul 2022 13:42:42 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>GitHub</title>
+      <link>https://loopedline.com/tags/github/</link>
+      <pubDate>Mon, 04 Jul 2022 13:42:42 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>software development</title>
       <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Sun, 03 Jul 2022 09:00:03 -0400</pubDate>
+      <pubDate>Mon, 04 Jul 2022 13:42:42 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/software-development/</guid>
       <description></description>
@@ -32,18 +41,9 @@
     <item>
       <title>technical guide</title>
       <link>https://loopedline.com/tags/technical-guide/</link>
-      <pubDate>Sun, 03 Jul 2022 09:00:03 -0400</pubDate>
+      <pubDate>Mon, 04 Jul 2022 13:42:42 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/technical-guide/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub</title>
-      <link>https://loopedline.com/tags/github/</link>
-      <pubDate>Fri, 01 Jul 2022 14:25:55 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/github/</guid>
       <description></description>
     </item>
     

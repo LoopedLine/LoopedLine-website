@@ -6,10 +6,23 @@
     <description>Recent content in technical guide on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jul 2022 09:00:03 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jul 2022 13:42:42 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/technical-guide/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Started With Git Remote Repositories (Like GitHub)</title>
+      <link>https://loopedline.com/post/getting-started-with-git-remote-repositories-like-github/</link>
+      <pubDate>Mon, 04 Jul 2022 13:42:42 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-git-remote-repositories-like-github/</guid>
+      <description>Introduction This post is part of a series about Git and GitHub.
+In all our previous posts we worked with Git locally.
+In this post we&amp;rsquo;re going to look at using Git to work with remote repositories.
+What is a remote repository? According to the &amp;ldquo;Git Basics - Working with Remotes&amp;rdquo; section from Pro Git by Scott Chacon and Ben Straub:
+ Remote repositories are versions of your project that are hosted on the Internet or network somewhere.</description>
+    </item>
     
     <item>
       <title>Getting Started with Git Branching and Merging</title>
