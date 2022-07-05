@@ -3,37 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/post/git-terminal-command-quick-reference/</loc>
+    <lastmod>2022-07-05T14:13:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/git/</loc>
+    <lastmod>2022-07-05T14:13:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-07-05T14:13:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2022-07-05T14:13:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2022-07-05T14:13:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-07-05T14:13:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/technical-quick-reference/</loc>
+    <lastmod>2022-07-05T14:13:01-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/post/getting-started-with-git-remote-repositories-like-github/</loc>
     <lastmod>2022-07-04T13:42:42-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/git/</loc>
-    <lastmod>2022-07-04T13:42:42-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/github/</loc>
-    <lastmod>2022-07-04T13:42:42-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-07-04T13:42:42-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-07-04T13:42:42-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-07-04T13:42:42-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
     <lastmod>2022-07-04T13:42:42-04:00</lastmod>
   </url>
   
@@ -44,7 +54,7 @@
   
   <url>
     <loc>https://loopedline.com/post/getting-started-with-git-branching-and-merging/</loc>
-    <lastmod>2022-07-03T09:00:03-04:00</lastmod>
+    <lastmod>2022-07-04T13:42:42-04:00</lastmod>
   </url>
   
   <url>
@@ -59,7 +69,7 @@
   
   <url>
     <loc>https://loopedline.com/post/git-and-github-topic/</loc>
-    <lastmod>2022-07-03T09:00:03-04:00</lastmod>
+    <lastmod>2022-07-04T13:42:42-04:00</lastmod>
   </url>
   
   <url>
@@ -429,11 +439,6 @@
   
   <url>
     <loc>https://loopedline.com/post/hugo-basic-command-quick-reference/</loc>
-    <lastmod>2022-06-09T13:03:07-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/technical-quick-reference/</loc>
     <lastmod>2022-06-09T13:03:07-04:00</lastmod>
   </url>
   

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Basic Git Terminal Command Quick Reference</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Basic Git Terminal Command Quick Reference</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Basic Git Terminal Command Quick Reference</h2>
+        
+
+
+<h5>Published: 2022 July 05</h5>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/git"><kbd class="item-tag">Git</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-quick-reference"><kbd class="item-tag">technical quick reference</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
+<p>This post is part of <a href="https://loopedline.com/post/git-and-github-topic/#our-posts-about-git-and-github">a series about Git and GitHub</a>.</p>
+<h2 id="context">Context</h2>
+<p>All commands are used in a terminal and assume that Git is installed.</p>
+<p>Commands should be executed in a terminal pointed to the directory of the relevant Git repository, unless otherwise stated.</p>
+<h2 id="basic-commands">Basic commands</h2>
+<p><em>Note: All the commands in this section can be executed in a terminal pointed at any directory.</em></p>
+<h4 id="list-basic-git-commands">List basic Git commands</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git
+</code></pre></div><p><em>or</em></p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git --help
+</code></pre></div><h4 id="check-git-version">Check Git version</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git --version
+</code></pre></div><h2 id="initial-setup">Initial setup</h2>
+<p><em>Note: All the commands in this section can be executed in a terminal pointed at any directory EXCEPT for two commands noted below.</em></p>
+<h4 id="set-your-user-name">Set your user name</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;[user name]&#34;</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;John Doe&#34;</span>
+</code></pre></div><h4 id="set-your-user-email">Set your user email</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.email <span style="color:#f92672">[</span>user email<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.email johndoe@example.com
+</code></pre></div><h4 id="set-your-default-editor">Set your default editor</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;[command for editor]&#34;</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<p>Sets the default editor to Visual Studio Code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;code --wait&#34;</span>
+</code></pre></div><h4 id="set-the-default-branch-name">Set the default branch name</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global init.defaultBranch <span style="color:#f92672">[</span>branch name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global init.defaultBranch main
+</code></pre></div><h4 id="check-global-git-configuration-settings">Check <em>global</em> Git configuration settings</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global --list
+</code></pre></div><p>Displays global Git settings.</p>
+<h4 id="edit-global-git-configuration-settings">Edit <em>global</em> Git configuration settings</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global --edit
+</code></pre></div><p>Opens your Git configuration settings file in your default text editor.</p>
+<h4 id="check-all-git-configuration-settings">Check <em>all</em> Git configuration settings</h4>
+<p><em>Note: This command should be executed in a terminal pointed to the directory of the relevant Git repository.</em></p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --list
+</code></pre></div><p>Displays all Git settings for the current repository.</p>
+<h4 id="edit-all-git-configuration-settings">Edit <em>all</em> Git configuration settings</h4>
+<p><em>Note: This command should be executed in a terminal pointed to the directory of the relevant Git repository.</em></p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --edit
+</code></pre></div><p>Opens your Git configuration settings file in your default text editor.</p>
+<h4 id="more-info">More info</h4>
+<p>See the <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">&ldquo;Getting Started - First-Time Git Setup&rdquo;</a> chapter from <em>Pro Git</em> for more details on Git configuration.</p>
+<h2 id="establishing-a-git-repository">Establishing a Git repository</h2>
+<p>The commands in this section should be entered in a terminal pointed to the directory where you want your Git repository.</p>
+<h4 id="check-the-status-of-any-existing-git-repository">Check the status of any existing Git repository</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p><strong>Output:</strong></p>
+<p>If you are in a directory that hasn&rsquo;t been initialized previously, you should see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">fatal: not a git repository (or any of the parent directories): .git
+</code></pre></div><h4 id="initialize-a-new-git-repository">Initialize a new Git repository</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git init
+</code></pre></div><h2 id="the-version-control-cycle">The Version Control Cycle</h2>
+<h3 id="adding-files">Adding files</h3>
+<h4 id="add-one-or-more-files-to-gits-staging-area">Add one or more files to Git&rsquo;s staging area</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add <span style="color:#f92672">[[</span>file 1<span style="color:#f92672">]</span> ... <span style="color:#f92672">[</span>file N<span style="color:#f92672">]]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add index.html
+</code></pre></div><p>Adds <em>index.html</em> to the staging area.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add index.html styles.css
+</code></pre></div><p>Adds <em>index.html</em> and <em>styles.css</em> to the staging area.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add index.html css/styles.css
+</code></pre></div><p>Adds <em>index.html</em> and <em>css/styles.css</em> to the staging area.  Note that you can specify files in subdirectories.</p>
+<h4 id="add-all-modified-files-to-gits-staging-area">Add all modified files to Git&rsquo;s staging area</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+</code></pre></div><h4 id="add-files-to-gits-staging-area-using-wildcards">Add files to Git&rsquo;s staging area using wildcards</h4>
+<p>To add all modified files that match a particular pattern you can use a wildcard (*).</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add <span style="color:#f92672">[</span>files or directories, using the * wildcard to replace portions of the file name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add *.html
+</code></pre></div><p>Adds all files with the <em>.html</em> extension to the staging area.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add article0*.html
+</code></pre></div><p>Adds all files that begin with <em>article0</em> and end with <em>.html</em> to the staging area.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add app.*
+</code></pre></div><p>Adds all files that begin with <em>app.</em> to the staging area.</p>
+<h3 id="committing-files">Committing files</h3>
+<h4 id="commit-staged-files-with-a-commit-message">Commit staged files with a commit message</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#e6db74">&#34;[commit message]&#34;</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#e6db74">&#34;Update spacing&#34;</span>
+</code></pre></div><h4 id="amend-the-last-commit-message">Amend the last commit message</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit --amend -m <span style="color:#e6db74">&#34;[commit message]&#34;</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit --amend -m <span style="color:#e6db74">&#34;Update spacing and styling&#34;</span>
+</code></pre></div><h3 id="checking-status">Checking status</h3>
+<h4 id="check-the-status-of-the-current-repository">Check the status of the current repository</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><h4 id="check-the-log-of-commits-in-the-current-repository">Check the log of commits in the current repository</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log
+</code></pre></div><p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log -<span style="color:#f92672">[</span>number<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log -5
+</code></pre></div><p>Shows the log of only the last 5 commits in the current repository.</p>
+<h2 id="branching-and-merging">Branching and Merging</h2>
+<h3 id="branching">Branching</h3>
+<h4 id="see-the-list-of-branches-for-the-current-repository">See the list of branches for the current repository</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch
+</code></pre></div><p>Shows basic branch information.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vva
+</code></pre></div><p>Shows additional branch information.</p>
+<h4 id="create-a-new-branch">Create a new branch</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch <span style="color:#f92672">[</span>new branch name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch feature-visualization
+</code></pre></div><h4 id="switch-to-a-different-branch">Switch to a different branch</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout <span style="color:#f92672">[</span>branch name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout feature-visualization
+</code></pre></div><h3 id="merging">Merging</h3>
+<h4 id="merge-one-branch-into-another">Merge one branch into another</h4>
+<p><strong>Changes are always merged <em>into</em> the active branch</strong>, so merging has two parts:</p>
+<ol>
+<li>Checkout the branch you wish to merge <em>into</em>.</li>
+<li>Merge <em>another</em> branch <em>into</em> your <em>active</em> branch.</li>
+</ol>
+<h5 id="1-checkout-the-branch-you-want-to-merge-into">1. Checkout the branch you want to merge <em>into</em></h5>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout <span style="color:#f92672">[</span>branch name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<p>For this example we want to merge the changes we made on the <em>development</em> branch into the <em>master</em> branch.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
+</code></pre></div><p><strong>Output:</strong></p>
+<p>You&rsquo;ll either see the message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Already on <span style="color:#e6db74">&#39;master&#39;</span>
+</code></pre></div><p><em>or</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Switched to branch <span style="color:#e6db74">&#39;master&#39;</span>
+</code></pre></div><p>Either way, the master branch is now the active branch.</p>
+<h5 id="2-merge-the-changes-from-the-desired-branch-into-the-current-branch">2. Merge the changes from the <em>desired</em> branch <em>into</em> the <em>current</em> branch</h5>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge <span style="color:#f92672">[</span>branch name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<p>For this example we want to merge the changes we made on the <em>development</em> branch into the <em>master</em> branch.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge development
+</code></pre></div><h4 id="abort-an-in-progress-merge">Abort an in-progress merge</h4>
+<p>If you start to merge a branch and decide you don&rsquo;t want to complete the merge, you can use the following to revert it.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge --abort
+</code></pre></div><h4 id="rebase-your-commit-history">Rebase your commit history</h4>
+<p>If you want to apply all the file changes of one branch to another without also applying the commit history of that branch you can use the <code>rebase</code> command.</p>
+<p><strong>NOTE:</strong> This is a command where it&rsquo;s important to know what you&rsquo;re doing, especially if you are working with remote repositories.  Understand the impact of this command before using it.</p>
+<p>To learn more about using the rebase command watch the video <a href="https://www.youtube.com/watch?v=BFszA0io_7M">Rebase as an Alternative to Merge</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">&ldquo;Git Branching - Rebasing&rdquo;</a> section from <em>Pro Git</em>.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase feature-sort
+</code></pre></div><h3 id="deleting-branches">Deleting branches</h3>
+<h4 id="delete-a-branch">Delete a branch</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch --delete <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch --delete development 
+</code></pre></div><h3 id="stashing-files">Stashing files</h3>
+<h4 id="stash-your-current-work">Stash your current work</h4>
+<p>If you want to save your current work without committing it you can use the <code>stash</code> command.</p>
+<p><strong>Command</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash
+</code></pre></div><p>To learn more about using the <code>stash</code> command watch the video <a href="https://www.youtube.com/watch?v=yOYSu6D5p9Y">Using the Stash</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning">&ldquo;Git Tools - Stashing and Cleaning&rdquo;</a> section from <em>Pro Git</em> .</p>
+<h2 id="remote-repositories">Remote Repositories</h2>
+<h3 id="establishing-remote-tracking-repositories">Establishing remote-tracking repositories</h3>
+<h4 id="clone-a-git-repository">Clone a Git repository</h4>
+<p>If there is an existing project that you want to work with, the <code>git clone</code> command allows you to download a copy of the Git repository.  This will download the .git file, which includes the entire history of the project.</p>
+<p>Navigate to the directory where you want the project on your local machine and then run the command with the URL for your project.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone <span style="color:#f92672">[</span>URL<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/dwmkerr/hacker-laws
+</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=i-3gsC3aBBA">Cloning an Existing Repository</a> by <em>Tower</em> illustrates this command.</p>
+<h4 id="add-a-git-remote-repository">Add a Git remote repository</h4>
+<p>If you have started a project locally and want to upload it to a remote host, the <code>git remote add</code> command will create a remote repository for it.</p>
+<p>Navigate to the directory of your local Git repository and then run the command with a chosen <em>shortname</em> (&ldquo;origin&rdquo; is the convention) and the URL for the remote repository.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>URL<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add origin https://github.com/exampleuser/exampleproject
+</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=fSH-_SmtHio">Connecting a Remote Repository</a> by <em>Tower</em> illustrates this command.</p>
+<h3 id="exchanging-data-with-remote-tracking-repositories">Exchanging data with remote-tracking repositories</h3>
+<h4 id="fetching-remote-repository-data">Fetching remote repository data</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch origin
+</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=A4rIs-6c98s">Pulling &amp; Fetching Changes from a Remote</a> by <em>Tower</em> illustrates this command.</p>
+<h4 id="git-pull">Git pull</h4>
+<p>The <code>git pull</code> command can fetch and attempt to automatically merge changes from your remote repository into your local repository.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull
+</code></pre></div><p>According to the <a href="https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#_pulling">&ldquo;Git Branching - Remote Branches&rdquo;</a> section from <em>Pro Git</em>:</p>
+<blockquote>
+<p>Generally it’s better to simply use the fetch and merge commands explicitly as the magic of git pull can often be confusing.</p>
+</blockquote>
+<p>The video <a href="https://www.youtube.com/watch?v=A4rIs-6c98s">Pulling &amp; Fetching Changes from a Remote</a> by <em>Tower</em> illustrates this command.</p>
+<h4 id="git-push">Git push</h4>
+<h5 id="pushing-to-a-remote-repository-the-first-time">Pushing to a remote repository (the first time)</h5>
+<p>When you first use the <code>push</code> command for a given branch you have to use the longer form.</p>
+<p>To begin, make sure the active branch is the branch that you want to share, then you can use the command.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push -u <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>remote branch name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push -u origin newfeature
+</code></pre></div><p>This will create the new branch on the remote repository, share the repository data for that branch, and establish a tracking connection with that branch on your local repository.</p>
+<p>The video <a href="https://www.youtube.com/watch?v=lqw7ipXmc-4">Pushing Changes to a Remote</a> by <em>Tower</em> illustrates this command.</p>
+<h5 id="pushing-to-a-remote-repository-with-a-tracking-connection-subsequent-times">Pushing to a remote repository with a tracking connection (subsequent times)</h5>
+<p>If you have established a tracking connection, the next time you want to push changes from that branch to the remote repository, you can use a simpler version of the <code>push</code> command.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push
+</code></pre></div><p>This will push the latest changes from your current branch on your local repository to the tracked branch on the remote repository.</p>
+<p>The video <a href="https://www.youtube.com/watch?v=lqw7ipXmc-4">Pushing Changes to a Remote</a> by <em>Tower</em> illustrates this command.</p>
+<h3 id="reviewing-remote-repository-connections">Reviewing remote repository connections</h3>
+<h4 id="listing-the-remote-repositories-that-have-tracking-connections-with-your-local-repository">Listing the remote repositories that have tracking connections with <em>your local repository</em></h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
+</code></pre></div><h4 id="listing-the-remote-repositories-that-have-tracking-connections-with-the-active-branch-on-your-local-repository">Listing the remote repositories that have tracking connections with <em>the active branch on your local repository</em></h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vva
+</code></pre></div><h4 id="listing-more-information-about-a-remote-repository">Listing more information about a remote repository</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote show <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote show origin
+</code></pre></div><h3 id="altering-remote-repositories">Altering remote repositories</h3>
+<h4 id="renaming-a-remote-repository-connection">Renaming a remote repository connection</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote rename <span style="color:#f92672">[</span>shortname-previous<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>shortname-new<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<p>For a remote called <em>temp</em> that you want to rename to <em>offsite</em>, use the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote rename temp offsite
+</code></pre></div><h4 id="removing-a-remote-repository-connection">Removing a remote repository connection</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove legacy
+</code></pre></div><h2 id="additional-resources">Additional Resources</h2>
+<p>The <a href="https://ndpsoftware.com/git-cheatsheet.html">Visual Git command reference</a> shows Git commands organized visually by the areas each command affects.</p>
+<p>The <a href="https://git-scm.com/docs">Git documentation</a> provides more detail about Git commands.</p>
+<p>To find a curated list of many more resources for learning about Git you can review our <a href="https://loopedline.com/post/git-and-github-topic/">Git and GitHub Topic</a> post.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-git-remote-repositories-like-github/">Getting Started With Git Remote Repositories (Like GitHub)</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 04
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-git-branching-and-merging/">Getting Started with Git Branching and Merging</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 03
+        
+                  |     Last edited:  2022 July 04
+        
+    </h5>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-git/">Getting Started with Git</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <h5>
+        Published: 2022 July 02
+        
+                  |     Last edited:  2022 July 03
+        
+    </h5>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

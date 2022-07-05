@@ -6,10 +6,24 @@
     <description>Recent content in Posts on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jul 2022 13:42:42 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jul 2022 14:13:01 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Basic Git Terminal Command Quick Reference</title>
+      <link>https://loopedline.com/post/git-terminal-command-quick-reference/</link>
+      <pubDate>Tue, 05 Jul 2022 14:13:01 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/git-terminal-command-quick-reference/</guid>
+      <description>Introduction This post is part of a series about Git and GitHub.
+Context All commands are used in a terminal and assume that Git is installed.
+Commands should be executed in a terminal pointed to the directory of the relevant Git repository, unless otherwise stated.
+Basic commands Note: All the commands in this section can be executed in a terminal pointed at any directory.
+List basic Git commands Command:
+git or</description>
+    </item>
     
     <item>
       <title>Getting Started With Git Remote Repositories (Like GitHub)</title>
