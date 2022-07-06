@@ -114,6 +114,8 @@
 <p>Published: 2022 July 05</p>
 
 
+    <p>Last edited: 2022 July 06</p>
+
 
         
 <a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
@@ -164,7 +166,26 @@
 </code></pre></div><p><strong>Example:</strong></p>
 <p>Sets the default editor to Visual Studio Code.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;code --wait&#34;</span>
-</code></pre></div><h4 id="set-the-default-branch-name">Set the default branch name</h4>
+</code></pre></div><h4 id="set-your-default-difftool">Set your default difftool</h4>
+<p>To set a custom difftool, you need to set two parameters:</p>
+<ol>
+<li>difftool name</li>
+<li>difftool command</li>
+</ol>
+<p><strong>Command 1 form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global diff.tool <span style="color:#f92672">[</span>difftool name<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Command 1 Example:</strong></p>
+<p>Sets the default <em>diff.tool</em> name variable to vscode (for Visual Studio Code).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global diff.tool vscode
+</code></pre></div><p><strong>Command 2 form:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global difftool.<span style="color:#f92672">[</span>difftool name<span style="color:#f92672">]</span>.cmd <span style="color:#e6db74">&#34;[command for editor]&#34;</span>
+</code></pre></div><p>Note that the <code>[difftool name]</code> must match the name in the previous command.</p>
+<p><strong>Command 2 Example:</strong></p>
+<p>Sets the <em>difftool command</em> variable to launch Visual Studio Code to display diffs.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global difftool.vscode.cmd <span style="color:#e6db74">&#34;code --wait --diff </span>$LOCAL<span style="color:#e6db74"> </span>$REMOTE<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=8JJ101D3knE&amp;t=3033s">Git Tutorial for Beginners</a> by <em>Programming with Mosh</em> (starting at timestamp 50:33) demonstrates setting these values.</p>
+<p>For further information (including if you want to use one of the built-in diff.tool values) consult the <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-difftool">Git documentation for configuring <em>diff.tool</em></a>.</p>
+<h4 id="set-the-default-branch-name">Set the default branch name</h4>
 <p><strong>Command form:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global init.defaultBranch <span style="color:#f92672">[</span>branch name<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
@@ -252,7 +273,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log -<span style="color:#f92672">[</span>number<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log -5
-</code></pre></div><p>Shows the log of only the last 5 commits in the current repository.</p>
+</code></pre></div><p>Shows the log of only the last 5 commits.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --oneline
+</code></pre></div><p>Shows the log in a condensed form to fit each commit on one line.</p>
 <h2 id="branching-and-merging">Branching and Merging</h2>
 <h3 id="branching">Branching</h3>
 <h4 id="see-the-list-of-branches-for-the-current-repository">See the list of branches for the current repository</h4>
