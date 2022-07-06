@@ -67,6 +67,8 @@ a#listpage-navigation-right {
 
 /*  Overriding Bootstrap Formatting  */
 
+/*  Overriding Bootstrap Formatting  - Headings */
+
 h1, .h1 {
     margin-top: 100px;
 }
@@ -87,9 +89,15 @@ h4#listpage-item {
     margin-top: 10px;
 }
 
+/*  Overriding Bootstrap Formatting  - Miscellaneous */
+
 blockquote {
     font-size: 15px;
     font-style: italic;
+}
+
+ul ul {
+    margin-bottom: 10px;
 }
 
 
@@ -100,6 +108,13 @@ blockquote {
     outline: 1px solid red !important;
 } */
 
-ul ul {
+h5 {
+    font-size: 16px;
+
+    margin-top: 40px;
     margin-bottom: 10px;
+    margin-block-start: 40px;
+    margin-block-end: 10px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
 }
