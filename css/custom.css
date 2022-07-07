@@ -125,6 +125,10 @@ label.form-label {
     margin-top: 10px;
 }
 
-button.btn-contact {
+div.buffer {
+    margin-top: 10px;
+}
+
+button.buffer {
     margin-top: 10px;
 }
