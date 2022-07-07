@@ -118,3 +118,13 @@ h5 {
     margin-inline-end: 0px;
     margin-inline-start: 0px;
 }
+
+label.form-label {
+    display: grid;
+    justify-items: baseline;
+    margin-top: 10px;
+}
+
+button.btn-contact {
+    margin-top: 10px;
+}
