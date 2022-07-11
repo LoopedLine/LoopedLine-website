@@ -6,10 +6,22 @@
     <description>Recent content in CSS on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2022 11:07:58 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jul 2022 15:56:14 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Improving the Contact Form UI</title>
+      <link>https://loopedline.com/post/improving-the-contact-form-ui/</link>
+      <pubDate>Mon, 11 Jul 2022 15:56:14 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/improving-the-contact-form-ui/</guid>
+      <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Specifically, this post is part of a project to build a contact form with Hugo and host it with Netlify.
+Objective In a previous post we built a simple contact form. That form worked fine, but there were some elements of the user interface (UI) that weren&amp;rsquo;t optimal.</description>
+    </item>
     
     <item>
       <title>CSS Not Updating? Try a Hard Reload</title>

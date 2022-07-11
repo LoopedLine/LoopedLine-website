@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Improving the Contact Form UI</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Improving the Contact Form UI</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Improving the Contact Form UI</h2>
+        
+
+
+<p>Published: 2022 July 11</p>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo-theme"><kbd class="item-tag">Hugo theme</kbd></a>
+
+<a href="https://loopedline.com/tags/css"><kbd class="item-tag">CSS</kbd></a>
+
+<a href="https://loopedline.com/tags/bootstrap"><kbd class="item-tag">Bootstrap</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="background">Background</h2>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<p>Specifically, this post is part of <a href="https://loopedline.com/post/project-building-a-contact-form-with-hugo-and-hosting-it-with-netlify/">a project to build a contact form with Hugo and host it with Netlify</a>.</p>
+<h2 id="objective">Objective</h2>
+<p>In a <a href="https://loopedline.com/post/building-a-contact-form-with-netlify/">previous post</a> we built a simple contact form.  That form worked fine, but there were some elements of the user interface (UI) that weren&rsquo;t optimal.</p>
+<p>In this post we&rsquo;ll improve the contact form by adding labels to the input fields, fixing the <em>Message</em> field width, and adding some additional spacing around a few elements.</p>
+<h2 id="building-the-solution">Building the solution</h2>
+<h3 id="adding-labels-to-input-fields">Adding labels to input fields</h3>
+<p>Previously, the only indicator of what each field was for was the <em>placeholder</em> text.  But that text disappears as soon as the user types something.  A persistent label is more helpful.</p>
+<p>Adding labels simply requires including a <code>&lt;label&gt;</code> tag and linking it by <em>id</em> to the field with which it is associated.</p>
+<p>For example, for the <em>Name</em> field, the label and input elements look like the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span>&gt;Name&lt;/<span style="color:#f92672">label</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Name&#34;</span> <span style="color:#a6e22e">required</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;required&#34;</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>The site&rsquo;s existing Bootstrap and custom CSS rules caused the labels to be centered above the input field.  To address this we first added a class called <strong>form-label</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span>&gt;Name&lt;/<span style="color:#f92672">label</span>&gt;
+</code></pre></div><p>Next, to left justify the labels we set two CSS properties for that class:</p>
+<ul>
+<li><code>display: grid;</code></li>
+<li><code>justify-items: baseline;</code></li>
+</ul>
+<h3 id="setting-the-width-of-the-message-field">Setting the width of the Message field</h3>
+<p>The previous version of the form allowed resizing the <em>textarea</em> of the form Message field, but that caused the width of the other fields to change at the same time.</p>
+<p>This can be avoided by only allowing the field to be resized vertically.  Setting the <em>textarea</em> CSS property to <code>resize: vertical;</code> achieves that.  However, that is a rule that we likely don&rsquo;t want to apply site wide.</p>
+<p>As <a href="https://stackoverflow.com/questions/36825227/i-want-my-textarea-to-have-a-fixed-width/36825371#36825371">this StackOverflow answer</a> demonstrates, we can achieve the same result with inline styling and thereby isolate the change to only the field in question.</p>
+<h3 id="adding-margins">Adding margins</h3>
+<p>Several elements needed additional spacing.</p>
+<p>This was achieved by setting the CSS property <code>margin-top: 10px;</code> for the relevant classes.</p>
+<h3 id="the-updated-code">The updated code</h3>
+<h4 id="the-updated-html">The updated HTML</h4>
+<p>The form HTML is in the <strong>single.html</strong> file located in the <em>/layouts/contact/</em> directory, and the updated code is below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;header&#34; . }}
+
+&lt;<span style="color:#f92672">main</span>&gt;
+
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;m-4&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;What&#39;s on your mind?&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#a6e22e">data-netlify</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span>&gt;Name&lt;/<span style="color:#f92672">label</span>&gt;
+</span>            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Name&#34;</span> <span style="color:#a6e22e">required</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;required&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputEmail&#34;</span>&gt;Email&lt;/<span style="color:#f92672">label</span>&gt;
+</span>            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputEmail&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Email&#34;</span> <span style="color:#a6e22e">required</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;required&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputSubject&#34;</span>&gt;Subject&lt;/<span style="color:#f92672">label</span>&gt;
+</span>            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputSubject&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;subject&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Subject&#34;</span> <span style="color:#a6e22e">required</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;required&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputMessage&#34;</span>&gt;Message&lt;/<span style="color:#f92672">label</span>&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">            &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;textarea&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputMessage&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;message&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Message&#34;</span> <span style="color:#a6e22e">rows</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">required</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;required&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;resize:vertical&#34;</span>&gt;&lt;/<span style="color:#f92672">textarea</span>&gt;
+</span>        &lt;/<span style="color:#f92672">div</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;field buffer&#34;</span>&gt;
+</span>            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">data-netlify-recaptcha</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-primary buffer&#34;</span>&gt;Submit&lt;/<span style="color:#f92672">button</span>&gt;
+</span>    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;/<span style="color:#f92672">main</span>&gt;
+
+{{ partial &#34;footer&#34; . }}
+</code></pre></div><p>A <code>&lt;label&gt;</code> element was added to each input field.</p>
+<p>Inline CSS of <code>style=&quot;resize:vertical&quot;</code> was added to the <code>&lt;textarea&gt;</code> element.</p>
+<p>A new CSS class called <strong>buffer</strong> was added to the recaptcha <code>&lt;div&gt;</code> element.</p>
+<p>A new CSS class called <strong>buffer</strong> was added to the <code>&lt;button&gt;</code> element.</p>
+<h4 id="the-updated-css">The updated CSS</h4>
+<p>The relevant CSS is in the <strong>custom.css</strong> file located in the <em>/static/css/</em> directory, and the following rules were added.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">label</span>.<span style="color:#a6e22e">form-label</span> {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
+    <span style="color:#66d9ef">justify-items</span>: <span style="color:#66d9ef">baseline</span>;
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">div</span>.<span style="color:#a6e22e">buffer</span> {
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#f92672">button</span>.<span style="color:#a6e22e">buffer</span> {
+    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>These changes make the contact form more comprehensible and attractive.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/git-terminal-command-quick-reference/">Basic Git Terminal Command Quick Reference</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <p>
+        Published: 2022 July 05
+        
+                  |     Last edited:  2022 July 06
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-git-remote-repositories-like-github/">Getting Started With Git Remote Repositories (Like GitHub)</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <p>
+        Published: 2022 July 04
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-git-branching-and-merging/">Getting Started with Git Branching and Merging</a></h4>
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    
+    <p>
+        Published: 2022 July 03
+        
+                  |     Last edited:  2022 July 04
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>
