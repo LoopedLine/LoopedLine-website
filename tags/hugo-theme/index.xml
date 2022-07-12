@@ -6,10 +6,22 @@
     <description>Recent content in Hugo theme on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jul 2022 15:56:14 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jul 2022 22:47:54 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/hugo-theme/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fixing the Date Comparison Logic for Hugo Posts</title>
+      <link>https://loopedline.com/post/fixing-the-date-comparison-logic-for-hugo-posts/</link>
+      <pubDate>Mon, 11 Jul 2022 22:47:54 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/fixing-the-date-comparison-logic-for-hugo-posts/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Objective In two previous posts we added a last modified date to post pages and to list pages in Hugo. But the logic used to determine if the last modified date should be displayed was flawed.
+In this post we&amp;rsquo;ll fix that logic to correctly determine when to display the last modified date.</description>
+    </item>
     
     <item>
       <title>Improving the Contact Form UI</title>
@@ -104,11 +116,11 @@ Since this project utilizes a Hugo theme that in turn utilizes Bootstrap, much o
       <pubDate>Sun, 01 May 2022 14:43:42 -0400</pubDate>
       
       <guid>https://loopedline.com/post/including-last-modified-date-in-hugo-list-pages/</guid>
-      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+      <description>UPDATE The date comparison logic in this post has a subtle flaw. It was addressed and corrected in a later post.
+Introduction This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 Objective In this post we&amp;rsquo;ll add a last modified date to post list pages in Hugo.
-In a previous post we added a last modified date to post pages, now we&amp;rsquo;ll reflect that information on list pages as well.
-Building the solution Since the information already exists on each post page, we just need to update the list layout to display it.</description>
+In a previous post we added a last modified date to post pages, now we&amp;rsquo;ll reflect that information on list pages as well.</description>
     </item>
     
     <item>
@@ -117,10 +129,11 @@ Building the solution Since the information already exists on each post page, we
       <pubDate>Sat, 30 Apr 2022 20:52:03 -0400</pubDate>
       
       <guid>https://loopedline.com/post/including-last-modified-date-in-hugo-posts/</guid>
-      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+      <description>UPDATE The date comparison logic in this post has a subtle flaw. It was addressed and corrected in a later post.
+Introduction This project is built with Hugo and uses the Minimal Hugo theme.
 This post is part of an ongoing effort to tailor the theme over time.
 Objective In this post we&amp;rsquo;ll add a last modified date to posts in Hugo.
-We already have a date field that reflects when a post was first published. We want to keep that date and conditionally add a new date that reflects when the post was last updated.</description>
+We already have a date field that reflects when a post was first published.</description>
     </item>
     
     <item>
