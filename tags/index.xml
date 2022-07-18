@@ -6,15 +6,105 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jul 2022 22:47:54 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 18 Jul 2022 11:24:19 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Bootstrap</title>
+      <link>https://loopedline.com/tags/bootstrap/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome DevTools</title>
+      <link>https://loopedline.com/tags/chrome-devtools/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/chrome-devtools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://loopedline.com/tags/css/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DuckDuckGo</title>
+      <link>https://loopedline.com/tags/duckduckgo/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/duckduckgo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Font Awesome</title>
+      <link>https://loopedline.com/tags/font-awesome/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/font-awesome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://loopedline.com/tags/git/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://loopedline.com/tags/github/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub Pages</title>
+      <link>https://loopedline.com/tags/github-pages/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Fonts</title>
+      <link>https://loopedline.com/tags/google-fonts/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/google-fonts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://loopedline.com/tags/html/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hugo</title>
       <link>https://loopedline.com/tags/hugo/</link>
-      <pubDate>Mon, 11 Jul 2022 22:47:54 -0400</pubDate>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/hugo/</guid>
       <description></description>
@@ -23,16 +113,61 @@
     <item>
       <title>Hugo theme</title>
       <link>https://loopedline.com/tags/hugo-theme/</link>
-      <pubDate>Mon, 11 Jul 2022 22:47:54 -0400</pubDate>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/hugo-theme/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Linux</title>
+      <link>https://loopedline.com/tags/linux/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://loopedline.com/tags/markdown/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Netlify</title>
+      <link>https://loopedline.com/tags/netlify/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/netlify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open source software</title>
+      <link>https://loopedline.com/tags/open-source-software/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/open-source-software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>podcasts</title>
+      <link>https://loopedline.com/tags/podcasts/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/podcasts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>software development</title>
       <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Mon, 11 Jul 2022 22:47:54 -0400</pubDate>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/software-development/</guid>
       <description></description>
@@ -41,45 +176,81 @@
     <item>
       <title>static site generator</title>
       <link>https://loopedline.com/tags/static-site-generator/</link>
-      <pubDate>Mon, 11 Jul 2022 22:47:54 -0400</pubDate>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/static-site-generator/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>system administration</title>
+      <link>https://loopedline.com/tags/system-administration/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/system-administration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual Studio Code</title>
+      <link>https://loopedline.com/tags/visual-studio-code/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/visual-studio-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>web development</title>
       <link>https://loopedline.com/tags/web-development/</link>
-      <pubDate>Mon, 11 Jul 2022 22:47:54 -0400</pubDate>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/web-development/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bootstrap</title>
-      <link>https://loopedline.com/tags/bootstrap/</link>
-      <pubDate>Mon, 11 Jul 2022 15:56:14 -0400</pubDate>
+      <title>web hosting</title>
+      <link>https://loopedline.com/tags/web-hosting/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
-      <guid>https://loopedline.com/tags/bootstrap/</guid>
+      <guid>https://loopedline.com/tags/web-hosting/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>CSS</title>
-      <link>https://loopedline.com/tags/css/</link>
-      <pubDate>Mon, 11 Jul 2022 15:56:14 -0400</pubDate>
+      <title>web search engine</title>
+      <link>https://loopedline.com/tags/web-search-engine/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
-      <guid>https://loopedline.com/tags/css/</guid>
+      <guid>https://loopedline.com/tags/web-search-engine/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://loopedline.com/tags/git/</link>
-      <pubDate>Tue, 05 Jul 2022 14:13:01 -0400</pubDate>
+      <title>Wikipedia</title>
+      <link>https://loopedline.com/tags/wikipedia/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
-      <guid>https://loopedline.com/tags/git/</guid>
+      <guid>https://loopedline.com/tags/wikipedia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>YouTube</title>
+      <link>https://loopedline.com/tags/youtube/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>user interface</title>
+      <link>https://loopedline.com/tags/user-interface/</link>
+      <pubDate>Mon, 11 Jul 2022 15:56:14 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/user-interface/</guid>
       <description></description>
     </item>
     
@@ -89,15 +260,6 @@
       <pubDate>Tue, 05 Jul 2022 14:13:01 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/technical-quick-reference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub</title>
-      <link>https://loopedline.com/tags/github/</link>
-      <pubDate>Mon, 04 Jul 2022 13:42:42 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/github/</guid>
       <description></description>
     </item>
     
@@ -129,29 +291,11 @@
     </item>
     
     <item>
-      <title>user interface</title>
-      <link>https://loopedline.com/tags/user-interface/</link>
-      <pubDate>Tue, 07 Jun 2022 11:29:21 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/user-interface/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Bash</title>
       <link>https://loopedline.com/tags/bash/</link>
       <pubDate>Sun, 29 May 2022 08:14:26 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://loopedline.com/tags/linux/</link>
-      <pubDate>Sun, 29 May 2022 08:14:26 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -174,56 +318,11 @@
     </item>
     
     <item>
-      <title>system administration</title>
-      <link>https://loopedline.com/tags/system-administration/</link>
-      <pubDate>Sun, 29 May 2022 08:14:26 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/system-administration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web hosting</title>
-      <link>https://loopedline.com/tags/web-hosting/</link>
-      <pubDate>Wed, 25 May 2022 22:32:08 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/web-hosting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Netlify</title>
-      <link>https://loopedline.com/tags/netlify/</link>
-      <pubDate>Mon, 23 May 2022 08:12:40 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/netlify/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub Pages</title>
-      <link>https://loopedline.com/tags/github-pages/</link>
-      <pubDate>Sun, 22 May 2022 13:15:05 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CSS grid</title>
       <link>https://loopedline.com/tags/css-grid/</link>
       <pubDate>Mon, 04 Apr 2022 09:44:48 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/css-grid/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Font Awesome</title>
-      <link>https://loopedline.com/tags/font-awesome/</link>
-      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/font-awesome/</guid>
       <description></description>
     </item>
     
@@ -314,15 +413,6 @@
       <pubDate>Sun, 05 Dec 2021 17:12:50 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/recommended-resources/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Visual Studio Code</title>
-      <link>https://loopedline.com/tags/visual-studio-code/</link>
-      <pubDate>Mon, 16 Aug 2021 09:28:32 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/visual-studio-code/</guid>
       <description></description>
     </item>
     

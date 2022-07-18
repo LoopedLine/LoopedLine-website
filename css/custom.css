@@ -89,25 +89,6 @@ h4#listpage-item {
     margin-top: 10px;
 }
 
-/*  Overriding Bootstrap Formatting  - Miscellaneous */
-
-blockquote {
-    font-size: 15px;
-    font-style: italic;
-}
-
-ul ul {
-    margin-bottom: 10px;
-}
-
-
-
-/*  TESTING  */
-
-/* * {
-    outline: 1px solid red !important;
-} */
-
 h5 {
     font-size: 16px;
 
@@ -117,6 +98,17 @@ h5 {
     margin-block-end: 10px;
     margin-inline-end: 0px;
     margin-inline-start: 0px;
+}
+
+/*  Overriding Bootstrap Formatting  - Miscellaneous */
+
+blockquote {
+    font-size: 15px;
+    font-style: italic;
+}
+
+ul ul {
+    margin-bottom: 10px;
 }
 
 label.form-label {
@@ -132,3 +124,11 @@ div.buffer {
 button.buffer {
     margin-top: 10px;
 }
+
+
+
+/*  TESTING  */
+
+/* * {
+    outline: 1px solid red !important;
+} */

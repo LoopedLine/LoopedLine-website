@@ -6,10 +6,24 @@
     <description>Recent content in Netlify on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 May 2022 08:12:40 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 18 Jul 2022 11:24:19 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Thank You (2022)</title>
+      <link>https://loopedline.com/post/thank-you-2022/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/thank-you-2022/</guid>
+      <description>Introduction This project exists thanks to the incredible generosity of a tremendous number of people.
+It wouldn&amp;rsquo;t be possible to thank everyone who contributed. Acknowledgements are always incomplete.
+Yet we want to make the attempt to express our gratitude.
+Scope This project (in its current form) is now one year old.
+We want to acknowledge the contributions of various companies, organizations, and groups that helped it reach this point.
+While we might desire to be more granualar in our approbation, it would be both impractical in scope and imbalanced in outcome.</description>
+    </item>
     
     <item>
       <title>Building a Contact Form with Netlify</title>

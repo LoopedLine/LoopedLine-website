@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome DevTools on LoopedLine</title>
+    <link>https://loopedline.com/tags/chrome-devtools/</link>
+    <description>Recent content in Chrome DevTools on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Jul 2022 11:24:19 -0400</lastBuildDate>
+    
+	<atom:link href="https://loopedline.com/tags/chrome-devtools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thank You (2022)</title>
+      <link>https://loopedline.com/post/thank-you-2022/</link>
+      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/thank-you-2022/</guid>
+      <description>Introduction This project exists thanks to the incredible generosity of a tremendous number of people.
+It wouldn&amp;rsquo;t be possible to thank everyone who contributed. Acknowledgements are always incomplete.
+Yet we want to make the attempt to express our gratitude.
+Scope This project (in its current form) is now one year old.
+We want to acknowledge the contributions of various companies, organizations, and groups that helped it reach this point.
+While we might desire to be more granualar in our approbation, it would be both impractical in scope and imbalanced in outcome.</description>
+    </item>
+    
+    <item>
+      <title>CSS Not Updating? Try a Hard Reload</title>
+      <link>https://loopedline.com/post/css-not-updating-try-a-hard-reload/</link>
+      <pubDate>Wed, 08 Jun 2022 11:07:58 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/css-not-updating-try-a-hard-reload/</guid>
+      <description>Introduction When testing changes to CSS it can sometimes appear that nothing is happening.
+That can be caused by many issues, but one issue that can be tricky to detect is when the browser is caching old CSS after a reload of the page.
+Even after the page is refreshed and the HTML content is updated, the old CSS styling can still linger. That can be particularly frustrating and confusing. If the page has refreshed, why hasn&amp;rsquo;t the styling updated?</description>
+    </item>
+    
+    <item>
+      <title>Changing the Spacing of Font Awesome Icons in Hugo</title>
+      <link>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</link>
+      <pubDate>Tue, 22 Mar 2022 13:54:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/</guid>
+      <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+In this post, after resolving the problem of Changing the Size of Font Awesome Icons in Hugo, we now want to increase the spacing between the arrow icons used for page navigation icons on list pages.
+The Process From the previous investigation mentioned above we know that the arrow icons are defined in the fa-arrow-left and fa-arrow-right elements of the paginator.</description>
+    </item>
+    
+    <item>
+      <title>Changing the Size of Font Awesome Icons in Hugo</title>
+      <link>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</link>
+      <pubDate>Mon, 21 Mar 2022 14:36:04 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/changing-the-size-of-font-awesome-icons-in-hugo/</guid>
+      <description>The Problem This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+In this post, we&amp;rsquo;ll look at changing the page navigation icons on list pages. For our purposes, the arrows used at the bottom of each list page are too small, making them difficult to click.
+The Process As has been mentioned before, because Hugo offers so much flexibility and produces pages in such a layered way, it can be difficult to find the right place to make the necessary alterations.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Site Looks Different Served Locally vs Remotely [SOLVED]</title>
+      <link>https://loopedline.com/post/hugo-site-looks-different-served-locally-vs-remotely/</link>
+      <pubDate>Thu, 12 Aug 2021 22:44:18 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/hugo-site-looks-different-served-locally-vs-remotely/</guid>
+      <description>The Problem When a new website layout generated with Hugo was pushed to production it rendered very differently on the web than it appeared locally.
+It looked like the CSS was only partially applied and some elements overlapped one another.
+The Process First, the source files were compared, but, as expected, they appeared identical.
+Next, DevTools in the Chrome browser was used to compare a sample element on the site running locally vs remotely and showed that the sites were being styled by different CSS rules.</description>
+    </item>
+    
+  </channel>
+</rss>
