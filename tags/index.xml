@@ -6,10 +6,55 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Jul 2022 13:07:36 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jul 2022 15:46:50 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://loopedline.com/tags/hugo/</link>
+      <pubDate>Wed, 27 Jul 2022 15:46:50 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo theme</title>
+      <link>https://loopedline.com/tags/hugo-theme/</link>
+      <pubDate>Wed, 27 Jul 2022 15:46:50 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/hugo-theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software development</title>
+      <link>https://loopedline.com/tags/software-development/</link>
+      <pubDate>Wed, 27 Jul 2022 15:46:50 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static site generator</title>
+      <link>https://loopedline.com/tags/static-site-generator/</link>
+      <pubDate>Wed, 27 Jul 2022 15:46:50 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/static-site-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://loopedline.com/tags/web-development/</link>
+      <pubDate>Wed, 27 Jul 2022 15:46:50 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/web-development/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>knowledge acquisition</title>
@@ -192,24 +237,6 @@
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>https://loopedline.com/tags/hugo/</link>
-      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo theme</title>
-      <link>https://loopedline.com/tags/hugo-theme/</link>
-      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/hugo-theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://loopedline.com/tags/linux/</link>
       <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
@@ -255,24 +282,6 @@
     </item>
     
     <item>
-      <title>software development</title>
-      <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/software-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>static site generator</title>
-      <link>https://loopedline.com/tags/static-site-generator/</link>
-      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/static-site-generator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>system administration</title>
       <link>https://loopedline.com/tags/system-administration/</link>
       <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
@@ -287,15 +296,6 @@
       <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/visual-studio-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web development</title>
-      <link>https://loopedline.com/tags/web-development/</link>
-      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/web-development/</guid>
       <description></description>
     </item>
     

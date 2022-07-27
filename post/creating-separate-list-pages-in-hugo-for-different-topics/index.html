@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Creating Separate List Pages in Hugo for Different Topics</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Creating Separate List Pages in Hugo for Different Topics</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Creating Separate List Pages in Hugo for Different Topics</h2>
+        
+
+
+
+
+
+
+
+
+<p>Published: 2022 July 27</p>
+
+
+
+        
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/web-development"><kbd class="item-tag">web development</kbd></a>
+
+<a href="https://loopedline.com/tags/static-site-generator"><kbd class="item-tag">static site generator</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo"><kbd class="item-tag">Hugo</kbd></a>
+
+<a href="https://loopedline.com/tags/hugo-theme"><kbd class="item-tag">Hugo theme</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
+<p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
+<p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
+<h2 id="objective">Objective</h2>
+<p>In the second site design of this project we incorporated the Minimal Hugo theme, which offers one place for articles.</p>
+<p>In this post we&rsquo;ll modify the theme to create a new third site design that adds an additional category to display content for a separate topic.</p>
+<h2 id="building-the-solution">Building the solution</h2>
+<h3 id="overview-of-the-solution">Overview of the solution</h3>
+<p>There are several steps required to make this change:</p>
+<ol>
+<li>Select a place for the new post files.</li>
+<li>Add <em>type</em> to article front matter.</li>
+<li>Create links to the new list pages.</li>
+<li>Update the existing list template partial file.</li>
+<li>Add a new list template partial file.</li>
+<li>Update the article template file.</li>
+</ol>
+<p>Updating the existing list template partial file (Step 4) isn&rsquo;t strictly necessary, but since the project&rsquo;s existing code for that file needs improvement, it makes sense to make that change before creating another partial file based off of it.</p>
+<h3 id="organizing-post-files">Organizing post files</h3>
+<p>We first need to decide where articles for the new topic will be located.</p>
+<p>In the second site design the articles were located in the <em>/content/post/</em> directory.</p>
+<p>In the third site design we&rsquo;ll still keep all articles in that directory.  There are several reasons for this:</p>
+<ol>
+<li>It allows all current articles to keep their current URL.</li>
+<li>Existing scripts used to help build the site continue to work without modification.</li>
+<li>It keeps all article content grouped together in one place.</li>
+</ol>
+<p>This choice means we will have to make other changes so that posts about each of the two topics can be displayed in separate lists.</p>
+<h3 id="adding-type-to-articles">Adding <em>type</em> to articles</h3>
+<h4 id="existing-articles">Existing articles</h4>
+<p>Since all articles are located in the same directory, we need another way to differentatiate which article corresponds to which topic.</p>
+<p>We&rsquo;ll do that by adding the <strong>type</strong> field to the front matter of each article and assigning it a type - either <em>build</em> or <em>learn</em> for our present purposes.</p>
+<h4 id="new-articles">New articles</h4>
+<p>To simplify the creation of future posts, we&rsquo;ll also add the <strong>type</strong> field to the post archetype file.</p>
+<p>The updated front matter section of <strong>/archetype/post.md</strong> is below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;{{ replace ( slicestr .TranslationBaseName 4 ) &#34;-&#34; &#34; &#34; | title }}&#34;
+seqid: {{ slicestr .TranslationBaseName 0 3 }}
+slug: &#34;{{ slicestr .TranslationBaseName 4 }}&#34;
+<span style="display:block;width:100%;background-color:#3c3d38">type: &#34;&#34;
+</span>date: {{ .Date }}
+lastmod: {{ .Date }}
+description: &#34;&#34;
+tags: [&#34;&#34;]
+draft: true
+---
+</code></pre></div><h3 id="creating-new-menu-links">Creating new menu links</h3>
+<p>The second site design had all articles grouped under the <em>Posts</em> directory.</p>
+<p>For the third site design we want to separate posts into two topics: <em>Build</em> and <em>Learn</em>.</p>
+<p>To do this we need to add links for the new topics and point them at new list pages.</p>
+<h4 id="modifying-the-config-file">Modifying the config file</h4>
+<p>To create new menu links for each topic we first need to modify the project <strong>config.toml</strong> file.</p>
+<p>The previous relevant section:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/post/&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Posts&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</code></pre></div><p>The updated section:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/post/build/&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Build&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/post/learn/&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Learn&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</code></pre></div><h4 id="creating-new-list-pages-for-the-new-topic-lists">Creating new list pages for the new topic lists</h4>
+<p>We want the list pages for the two topics to be located at:</p>
+<ul>
+<li>loopedline.com/post/build/</li>
+<li>loopedline.com/post/learn/</li>
+</ul>
+<p>So, we need to add two new directories to our project:</p>
+<ul>
+<li><strong>/content/post/build/</strong></li>
+<li><strong>/content/post/learn/</strong></li>
+</ul>
+<p>Next, each directory needs a new <strong>_index.md</strong> file.</p>
+<p>As the <a href="https://cloudcannon.com/blog/the-ultimate-guide-to-hugo-sections/#bundles--and-that-pesky-underscore">The Ultimate Guide to Hugo Sections</a> by Bryce Wray at CloudCannon explains, we need to use an <em>_index.md</em> file in each folder to tell Hugo to create what it calls a <em><a href="https://gohugo.io/content-management/page-bundles/#branch-bundles">branch bundle</a></em> to create a list of content.</p>
+<p>These files do not need to have much in them.  In fact, we only need a small amount of front matter.</p>
+<p>For the <strong>/build/_index.md</strong> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;Build&#34;
+list_filter: [&#34;build&#34;]
+---
+</code></pre></div><p>And for the <strong>/learn/_index.md</strong> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;Learn&#34;
+list_filter: [&#34;learn&#34;]
+---
+</code></pre></div><p>The <em>title</em> field will be used by the list partial file to title the page.</p>
+<p>The <em>list_filter</em> field is a <a href="https://gohugo.io/content-management/front-matter/#user-defined">user-defined field</a> that will be used to filter posts for the relevant topic.</p>
+<h4 id="creating-a-new-list-page-for-the-existing-list">Creating a new list page for the existing list</h4>
+<p>Because of changes we&rsquo;ll make to the list layout in the next few steps, we also need to create a list page for the post directory.</p>
+<p>In the <strong>/content/post/</strong> directory, we&rsquo;ll add a new <strong>_index.md</strong> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;All Posts&#34;
+list_filter: [&#34;build&#34;, &#34;learn&#34;]
+---
+</code></pre></div><p>This will maintain existing list functionality as we incorporate the changes for the new site design.</p>
+<h3 id="updating-the-existing-list-template-partial-file">Updating the existing list template partial file</h3>
+<p>Previously, we found the syntax of the <em>list</em> template file and Hugo&rsquo;s parsing of it confusing.</p>
+<p>The <em>list</em> template file from the second site design could be found at <strong>/layouts/partials/list-page.html</strong> and it&rsquo;s original code is below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- INCLUDE THIS LINE AT THE TOP SO THE PAGINATOR CORRECTLY SETS THE PAGINATION VALUE: {{ range (.Paginator 1000).Pages }} {{ partial &#34;list-item&#34; . }} {{ end }} --&gt;</span>
+
+&lt;<span style="color:#f92672">main</span>&gt;
+
+    &lt;<span style="color:#f92672">h2</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;{{ .Paginator.TotalNumberOfElements }} total posts&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+
+    {{ range (.Paginator 1000).Pages }}
+        {{ partial &#34;list-item&#34; . }}
+    {{ end }}
+
+    &lt;<span style="color:#f92672">hr</span>&gt;
+
+&lt;/<span style="color:#f92672">main</span>&gt;
+
+{{ partial &#34;paginator&#34; . }}
+</code></pre></div><p>Obviously, including a line of code that is commented out yet is necessary for Hugo to render the page correctly was confusing and undesirable.  As we researched how to alter the template to accomodate the new layout we found a better approach for this template, so it was refactored to the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:block;width:100%;background-color:#3c3d38">{{ $paginator := (.Paginator 1000).Pages }}
+</span>
+&lt;<span style="color:#f92672">main</span>&gt;
+
+    &lt;<span style="color:#f92672">h2</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;{{ .Paginator.TotalNumberOfElements }} total posts&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+
+<span style="display:block;width:100%;background-color:#3c3d38">    {{ range .Paginator.Pages }}
+</span>        {{ partial &#34;list-item&#34; . }}
+    {{ end }}
+
+    &lt;<span style="color:#f92672">hr</span>&gt;
+
+&lt;/<span style="color:#f92672">main</span>&gt;
+
+{{ partial &#34;paginator&#34; . }}
+</code></pre></div><p>Only two lines were changed, but it made the code far more understandable.</p>
+<p>It&rsquo;s still not clear to us why Hugo processes lines that are commented out, but setting aside that issue the reason that the first line was effective was that Hugo processes a <em>pagination</em> command once per page.  So it processes the top pagination command and then uses that result for all other calls for pagination on the same page.</p>
+<p>From the <a href="https://gohugo.io/templates/pagination/#list-paginator-pages">Hugo documentation on List Paginator Pages</a>:</p>
+<blockquote>
+<p>The .Paginator is static and cannot change once created.</p>
+<p>If you call .Paginator or .Paginate multiple times on the same page, you should ensure all the calls are identical. Once either .Paginator or .Paginate is called while generating a page, its result is cached, and any subsequent similar call will reuse the cached result. This means that any such calls which do not match the first one will not behave as written.</p>
+</blockquote>
+<h3 id="adding-a-new-list-template-partial-file">Adding a new list template partial file</h3>
+<p>Now that we have refactored the existing list template file we can consider the changes necessary for the new list pages.</p>
+<p>The template file from the second site design assumed that the content was in the same directory as the list page, which won&rsquo;t be the case for our new list pages.</p>
+<p>We&rsquo;ll create a new list template file to accomodate this change while maintaining existing list functionality.  We can start by copying the newly-updated list template file at <em>/layouts/partials/list-page.html</em> and name the new version <strong>/layouts/partials/list-page-for-posts.html</strong>.</p>
+<p>Slightly later in the <a href="https://gohugo.io/templates/pagination/#list-paginator-pages">Hugo documentation on List Paginator Pages</a> mentioned earlier is an example of a helpful form of the <em>.Paginate</em> command:</p>
+<blockquote>
+<p><code>{{ $paginator := .Paginate (where .Pages &quot;Type&quot; &quot;posts&quot;) 5 }}</code></p>
+</blockquote>
+<p>We&rsquo;ll use this form in the third site design:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:block;width:100%;background-color:#3c3d38">{{ $paginator := .Paginate (where .Site.RegularPages &#34;Type&#34; &#34;in&#34; ( .Params.list_filter )) 1000 }}
+</span>
+&lt;<span style="color:#f92672">main</span>&gt;
+
+    &lt;<span style="color:#f92672">h2</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;{{ .Paginator.TotalNumberOfElements }} total posts&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+
+    {{ range .Paginator.Pages }}
+        {{ partial &#34;list-item&#34; . }}
+    {{ end }}
+
+    &lt;<span style="color:#f92672">hr</span>&gt;
+
+&lt;/<span style="color:#f92672">main</span>&gt;
+
+{{ partial &#34;paginator&#34; . }}
+</code></pre></div><p>For our updated <em>list-page-by-type-group.html</em> page we use <em>.RegularPages</em> so that we only list &ldquo;regular&rdquo; pages and not other list pages.  (<a href="https://discourse.gohugo.io/t/confused-about-site-pages-vs-site-regularpages/19388/2">This answer on the Hugo forums</a> explains the difference between <code>.Pages</code> and <code>.RegularPages</code>.)</p>
+<p>Furthermore, we use <code>.Site.RegularPages</code> so that we list all pages from the site, since we are creating a list for files that are in a separate directory than the list page itself.</p>
+<p>We then use the <code>where</code> clause to filter for the <em>type</em> of article that matches the <em>list_filter</em> parameter of the list page.  The <code>in</code> function checks for the presence of a value in an array.  (See the Hugo documentation for the functions <a href="https://gohugo.io/functions/where/"><em>where</em></a> and <a href="https://gohugo.io/functions/in/"><em>in</em></a>.)</p>
+<p>Finally, we use the <code>.Params.list_filter</code> value to filter by the <a href="https://gohugo.io/content-management/front-matter/#user-defined">user-defined field</a> <em>list_filter</em> of each topic page.</p>
+<h4 id="calling-the-new-list-template-partial-file">Calling the new list template partial file</h4>
+<p>As mentioned above, to maintain existing list functionality while showing the new topical list, we created a new list template partial file.</p>
+<p>We now need to add a new <em>list template file</em> to call the new <em>list template partial file</em>.</p>
+<p>We&rsquo;ll create the file <strong>/layouts/post/list.html</strong> and add the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;header&#34; . }}
+
+{{ partial &#34;list-page-for-posts&#34; . }}
+
+{{ partial &#34;footer&#34; . }}
+</code></pre></div><p>Now our existing lists and new topical lists will both work in parallel.</p>
+<h3 id="updating-the-article-template-file">Updating the article template file</h3>
+<p>Though in an earlier step only one line was added to the project&rsquo;s articles, it is a line that effects the way content is rendered by the theme files.</p>
+<p>Since we added <em>type</em> to the front matter of all articles, we need to update a section of the <strong>post-content.html</strong> file in the <em>/layouts/partials/</em> directory so that <em>Related</em> articles will be displayed.</p>
+<p>The existing <em>where</em> clause compares the <em>type</em> to the hardcoded value &ldquo;post&rdquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">related</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">first</span> <span style="color:#ae81ff">3</span> (<span style="color:#a6e22e">where</span> (<span style="color:#a6e22e">where</span> (<span style="color:#a6e22e">where</span> .<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Pages</span>.<span style="color:#a6e22e">ByDate</span>.<span style="color:#a6e22e">Reverse</span> <span style="color:#e6db74">&#34;.Type&#34;</span> <span style="color:#e6db74">&#34;==&#34;</span> <span style="color:#e6db74">&#34;post&#34;</span>) <span style="color:#e6db74">&#34;.Params.tags&#34;</span> <span style="color:#e6db74">&#34;intersect&#34;</span> .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">tags</span>) <span style="color:#e6db74">&#34;Permalink&#34;</span> <span style="color:#e6db74">&#34;!=&#34;</span> .<span style="color:#a6e22e">Permalink</span>) }}
+</code></pre></div><p>According to the <a href="https://gohugo.io/content-management/types">Hugo documentation on Content Types</a>:</p>
+<blockquote>
+<p>Hugo resolves the content type from either the <code>type</code> in front matter or, if not set, the first directory in the file path. E.g. <code>content/blog/my-first-event.md</code> will be of type <code>blog</code> if no type is set.</p>
+</blockquote>
+<p>If we didn&rsquo;t set the <em>type</em> for our articles they would all be considered to have a <em>type</em> of <em>post</em>, and the test would pass.</p>
+<p>However, since we are setting the <em>type</em> in the front matter of our articles, the test no longer works.</p>
+<p>To resolve this we simply remove the <code>(where .Site.Pages.ByDate.Reverse &quot;.Type&quot; &quot;==&quot; &quot;post&quot;)</code> test and replace it with <code>.Site.Pages.ByDate.Reverse</code> to show articles regardless of type.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">related</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">first</span> <span style="color:#ae81ff">3</span> (<span style="color:#a6e22e">where</span> (<span style="color:#a6e22e">where</span> .<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">RegularPages</span>.<span style="color:#a6e22e">ByDate</span>.<span style="color:#a6e22e">Reverse</span> <span style="color:#e6db74">&#34;.Params.tags&#34;</span> <span style="color:#e6db74">&#34;intersect&#34;</span> .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">tags</span>) <span style="color:#e6db74">&#34;Permalink&#34;</span> <span style="color:#e6db74">&#34;!=&#34;</span> .<span style="color:#a6e22e">Permalink</span>) }}
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>We now have the desired site layout and functionality using <em>type</em> in article frontmatter while preserving existing functionality.  This approach seems to slightly go against the grain of Hugo.</p>
+<p>Another design might make better use of Hugo&rsquo;s default taxonomies.  For instance, in a future update it might be worth considering using <em>categories</em>, <a href="https://gohugo.io/content-management/taxonomies/#default-taxonomies">one of Hugo&rsquo;s default taxonomies</a>.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/thank-you-2022/">Thank You (2022)</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 July 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/fixing-the-date-comparison-logic-for-hugo-posts/">Fixing the Date Comparison Logic for Hugo Posts</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 July 11
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/improving-the-contact-form-ui/">Improving the Contact Form UI</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 July 11
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

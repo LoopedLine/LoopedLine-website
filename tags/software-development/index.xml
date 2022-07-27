@@ -6,10 +6,22 @@
     <description>Recent content in software development on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jul 2022 11:24:19 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jul 2022 15:46:50 -0400</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creating Separate List Pages in Hugo for Different Topics</title>
+      <link>https://loopedline.com/post/creating-separate-list-pages-in-hugo-for-different-topics/</link>
+      <pubDate>Wed, 27 Jul 2022 15:46:50 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/creating-separate-list-pages-in-hugo-for-different-topics/</guid>
+      <description>Introduction This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.
+Objective In the second site design of this project we incorporated the Minimal Hugo theme, which offers one place for articles.
+In this post we&amp;rsquo;ll modify the theme to create a new third site design that adds an additional category to display content for a separate topic.</description>
+    </item>
     
     <item>
       <title>Thank You (2022)</title>
@@ -165,10 +177,9 @@ The Process This is a common problem with a long history, so a web search quickl
       <pubDate>Wed, 01 Jun 2022 15:32:34 -0400</pubDate>
       
       <guid>https://loopedline.com/post/updating-the-hugo-list-page-layout-to-display-all-posts/</guid>
-      <description>Background This project is built with Hugo and uses the Minimal Hugo theme.
-This post is part of an ongoing effort to tailor the theme over time.
-Objective In a previous post we built a new user interface for navigating between list pages. But the approach used in that post seems to go against the general Hugo structure for automatically creating list pages, so it introduced several problems.
-Most strikingly, list pages for subsections always displayed a count for, and pointed to, the list page for all posts.</description>
+      <description>UPDATE The paginator partial template file at the end of this post includes a line of code that is commented out yet is necessary for Hugo to render the page correctly. That is confusing and undesirable. This issue was addressed and corrected in a later post.
+Background This project is built with Hugo and uses the Minimal Hugo theme.
+This post is part of an ongoing effort to tailor the theme over time.</description>
     </item>
     
     <item>
