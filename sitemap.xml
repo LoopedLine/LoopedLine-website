@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/post/</loc>
+    <lastmod>2022-07-25T14:22:54-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-07-27T14:07:07-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/post/know-what-vs-know-how/</loc>
     <lastmod>2022-07-24T13:07:36-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/knowledege/</loc>
+    <loc>https://loopedline.com/tags/knowledge-acquisition/</loc>
     <lastmod>2022-07-24T13:07:36-04:00</lastmod>
   </url>
   
@@ -18,28 +28,18 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-07-24T13:07:36-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/post/</loc>
-    <lastmod>2022-07-24T13:07:36-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/practice/</loc>
     <lastmod>2022-07-24T13:07:36-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/skill/</loc>
+    <loc>https://loopedline.com/tags/skill-development/</loc>
     <lastmod>2022-07-24T13:07:36-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-07-24T13:07:36-04:00</lastmod>
+    <lastmod>2022-07-27T14:07:07-04:00</lastmod>
   </url>
   
   <url>
@@ -119,7 +119,7 @@
   
   <url>
     <loc>https://loopedline.com/tags/git/</loc>
-    <lastmod>2022-07-18T11:24:19-04:00</lastmod>
+    <lastmod>2022-07-27T14:07:07-04:00</lastmod>
   </url>
   
   <url>
@@ -179,7 +179,7 @@
   
   <url>
     <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-07-18T11:24:19-04:00</lastmod>
+    <lastmod>2022-07-27T14:07:07-04:00</lastmod>
   </url>
   
   <url>
@@ -244,12 +244,12 @@
   
   <url>
     <loc>https://loopedline.com/post/git-terminal-command-quick-reference/</loc>
-    <lastmod>2022-07-06T14:24:41-04:00</lastmod>
+    <lastmod>2022-07-27T14:07:07-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/technical-quick-reference/</loc>
-    <lastmod>2022-07-06T14:24:41-04:00</lastmod>
+    <lastmod>2022-07-27T14:07:07-04:00</lastmod>
   </url>
   
   <url>
