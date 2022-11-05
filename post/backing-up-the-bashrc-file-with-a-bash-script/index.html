@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Backing Up the .bashrc File with a Bash Script</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Backing Up the .bashrc File with a Bash Script</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Backing Up the .bashrc File with a Bash Script</h2>
+        
+
+
+
+
+
+
+
+
+<p>Published: 2022 November 04</p>
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shell-script"><kbd class="item-tag">shell script</kbd></a>
+
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="objective">Objective</h2>
+<p>Automating common tasks can save effort over time.</p>
+<p>In this post we&rsquo;ll construct a <a href="https://loopedline.com/post/automating-bash-shell-commands/">Bash script</a> to automate the backup of the <a href="https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux">.bashrc</a> file.</p>
+<h2 id="the-script">The Script</h2>
+<p>We&rsquo;ve developed Bash scripts for automating tasks in <a href="/tags/shell-script/">previous posts</a> so we&rsquo;ll leverage that previous work and modify it for our current purposes:</p>
+<p><strong>backup_bashrc.sh</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># VARIABLES</span>
+<span style="display:block;width:100%;background-color:#3c3d38">bashrc_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">bashrc_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.bashrc&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_top_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/backups/&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;backup_of_bashrc_</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span>
+<span style="color:#75715e"># VARIABLES, constructed</span>
+<span style="display:block;width:100%;background-color:#3c3d38">bashrc_location<span style="color:#f92672">=</span>$bashrc_directory$bashrc_filename
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_output_directory<span style="color:#f92672">=</span>$backup_top_directory$backup_filename
+</span>
+<span style="color:#75715e"># FUNCTION</span>
+<span style="color:#75715e"># Provides contextual output</span>
+script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	echo
+	echo
+	
+	echo
+	echo
+	echo <span style="color:#f92672">=============================================================</span>
+	echo <span style="color:#f92672">====================</span> script info - START <span style="color:#f92672">====================</span>
+	echo
+	echo <span style="color:#e6db74">&#34;Executing </span>$BASH_SOURCE<span style="color:#e6db74">&#34;</span>
+	echo
+	echo <span style="color:#e6db74">&#34;.bashrc backup script&#34;</span>
+	echo
+	echo <span style="color:#e6db74">&#34;This script will copy </span>$bashrc_location<span style="color:#e6db74"> and output the file to </span>$backup_output_directory<span style="color:#e6db74">&#34;</span>
+	echo
+	echo <span style="color:#f92672">=====================</span> script info - END <span style="color:#f92672">=====================</span>
+	echo <span style="color:#f92672">=============================================================</span>
+	echo
+	echo
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># FUNCTION</span>
+<span style="color:#75715e"># Creates backup of .bashrc file.</span>
+create_backup_files<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	
+	echo
+	echo <span style="color:#e6db74">&#34;Backup started.&#34;</span>
+<span style="display:block;width:100%;background-color:#3c3d38">	cp $bashrc_location $backup_output_directory
+</span>	echo <span style="color:#e6db74">&#34;Backup finished.&#34;</span>
+	echo
+
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># MAIN program flow</span>
+script_info
+create_backup_files
+</code></pre></div><h3 id="script-description">Script description</h3>
+<p>Despite the script length, the core functionality is very simple.  We are just running a <code>cp</code> (copy) command and passing it the correct source and target variables (shown in the highlighted lines).</p>
+<p>The source and target inputs are constructed in variables to provide a simple way to make future updates.</p>
+<p>Everything else is output to the user for clarity.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>That is all we need to backup the .bashrc via a Bash script.</p>
+<p>The finalized script can be found <a href="https://github.com/LoopedLine/Linux-backup/blob/main/backup_bashrc.sh">here</a>.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/creating-separate-list-pages-in-hugo-for-different-topics/">Creating Separate List Pages in Hugo for Different Topics</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 July 27
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/thank-you-2022/">Thank You (2022)</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 July 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/fixing-the-date-comparison-logic-for-hugo-posts/">Fixing the Date Comparison Logic for Hugo Posts</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 July 11
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

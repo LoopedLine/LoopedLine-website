@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/post/backing-up-the-bashrc-file-with-a-bash-script/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/bash/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/linux/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/shell/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/shell-script/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/system-administration/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/post/creating-separate-list-pages-in-hugo-for-different-topics/</loc>
     <lastmod>2022-07-27T15:46:50-04:00</lastmod>
   </url>
@@ -18,22 +63,7 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-07-27T15:46:50-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-07-27T15:46:50-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/static-site-generator/</loc>
-    <lastmod>2022-07-27T15:46:50-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
     <lastmod>2022-07-27T15:46:50-04:00</lastmod>
   </url>
   
@@ -63,12 +93,12 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/skill-development/</loc>
+    <loc>https://loopedline.com/tags/practice/</loc>
     <lastmod>2022-07-24T13:07:36-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/skill-practice/</loc>
+    <loc>https://loopedline.com/tags/skill-development/</loc>
     <lastmod>2022-07-24T13:07:36-04:00</lastmod>
   </url>
   
@@ -173,11 +203,6 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/linux/</loc>
-    <lastmod>2022-07-18T11:24:19-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/markdown/</loc>
     <lastmod>2022-07-18T11:24:19-04:00</lastmod>
   </url>
@@ -194,11 +219,6 @@
   
   <url>
     <loc>https://loopedline.com/tags/podcasts/</loc>
-    <lastmod>2022-07-18T11:24:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/system-administration/</loc>
     <lastmod>2022-07-18T11:24:19-04:00</lastmod>
   </url>
   
@@ -320,21 +340,6 @@
   <url>
     <loc>https://loopedline.com/post/adding-sequence-ids-to-hugo-post-filenames/</loc>
     <lastmod>2022-05-29T14:52:42-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/bash/</loc>
-    <lastmod>2022-07-11T15:56:14-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/shell/</loc>
-    <lastmod>2022-07-11T15:56:14-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/shell-script/</loc>
-    <lastmod>2022-07-11T15:56:14-04:00</lastmod>
   </url>
   
   <url>
