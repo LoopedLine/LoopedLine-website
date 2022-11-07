@@ -122,7 +122,7 @@
 <p>Published: 2022 July 03</p>
 
 
-    <p>Last edited: 2022 July 04</p>
+    <p>Last edited: 2022 November 07</p>
 
 
         
@@ -137,6 +137,8 @@
 
     
     <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="introduction">Introduction</h2>
 <p>This post is part of <a href="https://loopedline.com/post/git-and-github-topic/#our-posts-about-git-and-github">a series about Git and GitHub</a>.</p>
@@ -235,7 +237,8 @@ style.css
 test.js
 </code></pre></div><p>And once again, the <em>test.js</em> file is there.</p>
 <p>This is what branching allows you to do.  You can have different working sets of files that are isolated from each other in separate contexts.</p>
-<p>If you&rsquo;d like to see review those steps, the <a href="https://www.youtube.com/watch?v=3iO4jxTtGbw">Creating &amp; Checking Out Branches</a> video by <em>Tower</em> illustrates this process.</p>
+<h4 id="additional-resources">Additional resources</h4>
+<p>If you&rsquo;d like to review these steps, the <a href="https://www.youtube.com/watch?v=3iO4jxTtGbw">Creating &amp; Checking Out Branches</a> video by <em>Tower</em> illustrates this process.</p>
 <h3 id="merging-a-branch-in-git">Merging a branch in Git</h3>
 <p>Let&rsquo;s say we like the changes we made on the <em>development</em> branch and we want to include them in the <em>master</em> branch.  We can merge them into the master branch from the development branch.</p>
 <p>To get started, we need to confirm that the <em>master</em> branch is the <em>active</em> branch, because <strong>changes are always merged <em>into</em> the active branch</strong>.</p>
@@ -262,8 +265,9 @@ Fast-forward
 style.css
 test.js
 </code></pre></div><p><strong>NOTE:</strong> This is a simple example that doesn&rsquo;t include a merge conflict.  Nevertheless, this is reflective of the typical process that you&rsquo;re likely to experience, especially if you&rsquo;re working with Git locally.  If you continue working with Git, especially with others, you&rsquo;ll eventually encounter merge conflicts.  You can learn how to handle that as you advance.</p>
+<h4 id="additional-resources-1">Additional resources</h4>
 <p>If you&rsquo;d like to review these steps, the <a href="https://www.youtube.com/watch?v=DDFi_vTlZTI">Merging Branches</a> video by <em>Tower</em> illustrates this process.</p>
-<p>And to see the process for handling merge conflicts, also take a look at the <a href="https://www.youtube.com/watch?v=27tfD2pDZVk">Dealing with Merge Conflicts</a> video by <em>Tower</em>.</p>
+<p>And to see the process for handling merge conflicts, take a look at the <a href="https://www.youtube.com/watch?v=27tfD2pDZVk">Dealing with Merge Conflicts</a> video by <em>Tower</em>.</p>
 <p>Finally, the entire <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">&ldquo;Git Branching - Basic Branching and Merging&rdquo;</a> section from <em>Pro Git</em> by Scott Chacon and Ben Straub provides another helpful walkthrough with additional details.</p>
 <h2 id="delete-a-branch">Delete a branch</h2>
 <p>After creating, working with, and merging branches, you&rsquo;re likely to eventually want to delete a branch.  Like many things in Git, it&rsquo;s pretty straightforward.</p>
@@ -277,11 +281,13 @@ test.js
 </code></pre></div><h3 id="stash-your-current-work">Stash your current work</h3>
 <p>If you want to save your current work without committing it you can use the <code>stash</code> command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash
-</code></pre></div><p>Watch the video <a href="https://www.youtube.com/watch?v=yOYSu6D5p9Y">Using the Stash</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning">&ldquo;Git Tools - Stashing and Cleaning&rdquo;</a> section from <em>Pro Git</em> to learn more about using the stash command.</p>
+</code></pre></div><h4 id="additional-resources-2">Additional resources</h4>
+<p>Watch the videos <a href="https://www.youtube.com/watch?v=lH3ZkwbVp5E">Git Stash In 5 Minutes</a> by <em>Colt Steele</em> and <a href="https://www.youtube.com/watch?v=yOYSu6D5p9Y">Using the Stash</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning">&ldquo;Git Tools - Stashing and Cleaning&rdquo;</a> section from <em>Pro Git</em> to learn more about using the stash command.</p>
 <h3 id="rebase-your-commit-history">Rebase your commit history</h3>
 <p>If you want to apply all the file changes of one branch to another without also applying the commit history of that branch you can use the <code>rebase</code> command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase new-feature-branch
 </code></pre></div><p>This is a command where it&rsquo;s important to know what you&rsquo;re doing, especially if you are working with remote repositories.  So, understand the impact of this command before using it.</p>
+<h4 id="additional-resources-3">Additional resources</h4>
 <p>Watch the video <a href="https://www.youtube.com/watch?v=BFszA0io_7M">Rebase as an Alternative to Merge</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">&ldquo;Git Branching - Rebasing&rdquo;</a> section from <em>Pro Git</em> to learn more about using the rebase command.</p>
 <h2 id="next-steps-in-learning-git">Next steps in learning Git</h2>
 <p>As mentioned in the previous post, there is much more to learn in Git.  We&rsquo;ve touched on only the introductory features of this powerful tool.</p>

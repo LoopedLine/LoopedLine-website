@@ -122,7 +122,7 @@
 <p>Published: 2022 July 05</p>
 
 
-    <p>Last edited: 2022 July 27</p>
+    <p>Last edited: 2022 November 07</p>
 
 
         
@@ -137,6 +137,8 @@
 
     
     <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -193,7 +195,8 @@
 <p><strong>Command 2 Example:</strong></p>
 <p>Sets the <em>difftool command</em> variable to launch Visual Studio Code to display diffs.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global difftool.vscode.cmd <span style="color:#e6db74">&#34;code --wait --diff </span>$LOCAL<span style="color:#e6db74"> </span>$REMOTE<span style="color:#e6db74">&#34;</span>
-</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=8JJ101D3knE&amp;t=3033s">Git Tutorial for Beginners</a> by <em>Programming with Mosh</em> (starting at timestamp 50:33) demonstrates setting these values.</p>
+</code></pre></div><h5 id="additional-resources">Additional resources</h5>
+<p>The video <a href="https://www.youtube.com/watch?v=8JJ101D3knE&amp;t=3033s">Git Tutorial for Beginners</a> by <em>Programming with Mosh</em> (starting at timestamp 50:33) demonstrates setting these values.</p>
 <p>For further information (including if you want to use one of the built-in diff.tool values) consult the <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-difftool">Git documentation for configuring <em>diff.tool</em></a>.</p>
 <h4 id="set-the-default-branch-name">Set the default branch name</h4>
 <p><strong>Command form:</strong></p>
@@ -218,7 +221,7 @@
 <p><strong>Command:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --edit
 </code></pre></div><p>Opens your Git configuration settings file in your default text editor.</p>
-<h4 id="more-info">More info</h4>
+<h5 id="additional-resources-1">Additional resources</h5>
 <p>See the <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">&ldquo;Getting Started - First-Time Git Setup&rdquo;</a> chapter from <em>Pro Git</em> for more details on Git configuration.</p>
 <h2 id="establishing-a-git-repository">Establishing a Git repository</h2>
 <p>The commands in this section should be entered in a terminal pointed to the directory where you want your Git repository.</p>
@@ -338,12 +341,13 @@
 </code></pre></div><h4 id="rebase-your-commit-history">Rebase your commit history</h4>
 <p>If you want to apply all the file changes of one branch to another without also applying the commit history of that branch you can use the <code>rebase</code> command.</p>
 <p><strong>NOTE:</strong> This is a command where it&rsquo;s important to know what you&rsquo;re doing, especially if you are working with remote repositories.  Understand the impact of this command before using it.</p>
-<p>To learn more about using the rebase command watch the video <a href="https://www.youtube.com/watch?v=BFszA0io_7M">Rebase as an Alternative to Merge</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">&ldquo;Git Branching - Rebasing&rdquo;</a> section from <em>Pro Git</em>.</p>
 <p><strong>Command form:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase feature-sort
-</code></pre></div><h3 id="deleting-branches">Deleting branches</h3>
+</code></pre></div><h5 id="additional-resources-2">Additional resources</h5>
+<p>To learn more about using the rebase command watch the video <a href="https://www.youtube.com/watch?v=BFszA0io_7M">Rebase as an Alternative to Merge</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">&ldquo;Git Branching - Rebasing&rdquo;</a> section from <em>Pro Git</em>.</p>
+<h3 id="deleting-branches">Deleting branches</h3>
 <h4 id="delete-a-branch">Delete a branch</h4>
 <p><strong>Command form:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch --delete <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span>
@@ -365,7 +369,8 @@
 <p><em><strong>Caution:</strong> This will remove files from the stash after applying them.</em></p>
 <p><strong>Command</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash pop
-</code></pre></div><p>To learn more about using the <code>stash</code> command watch the video <a href="https://www.youtube.com/watch?v=yOYSu6D5p9Y">Using the Stash</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning">&ldquo;Git Tools - Stashing and Cleaning&rdquo;</a> section from <em>Pro Git</em> .</p>
+</code></pre></div><h5 id="additional-resources-3">Additional resources</h5>
+<p>To learn more about using the <code>stash</code> command watch the videos <a href="https://www.youtube.com/watch?v=lH3ZkwbVp5E">Git Stash In 5 Minutes</a> by <em>Colt Steele</em> and <a href="https://www.youtube.com/watch?v=yOYSu6D5p9Y">Using the Stash</a> by <em>Tower</em> and read the <a href="https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning">&ldquo;Git Tools - Stashing and Cleaning&rdquo;</a> section from <em>Pro Git</em> .</p>
 <h2 id="remote-repositories">Remote Repositories</h2>
 <h3 id="establishing-remote-tracking-repositories">Establishing remote-tracking repositories</h3>
 <h4 id="clone-a-git-repository">Clone a Git repository</h4>
@@ -375,7 +380,8 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone <span style="color:#f92672">[</span>URL<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/dwmkerr/hacker-laws
-</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=i-3gsC3aBBA">Cloning an Existing Repository</a> by <em>Tower</em> illustrates this command.</p>
+</code></pre></div><h5 id="additional-resources-4">Additional resources</h5>
+<p>The video <a href="https://www.youtube.com/watch?v=i-3gsC3aBBA">Cloning an Existing Repository</a> by <em>Tower</em> illustrates this command.</p>
 <h4 id="add-a-git-remote-repository">Add a Git remote repository</h4>
 <p>If you have started a project locally and want to upload it to a remote host, the <code>git remote add</code> command will create a remote repository for it.</p>
 <p>Navigate to the directory of your local Git repository and then run the command with a chosen <em>shortname</em> (&ldquo;origin&rdquo; is the convention) and the URL for the remote repository.</p>
@@ -383,14 +389,16 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>URL<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add origin https://github.com/exampleuser/exampleproject
-</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=fSH-_SmtHio">Connecting a Remote Repository</a> by <em>Tower</em> illustrates this command.</p>
+</code></pre></div><h5 id="additional-resources-5">Additional resources</h5>
+<p>The video <a href="https://www.youtube.com/watch?v=fSH-_SmtHio">Connecting a Remote Repository</a> by <em>Tower</em> illustrates this command.</p>
 <h3 id="exchanging-data-with-remote-tracking-repositories">Exchanging data with remote-tracking repositories</h3>
 <h4 id="fetching-remote-repository-data">Fetching remote repository data</h4>
 <p><strong>Command form:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch origin
-</code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=A4rIs-6c98s">Pulling &amp; Fetching Changes from a Remote</a> by <em>Tower</em> illustrates this command.</p>
+</code></pre></div><h5 id="additional-resources-6">Additional resources</h5>
+<p>The video <a href="https://www.youtube.com/watch?v=A4rIs-6c98s">Pulling &amp; Fetching Changes from a Remote</a> by <em>Tower</em> illustrates this command.</p>
 <h4 id="git-pull">Git pull</h4>
 <p>The <code>git pull</code> command can fetch and attempt to automatically merge changes from your remote repository into your local repository.</p>
 <p><strong>Command:</strong></p>
@@ -399,6 +407,7 @@
 <blockquote>
 <p>Generally it’s better to simply use the fetch and merge commands explicitly as the magic of git pull can often be confusing.</p>
 </blockquote>
+<h5 id="additional-resources-7">Additional resources</h5>
 <p>The video <a href="https://www.youtube.com/watch?v=A4rIs-6c98s">Pulling &amp; Fetching Changes from a Remote</a> by <em>Tower</em> illustrates this command.</p>
 <h4 id="git-push">Git push</h4>
 <h5 id="pushing-to-a-remote-repository-the-first-time">Pushing to a remote repository (the first time)</h5>
@@ -409,12 +418,14 @@
 </code></pre></div><p><strong>Example:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push -u origin newfeature
 </code></pre></div><p>This will create the new branch on the remote repository, share the repository data for that branch, and establish a tracking connection with that branch on your local repository.</p>
+<h5 id="additional-resources-8">Additional resources</h5>
 <p>The video <a href="https://www.youtube.com/watch?v=lqw7ipXmc-4">Pushing Changes to a Remote</a> by <em>Tower</em> illustrates this command.</p>
 <h5 id="pushing-to-a-remote-repository-with-a-tracking-connection-subsequent-times">Pushing to a remote repository with a tracking connection (subsequent times)</h5>
 <p>If you have established a tracking connection, the next time you want to push changes from that branch to the remote repository, you can use a simpler version of the <code>push</code> command.</p>
 <p><strong>Command:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push
 </code></pre></div><p>This will push the latest changes from your current branch on your local repository to the tracked branch on the remote repository.</p>
+<h5 id="additional-resources-9">Additional resources</h5>
 <p>The video <a href="https://www.youtube.com/watch?v=lqw7ipXmc-4">Pushing Changes to a Remote</a> by <em>Tower</em> illustrates this command.</p>
 <h3 id="reviewing-remote-repository-connections">Reviewing remote repository connections</h3>
 <h4 id="listing-the-remote-repositories-that-have-tracking-connections-with-your-local-repository">Listing the remote repositories that have tracking connections with <em>your local repository</em></h4>
@@ -440,7 +451,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove legacy
-</code></pre></div><h2 id="additional-resources">Additional Resources</h2>
+</code></pre></div><h2 id="additional-resources-10">Additional Resources</h2>
 <p>The <a href="https://ndpsoftware.com/git-cheatsheet.html">Visual Git command reference</a> shows Git commands organized visually by the areas each command affects.</p>
 <p>The <a href="https://git-scm.com/docs">Git documentation</a> provides more detail about Git commands.</p>
 <p>To find a curated list of many more resources for learning about Git you can review our <a href="https://loopedline.com/post/git-and-github-topic/">Git and GitHub Topic</a> post.</p>
