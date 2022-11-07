@@ -6,7 +6,7 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 21:36:51 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 06 Nov 2022 20:28:22 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Bash</title>
       <link>https://loopedline.com/tags/bash/</link>
-      <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
+      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/bash/</guid>
       <description></description>
@@ -23,18 +23,36 @@
     <item>
       <title>Linux</title>
       <link>https://loopedline.com/tags/linux/</link>
-      <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
+      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>shell</title>
-      <link>https://loopedline.com/tags/shell/</link>
-      <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
+      <title>shell command</title>
+      <link>https://loopedline.com/tags/shell-command/</link>
+      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
       
-      <guid>https://loopedline.com/tags/shell/</guid>
+      <guid>https://loopedline.com/tags/shell-command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software development</title>
+      <link>https://loopedline.com/tags/software-development/</link>
+      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system administration</title>
+      <link>https://loopedline.com/tags/system-administration/</link>
+      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/system-administration/</guid>
       <description></description>
     </item>
     
@@ -44,24 +62,6 @@
       <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/shell-script/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>software development</title>
-      <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/software-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>system administration</title>
-      <link>https://loopedline.com/tags/system-administration/</link>
-      <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/system-administration/</guid>
       <description></description>
     </item>
     
@@ -431,42 +431,6 @@
       <pubDate>Thu, 17 Mar 2022 11:36:59 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/technical-troubleshooting-unsolved/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cowsay</title>
-      <link>https://loopedline.com/tags/cowsay/</link>
-      <pubDate>Fri, 25 Feb 2022 15:09:52 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/cowsay/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell alias</title>
-      <link>https://loopedline.com/tags/shell-alias/</link>
-      <pubDate>Fri, 25 Feb 2022 15:09:52 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/shell-alias/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell function</title>
-      <link>https://loopedline.com/tags/shell-function/</link>
-      <pubDate>Fri, 25 Feb 2022 15:09:52 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/shell-function/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sed</title>
-      <link>https://loopedline.com/tags/sed/</link>
-      <pubDate>Fri, 11 Feb 2022 11:37:37 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/sed/</guid>
       <description></description>
     </item>
     

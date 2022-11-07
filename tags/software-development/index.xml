@@ -6,10 +6,25 @@
     <description>Recent content in software development on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Nov 2022 21:36:51 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 06 Nov 2022 20:28:22 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Started with the Tree Command in Bash</title>
+      <link>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</link>
+      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</guid>
+      <description>Introduction The tree command is extremely useful.
+ According to tldr:
+Tree shows &amp;ldquo;the contents of the current directory as a tree.&amp;quot;
+ And according to the Tree homepage:
+&amp;ldquo;Tree is a recursive directory listing command that produces a depth indented listing of files&amp;rdquo;.
+ In other words, tree gives a visual display of the contents of a directory, includings its files, subdirectories, and the contents of those subdirectories.
+It might best be understood by example.</description>
+    </item>
     
     <item>
       <title>Backing Up the .bashrc File with a Bash Script</title>

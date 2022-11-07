@@ -3,47 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://loopedline.com/tags/bash/</loc>
+    <lastmod>2022-11-06T20:35:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</loc>
+    <lastmod>2022-11-06T20:28:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/linux/</loc>
+    <lastmod>2022-11-06T20:35:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/</loc>
+    <lastmod>2022-11-06T20:35:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/shell-command/</loc>
+    <lastmod>2022-11-06T20:35:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2022-11-06T20:28:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/system-administration/</loc>
+    <lastmod>2022-11-06T20:35:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2022-11-06T20:35:31-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://loopedline.com/post/backing-up-the-bashrc-file-with-a-bash-script/</loc>
     <lastmod>2022-11-04T21:36:51-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/bash/</loc>
-    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/linux/</loc>
-    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/</loc>
-    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/shell/</loc>
-    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/tags/shell-script/</loc>
-    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/system-administration/</loc>
-    <lastmod>2022-11-04T21:36:51-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/</loc>
     <lastmod>2022-11-04T21:36:51-04:00</lastmod>
   </url>
   
@@ -488,21 +493,6 @@
   </url>
   
   <url>
-    <loc>https://loopedline.com/tags/cowsay/</loc>
-    <lastmod>2022-02-25T15:09:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/shell-alias/</loc>
-    <lastmod>2022-02-25T15:09:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/shell-function/</loc>
-    <lastmod>2022-02-25T15:09:52-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://loopedline.com/post/creating-a-directory-with-bash-to-test-commands/</loc>
     <lastmod>2022-02-24T13:51:11-05:00</lastmod>
   </url>
@@ -514,12 +504,7 @@
   
   <url>
     <loc>https://loopedline.com/post/getting-started-with-shuf-command-in-bash/</loc>
-    <lastmod>2022-02-15T13:57:10-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/sed/</loc>
-    <lastmod>2022-02-11T11:37:37-05:00</lastmod>
+    <lastmod>2022-11-06T20:35:31-05:00</lastmod>
   </url>
   
   <url>
