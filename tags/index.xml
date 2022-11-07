@@ -6,7 +6,7 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Nov 2022 20:28:22 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 07 Nov 2022 13:19:14 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Bash</title>
       <link>https://loopedline.com/tags/bash/</link>
-      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
+      <pubDate>Mon, 07 Nov 2022 13:19:14 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/bash/</guid>
       <description></description>
@@ -23,9 +23,36 @@
     <item>
       <title>Linux</title>
       <link>https://loopedline.com/tags/linux/</link>
-      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
+      <pubDate>Mon, 07 Nov 2022 13:19:14 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell script</title>
+      <link>https://loopedline.com/tags/shell-script/</link>
+      <pubDate>Mon, 07 Nov 2022 13:19:14 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/shell-script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software development</title>
+      <link>https://loopedline.com/tags/software-development/</link>
+      <pubDate>Mon, 07 Nov 2022 13:19:14 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system administration</title>
+      <link>https://loopedline.com/tags/system-administration/</link>
+      <pubDate>Mon, 07 Nov 2022 13:19:14 -0500</pubDate>
+      
+      <guid>https://loopedline.com/tags/system-administration/</guid>
       <description></description>
     </item>
     
@@ -35,33 +62,6 @@
       <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
       
       <guid>https://loopedline.com/tags/shell-command/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>software development</title>
-      <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/software-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>system administration</title>
-      <link>https://loopedline.com/tags/system-administration/</link>
-      <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
-      
-      <guid>https://loopedline.com/tags/system-administration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell script</title>
-      <link>https://loopedline.com/tags/shell-script/</link>
-      <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/shell-script/</guid>
       <description></description>
     </item>
     

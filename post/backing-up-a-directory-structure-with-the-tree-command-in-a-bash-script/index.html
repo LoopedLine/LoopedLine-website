@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Backing Up the .bashrc File with a Bash Script</title>
+        <title>Backing Up a Directory Structure With the Tree Command in a Bash Script</title>
         
                 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -70,7 +70,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Backing Up the .bashrc File with a Bash Script</a>
+                    <a class="navbar-brand visible-xs" href="#">Backing Up a Directory Structure With the Tree Command in a Bash Script</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -109,7 +109,7 @@
 
     
     <div>
-        <h2>Backing Up the .bashrc File with a Bash Script</h2>
+        <h2>Backing Up a Directory Structure With the Tree Command in a Bash Script</h2>
         
 
 
@@ -119,10 +119,8 @@
 
 
 
-<p>Published: 2022 November 04</p>
+<p>Published: 2022 November 07</p>
 
-
-    <p>Last edited: 2022 November 07</p>
 
 
         
@@ -142,27 +140,33 @@
     
     <div align="start" class="content"><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="introduction">Introduction</h2>
 <p>This post is part of a series about automating data backups in Linux.</p>
-<p>In this post we&rsquo;ll construct a <a href="https://loopedline.com/post/automating-bash-shell-commands/">Bash script</a> to automate the backup of the <a href="https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux">.bashrc</a> file.</p>
+<p>In the <a href="https://loopedline.com/post/backing-up-the-bashrc-file-with-a-bash-script/">previous post</a> we automated the process to backup a <em>.bashrc</em> file with a <a href="https://loopedline.com/post/automating-bash-shell-commands/">Bash script</a>.</p>
+<p>Similarly, in this post we&rsquo;ll automate the process of saving the layout of several specific directories with a Bash script.</p>
 <h2 id="the-script">The Script</h2>
-<p>We&rsquo;ve developed Bash scripts for automating tasks in <a href="/tags/shell-script/">previous posts</a> so we&rsquo;ll leverage that work and modify it for our current purposes.</p>
+<p>We&rsquo;ve developed Bash scripts for automating tasks in <a href="/tags/shell-script/">previous posts</a>, so we&rsquo;ll leverage that work and modify it for our current purposes.</p>
+<p>Specifically, we&rsquo;ll start with the script developed for <a href="https://loopedline.com/post/backing-up-the-bashrc-file-with-a-bash-script/">backing up the .bashrc file</a> since it&rsquo;s requirements are so similar.</p>
+<p>We&rsquo;ll also use our understanding of the tree command that we developed in a <a href="https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/">previous post</a> to leverage that tool for our current effort.</p>
 <h3 id="script-code">Script code</h3>
-<p><strong>backup_bashrc.sh</strong></p>
+<p><strong>backup_directory_structure.sh</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
+
 <span style="color:#75715e"># VARIABLES</span>
-<span style="display:block;width:100%;background-color:#3c3d38">bashrc_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/&#34;</span>
-</span><span style="display:block;width:100%;background-color:#3c3d38">bashrc_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.bashrc&#34;</span>
+<span style="display:block;width:100%;background-color:#3c3d38">inquiry_top_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">inquiry_subdirectories<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;a b c&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
 </span><span style="display:block;width:100%;background-color:#3c3d38">backup_top_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/backups/&#34;</span>
-</span><span style="display:block;width:100%;background-color:#3c3d38">backup_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;backup_of_bashrc_</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;backup_of_directory_map_</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span><span style="color:#e6db74">.txt&#34;</span>
 </span>
+
 <span style="color:#75715e"># VARIABLES, constructed</span>
-<span style="display:block;width:100%;background-color:#3c3d38">bashrc_location<span style="color:#f92672">=</span>$bashrc_directory$bashrc_filename
+<span style="display:block;width:100%;background-color:#3c3d38">tree_command<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tree -d -L 2 -a </span><span style="color:#e6db74">${</span>inquiry_subdirectories<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
 </span><span style="display:block;width:100%;background-color:#3c3d38">backup_output_directory<span style="color:#f92672">=</span>$backup_top_directory$backup_filename
 </span>
+
 <span style="color:#75715e"># FUNCTION</span>
 <span style="color:#75715e"># Provides contextual output</span>
 script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
@@ -178,7 +182,9 @@ script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</
 	echo
 	echo <span style="color:#e6db74">&#34;.bashrc backup script&#34;</span>
 	echo
-	echo <span style="color:#e6db74">&#34;This script will copy </span>$bashrc_location<span style="color:#e6db74"> and output the file to </span>$backup_output_directory<span style="color:#e6db74">&#34;</span>
+	echo <span style="color:#e6db74">&#34;This script will output the directory structure of: </span>$inquiry_top_directory<span style="color:#e6db74">&#34;</span>
+	echo <span style="color:#e6db74">&#34;for the subdirectories: </span>$inquiry_subdirectories<span style="color:#e6db74">&#34;</span>
+	echo <span style="color:#e6db74">&#34;to the file: </span>$backup_output_directory<span style="color:#e6db74">&#34;</span>
 	echo
 	echo <span style="color:#f92672">=====================</span> script info - END <span style="color:#f92672">=====================</span>
 	echo <span style="color:#f92672">=============================================================</span>
@@ -186,28 +192,53 @@ script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</
 	echo
 <span style="color:#f92672">}</span>
 
+
 <span style="color:#75715e"># FUNCTION</span>
-<span style="color:#75715e"># Creates backup of .bashrc file.</span>
+<span style="color:#75715e"># Creates a backup of the layout of specific directories.</span>
 create_backup_files<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	
+	cd $inquiry_top_directory
 	
 	echo
 	echo <span style="color:#e6db74">&#34;Backup started.&#34;</span>
-<span style="display:block;width:100%;background-color:#3c3d38">	cp $bashrc_location $backup_output_directory
-</span>	echo <span style="color:#e6db74">&#34;Backup finished.&#34;</span>
+	echo
+	
+	<span style="color:#75715e">#Display the results</span>
+<span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#e6db74">${</span>tree_command<span style="color:#e6db74">}</span>
+</span>	
+	<span style="color:#75715e">#Output the results to a file</span>
+<span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#e6db74">${</span>tree_command<span style="color:#e6db74">}</span> &gt; $backup_output_directory
+</span>	
+	echo
+	echo <span style="color:#e6db74">&#34;Backup finished.&#34;</span>
 	echo
 
 <span style="color:#f92672">}</span>
+
 
 <span style="color:#75715e"># MAIN program flow</span>
 script_info
 create_backup_files
 </code></pre></div><h3 id="script-description">Script description</h3>
-<p>Despite the script length, the core functionality is very simple.  We are just running a <code>cp</code> (copy) command and passing it the correct source and target variables (shown in the highlighted lines).</p>
-<p>The source and target inputs are constructed in variables to provide a simple way to make future updates.</p>
-<p>Everything else is output to the user for clarity.</p>
+<p>As with the previous backup script despite the script length, the core functionality is very simple.  We are just running the <code>tree</code> command with the relevant options and subdirectories. (The relevant sections are highlighted).</p>
+<p>The tree command and output path are constructed in variables to provide a simple way to make future updates.</p>
+<hr>
+<p><code>inquiry_top_directory=&quot;/home/$USER/&quot;</code> - Defines a variable that points to the directory that contains the subdirectories we are interested in.</p>
+<p><code>inquiry_subdirectories=&quot;a b c&quot;</code> - Defines a variable that lists the specific subdirectories we are interested in.</p>
+<hr>
+<p><code>backup_top_directory=&quot;/home/$USER/backups/&quot;</code> - Defines a variable that points to the directory where we want to output the backup file.</p>
+<p><code>backup_filename=&quot;backup_of_directory_map_$(date +%Y-%m-%d)&quot;</code> - Defines a variable that specifies the name of the backup file.  In this case, the literal string <em>backup_of_directory_map</em>, followed by the current date in a specific format, followed by the literal string <em>.txt</em>.</p>
+<hr>
+<p><code>tree_command=&quot;tree -d -L 2 -a ${inquiry_subdirectories}&quot;</code> - Defines a variable for the desired tree command by combining a literal string with the variable listing the specific subdirectories of interest.  In this case, it constructs the command <strong>tree -d -L 2 -a a b c</strong> with options for returning directories only, searching up to 2 subdirectories deep, and only looking at the <strong>a</strong>, <strong>b</strong>, and <strong>c</strong> subdirectories.</p>
+<p><code>backup_output_directory=$backup_top_directory$backup_filename</code> - Defines a variable for the output filepath and filename.</p>
+<hr>
+<p><code>${tree_command}</code> - Runs the specified tree command for the purpose of outputting the result to the user.</p>
+<p><code>${tree_command} &gt; $backup_output_directory</code> - Runs the specified tree command again, this time for the purpose of outputting the result to the specified file.</p>
+<hr>
+<p>Everything else in the script is output to the user for clarity.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>That is all we need to backup the .bashrc via a Bash script.</p>
-<p>The finalized script can be found <a href="https://github.com/LoopedLine/Linux-backup/blob/main/backup_bashrc.sh">here</a>.</p>
+<p>This script backups the structure of specific directories to a file, allowing reproducibility and creating the possibility of further automation of backup tasks.</p>
+<p>The finalized script can be found <a href="https://github.com/LoopedLine/Linux-backup/blob/main/backup_directory_structure.sh">here</a>.</p>
 <!-- raw HTML omitted -->
 </div>
 
@@ -216,37 +247,6 @@ create_backup_files
     
         <h4 class="page-header">Related</h4>
          <div class="item">
-
-
-
-    
-    
-    <h4 id="listpage-item"><a href="/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/">Backing Up a Directory Structure With the Tree Command in a Bash Script</a></h4>
-
-
-
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-
-    <p>
-        Published: 2022 November 07
-        
-    </p>
-
-
-
-</div>
-  <div class="item">
 
 
 
@@ -271,6 +271,39 @@ create_backup_files
 
     <p>
         Published: 2022 November 06
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/backing-up-the-bashrc-file-with-a-bash-script/">Backing Up the .bashrc File with a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 November 04
+        
+                  |     Last edited:  2022 November 07
         
     </p>
 

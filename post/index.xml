@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Backing Up a Directory Structure With the Tree Command in a Bash Script</title>
+      <link>https://loopedline.com/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/</link>
+      <pubDate>Mon, 07 Nov 2022 13:19:14 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/</guid>
+      <description>Introduction This post is part of a series about automating data backups in Linux.
+In the previous post we automated the process to backup a .bashrc file with a Bash script.
+Similarly, in this post we&amp;rsquo;ll automate the process of saving the layout of several specific directories with a Bash script.
+The Script We&amp;rsquo;ve developed Bash scripts for automating tasks in previous posts, so we&amp;rsquo;ll leverage that work and modify it for our current purposes.</description>
+    </item>
+    
+    <item>
       <title>Getting Started with the Tree Command in Bash</title>
       <link>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</link>
       <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
@@ -32,10 +44,10 @@ It might best be understood by example.</description>
       <pubDate>Fri, 04 Nov 2022 21:36:51 -0400</pubDate>
       
       <guid>https://loopedline.com/post/backing-up-the-bashrc-file-with-a-bash-script/</guid>
-      <description>Objective Automating common tasks can save effort over time.
+      <description>Introduction This post is part of a series about automating data backups in Linux.
 In this post we&amp;rsquo;ll construct a Bash script to automate the backup of the .bashrc file.
-The Script We&amp;rsquo;ve developed Bash scripts for automating tasks in previous posts so we&amp;rsquo;ll leverage that previous work and modify it for our current purposes:
-backup_bashrc.sh
+The Script We&amp;rsquo;ve developed Bash scripts for automating tasks in previous posts so we&amp;rsquo;ll leverage that work and modify it for our current purposes.
+Script code backup_bashrc.sh
 #!/bin/bash  # VARIABLES bashrc_directory=&amp;#34;/home/$USER/&amp;#34; bashrc_filename=&amp;#34;.bashrc&amp;#34; backup_top_directory=&amp;#34;/home/$USER/backups/&amp;#34; backup_filename=&amp;#34;backup_of_bashrc_$(date +%Y-%m-%d)&amp;#34;  # VARIABLES, constructed bashrc_location=$bashrc_directory$bashrc_filename backup_output_directory=$backup_top_directory$backup_filename  # FUNCTION # Provides contextual output script_info() { echo echo echo echo echo ============================================================= echo ==================== script info - START ==================== echo echo &amp;#34;Executing $BASH_SOURCE&amp;#34; echo echo &amp;#34;.</description>
     </item>
     
