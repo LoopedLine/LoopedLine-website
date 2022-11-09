@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Backing Up Visual Studio Code (VS Code) Settings and Extensions With a Bash Script</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Backing Up Visual Studio Code (VS Code) Settings and Extensions With a Bash Script</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Backing Up Visual Studio Code (VS Code) Settings and Extensions With a Bash Script</h2>
+        
+
+
+
+
+
+
+
+
+<p>Published: 2022 November 09</p>
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shell-script"><kbd class="item-tag">shell script</kbd></a>
+
+<a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
+
+<a href="https://loopedline.com/tags/visual-studio-code"><kbd class="item-tag">Visual Studio Code</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
+<p>This post is part of a series about automating data backups in Linux.</p>
+<p>In the <a href="https://loopedline.com/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/">previous post</a> we automated the process to backup a <em>.bashrc</em> file with a <a href="https://loopedline.com/post/automating-bash-shell-commands/">Bash script</a>.</p>
+<p>In this post we&rsquo;ll automate the process of backing up <a href="https://loopedline.com/post/vscode-learning-path/">Visual Studio Code (VS Code)</a> settings and a list of installed extensions with a Bash script.</p>
+<h2 id="the-script">The Script</h2>
+<p>We&rsquo;ve developed Bash scripts for automating tasks in <a href="/tags/shell-script/">previous posts</a>, so we&rsquo;ll leverage that work and modify it for our current purposes.</p>
+<p>Specifically, we&rsquo;ll start with the script developed for <a href="https://loopedline.com/post/backing-up-the-bashrc-file-with-a-bash-script/">backing up the .bashrc file</a> since it&rsquo;s requirements are so similar.</p>
+<p>Also, there are several published approaches for this task - for instance, <a href="https://superuser.com/questions/1080682/how-do-i-back-up-my-vs-code-settings-and-list-of-installed-extensions">this StackOverflow question</a> and Elliot DeNolf&rsquo;s <a href="https://www.elliotdenolf.com/posts/backup-restore-vs-code-extensions">post</a> - but the most comprehensive solution we identified was found in Dominik Zarsky&rsquo;s <a href="https://dev.to/loupeznik/how-to-backup-your-vs-code-extensions-and-settings-4cji">post</a> and <a href="https://github.com/Loupeznik/utils/blob/master/backup_utils/vscode-backup.sh">script</a>.  We&rsquo;ll incorporate portions of that logic for the task.</p>
+<h3 id="script-code">Script code</h3>
+<p><strong>backup_vscode.sh</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">########################################################</span>
+<span style="color:#75715e">## VS Code Settings and Extensions backup/sync script</span>
+<span style="color:#75715e">## Based on a script by Loupeznik (https://github.com/Loupeznik), which can be found at https://github.com/Loupeznik/utils/blob/master/backup_utils/vscode-backup.sh</span>
+<span style="color:#75715e">## Script prints all installed VS Code extensions into a txt file and backs up settings and keybindings config files.</span>
+<span style="color:#75715e">########################################################</span>
+
+
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e"># VARIABLES</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">vscode_settings_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/.config/Code/User&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_top_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/backups/&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_instance_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vscode-configuration-</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_filename_for_settings<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vscode-settings-archive&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_filename_for_extensions<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vscode-extensions-list.txt&#34;</span>
+</span>
+
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e"># VARIABLES, constructed</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">backup_output_directory<span style="color:#f92672">=</span>$backup_top_directory$backup_instance_directory
+</span>
+
+<span style="color:#75715e"># FUNCTION</span>
+<span style="color:#75715e"># Provides contextual output</span>
+script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	echo
+	echo
+	
+	echo
+	echo
+	echo <span style="color:#f92672">=============================================================</span>
+	echo <span style="color:#f92672">====================</span> script info - START <span style="color:#f92672">====================</span>
+	echo
+	echo <span style="color:#e6db74">&#34;Executing </span>$BASH_SOURCE<span style="color:#e6db74">&#34;</span>
+	echo
+	echo <span style="color:#e6db74">&#34;VS Code Settings and Extensions backup script&#34;</span>
+	echo
+	echo <span style="color:#e6db74">&#34;This script will output backup files to </span>$backup_output_directory<span style="color:#e6db74">&#34;</span>
+	echo
+	echo <span style="color:#f92672">=====================</span> script info - END <span style="color:#f92672">=====================</span>
+	echo <span style="color:#f92672">=============================================================</span>
+	echo
+	echo
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># FUNCTION</span>
+<span style="color:#75715e"># Tests for existing backup directory.  Prompts user if existing directory found.  Otherwise creates new backup directory.</span>
+<span style="display:block;width:100%;background-color:#3c3d38">create_backup_instance_directory<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">	echo <span style="color:#e6db74">&#34;[GENERAL] Setting up output folder.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d $backup_output_directory <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo <span style="color:#e6db74">&#34;[GENERAL] The directory </span>$backup_output_directory<span style="color:#e6db74"> already exists.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo <span style="color:#e6db74">&#34;[GENERAL] DO YOU WISH TO PERMANENTLY DELETE IT? - Press y to continue, any other key to exit.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo
+</span><span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#66d9ef">while</span> : ; <span style="color:#66d9ef">do</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			read -n <span style="color:#ae81ff">1</span> k &lt;&amp;<span style="color:#ae81ff">1</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> $k <span style="color:#f92672">=</span> y <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			echo <span style="color:#e6db74">&#34;&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			echo <span style="color:#e6db74">&#34;[GENERAL] Deleting the existing </span>$backup_output_directory<span style="color:#e6db74"> and creating a new directory with that name.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			rm -rf $backup_output_directory
+</span><span style="display:block;width:100%;background-color:#3c3d38">			break
+</span><span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#66d9ef">else</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			echo
+</span><span style="display:block;width:100%;background-color:#3c3d38">			echo <span style="color:#e6db74">&#34;[GENERAL] Exiting&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			echo
+</span><span style="display:block;width:100%;background-color:#3c3d38">			exit <span style="color:#ae81ff">0</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#66d9ef">fi</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#66d9ef">done</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#66d9ef">fi</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">	mkdir $backup_output_directory
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#f92672">}</span>
+</span>
+
+<span style="color:#75715e"># FUNCTION</span>
+<span style="color:#75715e"># Creates backups of Visual Studio Code (VS Code) settings files.</span>
+<span style="display:block;width:100%;background-color:#3c3d38">backup_settings_files<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">	
+</span><span style="display:block;width:100%;background-color:#3c3d38">	echo
+</span><span style="display:block;width:100%;background-color:#3c3d38">	echo <span style="color:#e6db74">&#34;[SETTINGS] Backing up your config files.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">	
+</span><span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> ! -f $vscode_settings_directory/keybindings.json <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo <span style="color:#e6db74">&#34;[SETTINGS] Backing up settings.json file.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo <span style="color:#e6db74">&#34;[SETTINGS] Keybindings config file not found.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		tar -czf $backup_output_directory/$backup_filename_for_settings.tar.gz -C $vscode_settings_directory settings.json
+</span><span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#66d9ef">else</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo <span style="color:#e6db74">&#34;[SETTINGS] Backing up settings.json file.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		echo <span style="color:#e6db74">&#34;[SETTINGS] Backing up keybindings.json file.&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		tar -czf $backup_output_directory/$backup_filename_for_settings.tar.gz -C $vscode_settings_directory settings.json keybindings.json
+</span><span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#66d9ef">fi</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#f92672">}</span>
+</span>
+
+<span style="color:#75715e"># FUNCTION</span>
+<span style="color:#75715e"># Creates a list of installed Visual Studio Code (VS Code) extensions.</span>
+create_list_of_extensions<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+
+	echo
+	echo <span style="color:#e6db74">&#34;[EXTENSIONS] Exporting your extensions.&#34;</span>
+<span style="display:block;width:100%;background-color:#3c3d38">	code --list-extensions | xargs -L <span style="color:#ae81ff">1</span> echo code --install-extension &gt; $backup_output_directory/$backup_filename_for_extensions
+</span>	
+	echo
+	echo <span style="color:#e6db74">&#34;[GENERAL] Backup complete.&#34;</span>
+	echo
+
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e"># MAIN program flow</span>
+script_info
+create_backup_instance_directory
+backup_settings_files
+create_list_of_extensions
+</code></pre></div><h3 id="script-description">Script description</h3>
+<p>The VS Code settings location and output path are constructed in variables to provide a simple way to make future updates.</p>
+<hr>
+<p><code>vscode_settings_directory=&quot;/home/$USER/.config/Code/User&quot;</code> - Defines a variable that points to the directory that contains VS Code settings files.</p>
+<hr>
+<p><code>backup_top_directory=&quot;/home/$USER/backups/&quot;</code> - Defines a variable that points to the directory where we want to output the backup file.</p>
+<p><code>backup_instance_directory=&quot;vscode-configuration-$(date +%Y-%m-%d)&quot;</code> - Defines a variable that specifies the name of the backup directory.  In this case, the literal string <em>vscode-configuration</em>, followed by the current date.</p>
+<hr>
+<p><code>backup_filename_for_settings=&quot;vscode-settings-archive&quot;</code> - Defines a variable that specifies the name of the settings backup archive.</p>
+<p><code>backup_filename_for_extensions=&quot;vscode-extensions-list.txt&quot;</code> - Defines a variable that specifies the name of the extensions list backup file.</p>
+<hr>
+<p><code>backup_output_directory=$backup_top_directory$backup_instance_directory</code> - Defines a variable for the output filepath and directory name.</p>
+<hr>
+<p>The backup process is separated into three separate functions that handle distinct portions of the backup process.</p>
+<hr>
+<p><code>create_backup_instance_directory() {...}</code> - Tests for the existence of a subdirectory with the specified backup name within the specified directory.  If it finds a match it prompts the user, asking if the folder should be deleted and replaced.  If the user types &lsquo;n&rsquo; the script exits.  If the user types &lsquo;y&rsquo; the existing subdirectory is deleted.  Finally, a subdirectory is created with the specified name.</p>
+<hr>
+<p><code>backup_settings_files() {...}</code> - Tests for the existence of a <strong>keybindings.json</strong> file in the specified directory.  If the keybindings file is not found it copies and zips the <strong>settings.json</strong> file in that directory to the specified output directory..  If a keybindings file is found, it copies and zips both files and backs them up to the specified output directory.</p>
+<hr>
+<p><code>code --list-extensions | xargs -L 1 echo code --install-extension &gt; $backup_output_directory/code-extensions-install</code> - Lists the installed VS Code extensions, appends the literal string <em>code &ndash;install-extension</em>, and outputs the text to the specified output file.</p>
+<hr>
+<p>Everything else in the script is output to the user for clarity.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This script backups both VS Code settings and a list of installed extensions.</p>
+<p>The finalized script can be found <a href="https://github.com/LoopedLine/Linux-backup/blob/main/backup_vscode.sh">here</a>.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/">Backing Up a Directory Structure With the Tree Command in a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 November 07
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-the-tree-command-in-bash/">Getting Started with the Tree Command in Bash</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 November 06
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/backing-up-the-bashrc-file-with-a-bash-script/">Backing Up the .bashrc File with a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 November 04
+        
+                  |     Last edited:  2022 November 07
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+        </footer>
+
+        
+        
+    </body>
+
+</html>

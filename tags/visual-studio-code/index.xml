@@ -6,10 +6,22 @@
     <description>Recent content in Visual Studio Code on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jul 2022 11:24:19 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 09 Nov 2022 13:46:39 -0500</lastBuildDate>
     
 	<atom:link href="https://loopedline.com/tags/visual-studio-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Backing Up Visual Studio Code (VS Code) Settings and Extensions With a Bash Script</title>
+      <link>https://loopedline.com/post/backing-up-vs-code-settings-and-extensions-with-a-bash-script/</link>
+      <pubDate>Wed, 09 Nov 2022 13:46:39 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/backing-up-vs-code-settings-and-extensions-with-a-bash-script/</guid>
+      <description>Introduction This post is part of a series about automating data backups in Linux.
+In the previous post we automated the process to backup a .bashrc file with a Bash script.
+In this post we&amp;rsquo;ll automate the process of backing up Visual Studio Code (VS Code) settings and a list of installed extensions with a Bash script.
+The Script We&amp;rsquo;ve developed Bash scripts for automating tasks in previous posts, so we&amp;rsquo;ll leverage that work and modify it for our current purposes.</description>
+    </item>
     
     <item>
       <title>Thank You (2022)</title>

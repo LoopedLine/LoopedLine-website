@@ -3,43 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://loopedline.com/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/</loc>
-    <lastmod>2022-11-07T13:19:14-05:00</lastmod>
+    <loc>https://loopedline.com/post/backing-up-vs-code-settings-and-extensions-with-a-bash-script/</loc>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/bash/</loc>
-    <lastmod>2022-11-07T13:19:14-05:00</lastmod>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/linux/</loc>
-    <lastmod>2022-11-07T13:19:14-05:00</lastmod>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/</loc>
-    <lastmod>2022-11-07T14:31:18-05:00</lastmod>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/shell-script/</loc>
-    <lastmod>2022-11-07T13:19:14-05:00</lastmod>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/software-development/</loc>
-    <lastmod>2022-11-07T14:31:18-05:00</lastmod>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/system-administration/</loc>
-    <lastmod>2022-11-07T13:19:14-05:00</lastmod>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2022-11-07T14:31:18-05:00</lastmod>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/tags/visual-studio-code/</loc>
+    <lastmod>2022-11-09T13:46:39-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loopedline.com/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/</loc>
+    <lastmod>2022-11-07T13:19:14-05:00</lastmod>
   </url>
   
   <url>
@@ -234,11 +244,6 @@
   
   <url>
     <loc>https://loopedline.com/post/thank-you-2022/</loc>
-    <lastmod>2022-07-18T11:24:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://loopedline.com/tags/visual-studio-code/</loc>
     <lastmod>2022-07-18T11:24:19-04:00</lastmod>
   </url>
   

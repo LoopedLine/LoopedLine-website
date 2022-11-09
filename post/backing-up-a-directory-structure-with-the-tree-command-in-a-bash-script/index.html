@@ -227,7 +227,7 @@ create_backup_files
 <p><code>inquiry_subdirectories=&quot;a b c&quot;</code> - Defines a variable that lists the specific subdirectories we are interested in.</p>
 <hr>
 <p><code>backup_top_directory=&quot;/home/$USER/backups/&quot;</code> - Defines a variable that points to the directory where we want to output the backup file.</p>
-<p><code>backup_filename=&quot;backup_of_directory_map_$(date +%Y-%m-%d)&quot;</code> - Defines a variable that specifies the name of the backup file.  In this case, the literal string <em>backup_of_directory_map</em>, followed by the current date in a specific format, followed by the literal string <em>.txt</em>.</p>
+<p><code>backup_filename=&quot;backup_of_directory_map_$(date +%Y-%m-%d)&quot;</code> - Defines a variable that specifies the name of the backup file.  In this case, the literal string <em>backup_of_directory_map</em>, followed by the current date, followed by the literal string <em>.txt</em>.</p>
 <hr>
 <p><code>tree_command=&quot;tree -d -L 2 -a ${inquiry_subdirectories}&quot;</code> - Defines a variable for the desired tree command by combining a literal string with the variable listing the specific subdirectories of interest.  In this case, it constructs the command <strong>tree -d -L 2 -a a b c</strong> with options for returning directories only, searching up to 2 subdirectories deep, and only looking at the <strong>a</strong>, <strong>b</strong>, and <strong>c</strong> subdirectories.</p>
 <p><code>backup_output_directory=$backup_top_directory$backup_filename</code> - Defines a variable for the output filepath and filename.</p>
@@ -247,6 +247,37 @@ create_backup_files
     
         <h4 class="page-header">Related</h4>
          <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/backing-up-vs-code-settings-and-extensions-with-a-bash-script/">Backing Up Visual Studio Code (VS Code) Settings and Extensions With a Bash Script</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 November 09
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
 
 
 
@@ -304,37 +335,6 @@ create_backup_files
         Published: 2022 November 04
         
                   |     Last edited:  2022 November 07
-        
-    </p>
-
-
-
-</div>
-  <div class="item">
-
-
-
-    
-    
-    <h4 id="listpage-item"><a href="/post/creating-separate-list-pages-in-hugo-for-different-topics/">Creating Separate List Pages in Hugo for Different Topics</a></h4>
-
-
-
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-
-    <p>
-        Published: 2022 July 27
         
     </p>
 
