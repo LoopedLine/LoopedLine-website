@@ -126,7 +126,7 @@
 
 
 
-    <p>Last edited: 2022 November 07</p>
+    <p>Last edited: 2023 August 23</p>
 
 
         
@@ -141,6 +141,8 @@
 
     
     <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -294,6 +296,19 @@
 <p><strong>Command:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --oneline
 </code></pre></div><p>Shows the log in a condensed form to fit each commit on one line.</p>
+<h4 id="check-the-log-of-commits-in-an-expanded-scope">Check the log of commits in an expanded scope</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --all
+</code></pre></div><p>Shows the log in an expanded scope including other branchs and tags.</p>
+<h4 id="check-the-log-of-commits-in-an-expanded-scope-with-graphical-formatting">Check the log of commits in an expanded scope with graphical formatting</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --all --decorate --oneline --graph
+</code></pre></div><p>Shows the expanded log in a more graphical format.</p>
+<p><strong>Note:</strong>  If the following alias is added to git configs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global alias.adog <span style="color:#e6db74">&#34;log --all --decorate --oneline --graph&#34;</span>
+</code></pre></div><p>a simpler command can be used:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git adog
+</code></pre></div><p>This command structure and alias was found in <a href="https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs/35075021#35075021">a very helpful StackOverflow answer</a>.</p>
 <h2 id="branching-and-merging">Branching and Merging</h2>
 <h3 id="branching">Branching</h3>
 <h4 id="see-the-list-of-branches-for-the-current-repository">See the list of branches for the current repository</h4>
@@ -450,10 +465,17 @@
 </code></pre></div><p><strong>Example:</strong></p>
 <p>For a remote called <em>temp</em> that you want to rename to <em>offsite</em>, use the following:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote rename temp offsite
+</code></pre></div><h4 id="changing-the-url-of-a-remote-repository-connection">Changing the URL of a remote repository connection</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote set-url <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>new-URL<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<p>To update a remote called <em>offsite</em> that you want to connect to <em>https://github.com/OWNER/REPOSITORY.git</em>, use the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote set-url offsite https://github.com/OWNER/REPOSITORY.git
 </code></pre></div><h4 id="removing-a-remote-repository-connection">Removing a remote repository connection</h4>
 <p><strong>Command form:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove <span style="color:#f92672">[</span>shortname<span style="color:#f92672">]</span>
 </code></pre></div><p><strong>Example:</strong></p>
+<p>To delete a remote called <em>legacy</em> use the following:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove legacy
 </code></pre></div><h2 id="additional-resources-10">Additional Resources</h2>
 <p>The <a href="https://ndpsoftware.com/git-cheatsheet.html">Visual Git command reference</a> shows Git commands organized visually by the areas each command affects.</p>
