@@ -6,11 +6,7 @@
     <description>Recent content in static site generator on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jul 2022 15:46:50 -0400</lastBuildDate>
-    
-	<atom:link href="https://loopedline.com/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Jul 2022 15:46:50 -0400</lastBuildDate><atom:link href="https://loopedline.com/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating Separate List Pages in Hugo for Different Topics</title>
       <link>https://loopedline.com/post/creating-separate-list-pages-in-hugo-for-different-topics/</link>

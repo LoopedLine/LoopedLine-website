@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 July 11</p>
+
+
+
+    <p>Published: 2022 July 11</p>
+
 
 
 
@@ -158,12 +162,12 @@
 <p>Previously, the only indicator of what each field was for was the <em>placeholder</em> text.  But that text disappears as soon as the user types something.  A persistent label is more helpful.</p>
 <p>Adding labels simply requires including a <code>&lt;label&gt;</code> tag and linking it by <em>id</em> to the field with which it is associated.</p>
 <p>For example, for the <em>Name</em> field, the label and input elements look like the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
     &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span>&gt;Name&lt;/<span style="color:#f92672">label</span>&gt;
     &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Name&#34;</span> <span style="color:#a6e22e">required</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;required&#34;</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><p>The site&rsquo;s existing Bootstrap and custom CSS rules caused the labels to be centered above the input field.  To address this we first added a class called <strong>form-label</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span>&gt;Name&lt;/<span style="color:#f92672">label</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inputName&#34;</span>&gt;Name&lt;/<span style="color:#f92672">label</span>&gt;
 </code></pre></div><p>Next, to left justify the labels we set two CSS properties for that class:</p>
 <ul>
 <li><code>display: grid;</code></li>
@@ -179,7 +183,7 @@
 <h3 id="the-updated-code">The updated code</h3>
 <h4 id="the-updated-html">The updated HTML</h4>
 <p>The form HTML is in the <strong>single.html</strong> file located in the <em>/layouts/contact/</em> directory, and the updated code is below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;header&#34; . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;header&#34; . }}
 
 &lt;<span style="color:#f92672">main</span>&gt;
 
@@ -218,7 +222,7 @@
 <p>A new CSS class called <strong>buffer</strong> was added to the <code>&lt;button&gt;</code> element.</p>
 <h4 id="the-updated-css">The updated CSS</h4>
 <p>The relevant CSS is in the <strong>custom.css</strong> file located in the <em>/static/css/</em> directory, and the following rules were added.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">label</span>.<span style="color:#a6e22e">form-label</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">label</span>.<span style="color:#a6e22e">form-label</span> {
     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
     <span style="color:#66d9ef">justify-items</span>: <span style="color:#66d9ef">baseline</span>;
     <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
@@ -338,8 +342,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

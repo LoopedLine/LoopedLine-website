@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2021 July 19</p>
+
+
+
+    <p>Published: 2021 July 19</p>
+
 
 
     <p>Last edited: 2022 May 04</p>
@@ -152,7 +156,7 @@
 <p>Follow the instuctions from <a href="https://meshworld.in/install-hugo-on-ubuntu-20-04-or-ubuntu-based-distributions/">Install Hugo on Ubuntu 20.04 or Ubuntu-based distributions</a> by Vishnu Damwala:</p>
 <blockquote>
 <p>Open your terminal (Ctrl+Alt+T) and run the below command with sudo privileges</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install hugo
 </code></pre></div></blockquote>
 <h4 id="install-hugo-on-windows">Install Hugo on Windows</h4>
 <p>Follow the instruction from <a href="https://www.youtube.com/watch?v=G7umPCU-8xc">Installing Hugo on Windows | Hugo - Static Site Generator | Tutorial 2</a> by Mike Dane</p>
@@ -160,7 +164,7 @@
 <p>Follow the instuctions from the Official Hugo <a href="https://gohugo.io/getting-started/quick-start/#step-1-install-hugo">Quick Start</a> Guide:</p>
 <blockquote>
 <p>Homebrew and MacPorts, package managers for macOS, can be installed from brew.sh or macports.org respectively.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
 <span style="color:#75715e"># or</span>
 port install hugo
 </code></pre></div></blockquote>
@@ -169,12 +173,12 @@ port install hugo
 <p>If none of the above work for you, you can find more details and options at The Official <a href="https://gohugo.io/getting-started/installing">Getting Started - Fundamentals - Install Hugo</a> Guide.</p>
 <h3 id="confirm-hugo-is-installed">Confirm Hugo is installed</h3>
 <p>Open a terminal and type the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
 </code></pre></div><p>You should see a message indicating the version number.</p>
 <h3 id="create-your-first-site">Create your first site</h3>
 <p>In the terminal, navigate to the folder where you want Hugo website files to reside.</p>
 <p>Then enter the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site my-first-hugo-website
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site my-first-hugo-website
 </code></pre></div><p>You may replace <em>my-first-hugo-website</em> with another name, if you prefer.</p>
 <p>You should see a message beginning with</p>
 <blockquote>
@@ -202,13 +206,13 @@ port install hugo
 <p>Paste the copied files and folders into the <code>/my-first-hugo-website/content/</code> folder.</p>
 <h3 id="start-the-hugo-server-to-see-your-website">Start the Hugo server to see your website</h3>
 <p>In the terminal type the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
 </code></pre></div><p>Open a web browser to <a href="http://localhost:1313/">http://localhost:1313/</a> to see your new site.</p>
 <p>You can leave the server running to see changes applied as you make them.  Later, once you are finished, you can press <code>CTRL + C</code> to stop the server.</p>
 <h3 id="create-your-first-post">Create your first post</h3>
 <p>Since we kept the server running so that we could observe our changes you&rsquo;ll need to open another terminal and navigate to the project folder: <code>/my-first-hugo-website/</code>.</p>
 <p>In the terminal type the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new /post/my-first-page.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new /post/my-first-page.md
 </code></pre></div><p>You may replace <em>my-first-page.md</em> with another filename, if you prefer.</p>
 <p>Look at your web browser and editor to see the new blank page that was created.</p>
 <h2 id="experiment-to-make-it-your-own">Experiment to make it your own</h2>
@@ -219,7 +223,7 @@ port install hugo
 <h2 id="build-your-website">Build your website</h2>
 <p>Once you have altered the site to your satisfaction, it&rsquo;s time to output the website files.</p>
 <p>In the terminal, enter the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
 </code></pre></div><p>The generated files will be output to the <code>/my-first-hugo-website/public/</code> folder.</p>
 <p>These files can then be copied and uploaded for web hosting.</p>
 <h2 id="thanks">Thanks</h2>
@@ -340,8 +344,11 @@ port install hugo
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

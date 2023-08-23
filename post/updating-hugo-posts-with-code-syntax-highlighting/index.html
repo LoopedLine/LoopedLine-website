@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 March 12</p>
+
+
+
+    <p>Published: 2022 March 12</p>
+
 
 
 
@@ -157,7 +161,7 @@
 <p>While these offered some background information, they didn&rsquo;t help resolve the issue.</p>
 <hr>
 <p>That search also returned <a href="https://mertbakir.gitlab.io/hugo/syntax-highlighting-in-hugo/">this article</a>, which provided an example for one solution of adding the following to the Hugo <code>config.toml</code> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
     <span style="color:#a6e22e">guessSyntax</span> = <span style="color:#66d9ef">true</span>
 </code></pre></div><p>This succeeded in producing code with syntax highlighting, but offered less control over the outcome since it relies on Hugo correctly guessing the desired syntax.</p>
 <p>Finding a more flexible and configurable solution required more searching.</p>
@@ -166,11 +170,11 @@
 <h2 id="the-solution">The Solution</h2>
 <h3 id="code-fences-with-tags">Code fences with tags</h3>
 <p>Previous uses of code fences on this site had employed bare code fences like the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#e6db74">```
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#e6db74">```
 </span><span style="color:#e6db74"></span>&lt;code block&gt;
 <span style="color:#e6db74">```</span>
 </code></pre></div><p>But appending the code name immediately after the opening code fence triggers the appropriate syntax highlighting:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#e6db74">```toml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#e6db74">```toml
 </span><span style="color:#e6db74"></span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">&gt;</span>
 <span style="color:#e6db74">```</span>
 </code></pre></div><p>With this knowledge the <a href="https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages">List of Chroma Highlighting Languages</a> provided in the Hugo documentation is helpful to determine the specific tag to use to trigger syntax highlighting for a specific language.</p>
@@ -178,10 +182,10 @@
 <p>This type of update needed to be applied to all previous articles.  Doing that manually could take quite a while.  Fortunately, <a href="https://www.reddit.com/r/vscode/comments/at77sg/is_there_a_way_to_find_and_replace_every_nth_item/egzh4er/?utm_source=share&amp;utm_medium=web2x&amp;context=3">this VSCode subreddit post</a> provided the insight that regular expressions could be used in Visual Studio Code&rsquo;s find/replace functionality.</p>
 <h4 id="the-search-pattern">The Search Pattern</h4>
 <p>Finding only the opening code fence and not the closing code fence with regular expressions relied on the insight that in nearly every case the closing code fence was followed by a blank line while the opening code fence was followed by a line with either a word character, a hashtag (<strong>#</strong>), a parenthesis (<strong>&quot;</strong>), or an opening brace (<strong>{</strong>).  That led to using the following regular expression search pattern:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">```\n([#{&#34;\w])
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">```\n([#{&#34;\w])
 </code></pre></div><h4 id="the-replacement-pattern">The Replacement Pattern</h4>
 <p>The desired replacement pattern depended on the language being used, but was typically consistent throughout an individual article.  That led to using the following replacement pattern, when, for example, the article utilized <strong>Bash</strong> commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">```bash\n$1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">```bash\n$1
 </code></pre></div><h4 id="the-process-1">The process</h4>
 <p>Each article had to be worked through individually for several reasons:</p>
 <ul>
@@ -295,8 +299,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

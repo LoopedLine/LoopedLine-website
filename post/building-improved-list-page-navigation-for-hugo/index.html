@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 April 05</p>
+
+
+
+    <p>Published: 2022 April 05</p>
+
 
 
     <p>Last edited: 2022 June 04</p>
@@ -184,7 +188,7 @@
 <p>Because list pages in Hugo are built with layout files, this will involve updating the Hugo theme&rsquo;s <em>paginator.html</em> file, which is in the <em>/layouts/partials/</em> directory.</p>
 <p>We&rsquo;ll add the new features below the existing paginator elements.</p>
 <p>To start, we&rsquo;ll copy the code from prototype 7 of <a href="https://loopedline.com/post/testing-css-grid/">Testing CSS Grid</a> post (removing the <em>-proto7</em> suffix from element IDs), and add it to the <strong>paginator.html</strong> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container&#34;</span>&gt;
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel&#34;</span>&gt;
         &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-left&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;Left Navigation&lt;/<span style="color:#f92672">a</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-pagexofy&#34;</span>&gt;List Page X of Y&lt;/<span style="color:#f92672">div</span>&gt;
@@ -193,7 +197,7 @@
     &lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><p>Similarly, we&rsquo;ll add the CSS from that prototype to the <strong>custom.css</strong> file in our <em>/static/css/</em> directory that we created in the <a href="https://loopedline.com/post/changing-the-spacing-of-font-awesome-icons-in-hugo/">Changing the Spacing of Font Awesome Icons in Hugo</a> post:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* List Page Navigation Interface */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* List Page Navigation Interface */</span>
 
 <span style="color:#f92672">div</span>#listpage-navigation-container {
     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
@@ -247,7 +251,7 @@
 }
 </code></pre></div><h3 id="step-2---incorporating-the-existing-hugo-conditional-logic">Step 2 - Incorporating the existing Hugo conditional logic</h3>
 <p>We&rsquo;ll integrate the conditional logic from the current paginator.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:block;width:100%;background-color:#3c3d38">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:block;width:100%;background-color:#3c3d38">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
 </span>
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel&#34;</span>&gt;
@@ -272,7 +276,7 @@
 <span style="display:block;width:100%;background-color:#3c3d38">{{ end }}
 </span></code></pre></div><h3 id="step-3---incorporating-the-existing-paginator-link-and-page-count-logic">Step 3 - Incorporating the existing paginator link and page count logic</h3>
 <p>We&rsquo;ll integrate the link and page count logic from the current paginator.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
 
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel&#34;</span>&gt;
@@ -297,7 +301,7 @@
 {{ end }}
 </code></pre></div><h3 id="step-4---incorporating-the-section-page-count-logic">Step 4 - Incorporating the section page count logic</h3>
 <p>We&rsquo;ll integrate logic for counting the total number of pages in a section.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
 
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel&#34;</span>&gt;
@@ -322,7 +326,7 @@
 {{ end }}
 </code></pre></div><h3 id="step-5---incorporating-the-font-awesome-icons">Step 5 - Incorporating the Font Awesome icons</h3>
 <p>We&rsquo;ll integrate the Font Awesome icons from the current paginator.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
 
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel&#34;</span>&gt;
@@ -351,7 +355,7 @@
 {{ end }}
 </code></pre></div><h3 id="step-6---incorporating-theme-styling">Step 6 - Incorporating theme styling</h3>
 <p>We&rsquo;ll integrate element class declarations from the current paginator to produce consistent styling.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Paginator.HasPrev .Paginator.HasNext }}
 
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel&#34;</span>&gt;
@@ -493,8 +497,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 April 04</p>
+
+
+
+    <p>Published: 2022 April 04</p>
+
 
 
     <p>Last edited: 2022 June 04</p>
@@ -159,7 +163,7 @@
 <p>To work directly with the HTML, we&rsquo;ll create a file inside a separate project folder.</p>
 <h3 id="prototype-1---just-html">Prototype 1 - Just HTML</h3>
 <p>In addition to typical HTML boilerplate, we&rsquo;ll include the following inside the <code>&lt;body&gt;</code> tag:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">hr</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">hr</span>&gt;
 
     &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 1 - Just HTML &lt;/<span style="color:#f92672">h3</span>&gt;
 
@@ -197,7 +201,7 @@
 </ul>
 <h3 id="prototype-2---basic-css-grid">Prototype 2 - Basic CSS Grid</h3>
 <p>To test the effect of CSS Grid, we&rsquo;ll start by adding a new section to the <code>&lt;body&gt;</code> of our HTML file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 2 - Basic CSS Grid&lt;/<span style="color:#f92672">h3</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 2 - Basic CSS Grid&lt;/<span style="color:#f92672">h3</span>&gt;
 
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto02&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-left-proto02&#34;</span>&gt;Left Navigation&lt;/<span style="color:#f92672">div</span>&gt;
@@ -211,11 +215,11 @@
 <p><code>&lt;div id=&quot;listpage-navigation-panel-proto02&quot;&gt;</code> - We&rsquo;ve added a containing <code>&lt;div&gt;</code> around our existing divs to act as the CSS Grid parent and given it a unique ID.</p>
 <p>We also gave our four child divs unique IDs.</p>
 <p>Next, we&rsquo;ll add a style section to the <code>&lt;head&gt;</code> tag to link our CSS file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">style</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">style</span>&gt;
         @<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;./prototype.css&#39;</span><span style="color:#f92672">)</span>;
     &lt;/<span style="color:#f92672">style</span>&gt;
 </code></pre></div><p>And for our CSS file we&rsquo;ll include the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* List Page Navigation - Prototype 2 */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* List Page Navigation - Prototype 2 */</span>
 <span style="color:#f92672">div</span>#listpage-navigation-panel-proto02 {
     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
     <span style="color:#66d9ef">grid-template-areas</span>: 
@@ -260,7 +264,7 @@
 <h3 id="prototype-3---making-the-css-grid-responsive">Prototype 3 - Making the CSS Grid Responsive</h3>
 <p>Testing the design by resizing the browser window reveals that the result is not particularly attractive or useful at either large or small sizes.</p>
 <p>To compare our changes we&rsquo;ll again add a new section to our HTML file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 3 - Making the CSS Grid Responsive&lt;/<span style="color:#f92672">h3</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 3 - Making the CSS Grid Responsive&lt;/<span style="color:#f92672">h3</span>&gt;
 
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto03&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-left-proto03&#34;</span>&gt;Left Navigation&lt;/<span style="color:#f92672">div</span>&gt;
@@ -272,7 +276,7 @@
     &lt;<span style="color:#f92672">hr</span>&gt;
 </code></pre></div><p>There is no structural change to this addition.  We just updated the IDs to end in <strong>-proto03</strong> so that we can target this new section with our changes and make their effect clear.  We&rsquo;ll likewise duplicate and update the IDs of our CSS code for this new example.</p>
 <p>Now, we can fix the resizing issue with a single line change to the CSS:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-panel-proto03 {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-panel-proto03 {
     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
     <span style="color:#66d9ef">grid-template-areas</span>: 
         <span style="color:#e6db74">&#34;left-proto03 pagexofy-proto03 right-proto03&#34;</span>
@@ -288,7 +292,7 @@
 <h3 id="prototype-4---centering-the-navigation-panel-horizontally">Prototype 4 - Centering the Navigation Panel Horizontally</h3>
 <p>Again, before making changes we&rsquo;ll add a new duplicate section to our HTML and CSS files, updating only the ID suffixes to <strong>-proto04</strong>.</p>
 <p>Now, in our HTML file we&rsquo;ll wrap our navigation panel in an additional <code>&lt;div&gt;</code> element:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 4 - Centering the Navigation Panel Horizontally&lt;/<span style="color:#f92672">h3</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 4 - Centering the Navigation Panel Horizontally&lt;/<span style="color:#f92672">h3</span>&gt;
 
 <span style="display:block;width:100%;background-color:#3c3d38">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container-proto04&#34;</span>&gt;
 </span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto04&#34;</span>&gt;
@@ -301,7 +305,7 @@
 </span>
     &lt;<span style="color:#f92672">hr</span>&gt;
 </code></pre></div><p>And we&rsquo;ll style that new div as a CSS grid as well:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-container-proto04 {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-container-proto04 {
     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
     <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
     <span style="color:#66d9ef">grid-template-columns</span>: <span style="color:#a6e22e">minmax</span>(<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>, <span style="color:#66d9ef">auto</span>);
@@ -309,9 +313,9 @@
     <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">gold</span>;
 }
 </code></pre></div><p>As <a href="/bespoke/project/testing-css-grid/prototype04.html">the fourth prototype page</a> shows, this allows us to keep the navigation panel centered even as the page is resized.</p>
-<h3 id="prototype-5---centering-the-navigation-panel-elements-content-vertically">Prototype 5 - Centering the Navigation Panel Elements&rsquo; Content Vertically</h3>
-<p>Now, to center the navigation panel elements&rsquo; content vertically, we&rsquo;ll turn to CSS Flexbox.  We&rsquo;ll add three lines to all four of the panel elements:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-left-proto05 {
+<h3 id="prototype-5---centering-the-navigation-panel-elements-content-vertically">Prototype 5 - Centering the Navigation Panel Elements' Content Vertically</h3>
+<p>Now, to center the navigation panel elements' content vertically, we&rsquo;ll turn to CSS Flexbox.  We&rsquo;ll add three lines to all four of the panel elements:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#listpage-navigation-left-proto05 {
     <span style="color:#66d9ef">grid-area</span>: <span style="color:#66d9ef">left</span><span style="color:#f92672">-</span>proto05;
     <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
     
@@ -321,11 +325,11 @@
 </span>
     <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">red</span>;
 }
-</code></pre></div><p><a href="/bespoke/project/testing-css-grid/prototype05.html">The fifth prototype page</a> demonstrates that the panel elements&rsquo; content is now vertically centered.</p>
+</code></pre></div><p><a href="/bespoke/project/testing-css-grid/prototype05.html">The fifth prototype page</a> demonstrates that the panel elements' content is now vertically centered.</p>
 <h3 id="prototype-6---adding-hyperlinks">Prototype 6 - Adding Hyperlinks</h3>
 <p>Now that we have the structure the way we want it and since this is a prototype of a navigation panel, it&rsquo;s time to add some hyperlinks for navigation.</p>
 <p>For now we&rsquo;ll use empty links because we just want to demonstrate the functionality and don&rsquo;t need or want to leave the prototype page while testing.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 6 - Adding Hyperlinks&lt;/<span style="color:#f92672">h3</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h3</span>&gt;Page Navigation, Prototype 6 - Adding Hyperlinks&lt;/<span style="color:#f92672">h3</span>&gt;
 
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-container-proto06&#34;</span>&gt;
         &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;listpage-navigation-panel-proto06&#34;</span>&gt;
@@ -457,8 +461,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

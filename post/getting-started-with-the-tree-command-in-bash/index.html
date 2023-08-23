@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 November 06</p>
+
+
+
+    <p>Published: 2022 November 06</p>
+
 
 
 
@@ -159,11 +163,11 @@
 <p>To see the utility of the tree command, let&rsquo;s look at an example of a large directory structure that includes several levels of nested subdirectories.</p>
 <hr>
 <p>In a suitable test directory, we can use the following command to create 50 nested directories.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p test-directory/<span style="color:#f92672">{</span>another/<span style="color:#f92672">{</span>also,and<span style="color:#f92672">}</span>,directory1/<span style="color:#f92672">{</span>1,2,3,4,5<span style="color:#f92672">}</span>,dir-a/<span style="color:#f92672">{</span>asparagus/<span style="color:#f92672">{</span>apollo,atlas<span style="color:#f92672">}</span>,avocado,artichoke,arugula/astro,apricot/<span style="color:#f92672">{</span>alfred,apache<span style="color:#f92672">}</span>,apple/<span style="color:#f92672">{</span>akane,ambrosia<span style="color:#f92672">}}</span>,dir-b/<span style="color:#f92672">{</span>banana/<span style="color:#f92672">{</span>bluggoe,benedetta<span style="color:#f92672">}</span>,blackberry,blueberry/<span style="color:#f92672">{</span>bluecrop,bluegold,blueray,brightwell<span style="color:#f92672">}</span>,basil/boxwood<span style="color:#f92672">}</span>,dir-c/<span style="color:#f92672">{</span>cabbage,cashew,cherry/<span style="color:#f92672">{</span>cristobalina,carmen,celeste,cristalina<span style="color:#f92672">}</span>,chickpea,corn/<span style="color:#f92672">{</span>challenger,camelot<span style="color:#f92672">}}</span>,other/etc<span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p test-directory/<span style="color:#f92672">{</span>another/<span style="color:#f92672">{</span>also,and<span style="color:#f92672">}</span>,directory1/<span style="color:#f92672">{</span>1,2,3,4,5<span style="color:#f92672">}</span>,dir-a/<span style="color:#f92672">{</span>asparagus/<span style="color:#f92672">{</span>apollo,atlas<span style="color:#f92672">}</span>,avocado,artichoke,arugula/astro,apricot/<span style="color:#f92672">{</span>alfred,apache<span style="color:#f92672">}</span>,apple/<span style="color:#f92672">{</span>akane,ambrosia<span style="color:#f92672">}}</span>,dir-b/<span style="color:#f92672">{</span>banana/<span style="color:#f92672">{</span>bluggoe,benedetta<span style="color:#f92672">}</span>,blackberry,blueberry/<span style="color:#f92672">{</span>bluecrop,bluegold,blueray,brightwell<span style="color:#f92672">}</span>,basil/boxwood<span style="color:#f92672">}</span>,dir-c/<span style="color:#f92672">{</span>cabbage,cashew,cherry/<span style="color:#f92672">{</span>cristobalina,carmen,celeste,cristalina<span style="color:#f92672">}</span>,chickpea,corn/<span style="color:#f92672">{</span>challenger,camelot<span style="color:#f92672">}}</span>,other/etc<span style="color:#f92672">}</span>
 </code></pre></div><p>(Thanks to <a href="https://markontech.com/linux/create-multiple-directories-in-linux/">markontech</a> for demonstrating this technique.)</p>
 <hr>
 <p>We can then use the following command to populate those new example directories with 153 files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -type d -exec touch <span style="color:#f92672">{}</span>/file_<span style="color:#f92672">{</span>1..3<span style="color:#f92672">}</span>.txt <span style="color:#ae81ff">\;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -type d -exec touch <span style="color:#f92672">{}</span>/file_<span style="color:#f92672">{</span>1..3<span style="color:#f92672">}</span>.txt <span style="color:#ae81ff">\;</span>
 </code></pre></div><p>(Thanks to <a href="https://unix.stackexchange.com/questions/94207/recursively-add-a-file-to-all-sub-directories/149484#149484">this StackOverflow answer</a> for sharing this technique.)</p>
 <h2 id="note-on-installing-the-tree-command">Note on installing the tree command</h2>
 <p>Tree doesn&rsquo;t come pre-installed on many operating systems, but if it&rsquo;s not readily available through your system&rsquo;s package manager, it can be found on <a href="https://gitlab.com/OldManProgrammer/unix-tree">Gitlab</a> and <a href="https://github.com/Old-Man-Programmer/tree">GitHub</a>.</p>
@@ -171,17 +175,17 @@
 <p>Now, if you wanted to get a sense for how the directories and subdirectories were arranged and where files were located within them, how would you do it?</p>
 <p>We could use the <code>ls</code> command.</p>
 <p><strong>Command</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls
 </code></pre></div><p><strong>Result</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file_1.txt  file_2.txt  file_3.txt  test-directory
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file_1.txt  file_2.txt  file_3.txt  test-directory
 </code></pre></div><p>But in this example, you&rsquo;d have to run the command 50 times, navigating into and out of each subdirectory between each run, which would take a long time.</p>
 <p>And at the end of it, you&rsquo;d be left trying to remember how the subdirectories were nested.</p>
 <hr>
 <p>Alternatively, you could run the <code>tree</code> command and get your answer instantly.</p>
 <p><strong>Command</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree
 </code></pre></div><p><strong>Result</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
 ├── file_1.txt
 ├── file_2.txt
 ├── file_3.txt
@@ -392,9 +396,9 @@
 <p>The tree command has several options that make it even more powerful.</p>
 <p>For starters, the <code>-d</code> option limits results to just directories.</p>
 <p><strong>Command</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -d
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -d
 </code></pre></div><p><strong>Result</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
 └── test-directory
     ├── another
     │   ├── also
@@ -450,9 +454,9 @@
 </code></pre></div><h2 id="example-3-viewing-the-files-and-subdirectories-of-a-directory-to-a-specifed-depth">Example 3: Viewing the files and subdirectories of a directory to a specifed depth</h2>
 <p>Alternatively, you can limit the return to a specific depth of subdirectories with the <code>-L</code> option.</p>
 <p><strong>Command</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -L <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -L <span style="color:#ae81ff">2</span>
 </code></pre></div><p><strong>Result</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
 ├── file_1.txt
 ├── file_2.txt
 ├── file_3.txt
@@ -471,9 +475,9 @@
 </code></pre></div><h2 id="example-4-viewing-only-specific-subdirectories-of-a-directory">Example 4: Viewing only specific subdirectories of a directory</h2>
 <p>The <code>-a</code> option allows you to limit the results to specific directories.</p>
 <p><strong>Command</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -a test-directory/dir-a test-directory/dir-b test-directory/dir-c
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -a test-directory/dir-a test-directory/dir-b test-directory/dir-c
 </code></pre></div><p><strong>Result</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test-directory/dir-a
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test-directory/dir-a
 ├── apple
 │   ├── akane
 │   │   ├── file_1.txt
@@ -631,9 +635,9 @@ test-directory/dir-c
 <p>These commands can be combined.</p>
 <p>For example, you can limit to specified directories, to a specified depth, and only return directories.</p>
 <p><strong>Command</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -d -L <span style="color:#ae81ff">1</span> -a test-directory/dir-a test-directory/dir-b test-directory/dir-c
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -d -L <span style="color:#ae81ff">1</span> -a test-directory/dir-a test-directory/dir-b test-directory/dir-c
 </code></pre></div><p><strong>Result</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test-directory/dir-a
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test-directory/dir-a
 ├── apple
 ├── apricot
 ├── artichoke
@@ -655,7 +659,7 @@ test-directory/dir-c
 <span style="color:#ae81ff">15</span> directories
 </code></pre></div><h2 id="more-options">More options</h2>
 <p>This is just an introduction - there are additional options that can be found via the manual:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">man tree
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">man tree
 </code></pre></div><h2 id="conclusion">Conclusion</h2>
 <p>The <code>tree</code> command makes it easier to explore and understand directory and file structures from the command line.</p>
 <!-- raw HTML omitted -->
@@ -765,8 +769,11 @@ test-directory/dir-c
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

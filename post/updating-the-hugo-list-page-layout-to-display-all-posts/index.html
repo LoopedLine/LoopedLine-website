@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 June 01</p>
+
+
+
+    <p>Published: 2022 June 01</p>
+
 
 
     <p>Last edited: 2022 July 27</p>
@@ -145,7 +149,7 @@
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="update">UPDATE</h2>
-<p>The paginator partial template file at the end of this post includes a line of code that is commented out yet is necessary for Hugo to render the page correctly.  That is confusing and undesirable.  This issue was addressed and corrected in <a href="https://loopedline.com/post/creating-separate-list-pages-in-hugo-for-different-topics/">a later post</a>.</p>
+<p>The paginator partial template file at the end of this post includes a line of code that is commented out yet is necessary for Hugo to render the page correctly.  That is confusing and undesirable.  This issue was addressed and corrected in <a href="https://loopedline.com/post/creating-separate-list-pages-in-hugo-for-different-topics/#updating-the-existing-list-template-partial-file">a later post</a>.</p>
 <h1 id="background">Background</h1>
 <p>This project is built with <a href="https://loopedline.com/post/building-your-first-hugo-website/">Hugo</a> and uses the <a href="https://themes.gohugo.io/themes/minimal/">Minimal</a> Hugo theme.</p>
 <p>This post is part of <a href="https://loopedline.com/post/changing-a-hugo-theme-over-time/">an ongoing effort to tailor the theme over time</a>.</p>
@@ -158,7 +162,7 @@
 <h2 id="step-0-original-code">Step 0: Original code</h2>
 <p>The original list page layout that shipped with the Minimal theme worked reliably for all sections and subsections and it is close to the desired user interface, so we&rsquo;ll use that as our starting point.</p>
 <p>The code for creating list pages for this project is located in the <strong>list.html</strong> file of the <em>/layouts/_default/</em> directory.  The original version is below:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
 
 &lt;<span style="color:#a6e22e">main</span>&gt;
 
@@ -173,7 +177,7 @@
 </code></pre></div><h2 id="step-1-refactoring">Step 1: Refactoring</h2>
 <p>We&rsquo;ll make a minor change to refactor the code for readability.</p>
 <p>The altered lines are highlighted.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
 
 &lt;<span style="color:#a6e22e">main</span>&gt;
 
@@ -189,7 +193,7 @@
 {{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer&#34;</span> . }}
 </code></pre></div><h2 id="step-2-updating-the-appearance">Step 2: Updating the appearance</h2>
 <p>We&rsquo;ll add horizonal lines to visually separate the list.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
 
 &lt;<span style="color:#a6e22e">main</span>&gt;
 
@@ -209,7 +213,7 @@
 </code></pre></div><h2 id="step-3-updating-the-paginator-range">Step 3: Updating the Paginator range</h2>
 <p>The most substanitive change is including more posts on a single list page.</p>
 <p>We can accomplish that by setting the pagination value to a large number, like 1000.  That will most likely allow all posts to be listed on a single page while providing the fallback of generating a paginated list if the number of posts exceeds 1000.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
 
 &lt;<span style="color:#a6e22e">main</span>&gt;
 
@@ -228,7 +232,7 @@
 {{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer&#34;</span> . }}
 </code></pre></div><h2 id="step-4-adding-the-count-of-total-posts">Step 4: Adding the count of total posts</h2>
 <p>Now, we&rsquo;ll add a count of all the posts for a section.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
 
 &lt;<span style="color:#a6e22e">main</span>&gt;
 
@@ -253,7 +257,7 @@
 <h2 id="step-5-fixing-the-paginator-value">Step 5: Fixing the paginator value</h2>
 <p>While we don&rsquo;t want to move the actual <strong>.Paginator</strong> call to a different line, we can add a non-functional call.</p>
 <p>If we add a new <strong>.Paginator</strong> call at the top of the page and comment it out it won&rsquo;t actually appear on the page, but Hugo will still use it to set the paginator value to 1000.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="display:block;width:100%;background-color:#3c3d38">&lt;!<span style="color:#f92672">--</span> <span style="color:#a6e22e">INCLUDE</span> <span style="color:#a6e22e">THIS</span> <span style="color:#a6e22e">LINE</span> <span style="color:#a6e22e">AT</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">TOP</span> <span style="color:#a6e22e">SO</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">PAGINATOR</span> <span style="color:#a6e22e">CORRECTLY</span> <span style="color:#a6e22e">SETS</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">PAGINATION</span> <span style="color:#a6e22e">VALUE</span>: {{ <span style="color:#66d9ef">range</span> (.<span style="color:#a6e22e">Paginator</span> <span style="color:#ae81ff">1000</span>).<span style="color:#a6e22e">Pages</span> }} {{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;list-item&#34;</span> . }} {{ <span style="color:#a6e22e">end</span> }} <span style="color:#f92672">--</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="display:block;width:100%;background-color:#3c3d38">&lt;!<span style="color:#f92672">--</span> <span style="color:#a6e22e">INCLUDE</span> <span style="color:#a6e22e">THIS</span> <span style="color:#a6e22e">LINE</span> <span style="color:#a6e22e">AT</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">TOP</span> <span style="color:#a6e22e">SO</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">PAGINATOR</span> <span style="color:#a6e22e">CORRECTLY</span> <span style="color:#a6e22e">SETS</span> <span style="color:#a6e22e">THE</span> <span style="color:#a6e22e">PAGINATION</span> <span style="color:#a6e22e">VALUE</span>: {{ <span style="color:#66d9ef">range</span> (.<span style="color:#a6e22e">Paginator</span> <span style="color:#ae81ff">1000</span>).<span style="color:#a6e22e">Pages</span> }} {{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;list-item&#34;</span> . }} {{ <span style="color:#a6e22e">end</span> }} <span style="color:#f92672">--</span>&gt;
 </span>
 {{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
 
@@ -382,8 +386,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 February 25</p>
+
+
+
+    <p>Published: 2022 February 25</p>
+
 
 
 
@@ -154,43 +158,43 @@
 <h2 id="making-a-bash-alias">Making a Bash alias</h2>
 <h3 id="bash-alias-form">Bash alias form</h3>
 <p>To create an alias named &ldquo;alias-name&rdquo;:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias alias-name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;command&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias alias-name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;command&#39;</span>
 </code></pre></div><p>To use the alias:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias-name
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias-name
 </code></pre></div><h3 id="bash-alias-example-1">Bash alias example 1</h3>
 <p>To create an alias named &ldquo;l1&rdquo; to call the ls command with the option to show one file per line:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias l1<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ls -1&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias l1<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ls -1&#39;</span>
 </code></pre></div><p>To use the alias:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">l1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">l1
 </code></pre></div><h3 id="bash-alias-example-2">Bash alias example 2</h3>
 <p>To create an alias named &ldquo;quickcd&rdquo; to navigate to a specific nested directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias quickcd<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cd ~/dir1/dir2/dir3&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias quickcd<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cd ~/dir1/dir2/dir3&#39;</span>
 </code></pre></div><p>To use the alias:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">quickcd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">quickcd
 </code></pre></div><h3 id="making-aliases-persistent">Making aliases persistent</h3>
 <p>The above examples will only impact the current shell session.  To make those changes permanent for Bash on Ubuntu you&rsquo;ll likely want to include them in the <code>~/.bashrc</code> file.  (See the <a href="https://loopedline.com/post/automating-bash-shell-commands/#note-on-system-specific-updates">note on system-specific updates</a>.)</p>
 <h2 id="making-a-bash-function">Making a Bash function</h2>
 <h3 id="bash-function-form">Bash function form</h3>
 <p>To create a function named &ldquo;function-name&rdquo;:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span>-name <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span>-name <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   commands
 <span style="color:#f92672">}</span>
 </code></pre></div><p>To use the function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span>-name
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span>-name
 </code></pre></div><h3 id="bash-function-example-1">Bash function example 1</h3>
 <p>To create a function named &ldquo;datetime&rdquo; to call the date command with the output formatted a particular way:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">datetime <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">datetime <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   date <span style="color:#e6db74">&#39;+The current date and time is: %Y-%m-%dT%T%:z&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>To call the function enter the function name:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">datetime
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">datetime
 </code></pre></div><h3 id="bash-function-example-2">Bash function example 2</h3>
 <p>To create a function named &ldquo;wisecow&rdquo; to pass the output of the fortune command to the cowsay command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wisecow <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wisecow <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   fortune | cowsay
 <span style="color:#f92672">}</span>
 </code></pre></div><p>To call the function enter the function name:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wisecow
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wisecow
 </code></pre></div><h3 id="making-functions-persistent">Making functions persistent</h3>
 <p>The above examples will only impact the current shell session.  To make those changes permanent for Bash on Ubuntu you&rsquo;ll likely want to include them in the <code>~/.bashrc</code> file.  (See the <a href="https://loopedline.com/post/automating-bash-shell-commands/#note-on-system-specific-updates">note on system-specific updates</a>.)</p>
 <h2 id="making-a-bash-script">Making a Bash script</h2>
@@ -198,63 +202,63 @@
 <hr>
 <p><strong>Step 1: Create the file</strong></p>
 <p>Create a file with the &ldquo;.sh&rdquo; extension:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">example-script.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">example-script.sh
 </code></pre></div><hr>
 <p><strong>Step 2: Write the script</strong></p>
 <p>Edit the file to include &ldquo;#!/bin/bash&rdquo; on the first line followed by the desired commands on subsequent lines:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 &lt;commands&gt;
 </code></pre></div><hr>
 <p><strong>Step 3: Make the script executable</strong></p>
 <p>Alter the permissions of the script to make it executable.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x example-script.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x example-script.sh
 </code></pre></div><hr>
 <p><strong>Step R1: Run the script</strong></p>
 <p>Run the script by entering &ldquo;./&rdquo; before it&rsquo;s name:</p>
-<pre><code>./example-script.sh
+<pre tabindex="0"><code>./example-script.sh
 </code></pre><hr>
 <h3 id="bash-script-example-1">Bash script example 1</h3>
 <p>To make a script that prints &ldquo;Hello everyone!&quot;:</p>
 <hr>
 <p><strong>Step 1: Create the file</strong></p>
 <p>Create a file with the &ldquo;.sh&rdquo; extension:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch script-hello.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch script-hello.sh
 </code></pre></div><hr>
 <p><strong>Step 2: Write the script</strong></p>
 <p>Edit the file to include the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 echo <span style="color:#e6db74">&#39;Hello everyone!&#39;</span>
 </code></pre></div><hr>
 <p><strong>Step 3: Make the script executable</strong></p>
 <p>Modify the file permission to make it executable:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x script-hello.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x script-hello.sh
 </code></pre></div><hr>
 <p><strong>Step R1: Run the script</strong></p>
 <p>Run the script:</p>
-<pre><code>./script-hello.sh
+<pre tabindex="0"><code>./script-hello.sh
 </code></pre><hr>
 <h3 id="bash-script-example-2">Bash script example 2</h3>
 <p>To make a script to run htop with output sorted by memory usage:</p>
 <hr>
 <p><strong>Step 1: Create the file</strong></p>
 <p>Create a file with the &ldquo;.sh&rdquo; extension:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch script-htopmem.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch script-htopmem.sh
 </code></pre></div><hr>
 <p><strong>Step 2: Write the script</strong></p>
 <p>Edit the file to include the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 htop –sort PERCENT_MEM
 </code></pre></div><hr>
 <p><strong>Step 3: Make the script executable</strong></p>
 <p>Modify the file permission to make it executable:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x script-htopmem.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x script-htopmem.sh
 </code></pre></div><hr>
 <p><strong>Step R1: Run the script</strong></p>
 <p>Run the script:</p>
-<pre><code>./script-htopmem.sh
+<pre tabindex="0"><code>./script-htopmem.sh
 </code></pre><hr>
 <h2 id="making-a-bash-script-executable-from-anywhere">Making a Bash script executable from anywhere</h2>
 <p>The above example scripts can only be run from within the directory containing them or by including that directory when calling the script.</p>
@@ -282,13 +286,13 @@ htop –sort PERCENT_MEM
 <hr>
 <p><strong>Step 5: Update the $PATH to include the directory</strong></p>
 <p>Ensure the directory is in the <code>$PATH</code> environment variable so your shell can find the script when you call it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export PATH<span style="color:#f92672">=</span>$PATH:/home/user/scripts
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export PATH<span style="color:#f92672">=</span>$PATH:/home/user/scripts
 </code></pre></div><p>The above command will only impact the current shell session.</p>
 <p>To make these changes permanent for Bash on Ubuntu you&rsquo;ll likely want to include them in the <code>~/.bashrc</code> file.  (See the <a href="https://loopedline.com/post/automating-bash-shell-commands/#note-on-system-specific-updates">note on system-specific updates</a>.)</p>
 <hr>
 <p><strong>Step R2: Run the script</strong></p>
 <p>Now you can execute this script anywhere simply by entering the script file name as a command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">example-script.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">example-script.sh
 </code></pre></div><h2 id="note-on-system-specific-updates">Note on system-specific updates</h2>
 <p>To make many of these changes persistent you&rsquo;ll need to update the appropriate system file(s).  Which file(s) you need to update depends on your operating system and your shell.</p>
 <p>The examples referenced here are for Bash on Ubuntu, where you&rsquo;ll likely want to update the <code>~/.bashrc</code> file.</p>
@@ -398,8 +402,11 @@ htop –sort PERCENT_MEM
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

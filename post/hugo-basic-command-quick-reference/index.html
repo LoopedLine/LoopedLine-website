@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2021 July 23</p>
+
+
+
+    <p>Published: 2021 July 23</p>
+
 
 
     <p>Last edited: 2022 June 09</p>
@@ -144,11 +148,11 @@
 <!-- raw HTML omitted -->
 <h3 id="check-hugo-version">Check Hugo version</h3>
 <p>In a terminal, enter the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
 </code></pre></div><p>If Hugo is installed you should see a message indicating the Hugo version number.</p>
 <h3 id="create-a-new-website">Create a new website</h3>
 <p>In a terminal pointed to the directory where you want Hugo project files to reside, enter the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site my-hugo-website
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site my-hugo-website
 </code></pre></div><p>NOTE: Replace <em>my-hugo-website</em> with the site name you want.</p>
 <p>You should see a message beginning with</p>
 <blockquote>
@@ -156,26 +160,26 @@
 </blockquote>
 <h3 id="create-a-new-project-file">Create a new project file</h3>
 <p>In a terminal pointed to the directory where your Hugo project files reside, enter the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new /folder/my-file.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new /folder/my-file.md
 </code></pre></div><p>Replace <em>my-file.md</em> with the file name you want.</p>
 <p>Replace <em>folder</em> with the relative path to the directory where you want your new file to reside.</p>
 <h3 id="start-the-hugo-server-to-see-your-website">Start the Hugo server to see your website</h3>
 <p>In a terminal type the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server
 </code></pre></div><p>Open a web browser to <a href="http://localhost:1313/">http://localhost:1313/</a> to see your new site.</p>
 <p>Leave the server running to see changes applied as you make them.</p>
 <p>Press <code>CTRL + C</code> to stop the server.</p>
 <h4 id="to-see-draft-pages">To see draft pages</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
 </code></pre></div><p>Include the <code>-D</code> flag to see pages marked as drafts.  Leave the flag off to see only pages marked as final.</p>
 <h4 id="to-see-pages-marked-for-future-publication">To see pages marked for future publication</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -F
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -F
 </code></pre></div><p>Include the <code>-F</code> flag to see pages marked with a publishdate in the future.</p>
 <h4 id="to-see-additional-options">To see additional options</h4>
 <p>See the <a href="https://gohugo.io/commands/hugo_server/">Hugo documentation</a> for many more server options.</p>
 <h3 id="build-a-website-from-your-project-files">Build a website from your project files</h3>
 <p>In a terminal pointed to the directory where your Hugo project files reside, enter the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
 </code></pre></div><p>The generated files will be output to the <code>/project-folder/public/</code> folder, where <em>project-folder</em> is the main directory of your project.</p>
 <!-- raw HTML omitted -->
 </div>
@@ -282,8 +286,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

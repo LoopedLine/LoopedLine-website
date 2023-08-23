@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 April 01</p>
+
+
+
+    <p>Published: 2022 April 01</p>
+
 
 
     <p>Last edited: 2022 June 04</p>
@@ -160,7 +164,7 @@
 <h3 id="new-layout-directory-and-new-template-file">New layout directory and new template file</h3>
 <p>Since we want list pages for the <em>/project/content/post/</em> directory to be built using the default list template, we&rsquo;ll create a separate template in a different directory.</p>
 <p>Specifically, we&rsquo;ll create the new directory <strong>/project/layouts/map/</strong> and to that directory we&rsquo;ll add the file <strong>single.html</strong>, which contains:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> . }}
 
 &lt;<span style="color:#a6e22e">main</span>&gt;
 
@@ -192,7 +196,7 @@
 <h3 id="new-content-directory-and-content-file">New content directory and content file</h3>
 <p>With the new layout directory and template file created, we can now create the content directory and content file that will instantiate the page.</p>
 <p>Specifically, we&rsquo;ll create the new directory <strong>/project/content/map/</strong> and to that directory we&rsquo;ll add the file <strong>all-posts.md</strong>, which (besides frontmatter) contains only the page title, since all other necessary information is contained in the template:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">## All Posts
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">## All Posts
 </span></code></pre></div><h2 id="the-result">The Result</h2>
 <p>With that, Hugo can automatically build <a href="/bespoke/archive/map-all-posts/map-all-posts.html">a page</a> listing all posts in the <em>/project/content/post/</em> directory .</p>
 <!-- raw HTML omitted -->
@@ -300,8 +304,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

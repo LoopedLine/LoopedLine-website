@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 July 04</p>
+
+
+
+    <p>Published: 2022 July 04</p>
+
 
 
 
@@ -206,12 +210,12 @@
 <h4 id="git-clone">Git clone</h4>
 <p>If there is an existing project that you want to work with, the <code>git clone &lt;url&gt;</code> command allows you to download a copy of the Git repository.  This will download the .git file, which includes the entire history of the project.</p>
 <p>Navigate to the directory where you want the project on your local machine and then run the command with the URL for your project.  For example, to download the Git repository for the list of <em>Hacker Laws</em> maintained by Dave Kerr, you would use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/dwmkerr/hacker-laws
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/dwmkerr/hacker-laws
 </code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=i-3gsC3aBBA">Cloning an Existing Repository</a> by <em>Tower</em> illustrates this command.</p>
 <h4 id="git-remote-add">Git remote add</h4>
 <p>If you have started a project locally and want to upload it to a remote host, the <code>git remote add &lt;shortname&gt; &lt;url&gt;</code> command will create a remote repository for it.</p>
 <p>Navigate to the directory of your local Git repository and then run the command with a chosen <em>shortname</em> (&ldquo;origin&rdquo; is the convention) and the URL for the remote repository.  For example, if your GitHub username was <em>exampleuser</em> and your remote repository had the shortname <em>exampleproject</em>, you would use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add origin https://github.com/exampleuser/exampleproject
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add origin https://github.com/exampleuser/exampleproject
 </code></pre></div><p>The video <a href="https://www.youtube.com/watch?v=fSH-_SmtHio">Connecting a Remote Repository</a> by <em>Tower</em> illustrates this command.</p>
 <h3 id="exchanging-data-with-remote-tracking-repositories">Exchanging data with remote-tracking repositories</h3>
 <p>Because remote repositories are separate from your local repository, they can evolve indendently.  Changes can take place in any one repository that the others are unaware of.  To communicate about these changes you have to explicitly tell Git to either request or send updated information.</p>
@@ -224,19 +228,19 @@
 <p>The first two commands are for downloading data from a remote repository to your local computer.  The third command is for uploading data from your local repository to a remote repository.</p>
 <h4 id="git-fetch">Git fetch</h4>
 <p>The <code>git fetch &lt;remotename&gt;</code> command downloads all the data from the remote repository that your local repository doesn&rsquo;t have.  This command works with the shortname of one of your existing remote-tracking repositories.  For example, if you previously setup a remote repository with the shortname <em>origin</em>, you would use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch origin
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch origin
 </code></pre></div><p>Git fetch leaves your working copy untouched.  As the <a href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#_fetching_and_pulling">&ldquo;Git Basics - Working with Remotes&rdquo;</a> section from <em>Pro Git</em> highlights:</p>
 <blockquote>
 <p>It’s important to note that the git fetch command only downloads the data to your local repository — it doesn’t automatically merge it with any of your work or modify what you’re currently working on. You have to merge it manually into your work when you’re ready.</p>
 </blockquote>
 <p>You can now use the <code>git branch -vva</code> command to see what was changed remotely:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vva
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vva
 </code></pre></div><p>If there are any changes you want to incorporate you can use the <code>git merge</code> command (outlined in <a href="https://loopedline.com/post/getting-started-with-git-branching-and-merging/">a previous post</a>) to merge those changes.</p>
 <p>The video <a href="https://www.youtube.com/watch?v=A4rIs-6c98s">Pulling &amp; Fetching Changes from a Remote</a> by <em>Tower</em> illustrates this command.</p>
 <h4 id="git-pull">Git pull</h4>
 <p>Similarly, the <code>git pull</code> command can fetch and automatically merge changes from your remote repository into your local repository.</p>
 <p>For example, if you previously setup a remote-tracking repository for your active branch, you can simply use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull
 </code></pre></div><p>Git will fetch and attempt to automatically merge any changes.</p>
 <p>According to the <a href="https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#_pulling">&ldquo;Git Branching - Remote Branches&rdquo;</a> section from <em>Pro Git</em>:</p>
 <blockquote>
@@ -246,24 +250,24 @@
 <h4 id="git-push">Git push</h4>
 <p>The previous commands were about downloading changes from remote repositories.  To share changes you have made, you can use the <code>git push</code> command.</p>
 <p>When you first use the command for a given branch you have to use the longer form of the command, <code>git push -u &lt;shortname&gt; &lt;branchname&gt;</code>.  To begin, make sure you have checked out the branch that you want to share, then you can use the command.  For example, if you previously setup a remote repository with the shortname <em>origin</em> and you want to publish a branch called <em>newfeature</em>, you would use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push -u origin newfeature
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push -u origin newfeature
 </code></pre></div><p>This will create the new branch on the remote repository, share the repository data for that branch, and establish a tracking connection with that branch on your local repository.</p>
 <p>Because we established a tracking connection, the next time you want to push changes from that branch, you can use a simpler command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push
 </code></pre></div><p>This will push the latest changes from your current branch on your local repository to the tracked branch on the remote repository.</p>
 <p>The video <a href="https://www.youtube.com/watch?v=lqw7ipXmc-4">Pushing Changes to a Remote</a> by <em>Tower</em> illustrates this command.</p>
 <h3 id="reviewing-remote-repository-connections">Reviewing remote repository connections</h3>
 <p>To see the remote repositories that have tracking connections with <em>your local repository</em>, use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
 </code></pre></div><p>To see the remote repositories that have tracking connections with <em>the active branch on your local repository</em>, use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vva
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vva
 </code></pre></div><p>To see more information about a remote, use the command <code>git remote show &lt;shortname&gt;</code>.  For example, for a remote with the shortname <em>origin</em>, use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote show origin
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote show origin
 </code></pre></div><h3 id="more-useful-commands-for-working-with-remote-repositories">More useful commands for working with remote repositories</h3>
 <p>To rename a remote&rsquo;s shortname use the <code>git remote rename &lt;oldname&gt; &lt;newname&gt;</code> command.  For example, for a remote called <em>temp</em> that you want to rename to <em>offsite</em>, use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote rename temp offsite
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote rename temp offsite
 </code></pre></div><p>To remove a remote-tracking connection use the <code>git remote remove &lt;remotename&gt;</code> command.  For example, for a remote called <em>legacy</em>, use the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove legacy
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove legacy
 </code></pre></div><h3 id="additional-resources">Additional resources</h3>
 <p>Both the <a href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes">&ldquo;Git Basics - Working with Remotes&rdquo;</a> and <a href="https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches">&ldquo;Git Branching - Remote Branches&rdquo;</a> sections from <em>Pro Git</em> are extremely helpful for understanding this topic.  They contain examples and diagrams that illustrate the concepts more thoroughly.  If you have any questions or confusion about the topic, those two sections will likely help clarify the subject.</p>
 <h2 id="using-remote-repositories">Using remote repositories</h2>
@@ -383,8 +387,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

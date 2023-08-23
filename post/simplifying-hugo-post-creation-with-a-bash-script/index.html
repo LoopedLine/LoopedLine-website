@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 March 13</p>
+
+
+
+    <p>Published: 2022 March 13</p>
+
 
 
 
@@ -162,7 +166,7 @@
 <p>We&rsquo;ll start by addressing the step of navigating to the Hugo project directory.</p>
 <p>For now, we&rsquo;ll assume that the user will pass the properly-formatted name of the post to the script in the first parameter.</p>
 <p>Because our Hugo project directory is not likely to change often we can assign it to a variable within a script and then use that variable to change the script&rsquo;s active directory to the Hugo project directory.  We then simply call the Hugo post creation command with the name of the file to be created (which we assume was passed when the command was invoked) and Hugo does the rest.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/hugo-project-directory
@@ -175,7 +179,7 @@ hugo new $new_post_name
 </code></pre></div><p>That&rsquo;s all it takes to automate away the first hurdle.  Now we can create new Hugo posts from any directory.</p>
 <h3 id="passing-the-article-name-as-a-string">Passing the article name as a string</h3>
 <p>Now we&rsquo;ll address the second issue.  We&rsquo;d like the user to be able to type the desired filename with spaces instead of dashes and then use the script to automatically substitute the dashes for spaces.  This can be accomplished with two changes.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/hugo-project-directory
@@ -198,7 +202,7 @@ hugo new $new_post_name
 <p>This has the effect of replacing all the spaces of the string stored in the <code>input_parameters</code> variable with dashes.  Then the extension &ldquo;.md&rdquo; is appended to the end of the string.  Finally, the result is stored in the variable <code>new_post_name</code>.</p>
 <h3 id="adding-a-subdirectory">Adding a subdirectory</h3>
 <p>In this particular application we&rsquo;ll also assume we want to place our posts in a specific subdirectory automatically.  We&rsquo;ll do this with three changes.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/hugo-project-directory
@@ -218,7 +222,7 @@ cd $directoryofhugoproject
 <p><code>hugo new $new_post_path_and_name</code> - Run the <code>hugo new</code> command with the new <strong>new_post_path_and_name</strong> variable as the parameter.</p>
 <h3 id="adding-output">Adding output</h3>
 <p>We&rsquo;ll add some output to help the user understand the functioning of the script.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/hugo-project-directory
@@ -246,7 +250,7 @@ hugo new $new_post_path_and_name
 <h2 id="the-completed-script">The completed script</h2>
 <p>Now we can create a new Hugo post by simply running the below script followed by the article name.  The script will then add the dashes and .md extension and place the new file in the appropriate directory.</p>
 <p><strong>hugo-new.sh</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/hugo-project-directory
@@ -375,8 +379,11 @@ hugo new $new_post_path_and_name
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

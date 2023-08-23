@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 May 24</p>
+
+
+
+    <p>Published: 2022 May 24</p>
+
 
 
 
@@ -161,7 +165,7 @@
 <h3 id="creating-a-new-file-deletion-script">Creating a new file deletion script</h3>
 <p>The only change in the current workflow for our main site content is that we want to delete the new contact files before we push changes to our main repository.  Since we already have a Bash script that deletes files from a specified directory (<em>sitebuild_02_deletefiles.sh</em>), we&rsquo;ll start with that and make any necessary alterations.  And since we want to keep those files for the other subdomain, we&rsquo;ll add this new deletion step to the end of our current process and only delete files from the main site publication directory.</p>
 <p>We&rsquo;ll copy the <em>sitebuild_02_deletefiles.sh</em> script, rename it to <strong>sitebuild_04_deletedirectory.sh</strong>, and update it to the following.  (All altered lines are highlighted.)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofwebsiteforpublishing<span style="color:#f92672">=</span>$1
@@ -233,7 +237,7 @@ warningwithprompt
 <h3 id="updating-the-calling-script-for-the-main-content-workflow">Updating the calling script for the main content workflow</h3>
 <p>Next, we only needed to make a few small changes to our main workflow calling script.</p>
 <p>We renamed the <em>sitebuild_00_publishsite.sh</em> script to <strong>publish-main-site.sh</strong> and updated it to the following.  (All altered lines are highlighted.)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory
@@ -329,7 +333,7 @@ sb_rebuildsite<span style="color:#f92672">()</span> <span style="color:#f92672">
 <p>Our current script for copying files is a close match for what we want to accomplish here.  So, we&rsquo;ll copy the <em>sitebuild_03_copyfiles.sh</em> script and rename it to <strong>sitebuild_05_copydirectory.sh</strong>.</p>
 <p>However, for our contact subdomain files we only want to copy a single subdirectory, instead of every subdirectory and file except one.  To accomplish that we added a variable to specify the desired subdirectory and altered the call to the <strong>cp</strong> function to reference that subdirectory.</p>
 <p>The updated code is below.  (All altered lines are highlighted.)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoprojectfiles<span style="color:#f92672">=</span>$1
@@ -359,7 +363,7 @@ copyfilesanddirectories
 </code></pre></div><h3 id="creating-a-calling-script-for-the-contact-content-workflow">Creating a calling script for the contact content workflow</h3>
 <p>Next, we created a new contact workflow calling script.</p>
 <p>We copied the <em>publish-main-site.sh</em> script, renamed it to <strong>publish-contact-site.sh</strong>, and updated it for this workflow.  All the altered lines are highlighted.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory
@@ -439,7 +443,7 @@ script_info
 <h3 id="creating-a-calling-script-for-the-overall-workflow">Creating a calling script for the overall workflow</h3>
 <p>We also created a new overall workflow calling script.</p>
 <p>We copied the <em>publish-main-site.sh</em> script, renamed it to <strong>publishsite.sh</strong>, and updated it to include the revelant elements of both the main and contact workflows.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory
@@ -664,8 +668,11 @@ sb_rebuildsite <span style="color:#f92672">&amp;&amp;</span> sb_deleteoldfiles_m
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

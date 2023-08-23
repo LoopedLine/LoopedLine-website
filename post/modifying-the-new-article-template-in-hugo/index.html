@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 March 14</p>
+
+
+
+    <p>Published: 2022 March 14</p>
+
 
 
 
@@ -150,12 +154,12 @@
 <p>Because Hugo offers so much flexibility and produces pages in such a layered way, it can be difficult to find the right place to make the necessary alterations.</p>
 <p>This project recently required such a search to figure out how to include two pieces of code that were routinely added to the source files for posts.</p>
 <p>The first inclusion was a comment field at the top of the document to help track the date of post creation:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">&lt;!--
-    POST CREATION
-        date: 2022-03-14T09:00
---&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">&lt;!--
+</span><span style="color:#75715e">    POST CREATION
+</span><span style="color:#75715e">        date: 2022-03-14T09:00
+</span><span style="color:#75715e">--&gt;</span>
 </code></pre></div><p>The second was also a comment field, but at the bottom of the document to help organize links from the page:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">&lt;!-- LINKS --&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">&lt;!-- LINKS --&gt;</span>
 </code></pre></div><p>Neither are big additions, but it&rsquo;s obviously better to add them automatically instead of re-typing them manually each time.</p>
 <h2 id="what-change-to-make-and-where-to-make-it">What change to make and where to make it</h2>
 <p>Figuring out how and where to add those snippets took some research and experimentation.</p>
@@ -170,7 +174,7 @@
 <p>and then modifying this new <strong>post.md</strong> file.</p>
 <p>After identifying the right place to make the change, the change itself was pretty simple.</p>
 <p><strong>hugo-project-directory/archetypes/post.md</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">---</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">---</span>
 <span style="color:#a6e22e">title</span>: <span style="color:#e6db74">&#34;{{ replace .TranslationBaseName &#34;</span><span style="color:#f92672">-</span><span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
 <span style="color:#a6e22e">date</span>: {{ .<span style="color:#a6e22e">Date</span> }}
 <span style="color:#a6e22e">description</span>: <span style="color:#e6db74">&#34;&#34;</span>
@@ -298,8 +302,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

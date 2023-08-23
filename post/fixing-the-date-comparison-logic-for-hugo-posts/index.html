@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 July 11</p>
+
+
+
+    <p>Published: 2022 July 11</p>
+
 
 
 
@@ -149,7 +153,7 @@
 <h2 id="problem-in-the-original-solution">Problem in the original solution</h2>
 <p>For post pages, the relevant logic is found in the partial layout file <strong>post-date.html</strong> in the <em>/layouts/partials/</em> directory.</p>
 <p>The original code is below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">date</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Date</span>.<span style="color:#a6e22e">Format</span> (.<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">dateFormat</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;2006 January 02&#34;</span>) }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">date</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Date</span>.<span style="color:#a6e22e">Format</span> (.<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">dateFormat</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;2006 January 02&#34;</span>) }}
 {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">lastmod</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Lastmod</span>.<span style="color:#a6e22e">Format</span> (.<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">dateFormat</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;2006 January 02&#34;</span>) }}
 
 &lt;<span style="color:#a6e22e">h5</span>&gt;<span style="color:#a6e22e">Published</span>: {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">date</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">h5</span>&gt;
@@ -168,7 +172,7 @@
 <h2 id="building-the-solution">Building the solution</h2>
 <h3 id="fixing-the-last-modified-date-in-hugo-post-pages">Fixing the last modified date in Hugo post pages</h3>
 <p>The updated code for <strong>post-date.html</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#f92672">--</span> <span style="color:#a6e22e">Variables</span> <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">Dates</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">be</span> <span style="color:#a6e22e">DISPLAYED</span> <span style="color:#f92672">--</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#f92672">--</span> <span style="color:#a6e22e">Variables</span> <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">Dates</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">be</span> <span style="color:#a6e22e">DISPLAYED</span> <span style="color:#f92672">--</span>&gt;
 {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">date</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Date</span>.<span style="color:#a6e22e">Format</span> (.<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">dateFormat</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;2006 January 02&#34;</span>) }}
 {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">lastmod</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Lastmod</span>.<span style="color:#a6e22e">Format</span> (.<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">dateFormat</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;2006 January 02&#34;</span>) }}
 
@@ -186,7 +190,7 @@
 <h3 id="fixing-the-last-modified-date-in-hugo-list-pages">Fixing the last modified date in Hugo list pages</h3>
 <p>The same solution applies to the date logic in Hugo list pages.</p>
 <p>The updated code for <strong>list-item.html</strong> partial file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#f92672">--</span> <span style="color:#a6e22e">Variables</span> <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">Dates</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">be</span> <span style="color:#a6e22e">DISPLAYED</span> <span style="color:#f92672">--</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;!<span style="color:#f92672">--</span> <span style="color:#a6e22e">Variables</span> <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">Dates</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">be</span> <span style="color:#a6e22e">DISPLAYED</span> <span style="color:#f92672">--</span>&gt;
 {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">date</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Date</span>.<span style="color:#a6e22e">Format</span> (.<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">dateFormat</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;2006 January 02&#34;</span>) }}
 {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">lastmod</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Lastmod</span>.<span style="color:#a6e22e">Format</span> (.<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">dateFormat</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;2006 January 02&#34;</span>) }}
 
@@ -310,8 +314,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

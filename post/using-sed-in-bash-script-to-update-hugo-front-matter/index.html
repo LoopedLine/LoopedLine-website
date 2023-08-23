@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 February 11</p>
+
+
+
+    <p>Published: 2022 February 11</p>
+
 
 
 
@@ -160,7 +164,7 @@
 <h2 id="updating-the-draft-status-field">Updating the draft status field</h2>
 <p>Let&rsquo;s say we have a <code>new-hugo-post.md</code> ready to publish that we want to undraft.</p>
 <p>In a Bash console we can enter the following command to first update the draft status:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;1,10 s/^draft: .*/draft: false/&#39;</span> new-hugo-post.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;1,10 s/^draft: .*/draft: false/&#39;</span> new-hugo-post.md
 </code></pre></div><p>Let&rsquo;s break down the elements of that command.</p>
 <p><code>sed</code> runs the sed program.</p>
 <p><code>-i</code> invoke the &ldquo;in-place&rdquo; option to modify the existing file in-place.</p>
@@ -175,13 +179,13 @@
 <h2 id="updating-the-date-field">Updating the date field</h2>
 <p>Now let&rsquo;s update the date field.</p>
 <p>We can get the current date and time using the <code>date</code> command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">date
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">date
 </code></pre></div><p>But Hugo expects the date to be formatted in a particular way.  We can achieve that with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">date <span style="color:#e6db74">&#39;+date: %Y-%m-%dT%T%:z&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">date <span style="color:#e6db74">&#39;+date: %Y-%m-%dT%T%:z&#39;</span>
 </code></pre></div><p>And we can assign that result as a variable that sed can reference with this command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">newdate<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date <span style="color:#e6db74">&#39;+date: %Y-%m-%dT%T%:z&#39;</span><span style="color:#66d9ef">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">newdate<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date <span style="color:#e6db74">&#39;+date: %Y-%m-%dT%T%:z&#39;</span><span style="color:#66d9ef">)</span>
 </code></pre></div><p>Now, we can use the following command to update the article to the current date and time:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#34;1,10 s/^date: .*/</span>$newdate<span style="color:#e6db74">/&#34;</span> new-hugo-post.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#34;1,10 s/^date: .*/</span>$newdate<span style="color:#e6db74">/&#34;</span> new-hugo-post.md
 </code></pre></div><p>Most of the elements of this command are the same as those for updating the draft status field, but there are a few differences to consider.</p>
 <p><code>&quot;...&quot;</code> - that is, the <strong>double quotes</strong> and the text within them - contain the instructions for what text sed is supposed to alter.  Note that this is different than the single quotes used for the draft status change.  The double quotes tells sed to expand any variables (such as $newdate) instead of interpreting them as a literal string.</p>
 <p><code>s/.../.../</code> as before, this tells sed to find text between the first and second forward slash and replace it with the text between the second and third forward slash.</p>
@@ -190,7 +194,7 @@
 <p>In summary, this command searches the first ten lines of the file new-hugo-post.md looking for lines of text that begin with &ldquo;date: &quot; followed by any other characters, matching to the end of the line, and replaces those lines with the value stored in the $newdate variable, which we assigned as the current date and time formatted to the output Hugo expects.</p>
 <h2 id="putting-it-all-together">Putting it all together</h2>
 <p>Instead of running the above commands individually, we can assemble them into a reusable script by pasting the following into a file called <code>hugo-undraft.sh</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 sed -i <span style="color:#e6db74">&#39;1,10 s/^draft: .*/draft: false/&#39;</span> $1
 
@@ -208,7 +212,7 @@ echo <span style="color:#e6db74">&#34;</span>$0<span style="color:#e6db74"> run 
 <h2 id="running-the-script">Running the script</h2>
 <p>Once those steps are completed you can execute this script anywhere and undraft your Hugo articles automatically.</p>
 <p>If, for example, you want to undraft the &ldquo;new-hugo-post.md&rdquo; article, navigate to the directory containing that article and use the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo-undraft.sh new-hugo-post.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo-undraft.sh new-hugo-post.md
 </code></pre></div><!-- raw HTML omitted -->
 </div>
 
@@ -314,8 +318,11 @@ echo <span style="color:#e6db74">&#34;</span>$0<span style="color:#e6db74"> run 
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

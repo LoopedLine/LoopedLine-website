@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 March 03</p>
+
+
+
+    <p>Published: 2022 March 03</p>
+
 
 
 
@@ -171,7 +175,7 @@
 <p>As already mentioned, Hugo offers one command to quickly and simply rebuild a site.</p>
 <p><a href="https://loopedline.com/post/hugo-basic-command-quick-reference/#build-a-website-from-your-project-files">The site building command</a> as well of <a href="https://loopedline.com/post/building-your-first-hugo-website/">the basics of building your first Hugo website</a> have been discussed in previous posts, so we we&rsquo;ll assume that knowledge.</p>
 <p>What we&rsquo;ll develop here is a script to automatically build a specific website in a specific directory.  This will allow us to run a script from any working directory and build that site in another directory.  This in turn allows us to include the site building in a larger workflow without having to navigate between different working directories.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory
@@ -203,7 +207,7 @@ echo
 <p><a href="https://unix.stackexchange.com/questions/153862/remove-all-files-directories-except-for-one-file/538623#538623">This answer from StackExchange</a> provides an excellent place to start.</p>
 <p><strong>WARNING</strong>: This script will delete (almost) all files in a directory, so use it only in a directory that contains files you want to delete.  Now is a good time to reconfirm that you are in the <em>test-directory</em> you created.  You may also wish to create a backup copy of those files to make it easier to repeat testing.</p>
 <p>Navigate to the website publishing directory and run the following script.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 filetonotdelete<span style="color:#f92672">=</span>other.html
@@ -220,7 +224,7 @@ ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimite
 <h2 id="deletion-step-2-deleting-all-files-and-subdirectories-except-one">Deletion Step 2: Deleting all files and subdirectories except one</h2>
 <p>The above script is a good start, but it doesn&rsquo;t yet delete subdirectories or their contents.  We need to make one small modification to accomplish that.</p>
 <p><strong>WARNING</strong>: This script will delete (almost) all files in a directory as well as subdirectories and all their contents, so use it only in a directory that contains files and subdirectories you want to delete.  You need to be especially cautious when using the <em>rm</em> command with the <em>&ndash;recursive</em> option.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 filetonotdelete<span style="color:#f92672">=</span>other.html
@@ -232,7 +236,7 @@ ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimite
 <p>In summary, the script deletes all files (except one specified file), all subdirectories, and the contents of all subdirectory of the working directory.</p>
 <h2 id="deletion-step-3-deleting-the-contents-of-a-specific-directory">Deletion Step 3: Deleting the contents of a specific directory</h2>
 <p>Now we will modify this script to work for a specified directory so that it can be called from anywhere.  This not only simplifies it&rsquo;s use, but also offers some protection from accidentally calling it in the wrong directory and deleting the wrong files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
@@ -248,7 +252,7 @@ ls --hide<span style="color:#f92672">=</span>$filetonotdelete | xargs --delimite
 <p>In summary, the script deletes all files (except one specified file), all subdirectories, and the contents of all subdirectories within a specified directory.</p>
 <h2 id="deletion-step-4-wrapping-program-logic-in-a-function">Deletion Step 4: Wrapping program logic in a function</h2>
 <p>Now we will wrap the main program flow in a function to make it easier to incorporate into the larger workflow.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
@@ -269,7 +273,7 @@ deletefilesanddirectories
 <p>In summary, this script accomplishes the same things as the previous script, but wraps the logic in a function, which will make it easier to refer to that logic by calling the function as we add additional elements to the script in the following steps.</p>
 <h2 id="deletion-step-5-informing-the-user">Deletion Step 5: Informing the user</h2>
 <p>Now that we have the deletion functionality working, we want to ensure that the user knows what files will be deleted.  So, we&rsquo;ll incorporate some output to notify the user.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
@@ -311,7 +315,7 @@ Similar to the logic in the earlier command that deletes files, this displays th
 <p>In summary, this script outputs a warning to the user about the files and folders that will be deleted.</p>
 <h2 id="deletion-step-6-prompting-the-user-for-permission-to-continue">Deletion Step 6: Prompting the user for permission to continue</h2>
 <p>Now that we can output a warning to the user, we&rsquo;ll want to prompt the user to ask if they wish to continue.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
@@ -371,12 +375,12 @@ warningwithprompt
 <p><code>read -n1 -p &quot;Do you wish to proceed? [y/n] &quot; response</code> - Read user input from the command line and store it in the <em>response</em> variable.  The <code>-p</code> option prints the literal string that follows it, &ldquo;Do you wish to proceed? [y/n] &ldquo;.  The <code>-n1</code> option tells the <em>read</em> command to only accept 1 character before returning the result.</p>
 <p><code>response=${response,,}</code> - This is a <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion">Bash parameter expansion that modifies the case of the alphabetic characters</a> in the parameter <em>response</em>.  Since this uses the <code>,,</code> expansion, all matching alphabetic character in <em>response</em> will be converted to lowercase.  And since this omits the <em>pattern</em> variable, every charcter will match.  Therefore, all alphabetic character in <em>response</em> will be converted to lowercase.</p>
 <p><code>case $response in . . . esac</code> - This is the <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#index-case">case syntax</a> for Bash and tests the <em>response</em> variable against the following cases sequentially.</p>
-<p><code>y|ye|yes) . . . ;;</code> - This is the first option in the case command that the <em>response</em> variable is compared against.  It is checking if <em>response</em> is equal to &ldquo;y&rdquo; or &ldquo;ye&rdquo; or &ldquo;yes&rdquo;.  If it matches any of those three it executes the commands contained within the <code>)</code> and the <code>;;</code>.  Since the clause is terminated with a <code>;;</code>, if there is a match, no further matches will be searched for.  (NOTE: The &ldquo;ye&rsquo; and &ldquo;yes&rdquo; options will not be used in the current script because the <em>-n1</em> option in the <em>read</em> command means only one character will be read.  These are kept in for flexibility if the <em>-n1</em> option is removed in a later script.)</p>
+<p><code>y|ye|yes) . . . ;;</code> - This is the first option in the case command that the <em>response</em> variable is compared against.  It is checking if <em>response</em> is equal to &ldquo;y&rdquo; or &ldquo;ye&rdquo; or &ldquo;yes&rdquo;.  If it matches any of those three it executes the commands contained within the <code>)</code> and the <code>;;</code>.  Since the clause is terminated with a <code>;;</code>, if there is a match, no further matches will be searched for.  (NOTE: The &ldquo;ye' and &ldquo;yes&rdquo; options will not be used in the current script because the <em>-n1</em> option in the <em>read</em> command means only one character will be read.  These are kept in for flexibility if the <em>-n1</em> option is removed in a later script.)</p>
 <p><code>*) . . . ;;</code> - This is the second option in the case command that the <em>response</em> variable is compared against.  Because of the wildcard <code>*</code> this will always evaluate as true.</p>
 <p>In summary, this script outputs a warning to the user about the files and folders that will be deleted, prompts the user for a response, awaits the response, and then outputs one of two messages to the user depending on the response.</p>
 <h2 id="deletion-step-7-prompting-the-user-for-permission-to-continue">Deletion Step 7: Prompting the user for permission to continue</h2>
 <p>Now all we need to do to complete this script is to uncomment the call to the <em>deletefilesanddirectories</em> function.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofwebsiteforpublishing<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/publishing-directory
@@ -434,7 +438,7 @@ warningwithprompt
 <p>By updating the variables <em>directoryofwebsiteforpublishing</em> and <em>filetonotdelete</em> to the relevant values for our production files, we have a script that will delete all the files of the specified directory except the one file we want to preserve.</p>
 <h1 id="copying-all-files-from-the-hugo-website-directory-to-the-publishing-directory">Copying all files from the Hugo website directory to the publishing directory</h1>
 <p>Since we can delete all files (except one protected file) in our website publishing directory, we now want to repopulate the folder with updated files from the Hugo website directory.  We&rsquo;ll look at a script to automatically copy those files from one folder to the other.  The basic logic of this script is from <a href="https://stackoverflow.com/questions/3643848/copy-files-from-one-directory-into-an-existing-directory/4645159#4645159">this StackOverflow answer</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoprojectfiles<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory/public
@@ -472,7 +476,7 @@ copyfilesanddirectories
 <p>Also, to enhance flexibility and to reduce the risk of unexpected behavior if the scripts are modified in the future, we&rsquo;ll alter each script to remove the hardcoded directory and file references and instead assign those values by passing parameters.  We&rsquo;ll then hardcode those values in the calling script so we don&rsquo;t have to re-enter them every time the main script is run.</p>
 <hr>
 <p><strong>sitebuild_01_rebuildsite.sh</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>$1
@@ -491,7 +495,7 @@ hugo
 echo
 </code></pre></div><hr>
 <p><strong>sitebuild_02_deletefiles.sh</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofwebsiteforpublishing<span style="color:#f92672">=</span>$1
@@ -556,7 +560,7 @@ warningwithprompt
 <span style="color:#66d9ef">esac</span>
 </code></pre></div><hr>
 <p><strong>sitebuild_03_copyfiles.sh</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoprojectfiles<span style="color:#f92672">=</span>$1
@@ -585,7 +589,7 @@ echo
 copyfilesanddirectories
 </code></pre></div><hr>
 <p><strong>sitebuild_00_publishsite.sh</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
 directoryofhugoproject<span style="color:#f92672">=</span>/home/user/TEMP/test-directory/hugo-project-directory
@@ -755,8 +759,11 @@ sb_rebuildsite <span style="color:#f92672">&amp;&amp;</span> sb_deletfiles <span
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

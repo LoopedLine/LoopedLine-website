@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2021 December 08</p>
+
+
+
+    <p>Published: 2021 December 08</p>
+
 
 
 
@@ -150,22 +154,22 @@
 <p>For now, most Debian-based Linux distributions use <code>rename.ul</code> to refer to the util-linux command.</p>
 <p>As the man page entry says, rename.ul <em>&ldquo;will rename the specified files by replacing the first occurrence of expression in their name by replacement.&quot;</em></p>
 <p>It has the form</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;expression&gt; &lt;replacement&gt; &lt;file&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;expression&gt; &lt;replacement&gt; &lt;file&gt;
 </code></pre></div><p>For example,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul -v <span style="color:#e6db74">&#39;_draft&#39;</span> <span style="color:#e6db74">&#39;_final&#39;</span> *.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul -v <span style="color:#e6db74">&#39;_draft&#39;</span> <span style="color:#e6db74">&#39;_final&#39;</span> *.txt
 </code></pre></div><p>The above would replace the first occurrence of the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt and display a list of which files were renamed.</p>
 <p>That can be risky if you&rsquo;re not sure about what you&rsquo;re doing.  It&rsquo;s a good idea to also add the <code>-n</code> option to first see what changes would be made.  Then, if you like the results, rerun the command without the -n argument.  To see what changes would take place before actually making them just amend the command to the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul -nv <span style="color:#e6db74">&#39;_draft&#39;</span> <span style="color:#e6db74">&#39;_final&#39;</span> *.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename.ul -nv <span style="color:#e6db74">&#39;_draft&#39;</span> <span style="color:#e6db74">&#39;_final&#39;</span> *.txt
 </code></pre></div><h2 id="rename">rename</h2>
 <p>For now, most Debian-based Linux distributions use <code>rename</code> to refer to the Perl command.</p>
 <p>As the tldr entry says, rename <em>&ldquo;renames files using a Perl Common Regular Expression&rdquo;</em></p>
 <p>It has the form</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;expression&gt; &lt;file&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;expression&gt; &lt;file&gt;
 </code></pre></div><p>For example,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -nv <span style="color:#e6db74">&#39;s/_draft/_final/&#39;</span> *.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -nv <span style="color:#e6db74">&#39;s/_draft/_final/&#39;</span> *.txt
 </code></pre></div><p>Because of the <code>-n</code> argument, the above shows what files (if any) would be renamed and how they would be renamed by replacing the string &lsquo;_draft&rsquo; with &lsquo;_final&rsquo; for all files in the directory with the extension .txt.</p>
 <p>Removing the <code>-n</code> argument actually makes the changes and displays a list of which files were renamed.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -v <span style="color:#e6db74">&#39;s/_draft/_final/&#39;</span> *.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rename -v <span style="color:#e6db74">&#39;s/_draft/_final/&#39;</span> *.txt
 </code></pre></div><p>Because rename accepts regular expressions, it can be very powerful, allowing for complicated file rename tasks.</p>
 <!-- raw HTML omitted -->
 </div>
@@ -272,8 +276,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 May 01</p>
+
+
+
+    <p>Published: 2022 May 01</p>
+
 
 
     <p>Last edited: 2022 July 11</p>
@@ -161,7 +165,7 @@
 </ol>
 <h3 id="restructure-the-list-layout-for-readability">Restructure the list layout for readability</h3>
 <p>To make the <strong>list-item.html</strong> partial layout file easier to understand, we&rsquo;ll first restructure it by grouping the logic for the Title and Date sections:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
 
 
     <span style="color:#75715e">&lt;!-- TITLE SECTION --&gt;</span>
@@ -193,7 +197,7 @@
 </code></pre></div><h3 id="add-updated-date-logic">Add updated date logic</h3>
 <p>Next, we&rsquo;ll add the new date logic.</p>
 <p>This logic was developed in the previous example for the <strong>post-date.html</strong> partial layout file and requires only minor adaptation for use here.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
 
 
     <span style="color:#75715e">&lt;!-- TITLE SECTION --&gt;</span>
@@ -235,7 +239,7 @@
 &lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><h3 id="comment-out-original-date-logic">Comment out original date logic</h3>
 <p>Finally, with the new date logic working we can simply comment out the original date logic.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item&#34;</span>&gt;
 
 
     <span style="color:#75715e">&lt;!-- TITLE SECTION --&gt;</span>
@@ -279,9 +283,9 @@
 <p>List pages now reflect both the publication date of a post and the last modification date, where applicable.</p>
 <p>Unfortunately, something in the tech stack is reducing the desired spacing between the two dates.</p>
 <p>The desired spacing:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Published: 2022 March 31     |     Last edited: 2022 April 30
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Published: 2022 March 31     |     Last edited: 2022 April 30
 </code></pre></div><p>The rendered spacing:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Published: 2022 March 31 | Last edited: 2022 April 30
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Published: 2022 March 31 | Last edited: 2022 April 30
 </code></pre></div><p>It&rsquo;s not presently clear what is trimming the additional space.  Nevertheless, list pages now reflect the desired information.</p>
 <!-- raw HTML omitted -->
 </div>
@@ -388,8 +392,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         

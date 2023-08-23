@@ -6,11 +6,7 @@
     <description>Recent content in recommended resources on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Dec 2021 17:12:50 -0500</lastBuildDate>
-    
-	<atom:link href="https://loopedline.com/tags/recommended-resources/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 05 Dec 2021 17:12:50 -0500</lastBuildDate><atom:link href="https://loopedline.com/tags/recommended-resources/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash - Getting Started Working with the Shell</title>
       <link>https://loopedline.com/post/bash-getting-started-working-with-the-shell/</link>

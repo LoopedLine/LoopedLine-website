@@ -52,7 +52,7 @@
 
         
         <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
     
 
@@ -119,7 +119,11 @@
 
 
 
-<p>Published: 2022 February 07</p>
+
+
+
+    <p>Published: 2022 February 07</p>
+
 
 
 
@@ -140,43 +144,43 @@
 <p>There are many <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Variables">shell variables</a> used in [Bash]((https://loopedline.com/post/bash-getting-started-working-with-the-shell/).  One of them is the Bash variable <code>$RANDOM</code>.</p>
 <p>$RANDOM returns <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#index-RANDOM">a pseudo-random number between 0 and 32767</a>.</p>
 <p>Try it by typing the following command into a Bash command line interpreter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo $RANDOM
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo $RANDOM
 </code></pre></div><p>Run the command multiple times to see different results.</p>
 <h2 id="changing-the-possible-return-range">Changing the possible return range</h2>
 <p>We can reduce the range of the output by using the <a href="https://linuxhint.com/modulus-bash/">modulo operator</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>This will return numbers in the range 0-1.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>This will return numbers in the range 0-2.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>This will return numbers in the range 0-9.</p>
 <h2 id="changing-the-possible-return-minimum-value">Changing the possible return minimum value</h2>
 <p>We can increase the minimum value of the possible return range by adding a number to the remainder.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>This will return numbers in the range 1-3.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>This will return numbers in the range 2-4.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>This will return numbers in the range 10-12.</p>
 <h2 id="selecting-the-possible-return-range">Selecting the possible return range</h2>
 <p>Using the above examples, you can see that the range can be thought of as a simple formula: <code>$RANDOM % Y + X</code>, where <code>X</code> is the minimum value of the range, and <code>Y</code> is the number of values in the range.</p>
 <p>So, if you want a range going from 100 to 110, the minimum is 100 (X=100) and includes 11 numbers (Y=11):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>Or, a range of 200 to 250, starts at 200 (X=200) and includes 51 numbers (Y=51):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">51</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">200</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">51</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">200</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>Or, a range of 5000 to 6000, begins with 5000 (X=5000) and includes 1001 numbers (Y=1001):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">1001</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5000</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">%</span> <span style="color:#ae81ff">1001</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5000</span><span style="color:#66d9ef">))</span>
 </code></pre></div><h2 id="a-note-about-bias-in-this-approach">A note about bias in this approach</h2>
-<p>As <a href="https://askubuntu.com/questions/492572/how-do-i-get-randomness-in-command-line/492578#492578">this StackOverflow answer</a> points out, the results of the above techniques will &ldquo;be very slightly biased for any divisor that doesn&rsquo;t divide equally into 32768 (eg, anything that isn&rsquo;t a power of two)&quot;.</p>
+<p>As <a href="https://askubuntu.com/questions/492572/how-do-i-get-randomness-in-command-line/492578#492578">this StackOverflow answer</a> points out, the results of the above techniques will &ldquo;be very slightly biased for any divisor that doesn&rsquo;t divide equally into 32768 (eg, anything that isn&rsquo;t a power of two)&rdquo;.</p>
 <p>If this matters for your use case you can address this using a slightly different approach.</p>
 <p>As <a href="https://askubuntu.com/questions/1288998/random-variable-in-bash/1289009#1289009">another StackOverflow answer</a> states, &ldquo;To convert this number to an integer in the range 0..2, you can multiply it by 3 and (integer) divide by 32768 (=32767+1).&rdquo;</p>
 <p>So, one approach is to use the formula: <code>$RANDOM * Y / 32768 + X</code>, where <code>X</code> is the minimum value of the range, and <code>Y</code> is the number of values in the range.</p>
 <p>If you want a range going from 100 to 110, the minimum is 100 (X=100) and includes 11 numbers (Y=11):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">*</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">32768</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">*</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">32768</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>Or, a range of 200 to 250, starts at 200 (X=200) and includes 51 numbers (Y=51):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">*</span> <span style="color:#ae81ff">51</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">32768</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">200</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">*</span> <span style="color:#ae81ff">51</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">32768</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">200</span><span style="color:#66d9ef">))</span>
 </code></pre></div><p>Or, a range of 5000 to 6000, begins with 5000 (X=5000) and includes 1001 numbers (Y=1001):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">*</span> <span style="color:#ae81ff">1001</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">32768</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5000</span><span style="color:#66d9ef">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#66d9ef">$((</span>RANDOM <span style="color:#f92672">*</span> <span style="color:#ae81ff">1001</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">32768</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5000</span><span style="color:#66d9ef">))</span>
 </code></pre></div><!-- raw HTML omitted -->
 </div>
 
@@ -282,8 +286,11 @@
 
 </main>
 
+
+
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
         </footer>
 
         
