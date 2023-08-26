@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Backing Up the .bashrc File with a Bash Script</title>
+        <title>Backing Up Git Config Values With a Bash Script</title>
         
                 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -70,7 +70,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Backing Up the .bashrc File with a Bash Script</a>
+                    <a class="navbar-brand visible-xs" href="#">Backing Up Git Config Values With a Bash Script</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -109,7 +109,7 @@
 
     
     <div>
-        <h2>Backing Up the .bashrc File with a Bash Script</h2>
+        <h2>Backing Up Git Config Values With a Bash Script</h2>
         
 
 
@@ -122,11 +122,9 @@
 
 
 
-    <p>Published: 2022 November 04</p>
+    <p>Published: 2023 August 25</p>
 
 
-
-    <p>Last edited: 2022 November 07</p>
 
 
         
@@ -138,6 +136,8 @@
 
 <a href="https://loopedline.com/tags/shell-script"><kbd class="item-tag">shell script</kbd></a>
 
+<a href="https://loopedline.com/tags/git"><kbd class="item-tag">git</kbd></a>
+
 <a href="https://loopedline.com/tags/software-development"><kbd class="item-tag">software development</kbd></a>
 
 
@@ -146,27 +146,26 @@
     
     <div align="start" class="content"><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="introduction">Introduction</h2>
 <p>This post is part of a series about automating data backups in Linux.</p>
-<p>In this post we&rsquo;ll construct a <a href="https://loopedline.com/post/automating-bash-shell-commands/">Bash script</a> to automate the backup of the <a href="https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux">.bashrc</a> file.</p>
+<p>In the <a href="https://loopedline.com/post/backing-up-vs-code-settings-and-extensions-with-a-bash-script/">previous post</a> we automated the process to backup <a href="https://loopedline.com/post/vscode-learning-path/">Visual Studio Code (VS Code)</a> settings and a list of installed extensions.</p>
+<p>In this post we&rsquo;ll construct a <a href="https://loopedline.com/post/automating-bash-shell-commands/">Bash script</a> to automate the backup of global <a href="https://loopedline.com/post/git-and-github-topic/">git</a> <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">config values</a>.</p>
 <h2 id="the-script">The Script</h2>
 <p>We&rsquo;ve developed Bash scripts for automating tasks in <a href="/tags/shell-script/">previous posts</a> so we&rsquo;ll leverage that work and modify it for our current purposes.</p>
+<p>Specifically, we started with the script developed for <a href="https://loopedline.com/post/backing-up-the-bashrc-file-with-a-bash-script/">backing up the .bashrc file</a> since it&rsquo;s requirements are so similar.  We then modified it for this task.</p>
 <h3 id="script-code">Script code</h3>
-<p><strong>backup_bashrc.sh</strong></p>
+<p><strong>backup_git_config.sh</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># VARIABLES</span>
-<span style="display:block;width:100%;background-color:#3c3d38">bashrc_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/&#34;</span>
-</span><span style="display:block;width:100%;background-color:#3c3d38">bashrc_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.bashrc&#34;</span>
-</span><span style="display:block;width:100%;background-color:#3c3d38">backup_top_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/backups/&#34;</span>
-</span><span style="display:block;width:100%;background-color:#3c3d38">backup_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;backup_of_bashrc_</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</span>
+inquiry_top_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/&#34;</span>
+<span style="display:block;width:100%;background-color:#3c3d38">git_config_command<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;git config --global --list&#34;</span>
+</span>backup_top_directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/</span>$USER<span style="color:#e6db74">/backups/&#34;</span>
+backup_filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;backup_of_global_git_configs_</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span><span style="color:#e6db74">.txt&#34;</span>
+
 <span style="color:#75715e"># VARIABLES, constructed</span>
-<span style="display:block;width:100%;background-color:#3c3d38">bashrc_location<span style="color:#f92672">=</span>$bashrc_directory$bashrc_filename
-</span><span style="display:block;width:100%;background-color:#3c3d38">backup_output_directory<span style="color:#f92672">=</span>$backup_top_directory$backup_filename
-</span>
+backup_output_directory<span style="color:#f92672">=</span>$backup_top_directory$backup_filename
+
 <span style="color:#75715e"># FUNCTION</span>
 <span style="color:#75715e"># Provides contextual output</span>
 script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
@@ -180,9 +179,10 @@ script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</
 	echo
 	echo <span style="color:#e6db74">&#34;Executing </span>$BASH_SOURCE<span style="color:#e6db74">&#34;</span>
 	echo
-	echo <span style="color:#e6db74">&#34;.bashrc backup script&#34;</span>
+	echo <span style="color:#e6db74">&#34;git config backup script&#34;</span>
 	echo
-	echo <span style="color:#e6db74">&#34;This script will copy </span>$bashrc_location<span style="color:#e6db74"> and output the file to </span>$backup_output_directory<span style="color:#e6db74">&#34;</span>
+	echo <span style="color:#e6db74">&#34;This script will backup the user&#39;s global git config values to the file:&#34;</span>
+	echo <span style="color:#e6db74">&#34;</span>$backup_output_directory<span style="color:#e6db74">&#34;</span>
 	echo
 	echo <span style="color:#f92672">=====================</span> script info - END <span style="color:#f92672">=====================</span>
 	echo <span style="color:#f92672">=============================================================</span>
@@ -191,13 +191,23 @@ script_info<span style="color:#f92672">()</span> <span style="color:#f92672">{</
 <span style="color:#f92672">}</span>
 
 <span style="color:#75715e"># FUNCTION</span>
-<span style="color:#75715e"># Creates backup of .bashrc file.</span>
+<span style="color:#75715e"># Creates a backup of the user&#39;s global git config values</span>
 create_backup_files<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	
+	cd $inquiry_top_directory
 	
 	echo
 	echo <span style="color:#e6db74">&#34;Backup started.&#34;</span>
-<span style="display:block;width:100%;background-color:#3c3d38">	cp $bashrc_location $backup_output_directory
-</span>	echo <span style="color:#e6db74">&#34;Backup finished.&#34;</span>
+	echo
+	
+	<span style="color:#75715e">#Display the results</span>
+<span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#e6db74">${</span>git_config_command<span style="color:#e6db74">}</span>
+</span>	
+	<span style="color:#75715e">#Output the results to a file</span>
+<span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#e6db74">${</span>git_config_command<span style="color:#e6db74">}</span> &gt; $backup_output_directory
+</span>	
+	echo
+	echo <span style="color:#e6db74">&#34;Backup finished.&#34;</span>
 	echo
 
 <span style="color:#f92672">}</span>
@@ -206,12 +216,16 @@ create_backup_files<span style="color:#f92672">()</span> <span style="color:#f92
 script_info
 create_backup_files
 </code></pre></div><h3 id="script-description">Script description</h3>
-<p>Despite the script length, the core functionality is very simple.  We are just running a <code>cp</code> (copy) command and passing it the correct source and target variables (shown in the highlighted lines).</p>
-<p>The source and target inputs are constructed in variables to provide a simple way to make future updates.</p>
+<p>As with previous backup scripts, despite the script length, the core functionality is very simple.  We are running a single git command and saving the results to a file. (The relevant sections are highlighted.)</p>
+<hr>
+<p><code>git_config_command=&quot;git config --global --list&quot;</code> - Defines a variable that holds the relevant git command, <em>git config &ndash;global &ndash;list</em>, which instructs git to list all global config settings.</p>
+<p><code>${git_config_command}</code> - The saved command is run and the results are first output to the screen.</p>
+<p><code>${git_config_command} &gt; $backup_output_directory</code> - The saved command is run again and the results are saved to a file.</p>
+<hr>
 <p>Everything else is output to the user for clarity.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>That is all we need to backup the .bashrc via a Bash script.</p>
-<p>The finalized script can be found <a href="https://github.com/LoopedLine/Linux-backup/blob/main/backup_bashrc.sh">here</a>.</p>
+<p>That is all we need to backup global git config values via a Bash script.</p>
+<p>The finalized script can be found <a href="https://github.com/LoopedLine/Linux-backup/blob/main/backup_git_config.sh">here</a>.</p>
 <!-- raw HTML omitted -->
 </div>
 
@@ -220,37 +234,6 @@ create_backup_files
     
         <h4 class="page-header">Related</h4>
          <div class="item">
-
-
-
-    
-    
-    <h4 id="listpage-item"><a href="/post/backing-up-git-config-values-with-a-bash-script/">Backing Up Git Config Values With a Bash Script</a></h4>
-
-
-
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-
-    <p>
-        Published: 2023 August 25
-        
-    </p>
-
-
-
-</div>
-  <div class="item">
 
 
 
@@ -306,6 +289,37 @@ create_backup_files
 
     <p>
         Published: 2022 November 07
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-the-tree-command-in-bash/">Getting Started with the Tree Command in Bash</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2022 November 06
         
     </p>
 

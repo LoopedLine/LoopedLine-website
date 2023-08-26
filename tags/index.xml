@@ -6,20 +6,29 @@
     <description>Recent content in Tags on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2022 13:46:39 -0500</lastBuildDate><atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 23:36:35 -0400</lastBuildDate><atom:link href="https://loopedline.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash</title>
       <link>https://loopedline.com/tags/bash/</link>
-      <pubDate>Wed, 09 Nov 2022 13:46:39 -0500</pubDate>
+      <pubDate>Fri, 25 Aug 2023 23:36:35 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Git</title>
+      <link>https://loopedline.com/tags/git/</link>
+      <pubDate>Fri, 25 Aug 2023 23:36:35 -0400</pubDate>
+      
+      <guid>https://loopedline.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Linux</title>
       <link>https://loopedline.com/tags/linux/</link>
-      <pubDate>Wed, 09 Nov 2022 13:46:39 -0500</pubDate>
+      <pubDate>Fri, 25 Aug 2023 23:36:35 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/linux/</guid>
       <description></description>
@@ -28,7 +37,7 @@
     <item>
       <title>shell script</title>
       <link>https://loopedline.com/tags/shell-script/</link>
-      <pubDate>Wed, 09 Nov 2022 13:46:39 -0500</pubDate>
+      <pubDate>Fri, 25 Aug 2023 23:36:35 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/shell-script/</guid>
       <description></description>
@@ -37,7 +46,7 @@
     <item>
       <title>software development</title>
       <link>https://loopedline.com/tags/software-development/</link>
-      <pubDate>Wed, 09 Nov 2022 13:46:39 -0500</pubDate>
+      <pubDate>Fri, 25 Aug 2023 23:36:35 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/software-development/</guid>
       <description></description>
@@ -46,7 +55,7 @@
     <item>
       <title>system administration</title>
       <link>https://loopedline.com/tags/system-administration/</link>
-      <pubDate>Wed, 09 Nov 2022 13:46:39 -0500</pubDate>
+      <pubDate>Fri, 25 Aug 2023 23:36:35 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/system-administration/</guid>
       <description></description>
@@ -238,15 +247,6 @@
       <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
       
       <guid>https://loopedline.com/tags/font-awesome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://loopedline.com/tags/git/</link>
-      <pubDate>Mon, 18 Jul 2022 11:24:19 -0400</pubDate>
-      
-      <guid>https://loopedline.com/tags/git/</guid>
       <description></description>
     </item>
     

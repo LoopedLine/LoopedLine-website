@@ -6,7 +6,19 @@
     <description>Recent content in Linux on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2022 13:46:39 -0500</lastBuildDate><atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 23:36:35 -0400</lastBuildDate><atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backing Up Git Config Values With a Bash Script</title>
+      <link>https://loopedline.com/post/backing-up-git-config-values-with-a-bash-script/</link>
+      <pubDate>Fri, 25 Aug 2023 23:36:35 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/backing-up-git-config-values-with-a-bash-script/</guid>
+      <description>Introduction This post is part of a series about automating data backups in Linux.
+In the previous post we automated the process to backup Visual Studio Code (VS Code) settings and a list of installed extensions.
+In this post we&amp;rsquo;ll construct a Bash script to automate the backup of global git config values.
+The Script We&amp;rsquo;ve developed Bash scripts for automating tasks in previous posts so we&amp;rsquo;ll leverage that work and modify it for our current purposes.</description>
+    </item>
+    
     <item>
       <title>Backing Up Visual Studio Code (VS Code) Settings and Extensions With a Bash Script</title>
       <link>https://loopedline.com/post/backing-up-vs-code-settings-and-extensions-with-a-bash-script/</link>
