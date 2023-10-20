@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bash and The Linux Shell - Basic Terminal Command Quick Reference</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Bash and The Linux Shell - Basic Terminal Command Quick Reference</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Bash and The Linux Shell - Basic Terminal Command Quick Reference</h2>
+        
+
+
+
+
+
+
+
+
+
+
+
+    <p>Published: 2023 October 18</p>
+
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shell-command"><kbd class="item-tag">shell command</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<p>This is part of a series about <a href="https://loopedline.com/post/bash-and-the-linux-shell-topic/">Bash and the Linux Shell</a>.</p>
+<p>Other posts in the series introduce and explain several basic terminal commands used in Bash and the Linux Shell.</p>
+<p>This post serves as a quick reference for those commands.</p>
+<h1 id="context">Context</h1>
+<p>In this post we&rsquo;ll assume that Bash is installed and that all commands are entered in a Bash terminal.</p>
+<p>While much of the information applies generally to Linux, some of the instructions will not apply to all systems.  Specifically, program installation instructions focus on utilizing the package manager used by Debian and Ubuntu.  Other distributions will require different installation steps.</p>
+<p>The majority of these commands were tested on Bash 5.1.16 on Ubuntu 22.04.3 or later.  They may behave differently on other systems.</p>
+<p>Finally, much in Linux is based around the user and user-specific files.  For our examples, we&rsquo;ll reference the user name &ldquo;Emerson&rdquo;.  Wherever you see <em>Emerson</em> substitute your user name.</p>
+<h1 id="bash-commands">Bash Commands</h1>
+<h2 id="basic-shell-interactions-via-key-combinations">Basic shell interactions via key combinations</h2>
+<h3 id="open-a-new-terminal-window">open a new terminal window</h3>
+<p><em>Press the keys:</em></p>
+<p><code>CTRL</code> + <code>ALT</code> + <code>T</code></p>
+<h3 id="close-the-terminal-window">close the terminal window</h3>
+<p><em>While in the terminal window you want to close, press the keys:</em></p>
+<p><code>ALT</code> + <code>F4</code></p>
+<h3 id="stop-a-running-command">stop a running command</h3>
+<p><em>While in the terminal window running the command you want to stop, press the keys:</em></p>
+<p><code>CTRL</code> + <code>C</code></p>
+<h3 id="copy-highlighted-text">copy highlighted text</h3>
+<p>Highlight some text in the terminal and <em>press the keys:</em></p>
+<p><code>CTRL</code> + <code>SHIFT</code> + <code>C</code></p>
+<h3 id="paste-text-from-the-clipboard">paste text from the clipboard</h3>
+<p><code>CTRL</code> + <code>SHIFT</code> + <code>V</code></p>
+<h3 id="cycle-through-previous-commands">cycle through previous commands</h3>
+<p><code>↑</code> (the UP ARROW) and <code>↓</code> (the DOWN ARROW)</p>
+<h3 id="auto-complete-a-partially-typed-command">auto-complete a partially-typed command</h3>
+<p>Type the first part of the command and then press the <code>TAB</code> key.</p>
+<hr>
+<h2 id="commands-to-learn-about-commands">Commands to learn about commands</h2>
+<h3 id="--help-option">--help option</h3>
+<p>To learn more about a specific command one approach that often works is to type the command followed by the <strong>--help</strong> option.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span>command name<span style="color:#f92672">}}</span> --help
+</code></pre></div><p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">history --help
+</code></pre></div><hr>
+<h3 id="--version-option">--version option</h3>
+<p>To learn version information about a command type the command followed by the <strong>--version</strong> option.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span>command name<span style="color:#f92672">}}</span> --version
+</code></pre></div><p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash --version
+</code></pre></div><hr>
+<h3 id="which-command">which command</h3>
+<p>It&rsquo;s possible for multiple programs with the same name to be installed on a system.  To <strong>see which one is called when you enter the program name</strong>, use the <strong><a href="https://en.wikipedia.org/wiki/Which_(command)">which</a></strong> command followed by the name of the command you want to check.  This will display the path to the program that is run when the command is entered.</p>
+<h4 id="see-which-program-is-run-by-a-command">See which program is run by a command</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">which <span style="color:#f92672">{{</span>command name<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">which echo
+</code></pre></div><hr>
+<h3 id="man-command">man command</h3>
+<p>Many commands come with their own manual page, which can be displayed with the <strong><a href="https://en.wikipedia.org/wiki/Man_page">man</a></strong> command followed by the name of the command.</p>
+<h4 id="open-the-manual-page-for-a-command">Open the manual page for a command</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">man <span style="color:#f92672">{{</span>command name<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">man date
+</code></pre></div><p>Note: To exit the manual page, press <code>q</code>.</p>
+<hr>
+<h3 id="tldr-command">tldr command</h3>
+<p><strong>Not installed by default on most systems.</strong></p>
+<p>The <strong><a href="https://tldr.sh/">tldr</a></strong> command displays short, simple help pages for command line tools from the user-maintained <a href="https://github.com/tldr-pages/tldr">tldr-pages project</a>.</p>
+<p>It is also available <a href="https://tldr.inbrowser.app/">via the web app</a> and can be downloaded as <a href="https://tldr.sh/assets/tldr-book.pdf">a PDF version</a> for offline use.</p>
+<p><strong>NOTE: More information is available in our post about <a href="https://loopedline.com/post/getting-started-with-the-tldr-command-in-bash/">the tdlr command</a>.</strong></p>
+<h4 id="see-the-tldr-page-for-a-command">See the tldr page for a command</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tldr <span style="color:#f92672">{{</span>command name<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Command Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tldr echo
+</code></pre></div><hr>
+<h2 id="navigating-the-file-system-and-examining-files">Navigating the file system and examining files</h2>
+<h3 id="pwd-command">pwd command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/pwd">pwd</a></strong> command (short for <em>print working directory</em>) from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> <strong>tells us where we&rsquo;re currently located within our file system in the terminal</strong>.</p>
+<h4 id="see-the-working-directory">See the working directory</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pwd
+</code></pre></div><hr>
+<h3 id="ls-command">ls command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/ls">ls</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> <strong>lists the contents of a directory</strong>.</p>
+<h4 id="list-the-contents-of-a-directory">List the contents of a directory</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls
+</code></pre></div><p>The <em>ls</em> command has several helpful options:</p>
+<ul>
+<li>
+<p><code>-a</code> displays all content, including hidden files.</p>
+</li>
+<li>
+<p><code>-1</code> displays items in a single column.</p>
+</li>
+<li>
+<p><code>-l</code> displays items in &ldquo;long&rdquo; format.</p>
+</li>
+<li>
+<p><code>-lh</code> displays items in &ldquo;long&rdquo; format and the file sizes in &ldquo;human-readable&rdquo; units, like kilobytes and megabytes.</p>
+</li>
+<li>
+<p><code>-lt</code> displays items in &ldquo;long&rdquo; format and sorts by modification time.</p>
+</li>
+<li>
+<p><code>-lt --time=birth</code> displays items in &ldquo;long&rdquo; format and sorts by creation time.</p>
+</li>
+</ul>
+<hr>
+<h3 id="cd-command">cd command</h3>
+<p>The <strong><a href="https://en.wikipedia.org/wiki/Cd_(command)">cd</a></strong> command <strong>changes directories</strong> - that is it changes the working directory of the terminal.</p>
+<p>It requires additional arguments (most of the time) to change to a specified directory.</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd <span style="color:#f92672">{{</span>arguments<span style="color:#f92672">}}</span>
+</code></pre></div><p>The <em>cd</em> command has several helpful options:</p>
+<ul>
+<li>
+<p><code>..</code> go up one directory (to the parent directory).</p>
+</li>
+<li>
+<p><code>../..</code> go up two directories (to the parent directory&rsquo;s parent).</p>
+</li>
+<li>
+<p><code>-</code> go back to the previous working directory.</p>
+</li>
+<li>
+<p><code>/</code> go to the root directory.</p>
+</li>
+</ul>
+<hr>
+<h4 id="change-the-working-directory-to-the-home-directory">Change the working directory to the home directory</h4>
+<p>To go to the user home directory, use the command without any arguments.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd
+</code></pre></div><hr>
+<h4 id="change-the-working-directory-to-a-specific-subdirectory">Change the working directory to a specific subdirectory</h4>
+<p>To change to a specific subdirectory enter its relative path from your current working directory.</p>
+<p><strong>Example Task:</strong></p>
+<p>Move to the <em>/Pictures</em> subdirectory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd Pictures
+</code></pre></div><hr>
+<p><strong>Example Task:</strong></p>
+<p>Move to the <em>/Pictures/Wallpapers</em> subdirectory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd Pictures/Wallpapers
+</code></pre></div><hr>
+<h4 id="change-the-working-directory-to-a-specific-directory">Change the working directory to a specific directory</h4>
+<p>To change to a specific directory enter its full path.</p>
+<p><strong>Example Task:</strong></p>
+<p>Move to the <em>/Pictures/Wallpapers</em> subdirectory of the home directory of a user called <em>Emerson</em>.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /home/Emerson/Pictures/Wallpapers
+</code></pre></div><hr>
+<h3 id="tree-command">tree command</h3>
+<p><strong>Not installed by default on most systems.</strong></p>
+<p>The <strong><a href="https://gitlab.com/OldManProgrammer/unix-tree">tree</a></strong> command from <a href="https://oldmanprogrammer.net/source.php?dir=projects/tree">Steve Baker</a> <strong>displays a visual tree of the directory, it&rsquo;s subdirectories, and all their content</strong>.</p>
+<p><strong>NOTE: More information is available in our post about <a href="https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/">the tree command</a>.</strong></p>
+<h4 id="installing-the-tree-command">Installing the tree command</h4>
+<p>To <a href="https://itslinuxfoss.com/install-tree-linux/">install tree</a> on Ubuntu:</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install tree
+</code></pre></div><hr>
+<h4 id="view-the-contents-of-the-working-directory-and-all-subdirectories">View the contents of the working directory and all subdirectories</h4>
+<p>To see all contents of the working directory and all its subdirectories use the command without any arguments.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree
+</code></pre></div><hr>
+<h4 id="view-the-contents-of-the-working-directory-and-all-subdirectories-to-a-specific-depth">View the contents of the working directory and all subdirectories to a specific depth</h4>
+<p>To see all contents of the working directory and all the contents of its subdirectories but only to a certain depth of subdirectories use the <code>-L</code> option.</p>
+<p><strong>Example Task:</strong></p>
+<p>Limit to 1 level of subdirectories.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -L <span style="color:#ae81ff">1</span>
+</code></pre></div><hr>
+<p><strong>Example Task:</strong></p>
+<p>Limit to 2 level of subdirectories.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -L <span style="color:#ae81ff">2</span>
+</code></pre></div><hr>
+<h4 id="view-the-contents-of-the-working-directory-looking-only-at-subdirectories">View the contents of the working directory looking only at subdirectories</h4>
+<p><strong>Example Task:</strong></p>
+<p>Output only directories and not files use the <code>-d</code> option.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -d
+</code></pre></div><hr>
+<h4 id="view-the-contents-of-the-working-directory-looking-only-at-specific-subdirectories">View the contents of the working directory looking only at specific subdirectories</h4>
+<p>To see the contents of only specific subdirectories use the <code>-a</code> option.</p>
+<p><strong>Example Task:</strong></p>
+<p>Output only the contents of the <em>/Pictures</em> subdirectory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -a Pictures
+</code></pre></div><hr>
+<h2 id="working-with-directories">Working with Directories</h2>
+<h3 id="mkdir-command">mkdir command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/manual/html_node/mkdir-invocation.html#mkdir-invocation">mkdir</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> <strong>makes directories</strong>.</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir <span style="color:#f92672">{{</span>path_to_directory/directory_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="make-a-subdirectory-in-the-working-directory">Make a subdirectory in the working directory</h4>
+<p><strong>Example Task:</strong></p>
+<p>Make a subdirectory called <em>projectx</em> in the working directory</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir projectx
+</code></pre></div><hr>
+<h4 id="see-output-from-the-command">See output from the command</h4>
+<p>To see output about what the command did use the <code>-v</code> (verbose) option.</p>
+<p><strong>Example Task:</strong></p>
+<p>Make a subdirectory called <em>projectx</em> in the working directory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -v projectx
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir: created directory <span style="color:#e6db74">&#39;projectx&#39;</span>
+</code></pre></div><hr>
+<h4 id="make-a-subdirectory-in-a-specific-directory">Make a subdirectory in a specific directory</h4>
+<p><strong>Example Task:</strong></p>
+<p>Make a subdirectory called <em>projectx</em> in the <em>/home/Emerson/Documents/</em> directory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -v /home/Emerson/Documents/projectx
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir: created directory <span style="color:#e6db74">&#39;/home/Emerson/Documents/projectx&#39;</span>
+</code></pre></div><hr>
+<h3 id="rmdir-command">rmdir command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/manual/html_node/rmdir-invocation.html#rmdir-invocation">rmdir</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> <strong>removes directories</strong>, with the caveat that <strong>it only works on empty directories</strong>.  (You can first delete the files or use the <a href="#trash-command"><strong>trash</strong></a> command, which can remove directories that contain files.)</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir <span style="color:#f92672">{{</span>path_to_directory/directory_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="delete-a-subdirectory-in-the-working-directory">Delete a subdirectory in the working directory</h4>
+<p><strong>Example Task:</strong></p>
+<p>Delete a subdirectory called <em>projectx</em> in the working directory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir projectx
+</code></pre></div><hr>
+<h4 id="see-output-from-the-command-1">See output from the command</h4>
+<p>To see output about what the command did use the <code>-v</code> (verbose) option.</p>
+<p><strong>Example Task:</strong></p>
+<p>Delete a subdirectory called <em>projectx</em> in the working directory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir -v projectx
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir: removing directory <span style="color:#e6db74">&#39;projectx&#39;</span>
+</code></pre></div><hr>
+<h4 id="delete-a-subdirectory-in-a-specific-directory">Delete a subdirectory in a specific directory</h4>
+<p><strong>Example Task:</strong></p>
+<p>Delete a subdirectory called <em>projectx</em> in the <em>/home/Emerson/Documents/</em> directory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir -v /home/Emerson/Documents/projectx
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rmdir: removing directory <span style="color:#e6db74">&#39;/home/Emerson/Documents/projectx&#39;</span>
+</code></pre></div><hr>
+<h3 id="open-command-for-directories">open command (for directories)</h3>
+<p>The <strong><a href="https://portland.freedesktop.org/doc/xdg-open.html">open</a></strong> command from <a href="https://www.freedesktop.org/wiki/Software/xdg-utils/">freedesktop.org</a> <strong>opens files and directories</strong> using the default application for the file type.  (For Ubuntu systems using <a href="https://en.wikipedia.org/wiki/GNOME">GNOME desktop</a> from the <a href="https://en.wikipedia.org/wiki/GNOME_Project">GNOME project</a> this is <a href="https://en.wikipedia.org/wiki/GNOME_Files">GNOME Files</a> (formerly called Nautilus).)</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open <span style="color:#f92672">{{</span>path_to_directory/directory_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="open-a-specific-directory-in-the-default-graphical-file-manager">Open a specific directory in the default graphical file manager</h4>
+<p><strong>Example Task:</strong></p>
+<p>Open the <em>/home/Emerson/Documents</em> directory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open /home/Emerson/Documents
+</code></pre></div><hr>
+<h4 id="open-the-working-directory-in-the-default-graphical-file-manager">Open the working directory in the default graphical file manager</h4>
+<p>To open the working directory use <code>.</code> (a period), which tells the shell to run the command on the working directory.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open .
+</code></pre></div><hr>
+<h2 id="working-with-files">Working with files</h2>
+<h3 id="touch-command">touch command</h3>
+<p>The <strong><a href="https://en.wikipedia.org/wiki/Touch_(command)">touch</a></strong> command can be used for <a href="https://linuxhandbook.com/touch-command/">other things</a>, but most often it is used to <strong>create files</strong>.</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch <span style="color:#f92672">{{</span>path_to_file/file_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="create-a-file">Create a file</h4>
+<p><strong>Example Task:</strong></p>
+<p>Create a file called <em>test123.txt</em>.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch test123.txt
+</code></pre></div><hr>
+<h3 id="open-command-for-files">open command (for files)</h3>
+<p>As mentioned above, the <strong><a href="https://portland.freedesktop.org/doc/xdg-open.html">open</a></strong> command from <a href="https://www.freedesktop.org/wiki/Software/xdg-utils/">freedesktop.org</a> <strong>opens files and directories</strong> using the default application for the file type.</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open <span style="color:#f92672">{{</span>path_to_file/file_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="open-a-file-in-the-default-program-for-that-file-type">Open a file in the default program for that file type</h4>
+<p><strong>Example Task:</strong></p>
+<p>Open the <em>favorites.html</em> file.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open favorites.html
+</code></pre></div><hr>
+<h2 id="working-with-files-or-directories">Working with files or directories</h2>
+<h3 id="mv-command">mv command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/manual/html_node/mv-invocation.html#mv-invocation">mv</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> can <strong>move and/or rename files and directories</strong>.</p>
+<p><strong>Recommendation</strong>: Use the <code>-n</code> (no overwrite) option to prevent any possible overwriting of existing files and the <code>-v</code> (verbose) option to get output from the command to see what it has done.  (Even in cases when these are not necessary, it&rsquo;s a good habit to build to avoid unnecessary mistakes.)</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv -nv <span style="color:#f92672">{{</span>source<span style="color:#f92672">}}</span> <span style="color:#f92672">{{</span>target<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="move-a-file">Move a file</h4>
+<p><strong>Example Task:</strong></p>
+<p>Move the <em>quotations.txt</em> file to the <em>Archive</em> subdirectory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv -nv quotations.txt Archive/quotations.txt
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">renamed <span style="color:#e6db74">&#39;quotations.txt&#39;</span> -&gt; <span style="color:#e6db74">&#39;Archive/quotations.txt&#39;</span>
+</code></pre></div><p>Note that the output is a little odd because it says the file was &ldquo;renamed&rdquo; though really it was just moved.  It&rsquo;s a quirk of the output to be aware of.</p>
+<hr>
+<h4 id="rename-a-file">Rename a file</h4>
+<p><strong>Example Task:</strong></p>
+<p>Rename the <em>quotations.txt</em> file to the <em>quotes.txt</em>.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv -nv quotations.txt quotes.txt
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">renamed <span style="color:#e6db74">&#39;quotations.txt&#39;</span> -&gt; <span style="color:#e6db74">&#39;quotes.txt&#39;</span>
+</code></pre></div><hr>
+<h3 id="cp-command-to-copy-files">cp command (to copy files)</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html#cp-invocation">cp</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> allows you to <strong>copy files and directories</strong>.</p>
+<p><strong>Recommendation</strong>: Use the <code>-i</code> (interactive) option to prompt before overwriting of existing files and the <code>-v</code> (verbose) option to get output from the command.  Even in cases when these are not necessary, it&rsquo;s a good habit to build to avoid unnecessary mistakes.</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -iv <span style="color:#f92672">{{</span>source<span style="color:#f92672">}}</span> <span style="color:#f92672">{{</span>target<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="copy-a-file-to-a-different-directory-while-retaining-the-file-name">Copy a file to a different directory while retaining the file name</h4>
+<p><strong>Example Task:</strong></p>
+<p>Copy the <em>config.txt</em> file to the <em>/Archive</em> subdirectory.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -iv config.txt Archive/config.txt
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#39;config.txt&#39;</span> -&gt; <span style="color:#e6db74">&#39;Archive/config.txt&#39;</span>
+</code></pre></div><hr>
+<h4 id="copy-a-file-to-the-same-directory-with-a-different-file-name">Copy a file to the same directory with a different file name</h4>
+<p><strong>Example Task:</strong></p>
+<p>Copy the <em>config.txt</em> file to the same directory and change its name to <em>config.txt.bak</em>.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -iv config.txt config.txt.bak
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#39;config.txt&#39;</span> -&gt; <span style="color:#e6db74">&#39;config.txt.bak&#39;</span>
+</code></pre></div><hr>
+<h2 id="deleting-files-or-directories">Deleting files or directories</h2>
+<h3 id="trash-vs-rm">trash vs rm</h3>
+<p>The command to <strong>delete files or directories</strong> that comes standard with nearly all Linux distributions is <strong>rm</strong>.  But, as <a href="https://www.macworld.com/article/177994/rmdangers.html">Rob Griffiths</a> points out, <strong>the <em>rm</em> command can be dangerous:</strong></p>
+<blockquote>
+<p>Even if you’re brand new to Terminal, I hope someone has given you this valuable advice:</p>
+<p><strong>Be very careful when using the rm command to remove files and folders!</strong></p>
+<p>The Unix file and folder deletion tool rm is one of the most dangerous commands around. After all, no one likes to obliterate precious files by accident.</p>
+</blockquote>
+<p>With <em>rm</em> it is possible to accidentally delete the wrong files and directories.  And when using <em>rm</em> it can be difficult or impossible to recover those files.</p>
+<p>As the <a href="https://ubuntu.com/tutorials/command-line-for-beginners#5-moving-and-manipulating-files">Ubuntu command line tutorial</a> cautions:</p>
+<blockquote>
+<p>Unlike graphical interfaces, rm doesn’t move files to a folder called “trash” or similar. Instead it deletes them totally, utterly and irrevocably. You need to be ultra careful with the parameters you use with rm to make sure you’re only deleting the file(s) you intend to. You should take particular care when using wildcards, as it’s easy to accidentally delete more files than you intended.</p>
+</blockquote>
+<p>And as <a href="https://www.howtogeek.com/858815/linux-rm-command/#what-is-the-rm-command-in-linux">Dave McCay puts it</a>:</p>
+<blockquote>
+<p>The rm command can delete files, groups of files, directories, or complete directory trees. That&rsquo;s why it must be used with caution. Using rm isn&rsquo;t difficult, but the penalty for failure is high.</p>
+<p>When a file is deleted with rm , it is gone. It isn&rsquo;t moved to the trash. It is obliterated immediately. That doesn&rsquo;t mean you should avoid using rm . But to use it safely, you need to be aware of what it can do, and ensure you&rsquo;re using it properly.</p>
+<p>Some tools are more dangerous than others, and far less forgiving of mistakes. That&rsquo;s why there&rsquo;s never been a movie called The Texas Wrench Massacre. rm isn&rsquo;t a wrench, it&rsquo;s definitely a chainsaw.</p>
+<p>People use chainsaws all day everyday, and as long as they use one responsibly and mindfully, they&rsquo;re fine. It&rsquo;s the same deal with rm . When you pull rm out of your tool bag, you ought to slow down and check, then double-check, your command line.</p>
+</blockquote>
+<p>We think this is a good analogy and helpfully illustrates the power of <em>rm</em>.  <em>However</em>, we respectfully disagree with the assertion that users shouldn&rsquo;t avoid using <em>rm</em>.</p>
+<p><strong>We think you <em>should</em> avoid using rm unless it&rsquo;s exactly what you need</strong>.</p>
+<p>We think you should avoid using <em>rm</em> in the same way that you should avoid using a chainsaw for most household tasks.  You don&rsquo;t use a chainsaw to slice bread.  You don&rsquo;t use a chainsaw to open cardboard boxes.  You don&rsquo;t use a chainsaw to cut wrapping paper.  A chainsaw is too dangerous and powerful of a tool for most tasks.  The cost of a mistake is too high.  And there are completely suitable alternatives for most tasks.</p>
+<p>Yes, people use chainsaws everyday.  And every day some people are hurt badly by chainsaws.  It would be senseless to use such a dangerous tool without a need to use it.  And typically that just isn&rsquo;t the case with either chainsaws or <em>rm</em>.  It is important to know about the <em>rm</em> command, but we don&rsquo;t recommend making it your day-to-day tool for deleting files.</p>
+<p>Leave the chainsaw in the workshop on the shelf for most daily tasks, and use the safer and simpler tools when they work just as well.  Bring out the chainsaw only when that is what you need.</p>
+<p>Furthermore, even though the <em>rm</em> command may be helpful with some tasks and might be good to learn eventually, we don&rsquo;t believe it is the tool that new users should focus on.</p>
+<p><strong>Instead, we recommend learning and using the <em>trash</em> command for most situations.</strong></p>
+<hr>
+<h3 id="trash-command">trash command</h3>
+<p><strong>Not installed by default on most systems.</strong></p>
+<p>The <strong><a href="https://github.com/andreafrancia/trash-cli">trash</a></strong> command from <a href="https://github.com/andreafrancia">Andrea Farncia</a> <strong>moves files to the system trash can</strong>.</p>
+<p>The <em>trash</em> command operates in line with contemporary expectations that files are simply moved to a temporary location where they can be recovered instead of instantly deleted forever.  This gives you a chance to see (and potentially restore) deleted files.</p>
+<p>It does not come standard on most Linux distributions, so you will likely need to <a href="https://lindevs.com/install-trash-cli-on-ubuntu">install it</a>.</p>
+<p><strong>NOTE: More information is available in our post about <a href="https://loopedline.com/post/getting-started-with-the-trash-command-in-bash/">the trash command</a>.</strong></p>
+<h4 id="installing-the-trash-command">Installing the <em>trash</em> command</h4>
+<p>To install trash on Ubuntu:</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install trash-cli
+</code></pre></div><hr>
+<h4 id="moving-a-file-or-directory-to-trash">Moving a file or directory to trash</h4>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash <span style="color:#f92672">{{</span>path_to_content/content_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<p><strong>Example Task:</strong></p>
+<p>Delete the <em>recipes.txt</em> file.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash recipes.txt
+</code></pre></div><hr>
+<h4 id="restoring-a-deleted-file-or-directory-from-trash">Restoring a deleted file or directory from trash</h4>
+<p>The <strong>trash-restore</strong> command is interactive.  Navigate to the directory from which the file or directory was removed and enter the following command:</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-restore
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   <span style="color:#ae81ff">0</span> 2023-10-18 12:47:21 /home/Emerson/Documents/recipe.txt
+What file to restore <span style="color:#f92672">[</span>0..0<span style="color:#f92672">]</span>:
+</code></pre></div><p>To restore the <em>recipe.txt</em> file type <code>0</code> and press <code>Enter</code>.</p>
+<hr>
+<h4 id="selectively-delete-contents-from-the-trash-folder-by-removal-date">Selectively delete contents from the trash folder by removal date</h4>
+<p>The <em>trash</em> command doesn&rsquo;t permanently delete files so they remain on your system taking up space until you delete them permanently.</p>
+<p>If you want to remove those files, you have several options.  Here we&rsquo;ll look at permanently deleting files based on how long they have been in the trash.  (See the <a href="https://tldr.inbrowser.app/pages/linux/trash">tldr pages for trash</a> to see some additional options.)</p>
+<p><strong>A note of caution: This step will permanently delete files.  Be sure of what you are removing before proceeding.</strong></p>
+<p><strong>Example Task:</strong></p>
+<p>Permanently delete files that have been in the trash longer than 120 days.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-empty <span style="color:#ae81ff">120</span>
+</code></pre></div><hr>
+<h3 id="rm-command">rm command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/rm">rm</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> <strong>removes files or directories</strong> and comes standard with nearly all Linux distributions, but, as discussed above, <a href="#trash-vs-rm"><strong>it can be dangerous</strong></a> because it&rsquo;s easy to delete the wrong thing and it can be difficult or impossible to recover files.</p>
+<p><strong>Recommendation</strong>: If you are going to use the <em>rm</em> command, it usually makes sense to use the <code>-i</code> (interactive) option to see prompts before files are deleted and the <code>-v</code> (verbose) option so that you are made aware of what the command has done.</p>
+<p><strong>As mentioned above, we recommend using <em>trash</em> instead of <em>rm</em> whenever possible.</strong></p>
+<h4 id="aliasing-the-rm-command">aliasing the rm command</h4>
+<p>While the <em>rm</em> command itself can be dangerous, <a href="https://askubuntu.com/questions/3982/is-there-a-significant-disadvantage-to-aliasing-rm-to-do-something-else/3995#3995">some suggested strategies for aliasing <em>rm</em> are also dangerous</a>.  If you want to avoid accidental use of <em>rm</em>, <a href="https://superuser.com/questions/382407/best-practices-to-alias-the-rm-command-and-make-it-safer/382498#382498">alias to a different name than <em>rm</em> so you don&rsquo;t create a dangerous habit</a>, or consider <a href="https://superuser.com/questions/382407/best-practices-to-alias-the-rm-command-and-make-it-safer/383068#383068">aliasing to an explanatory <em>echo</em> command</a>.</p>
+<hr>
+<h2 id="text-editors">Text editors</h2>
+<h3 id="gedit-text-editor">gedit text editor</h3>
+<p><a href="https://wiki.gnome.org/Apps/Gedit">gedit</a> from the <a href="https://en.wikipedia.org/wiki/GNOME_Project">GNOME project</a> is a text editor with a simple GUI.</p>
+<h4 id="open-a-file-in-gedit">Open a file in gedit</h4>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gedit <span style="color:#f92672">{{</span>path_to_file/content_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<p><strong>Example Task:</strong></p>
+<p>Open the <em>summary.txt</em> file.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gedit summary.txt
+</code></pre></div><hr>
+<h3 id="nano-text-editor">nano text editor</h3>
+<p><a href="https://en.wikipedia.org/wiki/GNU_nano">nano</a> from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU Project</a> is a command line text editor.</p>
+<p>There are a few commands that are helpful to know:</p>
+<p><code>CTRL</code> + <code>G</code> opens the nano help menu.</p>
+<p><code>CTRL</code> + <code>X</code> closes the help menu.</p>
+<p><code>CTRL</code> + <code>S</code> saves the file.</p>
+<p><code>CTRL</code> + <code>X</code> exits nano.</p>
+<p>You can refer to the <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html">overview of nano&rsquo;s shortcuts</a> to find additional text commands.</p>
+<h4 id="open-a-file-in-nano">Open a file in nano</h4>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano <span style="color:#f92672">{{</span>path_to_file/content_name<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<p><strong>Example Task:</strong></p>
+<p>Open the <em>summary.txt</em> file.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano summary.txt
+</code></pre></div><hr>
+<h3 id="vim--neovim">Vim / Neovim</h3>
+<p><a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim</a> from <a href="https://en.wikipedia.org/wiki/Bram_Moolenaar">Bram Moolenaar</a> is a command line text editor.</p>
+<p><a href="https://en.wikipedia.org/wiki/Vim_(text_editor)#Neovim">Neovim</a> from the <a href="https://neovim.io/charter/">Neovim team</a> is a command line text editor based on Vim.</p>
+<p>Some introductory information:</p>
+<ol>
+<li>Vim and Neovim are command line text editors that are largely compatible with one another.</li>
+<li>You&rsquo;ll find Vim on many Linux systems.</li>
+<li>They both have a bit of a learning curve and most users don&rsquo;t find them intuitive at first.</li>
+<li>Consequntly, you might find yourself unintentionally in one of them.  So, it&rsquo;s helpful to know how to exit them, even if you don&rsquo;t plan to use them.</li>
+<li>There are helpful resources for if/when you&rsquo;d like to learn more about them.</li>
+</ol>
+<h4 id="exit-vim--neovim">Exit Vim / Neovim</h4>
+<p>Exiting Vim is so non-intuitive that many new users feel trapped.</p>
+<p>The basic sequence to quit Vim <em>without saving</em> is:</p>
+<ol>
+<li><code>Esc</code></li>
+<li><code>:</code></li>
+<li><code>q</code></li>
+<li><code>!</code></li>
+<li><code>Enter</code></li>
+</ol>
+<p>And the basic sequence to <em>save and quit</em> Vim is:</p>
+<ol>
+<li><code>Esc</code></li>
+<li><code>:</code></li>
+<li><code>w</code></li>
+<li><code>q</code></li>
+<li><code>Enter</code></li>
+</ol>
+<h4 id="learn-more-about-vim--neovim">Learn more about Vim / Neovim</h4>
+<p>If you decide to learn Vim or Neovim there are numerous resources available  Below are two:</p>
+<ul>
+<li>The <a href="https://openvim.com/">Interactive Vim Tutorial</a> is exactly what it sounds like and provides a guided learning path.</li>
+<li>In <a href="https://vim-adventures.com/">Vim Adventures</a> you can learn Vim while playing a game.</li>
+</ul>
+<hr>
+<h2 id="terminal-output">Terminal Output</h2>
+<h3 id="echo-command">echo command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/manual/html_node/echo-invocation.html#echo-invocation">echo</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> displays user-specified text to the screen.</p>
+<p><strong>Command Form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#f92672">{{</span>Arguments<span style="color:#f92672">}}</span>
+</code></pre></div><hr>
+<h4 id="display-a-specific-string-of-text-to-the-console">Display a specific string of text to the console</h4>
+<p>To display a specific string enter it as an argument.</p>
+<p><strong>Example Task:</strong></p>
+<p>Display the text <em>Hello World</em>.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo Hello World
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hello World
+</code></pre></div><hr>
+<h4 id="display-a-system-variable-to-the-console">Display a system variable to the console</h4>
+<p>To display a system variable enter it as an argument.</p>
+<p><strong>Example Task:</strong></p>
+<p>Display the <em>SHELL</em> variable.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo $SHELL
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash
+</code></pre></div><hr>
+<h3 id="clear-command">clear command</h3>
+<p>The <strong><a href="https://en.wikipedia.org/wiki/Clear_(Unix)">clear</a></strong> command clears the output from the terminal window.</p>
+<h4 id="clear-the-console">Clear the console</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">clear
+</code></pre></div><hr>
+<h2 id="system-management">System Management</h2>
+<h3 id="sudo-command">sudo command</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Sudo"><strong>sudo</strong></a> command <strong>executes a single command with superuser privileges</strong>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Superuser">Superuser privileges</a> are <a href="https://www.redhat.com/sysadmin/sudo">required for various system operations</a> - like installing software - and the <em>sudo</em> command has various <a href="https://ubuntu.com/tutorials/command-line-for-beginners#7-the-command-line-and-the-superuser">uses and hazards</a>.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo <span style="color:#f92672">{{</span>command line<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+</code></pre></div><hr>
+<h3 id="apt-command">apt command</h3>
+<p>The <a href="https://manpages.debian.org/latest/apt/apt.8.html"><strong>apt</strong></a> command from the <a href="https://en.wikipedia.org/wiki/Debian">Debian</a> Linux distribution is the package management utility for Debian-based distributions.</p>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt <span style="color:#f92672">{{</span>arguments<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt upgrade
+</code></pre></div><hr>
+<h3 id="neofetch-command">neofetch command</h3>
+<p><strong>Not installed by default on most systems.</strong></p>
+<p>The <a href="https://github.com/dylanaraps/neofetch"><strong>neofetch</strong></a> command from <a href="https://github.com/dylanaraps">Dylan Araps</a> is a &ldquo;<strong>CLI tool to display information about your operating system, software and hardware.</strong>&rdquo; according to <a href="https://tldr.inbrowser.app/pages/common/neofetch">tldr pages</a>.</p>
+<p><strong>NOTE: More information is available in our post about <a href="https://loopedline.com/post/getting-started-with-the-neofetch-command-in-bash/">the neofetch command</a>.</strong></p>
+<h4 id="install-neofetch">Install neofetch</h4>
+<p>On Ubuntu, <em>neofetch</em> can be installed through the package manager.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install neofetch
+</code></pre></div><hr>
+<h4 id="view-system-information">View system information</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">neofetch
+</code></pre></div><hr>
+<h2 id="assorted-commands">Assorted Commands</h2>
+<h3 id="date-command">date command</h3>
+<p>The <strong><a href="https://www.gnu.org/software/coreutils/date">date</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a> displays the system date and time.</p>
+<h4 id="see-system-date-and-time">See system date and time</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">date
+</code></pre></div><hr>
+<h4 id="see-system-date-and-time-in-a-specific-format">See system date and time in a specific format</h4>
+<p>You can also pass arguments to the date command to change it&rsquo;s format.</p>
+<p><strong>Example Task:</strong></p>
+<p>Output the date and time in the <em>YYYY-MM-DD HH:MM:SS</em> format.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">date <span style="color:#e6db74">&#39;+%Y-%m-%d %T&#39;</span>
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">2023-09-01 14:04:34
+</code></pre></div><hr>
+<h3 id="history-command">history command</h3>
+<p>To see a history of the commands used in the terminal, use the <strong><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-History-Builtins.html">history</a></strong> command from the <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU project</a>.</p>
+<h4 id="see-the-history-of-commands-entered-in-the-terminal">See the history of commands entered in the terminal</h4>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">history
+</code></pre></div><hr>
+<h4 id="see-the-history-of-a-specific-number-of-commands-entered-in-the-terminal">See the history of a specific number of commands entered in the terminal</h4>
+<p><strong>Example Task:</strong></p>
+<p>Output the history of only the last 5 commands.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">history <span style="color:#ae81ff">5</span>
+</code></pre></div><hr>
+<h2 id="pattern-matching-ie-wildcards">Pattern Matching (i.e. Wildcards)</h2>
+<p>The Linux shell allows several types of characters to stand-in, or represent, other characters.  Officially, Bash refers to this as <em><a href="https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html">pattern matching</a></em>.  More popularly, these are referred to as <strong>wildcards</strong>.  <em>Wildcards</em> allow greater ease and flexibility in finding or specifying files.</p>
+<h3 id="-question-mark-wildcard">? (question mark) wildcard</h3>
+<p>In patterns, the <strong>?</strong> wildcard will match to any one character.</p>
+<p>For instance, <code>file?.txt</code> will match:</p>
+<ul>
+<li>file1.txt</li>
+<li>file9.txt</li>
+<li>fileA.txt</li>
+<li>fileb.txt</li>
+<li>file_.txt</li>
+<li>file .txt</li>
+<li>and any other file that starts with <em>file</em>, ends with <em>.txt</em>, and includes any one character between those strings.</li>
+</ul>
+<hr>
+<h3 id="-asterisk-wildcard">* (asterisk) wildcard</h3>
+<p>In patterns, the <strong>*</strong> wildcard will match to any characters, including no character.</p>
+<p>For instance, <code>file*.txt</code> will match:</p>
+<ul>
+<li>file.txt</li>
+<li>file1.txt</li>
+<li>file11.txt</li>
+<li>file141.txt</li>
+<li>file9.txt</li>
+<li>fileAa.txt</li>
+<li>filebin.txt</li>
+<li>file_today.txt</li>
+<li>file of the month.txt</li>
+<li>and any other file that starts with <em>file</em>, ends with <em>.txt</em>, and includes any character, characters, and no character, between those strings.</li>
+</ul>
+<hr>
+<h2 id="special-characters">Special Characters</h2>
+<h3 id="tilde-expansion-">Tilde expansion (~)</h3>
+<p><a href="https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html"><strong>Tilde expansion</strong></a> is a <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html">shell expansion</a> that replaces an unquoted tilde, <code>~</code>, with the path for the user&rsquo;s home directory.</p>
+<p><strong>Example Task:</strong></p>
+<p>Navigate to the <em>/Pictures/Wallpapers</em> subdirectory of the users home folder.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /home/Emerson/Pictures/Wallpapers
+</code></pre></div><p>Or, with <em>tilde expansion</em> we could shorten it to the following:</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/Pictures/Wallpapers
+</code></pre></div><hr>
+<h2 id="shell-variables">Shell Variables</h2>
+<h3 id="path-variable">PATH variable</h3>
+<p><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#index-PATH"><strong>PATH</strong></a> is a <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bourne-Shell-Variables">Bourne Shell variable</a> that contains a colon-separated list of directories in which the shell looks for commands.</p>
+<p>To output the <em>PATH</em> variable:</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo $PATH
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/snap/bin:/
+</code></pre></div><hr>
+<h3 id="shell-variable">SHELL variable</h3>
+<p><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#index-SHELL"><strong>SHELL</strong></a> is a <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-Variables">Bash variable</a> that expands to the full pathname to the shell.</p>
+<p>To output the <em>SHELL</em> variable:</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo $SHELL
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash
+</code></pre></div><hr>
+<h3 id="random-variable">RANDOM variable</h3>
+<p><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#index-RANDOM"><strong>RANDOM</strong></a> is a <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-Variables">Bash variable</a> that returns a pseudo-random number between 0 and 32767.</p>
+<p><strong>NOTE: More information is available in our post about <a href="https://loopedline.com/post/getting-started-with-random-variable-in-bash/">the RANDOM variable</a>.</strong></p>
+<p><strong>Example Task:</strong></p>
+<p>Output a pseudo-random number.</p>
+<p><strong>Example Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo $RANDOM
+</code></pre></div><p><strong>Example Output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">19853</span>
+</code></pre></div><hr>
+<h1 id="further-resources">Further Resources</h1>
+<p>To find a curated list of many more resources for learning about <a href="https://loopedline.com/post/bash-and-the-linux-shell-topic/">Bash and the Linux Shell</a> you can review or central topic post.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/">Bash and the Linux Shell - 02 - Getting Started with The Basics</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 15
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-topic/">Bash and the Linux Shell - Topic</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 12
+        
+                  |     Last edited:  2023 October 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/getting-started-with-the-neofetch-command-in-bash/">Getting Started with the neofetch Command in Bash</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 September 27
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+
+
+        <footer>
+            <p class="copyright text-muted">© LoopedLine 2020-2023. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
+        </footer>
+
+        
+        
+    </body>
+
+</html>

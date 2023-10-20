@@ -32,7 +32,7 @@ The Script We&amp;rsquo;ve developed Bash scripts for automating tasks in previo
     </item>
     
     <item>
-      <title>Backing Up a Directory Structure With the Tree Command in a Bash Script</title>
+      <title>Backing Up a Directory Structure With the tree Command in a Bash Script</title>
       <link>https://loopedline.com/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/</link>
       <pubDate>Mon, 07 Nov 2022 13:19:14 -0500</pubDate>
       
@@ -44,17 +44,16 @@ The Script We&amp;rsquo;ve developed Bash scripts for automating tasks in previo
     </item>
     
     <item>
-      <title>Getting Started with the Tree Command in Bash</title>
+      <title>Getting Started with the tree Command in Bash</title>
       <link>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</link>
       <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
       
       <guid>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</guid>
       <description>Introduction The tree command is extremely useful.
- According to tldr:
-Tree shows &amp;ldquo;the contents of the current directory as a tree.&amp;quot;
- And according to the Tree homepage:
-&amp;ldquo;Tree is a recursive directory listing command that produces a depth indented listing of files&amp;rdquo;.
- In other words, tree gives a visual display of the contents of a directory, includings its files, subdirectories, and the contents of those subdirectories.
+According to the tree homepage:
+ Tree is a recursive directory listing command that produces a depth indented listing of files
+ In other words, tree displays a visual tree of the directory, it&amp;rsquo;s subdirectories, and all their content.
+It is much faster and much more understandable than using cd and ls commands repeatedly to understand a directory structure and content.
 It might best be understood by example.</description>
     </item>
     
@@ -399,7 +398,7 @@ This post is part of an ongoing effort to tailor the theme over time.</descripti
     </item>
     
     <item>
-      <title>Changing a Hugo Theme Over Time</title>
+      <title>Changing a Hugo Theme Over Time - Topic</title>
       <link>https://loopedline.com/post/changing-a-hugo-theme-over-time/</link>
       <pubDate>Thu, 31 Mar 2022 14:17:14 -0400</pubDate>
       

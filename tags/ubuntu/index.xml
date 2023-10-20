@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on LoopedLine</title>
+    <link>https://loopedline.com/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Aug 2023 14:09:20 -0400</lastBuildDate><atom:link href="https://loopedline.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding a Directory Shortcut to the Dash Panel In Ubuntu</title>
+      <link>https://loopedline.com/post/adding-a-directory-shortcut-to-the-dash-panel-in-ubuntu/</link>
+      <pubDate>Thu, 31 Aug 2023 14:09:20 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/adding-a-directory-shortcut-to-the-dash-panel-in-ubuntu/</guid>
+      <description>Background Several Linux distributions use the GNOME desktop environment. For Ubuntu, which we&amp;rsquo;ll focus on here, this is true for the &amp;ldquo;vanilla&amp;rdquo; (i.e. the &amp;ldquo;standard&amp;rdquo;, &amp;ldquo;stock&amp;rdquo;, or &amp;ldquo;base&amp;rdquo;) Ubuntu distribution, as well as several &amp;ldquo;flavors&amp;rdquo; of Ubuntu.
+One of the main elements of the GNOME desktop is the dash panel or dash bar, which GNOME refers to as the dash: &amp;ldquo;The dash shows you your favorite and running applications.&amp;quot; (I think referring to it as &amp;ldquo;the dash&amp;rdquo; is a little cryptic to newcomers so in this post I&amp;rsquo;ll refer to it as the dash panel instead.</description>
+    </item>
+    
+  </channel>
+</rss>

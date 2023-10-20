@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Adding a Directory Shortcut to the Dash Panel In Ubuntu</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Adding a Directory Shortcut to the Dash Panel In Ubuntu</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Adding a Directory Shortcut to the Dash Panel In Ubuntu</h2>
+        
+
+
+
+
+
+
+
+
+
+
+
+    <p>Published: 2023 August 31</p>
+
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/ubuntu"><kbd class="item-tag">Ubuntu</kbd></a>
+
+<a href="https://loopedline.com/tags/gnome"><kbd class="item-tag">GNOME</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="background">Background</h2>
+<p>Several <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> <a href="https://www.gnome.org/getting-gnome/">distributions</a> use the <a href="https://en.wikipedia.org/wiki/GNOME">GNOME desktop environment</a>.  For <a href="https://en.wikipedia.org/wiki/Ubuntu">Ubuntu</a>, which we&rsquo;ll focus on here, this is true for the <a href="https://ubuntu.com/">&ldquo;vanilla&rdquo; (i.e. the &ldquo;standard&rdquo;, &ldquo;stock&rdquo;, or &ldquo;base&rdquo;) Ubuntu distribution</a>, as well as several <a href="https://wiki.ubuntu.com/UbuntuFlavors">&ldquo;flavors&rdquo; of Ubuntu</a>.</p>
+<p>One of the main elements of the GNOME desktop is the <em>dash panel</em> or <em>dash bar</em>, which GNOME refers to as <em>the dash</em>: <a href="https://help.gnome.org/users/gnome-help/stable/shell-introduction.html.en#activities">&ldquo;The dash shows you your favorite and running applications.&quot;</a>  (I think referring to it as &ldquo;the dash&rdquo; is a little cryptic to newcomers so in this post I&rsquo;ll refer to it as <em>the dash panel</em> instead.)  The dash panel offers a simple way to launch and access applications.</p>
+<h2 id="objective">Objective</h2>
+<p>It&rsquo;s <a href="https://help.ubuntu.com/stable/ubuntu-help/shell-apps-favorites.html.en">straightforward</a> to add an installed application to the dash panel in Ubuntu.  You simply:</p>
+<ol>
+<li>open the application,</li>
+<li>right click on it&rsquo;s icon in the dash panel, and</li>
+<li>click <em>Add to Favorites</em>.</li>
+</ol>
+<p>Adding a shortcut to the dash panel pointing to a specific directory requires a little more work.</p>
+<p>Let&rsquo;s say we have a directory that we want to easily access from the dash panel.  In this post we&rsquo;ll create a shortcut to launch it.</p>
+<h2 id="solution">Solution</h2>
+<p>The general approach and some helpful technical background of the solution for creating desktop entries are outlined in <a href="https://unix.stackexchange.com/questions/103213/how-can-i-add-an-application-to-the-gnome-application-menu/103222#103222">this StackExchange answer</a>, but we&rsquo;ll make a few modifications for our situation.</p>
+<p>For this example we&rsquo;ll say we want</p>
+<ul>
+<li>
+<p>to make a link to the directory:
+<em>/home/Bob/Documents/ProjectX</em></p>
+</li>
+<li>
+<p>we intend to name the shortcut:
+<em>ProjectX</em></p>
+</li>
+<li>
+<p>we have a specific icon we want to use for the shortcut:
+<em>/home/Bob/icons/brilliant-sunrise.png</em></p>
+</li>
+</ul>
+<h3 id="adding-the-icon">Adding the icon</h3>
+<p>We&rsquo;ll start by placing the icon in a directory <a href="https://askubuntu.com/questions/132406/in-what-directorys-are-the-default-ubuntu-icons-located/407305#407305">where GNOME will find it</a>.</p>
+<p>We&rsquo;ll create a distinct directory called <em>zzz-mine</em> so that we know where to find this and other icons we might add in the future.  We&rsquo;ll need <a href="https://www.redhat.com/sysadmin/sudo">superuser privileges</a> to modify things in this directory, so we&rsquo;ll prepend the command with the <code>sudo</code> command.  (If you&rsquo;re not familiar with the <em>sudo</em> command, you should learn more about some of it&rsquo;s <a href="https://ubuntu.com/tutorials/command-line-for-beginners#7-the-command-line-and-the-superuser">uses and hazards</a>.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mkdir /usr/share/icons/zzz-mine/
+</code></pre></div><p>Then we&rsquo;ll move our icon into that folder.  This too will require superuser privileges, so we&rsquo;ll again use the <em>sudo</em> command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cp /home/Bob/icons/brilliant-sunrise.png /usr/share/icons/zzz-mine/brilliant-sunrise.png
+</code></pre></div><p>After confirming that our icon is copied into the new folder, we&rsquo;re ready to proceed.</p>
+<h3 id="confirm-name-availability">Confirm name availability</h3>
+<p>Next, we&rsquo;ll confirm that there isn&rsquo;t an existing desktop entry with the desired name.</p>
+<h4 id="confirm-desired-shortcut-name-is-available">Confirm desired shortcut name is available</h4>
+<p>First, we can test for it by pressing the <a href="https://help.ubuntu.com/stable/ubuntu-help/keyboard-key-super.html.en"><strong>Super</strong> key</a> and then typing the desired name.</p>
+<p><code>[Super] ProjectX</code></p>
+<p>If nothing comes up, that&rsquo;s a good sign that the shortcut name is available.  If an exact match does come up, select a different name for the shortcut.</p>
+<h4 id="confirm-filename-is-available">Confirm filename is available</h4>
+<p>Second, we&rsquo;ll navigate to the directory where we&rsquo;ll make our new entry to confirm that our intended filename isn&rsquo;t in use there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/.local/share/applications/
+ls *.desktop
+</code></pre></div><p>If you dont see a <em>ProjectX.desktop</em> file, than you&rsquo;re fine to proceed.  If you do, you&rsquo;ll need to choose a different filename.</p>
+<h3 id="create-the-desktop-entry-file">Create the desktop entry file</h3>
+<p>Since we confirmed that the name is available we can now create our new <em>.desktop</em> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch ~/.local/share/applications/ProjectX.desktop
+</code></pre></div><p>We&rsquo;ll next populate it with the necessary information.  We&rsquo;ll open the file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gedit ~/.local/share/applications/ProjectX.desktop
+</code></pre></div><p>And populate it with the relevant information:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>Desktop Entry<span style="color:#f92672">]</span>
+<span style="display:block;width:100%;background-color:#3c3d38">Name<span style="color:#f92672">=</span>ProjectX
+</span><span style="display:block;width:100%;background-color:#3c3d38">Exec<span style="color:#f92672">=</span>nautilus --new-window <span style="color:#e6db74">&#39;/home/Bob/Documents/ProjectX&#39;</span>
+</span>Comment<span style="color:#f92672">=</span>Open ProjectX directory
+<span style="display:block;width:100%;background-color:#3c3d38">Icon<span style="color:#f92672">=</span>/usr/share/icons/zzz-mine/brilliant-sunrise.png
+</span>Type<span style="color:#f92672">=</span>Application
+</code></pre></div><p>As previously mentioned, <a href="https://unix.stackexchange.com/questions/103213/how-can-i-add-an-application-to-the-gnome-application-menu/103222#103222">this StackExchange answer</a> provides general information for the solution, but here we&rsquo;ll go over some of the details specific to our case.</p>
+<hr>
+<p><code>Name=ProjectX</code> - Names the shortcut <em>ProjectX</em>.</p>
+<p><code>Exec=nautilus --new-window '/home/Bob/Documents/ProjectX'</code> - Opens a new file manager window to the <em>/home/Bob/Documents/ProjectX</em> directory.</p>
+<ul>
+<li>GNOME Files, formerly called <a href="https://en.wikipedia.org/wiki/GNOME_Files"><strong>Nautilus</strong></a>, is the file manager for the GNOME desktop.</li>
+<li>The <a href="https://linuxcommandlibrary.com/man/nautilus"><strong>&ndash;new-window</strong></a> option causes nautilus to open a new file manager window even if one is already open to the same directory.</li>
+</ul>
+<p><code>Icon=/usr/share/icons/zzz-mine/brilliant-sunrise.png</code> - Assigns the icon we selected to the shortcut.  NOTE: <a href="https://askubuntu.com/questions/722179/icon-path-in-desktop-file/722182#722182">The icon must use the absolute path</a>, not a relative path.</p>
+<hr>
+<p>After adding the required text, we can save and close the <em>ProjectX.desktop</em> file.</p>
+<h3 id="save-the-shortcut-as-a-favorite">Save the shortcut as a favorite</h3>
+<p>Now that we have our desktop entry completed and in the proper folder we can <a href="https://askubuntu.com/questions/1090731/how-do-i-pin-a-file-shortcut-to-ubuntu-dock/1090741#1090741">search for it and save it as a favorite</a>:</p>
+<ol>
+<li>Press the <em>Super</em> key or click on the &ldquo;Activities&rdquo; button.</li>
+<li>Search for *ProjectX&rdquo; by typing it into the search field.  Our shortcut should appear with the icon we selected.  (If it doesn&rsquo;t, confirm you saved the desktop file, wait a few moments, and try again.  It will likely only take a few seconds.)</li>
+<li>Right click on the icon and select &ldquo;Add to Favorites&rdquo;.</li>
+</ol>
+<p>You should now see your new shortcut on the dash panel.</p>
+<p>Click it to confirm that it&rsquo;s working as expected.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We now have a working shortcut that provides a quick way to access our project files.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/">Bash and The Linux Shell - Basic Terminal Command Quick Reference</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/">Bash and the Linux Shell - 02 - Getting Started with The Basics</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 15
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-topic/">Bash and the Linux Shell - Topic</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 12
+        
+                  |     Last edited:  2023 October 18
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+
+
+        <footer>
+            <p class="copyright text-muted">© LoopedLine 2020-2023. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
+        </footer>
+
+        
+        
+    </body>
+
+</html>

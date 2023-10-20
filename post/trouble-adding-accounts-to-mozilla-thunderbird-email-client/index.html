@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Trouble Adding Accounts to Mozilla Thunderbird Email Client [SOLVED]</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Trouble Adding Accounts to Mozilla Thunderbird Email Client [SOLVED]</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Trouble Adding Accounts to Mozilla Thunderbird Email Client [SOLVED]</h2>
+        
+
+
+
+
+
+
+
+
+
+
+
+    <p>Published: 2023 September 02</p>
+
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting"><kbd class="item-tag">technical troubleshooting</kbd></a>
+
+<a href="https://loopedline.com/tags/technical-troubleshooting-solved"><kbd class="item-tag">technical troubleshooting - solved</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="the-problem">The Problem</h1>
+<p>After setting up one Gmail account in <a href="https://www.thunderbird.net/">Mozilla Thunderbird</a> I experienced trouble adding additional Gmail accounts.</p>
+<p>While trying to add a new account a new Gmail browser window would open and prompt for account name and password.  Though there was no problem for the first account, I couldn&rsquo;t get past this point for subsequent accounts.</p>
+<p>It looked like the browser page just reloaded over and over again after about 10-20 seconds.  At first the email account name was auto-populated, but then the page would appear to reload and the account field was blank.  I re-entered the account name and tried again.  Usually it would reset the field as if nothing had been entered.  On several occasions a reCAPTCHA challenge appeared, which I completed over and over again, but the page seemed to just reload.</p>
+<h1 id="the-process">The Process</h1>
+<p>I tried adding different email accounts.  I tried on a new Thunderbird profile.  I tried restarting Thunderbird.  I tried restarting the computer.  I waited and tried again on another day in case the issue was with the network or the site.  I tried copying the link to a separate browser, which did allow me to enter the password but resulted in an error page saying the request was malformed.</p>
+<p>Ultimately I realized some settings in Thunderbird had been altered and tried resetting those.  That proved to be the issue.</p>
+<h1 id="the-solution">The Solution</h1>
+<p>In Thunderbird Settings, on the Privacy &amp; Security tab, in the Web Content section, the checkbox for &ldquo;Accept cookies from sites&rdquo; was unchecked.</p>
+<p>I rechecked it and then I could add accounts with no problem.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/">Bash and The Linux Shell - Basic Terminal Command Quick Reference</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/">Bash and the Linux Shell - 02 - Getting Started with The Basics</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 15
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-topic/">Bash and the Linux Shell - Topic</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 12
+        
+                  |     Last edited:  2023 October 18
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+
+
+        <footer>
+            <p class="copyright text-muted">© LoopedLine 2020-2023. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
+        </footer>
+
+        
+        
+    </body>
+
+</html>

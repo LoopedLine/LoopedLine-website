@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Getting Started with the trash Command in Bash</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Getting Started with the trash Command in Bash</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Getting Started with the trash Command in Bash</h2>
+        
+
+
+
+
+
+
+
+
+
+
+
+    <p>Published: 2023 September 25</p>
+
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/bash"><kbd class="item-tag">Bash</kbd></a>
+
+<a href="https://loopedline.com/tags/shell-command"><kbd class="item-tag">shell command</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<p>Deleting files is a basic function of using a computer.  And on Linux, there is more than one way to delete things.</p>
+<p>One of the tools, <strong>rm</strong>, comes standard but has some drawbacks.</p>
+<p>Another tool, <strong>trash</strong>, does not come standard on most distributions, but provides some helpful protections.</p>
+<p>We&rsquo;ll discuss them both and take a brief look at how to use the <strong>trash</strong> tool.</p>
+<h1 id="dangers-of-rm">Dangers of rm</h1>
+<p>The command to <strong>delete files or directories</strong> that comes standard with nearly all Linux distributions is <strong>rm</strong>.  But <strong><a href="https://www.macworld.com/article/177994/rmdangers.html">the <em>rm</em> command can be dangerous</a></strong> since it is possible to accidentally use the command to delete the wrong things.  And when using <em>rm</em> it can be difficult or impossible to recover those files.</p>
+<p>As the <a href="https://ubuntu.com/tutorials/command-line-for-beginners#5-moving-and-manipulating-files">Ubuntu command line tutorial</a> cautions:</p>
+<blockquote>
+<p>Unlike graphical interfaces, rm doesn’t move files to a folder called “trash” or similar. Instead it deletes them totally, utterly and irrevocably. You need to be ultra careful with the parameters you use with rm to make sure you’re only deleting the file(s) you intend to. You should take particular care when using wildcards, as it’s easy to accidentally delete more files than you intended.</p>
+</blockquote>
+<p>As <a href="https://www.howtogeek.com/858815/linux-rm-command/#what-is-the-rm-command-in-linux">Dave McCay puts it</a>:</p>
+<blockquote>
+<p>The rm command can delete files, groups of files, directories, or complete directory trees. That&rsquo;s why it must be used with caution. Using rm isn&rsquo;t difficult, but the penalty for failure is high.</p>
+<p>When a file is deleted with rm , it is gone. It isn&rsquo;t moved to the trash. It is obliterated immediately. That doesn&rsquo;t mean you should avoid using rm . But to use it safely, you need to be aware of what it can do, and ensure you&rsquo;re using it properly.</p>
+<p>Some tools are more dangerous than others, and far less forgiving of mistakes. That&rsquo;s why there&rsquo;s never been a movie called The Texas Wrench Massacre. rm isn&rsquo;t a wrench, it&rsquo;s definitely a chainsaw.</p>
+<p>People use chainsaws all day everyday, and as long as they use one responsibly and mindfully, they&rsquo;re fine. It&rsquo;s the same deal with rm . When you pull rm out of your tool bag, you ought to slow down and check, then double-check, your command line.</p>
+</blockquote>
+<p>We think this is a good analogy and helpfully illustrates the power of <em>rm</em>.</p>
+<p>However, we respectfully disagree with the assertion that users shouldn&rsquo;t avoid using <em>rm</em>.</p>
+<p><strong>We think you <em>should</em> avoid using rm unless it&rsquo;s exactly what you need</strong>.</p>
+<p>We think you should avoid using <em>rm</em> in the same way that you should avoid using a chainsaw for most small households tasks.  You don&rsquo;t use a chainsaw to slice bread.  You don&rsquo;t use a chainsaw to open boxes.  You don&rsquo;t use a chainsaw to cut paper.  It&rsquo;s too dangerous and powerful of a tool for most tasks, the cost of a mistake is too high, and there is a completely suitable alternative for most tasks.  Yes, people use chainsaws everyday.  And every day some people are hurt badly by chainsaws.  It would be senseless to use such a dangerous tool without a need to use it.  And typically that just isn&rsquo;t the case with either chainsaws or <em>rm</em>.  It is important to know about the <em>rm</em> command, but we don&rsquo;t recommend making it your day-to-day tool for deleting files.  Leave the chainsaw in the workshop on the shelf for most daily tasks, and use the safer and simpler tools when they work just as well.  Bring out the chainsaw only when that is what you need.</p>
+<p>Furthermore, even though the <em>rm</em> command may be helpful with some tasks and might be good to learn eventually, we don&rsquo;t believe it is the tool that new users should focus on.</p>
+<p><strong>Instead, we recommend learning and using the <code>trash</code> command for most situations.</strong></p>
+<h1 id="trash-command">trash command</h1>
+<p>The <a href="https://github.com/andreafrancia/trash-cli"><strong>trash</strong></a> command <strong>removes files and sends them to the trash can</strong>.</p>
+<p>The <em>trash</em> command operates in line with contemporary expectations that files are simply moved to a temporary location where they can be recovered instead of instantly deleted forever.  This gives you a chance to see (and potentially restore) deleted files.</p>
+<p>It does not come standard on most Linux distributions, so you likely will need to <a href="https://www.2daygeek.com/trash-cli-command-line-trashcan-linux-system/">install it</a>.</p>
+<h2 id="installing-the-trash-command">Installing the <em>trash</em> command</h2>
+<p>To install trash on Ubuntu:</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install trash-cli
+</code></pre></div><h2 id="using-the-trash-command">Using the <em>trash</em> command</h2>
+<p>There are four basic functions of the <em>trash</em> command:</p>
+<ol>
+<li>Removing a file to the trash can.</li>
+<li>Restoring a file from the trash can.</li>
+<li>Listing all files in the trash can.</li>
+<li>Deleting files from the trash can.</li>
+</ol>
+<h3 id="removing-a-file-to-the-trash-can">Removing a file to the trash can</h3>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash <span style="color:#f92672">{{</span>file<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Command example:</strong></p>
+<p>To delete a file called <em>shopping-list.txt</em> in the <em>present working directory</em> use the following.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash shopping-list.txt
+</code></pre></div><h3 id="restoring-a-file-from-the-trash-can">Restoring a file from the trash can</h3>
+<p>Let&rsquo;s say we changed our mind about deleting that file.</p>
+<p>If we had used the <em>rm</em> command, we&rsquo;d have a difficult time restoring it, if it was even possible.</p>
+<p>But with <em>trash</em>, we can get it back easily.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-restore
+</code></pre></div><p><strong>Example output:</strong></p>
+<p>To restore a file called <em>shopping-list.txt</em> in the <em>present working directory</em> use the above command and you should see something like the following interactive output.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">user@computer:~/Documents$ trash-restore
+   <span style="color:#ae81ff">0</span> 2023-09-23 17:15:29 /home/Documents/notes.txt
+   <span style="color:#ae81ff">1</span> 2023-09-23 17:02:36 /home/Documents/shopping-list.txt
+What file to restore <span style="color:#f92672">[</span>0..1<span style="color:#f92672">]</span>: <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Entering <code>1</code> and pressing <code>Enter</code> will restore the file.</p>
+<h3 id="listing-all-files-in-the-trash-can">Listing all files in the trash can</h3>
+<p>To see all files and directories currently in the trash can use the following command.</p>
+<p><strong>Command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-list
+</code></pre></div><h3 id="deleting-files-from-the-trash-can">Deleting files from the trash can</h3>
+<p>One thing to note with the <em>trash</em> command is that since it doesn&rsquo;t permanently delete files, they remain on your system taking up space until you delete them permanently.</p>
+<p>If you want to remove those files, you have several options:</p>
+<ul>
+<li>Permanently delete all files that match a specific pattern.</li>
+<li>Permanently delete all files with a specific original location.</li>
+<li>Empty the trash can of files older than a certain number of days and permenantly delete them.</li>
+<li>Empty the trash can and permanently delete all files stored there.</li>
+</ul>
+<p><strong>A note of caution: All of the following commands will permanently delete files.  Be sure of what you are removing before proceeding.</strong></p>
+<h4 id="permanently-deleting-all-files-from-trash-can-that-match-a-pattern">Permanently deleting all files from trash can that match a pattern</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-rm <span style="color:#f92672">{{</span>pattern<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Command example:</strong></p>
+<p>To permanently delete all files that end in <em>_FINAL.pdf</em> use the following.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-rm *_FINAL.pdf
+</code></pre></div><h4 id="permanently-deleting-all-files-from-trash-can-from-a-specific-original-location">Permanently deleting all files from trash can from a specific original location</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-rm <span style="color:#f92672">{{</span>full path to directory<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Command example:</strong></p>
+<p>To permanently delete all files that had an original location of <em>/home/USER/Documents/testdirectory</em> use the following.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-rm /home/USER/Documents/testdirectory
+</code></pre></div><h4 id="permanently-deleting-files-from-trash-can-older-than-n-days">Permanently deleting files from trash can older than N days</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-empty <span style="color:#f92672">{{</span>number of days since moved to trash can<span style="color:#f92672">}}</span>
+</code></pre></div><p><strong>Command example:</strong></p>
+<p>To permanently delete all files that have been in the trash longer than 120 days.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-empty <span style="color:#ae81ff">120</span>
+</code></pre></div><h4 id="permanently-deleting-all-files-from-trash-can">Permanently deleting all files from trash can</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">trash-empty
+</code></pre></div><h1 id="rm-command">rm command</h1>
+<p>Because the <strong>rm</strong> command still has it&rsquo;s uses and you are very likely to encounter tutorials telling you to use it, there are a few things that are helpful to know.</p>
+<p>The <strong>rm</strong> command <strong>removes files or directories immediately and permanently</strong> and comes standard with nearly all Linux distributions, but, as discussed above, <a href="#dangers-of-rm">it can be dangerous</a> because it&rsquo;s easy to delete the wrong thing and it can be difficult or impossible to recover files.</p>
+<h3 id="caution-when-using-the-rm-command">Caution when using the rm command</h3>
+<p>If you are going to use the <em>rm</em> command, it usually makes sense to use the <code>i</code> (interactive) option to see prompts before files are deleted and the <code>v</code> (verbose) option so that you are made aware of what the command is doing.</p>
+<h3 id="caution-when-aliasing-the-rm-command">Caution when aliasing the rm command</h3>
+<p>While the <em>rm</em> command itself can be dangerous, <a href="https://askubuntu.com/questions/3982/is-there-a-significant-disadvantage-to-aliasing-rm-to-do-something-else/3995#3995">some suggested strategies for aliasing <em>rm</em> are also dangerous</a>.  If you want to avoid accidental use of <em>rm</em>, <a href="https://superuser.com/questions/382407/best-practices-to-alias-the-rm-command-and-make-it-safer/382498#382498">alias to a <strong>different name than <em>rm</em></strong> so you don&rsquo;t create a dangerous habit</a>, or consider <a href="https://superuser.com/questions/382407/best-practices-to-alias-the-rm-command-and-make-it-safer/383068#383068">aliasing to an explanatory <em>echo</em> command</a>.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>The <strong>trash</strong> command is often the right tool to remove files from your system.</p>
+<p>It is a helpful and safer alternative to the <em>rm</em> command.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/">Bash and The Linux Shell - Basic Terminal Command Quick Reference</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/">Bash and the Linux Shell - 02 - Getting Started with The Basics</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 15
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-topic/">Bash and the Linux Shell - Topic</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 12
+        
+                  |     Last edited:  2023 October 18
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+
+
+        <footer>
+            <p class="copyright text-muted">© LoopedLine 2020-2023. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
+        </footer>
+
+        
+        
+    </body>
+
+</html>

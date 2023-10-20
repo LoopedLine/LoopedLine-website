@@ -126,7 +126,7 @@
 
 
 
-    <p>Last edited: 2023 August 23</p>
+    <p>Last edited: 2023 October 20</p>
 
 
         
@@ -141,6 +141,8 @@
 
     
     <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -309,6 +311,25 @@
 </code></pre></div><p>a simpler command can be used:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git adog
 </code></pre></div><p>This command structure and alias was found in <a href="https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs/35075021#35075021">a very helpful StackOverflow answer</a>.</p>
+<h3 id="renaming-files">Renaming files</h3>
+<p><strong>NOTE: Use caution when renaming files or you risk losing that file&rsquo;s update history.</strong></p>
+<p><a href="https://bauermann.wordpress.com/2008/01/03/take-care-when-renaming-files-in-git/">According to Thiago Jung Bauermann</a> if you modify a file and rename that file in the same commit <strong>you will lose the file&rsquo;s update history</strong>.</p>
+<p>The solution, <a href="https://sourceware.org/legacy-ml/frysk/2008-q1/msg00004.html">according to Roland McGrath</a> in a post that Bauermann links to, is the following:</p>
+<blockquote>
+<p>To preserve history, you have to carefully do a commit that only renames, and then a commit that touches the contents of the file.</p>
+</blockquote>
+<p>So, if you&rsquo;re going to rename a file:</p>
+<ol>
+<li>Make sure all changes to the file are committed.</li>
+<li>Rename the file with the <em>git mv</em> command and do not change anything else about the file.</li>
+<li>Commit the file immediately after the rename before anything else is changed.</li>
+</ol>
+<h4 id="renaming-a-file">Renaming a file</h4>
+<p><strong>Command form:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git mv <span style="color:#f92672">[</span>old_filename<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>new_filename<span style="color:#f92672">]</span>
+</code></pre></div><p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git mv extra.css custom.css
+</code></pre></div><p>Renames <em>extra.css</em> to <em>custom.css</em>.</p>
 <h2 id="branching-and-merging">Branching and Merging</h2>
 <h3 id="branching">Branching</h3>
 <h4 id="see-the-list-of-branches-for-the-current-repository">See the list of branches for the current repository</h4>
@@ -422,11 +443,7 @@
 <p>The <code>git pull</code> command can fetch and attempt to automatically merge changes from your remote repository into your local repository.</p>
 <p><strong>Command:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull
-</code></pre></div><p>According to the <a href="https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#_pulling">&ldquo;Git Branching - Remote Branches&rdquo;</a> section from <em>Pro Git</em>:</p>
-<blockquote>
-<p>Generally it’s better to simply use the fetch and merge commands explicitly as the magic of git pull can often be confusing.</p>
-</blockquote>
-<h5 id="additional-resources-7">Additional resources</h5>
+</code></pre></div><h5 id="additional-resources-7">Additional resources</h5>
 <p>The video <a href="https://www.youtube.com/watch?v=A4rIs-6c98s">Pulling &amp; Fetching Changes from a Remote</a> by <em>Tower</em> illustrates this command.</p>
 <h4 id="git-push">Git push</h4>
 <h5 id="pushing-to-a-remote-repository-the-first-time">Pushing to a remote repository (the first time)</h5>
@@ -556,7 +573,7 @@
 
     
     
-    <h4 id="listpage-item"><a href="/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/">Backing Up a Directory Structure With the Tree Command in a Bash Script</a></h4>
+    <h4 id="listpage-item"><a href="/post/backing-up-a-directory-structure-with-the-tree-command-in-a-bash-script/">Backing Up a Directory Structure With the tree Command in a Bash Script</a></h4>
 
 
 
@@ -589,7 +606,7 @@
 
 
         <footer>
-            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+            <p class="copyright text-muted">© LoopedLine 2020-2023. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
 
         </footer>
 

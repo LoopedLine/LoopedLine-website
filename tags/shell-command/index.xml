@@ -6,24 +6,110 @@
     <description>Recent content in shell command on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Nov 2022 20:28:22 -0500</lastBuildDate><atom:link href="https://loopedline.com/tags/shell-command/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 22:36:01 -0400</lastBuildDate><atom:link href="https://loopedline.com/tags/shell-command/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting Started with the Tree Command in Bash</title>
+      <title>Bash and The Linux Shell - Basic Terminal Command Quick Reference</title>
+      <link>https://loopedline.com/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/</link>
+      <pubDate>Wed, 18 Oct 2023 22:36:01 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/</guid>
+      <description>Introduction This is part of a series about Bash and the Linux Shell.
+Other posts in the series introduce and explain several basic terminal commands used in Bash and the Linux Shell.
+This post serves as a quick reference for those commands.
+Context In this post we&amp;rsquo;ll assume that Bash is installed and that all commands are entered in a Bash terminal.
+While much of the information applies generally to Linux, some of the instructions will not apply to all systems.</description>
+    </item>
+    
+    <item>
+      <title>Bash and the Linux Shell - 02 - Getting Started with The Basics</title>
+      <link>https://loopedline.com/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/</link>
+      <pubDate>Sun, 15 Oct 2023 10:05:33 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/</guid>
+      <description>Series This is part of a series about Bash and the Linux Shell.
+The previous post looked at what Bash is and what it&amp;rsquo;s useful for.
+In this post, we&amp;rsquo;ll look at the basics of getting started using Bash and the Linux Shell.
+Introduction As we discussed in the previous post, Bash is a popular tool created from the GNU project for interacting with your computer via text commands.
+By using these commands in Bash you are able to work directly with your operating system and many of the powerful tools that it offers.</description>
+    </item>
+    
+    <item>
+      <title>Bash and the Linux Shell - Topic</title>
+      <link>https://loopedline.com/post/bash-and-the-linux-shell-topic/</link>
+      <pubDate>Thu, 12 Oct 2023 15:12:11 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/bash-and-the-linux-shell-topic/</guid>
+      <description>Introduction This is our central topic page for Bash and the Linux Shell.
+Bash and the Linux shell are powerful tools. There is a lot that can be accomplished efficiently with Bash.
+This post contains a curated list of resources for learning about Bash and the Linux shell. Some of the linked resources were produced by this project, though many are produced by others.
+You’re not likely to need all of the resources listed here.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with the neofetch Command in Bash</title>
+      <link>https://loopedline.com/post/getting-started-with-the-neofetch-command-in-bash/</link>
+      <pubDate>Wed, 27 Sep 2023 12:30:04 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-the-neofetch-command-in-bash/</guid>
+      <description>Introduction Linux systems are made up of many components working together. And it may not always be clear to the user (especially a new user) what parts comprise their system.
+If you have a question about what part was used for some portion of your system there are numerous fetches - tools for fetching system information - available for finding and printing system component information.
+One popular option is neofetch.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with the trash Command in Bash</title>
+      <link>https://loopedline.com/post/getting-started-with-the-trash-command-in-bash/</link>
+      <pubDate>Mon, 25 Sep 2023 10:46:49 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-the-trash-command-in-bash/</guid>
+      <description>Introduction Deleting files is a basic function of using a computer. And on Linux, there is more than one way to delete things.
+One of the tools, rm, comes standard but has some drawbacks.
+Another tool, trash, does not come standard on most distributions, but provides some helpful protections.
+We&amp;rsquo;ll discuss them both and take a brief look at how to use the trash tool.
+Dangers of rm The command to delete files or directories that comes standard with nearly all Linux distributions is rm.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with the tldr Command in Bash</title>
+      <link>https://loopedline.com/post/getting-started-with-the-tldr-command-in-bash/</link>
+      <pubDate>Sun, 24 Sep 2023 22:02:42 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/getting-started-with-the-tldr-command-in-bash/</guid>
+      <description>Introduction tldr is a really helpful tool for the command line.
+It displays short, simple help pages for command line tools, from the user-maintained tldr-pages project.
+The tldr entries are shorter and more digestible than man pages, so it is great for learning about other commands.
+It does not come installed on most Linux distributions, but on many it is easy to install.
+You can also use tldr via the web app without installing it.</description>
+    </item>
+    
+    <item>
+      <title>Use Caution When Copying and Pasting to the Command Line</title>
+      <link>https://loopedline.com/post/use-caution-when-copying-and-pasting-to-the-command-line/</link>
+      <pubDate>Wed, 20 Sep 2023 23:03:32 -0400</pubDate>
+      
+      <guid>https://loopedline.com/post/use-caution-when-copying-and-pasting-to-the-command-line/</guid>
+      <description>An important note of caution Because Bash and the Linux shell are so powerful, you need to be cautious what commands you enter.
+Running the wrong command (or the right command in the wrong place) can irretrievablly delete your personal data or allow your computer to be compromised.
+Make sure you understand commands before you type them or copy and paste them to your machine.
+As this article helpfully illustrates, you should not blindly copy and paste commands from the internet into your terminal.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with the tree Command in Bash</title>
       <link>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</link>
       <pubDate>Sun, 06 Nov 2022 20:28:22 -0500</pubDate>
       
       <guid>https://loopedline.com/post/getting-started-with-the-tree-command-in-bash/</guid>
       <description>Introduction The tree command is extremely useful.
- According to tldr:
-Tree shows &amp;ldquo;the contents of the current directory as a tree.&amp;quot;
- And according to the Tree homepage:
-&amp;ldquo;Tree is a recursive directory listing command that produces a depth indented listing of files&amp;rdquo;.
- In other words, tree gives a visual display of the contents of a directory, includings its files, subdirectories, and the contents of those subdirectories.
+According to the tree homepage:
+ Tree is a recursive directory listing command that produces a depth indented listing of files
+ In other words, tree displays a visual tree of the directory, it&amp;rsquo;s subdirectories, and all their content.
+It is much faster and much more understandable than using cd and ls commands repeatedly to understand a directory structure and content.
 It might best be understood by example.</description>
     </item>
     
     <item>
-      <title>Renaming Files with the rename Command (the Perl Version)</title>
+      <title>Renaming Files with the rename Command (the Perl Version) in Bash</title>
       <link>https://loopedline.com/post/renaming-files-with-rename-command-the-perl-version/</link>
       <pubDate>Wed, 02 Mar 2022 21:21:25 -0500</pubDate>
       
@@ -53,8 +139,8 @@ Other commands involving multiple steps you can typically use and manage more ef
       
       <guid>https://loopedline.com/post/creating-a-directory-with-bash-to-test-commands/</guid>
       <description>Why create a test directory? When learning to work with new commands or programs it makes sense to be careful.
-In particular, command line tools can be especially powerful. They can allow the user to delete or overwrite data before they realize what has happened. It makes sense to be careful, especially when learning how to use a command.
-One way to partially limit that risk is to work in a test directory when trying new commands.</description>
+In particular, command line tools can be especially powerful. They can allow the user to delete or overwrite data before they realize what has happened. Often, these effects will be irreversible.
+One way to partially limit that risk is to work in a test directory when trying new commands. The scope of a command&amp;rsquo;s effects is often (but not always) bounded within a directory, so this can provide some protection against unintended consequences.</description>
     </item>
     
     <item>
@@ -96,7 +182,7 @@ For this project we&amp;rsquo;ll use sed, which is one of the basic programs tha
       <pubDate>Mon, 07 Feb 2022 15:48:06 -0500</pubDate>
       
       <guid>https://loopedline.com/post/getting-started-with-random-variable-in-bash/</guid>
-      <description>Creating Randomness in Bash There are many shell variables used in [Bash]((https://loopedline.com/post/bash-getting-started-working-with-the-shell/). One of them is the Bash variable $RANDOM.
+      <description>Creating Randomness in Bash There are many shell variables used in Bash. One of them is the Bash variable $RANDOM.
 $RANDOM returns a pseudo-random number between 0 and 32767.
 Try it by typing the following command into a Bash command line interpreter:
 echo $RANDOM Run the command multiple times to see different results.
