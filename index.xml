@@ -6,7 +6,19 @@
     <description>Recent content on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Oct 2023 22:36:01 -0400</lastBuildDate><atom:link href="https://loopedline.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Jan 2024 15:24:56 -0500</lastBuildDate><atom:link href="https://loopedline.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up a Raspberry Pi Zero 2 W with Ubuntu Server</title>
+      <link>https://loopedline.com/post/setting-up-a-raspberry-pi-zero-2-w-with-ubuntu-server/</link>
+      <pubDate>Thu, 04 Jan 2024 15:24:56 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/setting-up-a-raspberry-pi-zero-2-w-with-ubuntu-server/</guid>
+      <description>Introduction This is a guide for installing Ubuntu Server on a Raspberry Pi Zero 2 W via a headless setup using the Raspberry Pi Imager and another computer running Linux.
+Many of the steps are outlined in the Raspberry Pi Foundation&amp;rsquo;s Documentation in the Getting Started Guide.
+There are a few additional steps and helpful details that this guide is intended to provide for a smooth setup.
+Parts for the Pi There are several necessary components:</description>
+    </item>
+    
     <item>
       <title>Bash and The Linux Shell - Basic Terminal Command Quick Reference</title>
       <link>https://loopedline.com/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/</link>

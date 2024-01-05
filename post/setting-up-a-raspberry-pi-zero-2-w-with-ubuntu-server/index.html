@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Setting Up a Raspberry Pi Zero 2 W with Ubuntu Server</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Setting Up a Raspberry Pi Zero 2 W with Ubuntu Server</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Setting Up a Raspberry Pi Zero 2 W with Ubuntu Server</h2>
+        
+
+
+
+
+
+
+
+
+
+
+
+    <p>Published: 2024 January 04</p>
+
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/home-lab"><kbd class="item-tag">home lab</kbd></a>
+
+<a href="https://loopedline.com/tags/raspberry-pi"><kbd class="item-tag">Raspberry Pi</kbd></a>
+
+<a href="https://loopedline.com/tags/raspberry-pi-zero-2-w"><kbd class="item-tag">Raspberry Pi Zero 2 W</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<p>This is a guide for installing <a href="https://ubuntu.com/server">Ubuntu Server</a> on a <a href="https://en.wikipedia.org/wiki/Raspberry_Pi#Raspberry_Pi_Zero">Raspberry Pi Zero 2 W</a> via a <a href="https://en.wikipedia.org/wiki/Installation_(computer_programs)#Headless_installation">headless setup</a> using the Raspberry Pi Imager and another computer running Linux.</p>
+<p>Many of the steps are outlined in the Raspberry Pi Foundation&rsquo;s Documentation in the <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">Getting Started Guide</a>.</p>
+<p>There are a few additional steps and helpful details that this guide is intended to provide for a smooth setup.</p>
+<h1 id="parts-for-the-pi">Parts for the Pi</h1>
+<p>There are several necessary components:</p>
+<ul>
+<li>
+<p><a href="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/">Raspberry Pi Zero 2 W</a></p>
+</li>
+<li>
+<p><a href="https://www.raspberrypi.com/documentation/computers/getting-started.html#power-supply">5V power supply that provides at least 2.5A</a></p>
+<ul>
+<li>I prefer a <a href="https://www.amazon.com/GeeekPi-Raspberry-Supply-Charger-Adapter/dp/B07X8C6PV6">power supply with a switch</a> - at least for setup and testing - since the Pi Zero doesn&rsquo;t have one.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.raspberrypi.com/documentation/computers/getting-started.html#recommended-sd-cards">micro SD card with between 16GB and 256GB capacity</a></p>
+<ul>
+<li>If using an older card it&rsquo;s also relevant to <a href="https://www.raspberrypi.com/news/sd-card-speed-test/">consider the speed of the card</a>.</li>
+</ul>
+</li>
+<li>
+<p>Another computer for building the OS image and completing headless setup.</p>
+</li>
+<li>
+<p>A case isn&rsquo;t strictly necessary, but it is helpful to keep the Pi protected.</p>
+<ul>
+<li>I found this <a href="https://www.pishop.us/product/raspberry-pi-zero-case-clear/">clear case</a> useful for this project.</li>
+</ul>
+</li>
+</ul>
+<h1 id="building-the-os-image-for-the-pi">Building the OS image for the Pi</h1>
+<p>The next step is to install the desired operating system (OS) image on bootable media.</p>
+<p>The <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html#install-using-imager">Raspberry Pi Imager</a> is very helpful for creating a bootable OS image and configuring it for a headless setup.</p>
+<p>On Ubuntu, the Raspberry Pi Imager can be installed with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install rpi-imager
+</code></pre></div><p>Once the Imager is installed, open it and select the following settings (or substitute your own):</p>
+<p><strong>Operating System</strong></p>
+<p>CHOOSE OS &gt; Other general-purpose OS &gt; Ubuntu &gt; Ubuntu Server 22.04.3 LTS (64-bit)</p>
+<p><em>Note:</em></p>
+<ul>
+<li><em>The latest Long Term Support (LTS) release makes the most sense for this project.</em></li>
+<li><em>The Raspberry Pi Zero 2 W is a 64-bit system.</em></li>
+</ul>
+<p><strong>Storage</strong></p>
+<p>CHOSE STORAGE &gt; {Select the appropriate SD card}</p>
+<p><em>Note: Take care to select the correct storage as whatever drive you select will be completely overwritten and all data erased.</em></p>
+<p><strong>Advanced Options (Gear Icon in the lower right)</strong></p>
+<p>Select and fill the following fields:</p>
+<p>☑️ Set hostname: {DESIRED_DEVICE_NAME}</p>
+<p>☑️ Enable SSH</p>
+<p>🔘 Use password authentication</p>
+<p>☑️ Set username and password</p>
+<ul>
+<li>Username: {DESIRED_ACCOUNT_NAME}</li>
+<li>Password: {DESIRED_ACCOUNT_PASSWORD}</li>
+</ul>
+<p>☑️ Configure wireless LAN</p>
+<ul>
+<li>SSID:	{WIFI_SSID}</li>
+<li>Password: {WIFI_PASSWORD}</li>
+<li>Wireless LAN country: {COUNTRY_WHERE_THE_PI_IS_LOCATED}</li>
+</ul>
+<p><em>Note: This must be a 2.4GHz WiFi network for the Pi to connect with it.</em></p>
+<p>☑️ Set locale settings</p>
+<ul>
+<li>Time zone: {TIMEZONE}</li>
+<li>Keyboard layout: {KEYBOARD_LAYOUT}</li>
+</ul>
+<p>Click SAVE.</p>
+<p><strong>Review the information and build the OS image</strong></p>
+<p>Once you have entered and confirmed all the above information, click WRITE.</p>
+<p>If you are sure you have selected the correct media and settings, click YES.</p>
+<p>Wait for the writing and verification steps to complete.</p>
+<p>Read the system message to confirm succesful OS image writing.  If there was an error, repeat the imaging steps.</p>
+<h1 id="assembling-the-pi">Assembling the Pi</h1>
+<p>Assembling the Pi is straightforward:</p>
+<ol>
+<li>Insert the micro SD card.</li>
+<li>Place the Pi in the case.</li>
+<li>Plug the power supply into the correct micro USB port.</li>
+</ol>
+<h1 id="powering-the-pi">Powering the Pi</h1>
+<p>To turn it on, you only need to supply power.</p>
+<ul>
+<li>If you have a power supply <strong>with</strong> a switch, plug it in and flip the switch to on.</li>
+<li>If you have a power supply <strong>without</strong> a switch, just plug it in.</li>
+</ul>
+<p>Give the Pi a few minutes to boot.</p>
+<h1 id="connect-to-the-pi-over-the-local-network">Connect to the Pi over the Local Network</h1>
+<p>Connecting to the Pi can involve a few steps:</p>
+<ol>
+<li>Identify the IP address of the Pi.</li>
+<li>Connect to the Pi over SSH.</li>
+</ol>
+<h2 id="identify-the-ip-address-of-the-pi">Identify the IP address of the Pi</h2>
+<p>Identifying the IP address of the Pi can be accomplished in several ways.</p>
+<p>For instance, you can log in to your router and search through the WiFi-connected devices.</p>
+<p>Another approach is to use another computer to search your WiFi network for the device.  We&rsquo;ll look at that approach here.</p>
+<p>First, identify the IP address of the computer you&rsquo;ll use to conduct the search by running the <code>ip</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ip -brief address
+</code></pre></div><p>Look for addresses identified as &lsquo;UP&rsquo; and identify which is the IP address of your search computer.</p>
+<p>For this example, let&rsquo;s say the address is <em>192.168.0.6</em>.</p>
+<p>Next, use the <a href="https://en.wikipedia.org/wiki/Nmap">nmap</a> command and the IP address you just found to search the network for other connected devices.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nmap -sn 192.168.0.6/24
+</code></pre></div><p>From the list that nmap generates, identify the IP address for the Pi.</p>
+<h2 id="connect-to-the-pi-over-ssh">Connect to the Pi over SSH</h2>
+<p>Now, we can use <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a> to connect to the Pi.</p>
+<p>The command uses the form <code>ssh {username}@{ip-address}</code>, so for a user of <em>pi</em> and an IP address of <em>192.168.0.12</em> we&rsquo;d enter the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh pi@192.168.0.12
+</code></pre></div><p>During your first login to a host, you&rsquo;ll see a warning message:</p>
+<blockquote>
+<p>The authenticity of host &lsquo;192.168.0.12 (192.168.0.12)&rsquo; can&rsquo;t be established.</p>
+<p>&hellip;</p>
+<p>Are you sure you want to continue connecting?</p>
+</blockquote>
+<p>If you believe you have connected to the correct device, type &lsquo;yes&rsquo; and press Enter.</p>
+<p>When prompted, enter the password you assigned for the account.</p>
+<p>You should be greeted with a welcome message:</p>
+<blockquote>
+<p>Welcome to Ubuntu 22.04.3 LTS</p>
+</blockquote>
+<h1 id="updating-the-pi">Updating the Pi</h1>
+<p>Once you have connected to the Pi, finalize the setup by updating the system:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade <span style="color:#f92672">&amp;&amp;</span> sudo apt autoremove
+</code></pre></div><p>Confirm the update completed successfully.</p>
+<p>Afterward, you will likely need to reboot to apply all changes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo shutdown --reboot now
+</code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>With the above steps completed, the Raspberry Pi Zero 2 W is ready for use.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/">Bash and The Linux Shell - Basic Terminal Command Quick Reference</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/">Bash and the Linux Shell - 02 - Getting Started with The Basics</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 15
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-topic/">Bash and the Linux Shell - Topic</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 12
+        
+                  |     Last edited:  2023 October 18
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+
+
+        <footer>
+            <p class="copyright text-muted">© LoopedLine 2020-2023. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
+        </footer>
+
+        
+        
+    </body>
+
+</html>
