@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Setting Up a Raspberry Pi as a Linux Print Server with CUPS</title>
+        
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+
+            html body {
+                font-family: 'Raleway', sans-serif;
+                background-color: lightgray;
+            }
+
+            :root {
+                --accent: purple;
+                --border-width:  5px ;
+            }
+
+        </style>
+
+        
+        <link rel="stylesheet" href="https://loopedline.com/css/main.css">
+        <link rel="stylesheet" href="https://loopedline.com/css/custom.css">
+
+        
+        
+                
+        
+
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        
+        <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+    
+
+    
+
+    
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+        
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Setting Up a Raspberry Pi as a Linux Print Server with CUPS</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://loopedline.com/">Home</a></li>
+                            
+                                <li><a href="https://loopedline.com/about/">About</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/build/">Build</a></li>
+                            
+                                <li><a href="https://loopedline.com/post/learn/">Learn</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/LoopedLine/"><i class="fab fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://page.loopedline.com/contact/"><i class="fas fa-envelope"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    
+    <div>
+        <h2>Setting Up a Raspberry Pi as a Linux Print Server with CUPS</h2>
+        
+
+
+
+
+
+
+
+
+
+
+
+    <p>Published: 2024 January 19</p>
+
+
+
+
+        
+<a href="https://loopedline.com/tags/system-administration"><kbd class="item-tag">system administration</kbd></a>
+
+<a href="https://loopedline.com/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+
+<a href="https://loopedline.com/tags/home-lab"><kbd class="item-tag">home lab</kbd></a>
+
+<a href="https://loopedline.com/tags/raspberry-pi"><kbd class="item-tag">Raspberry Pi</kbd></a>
+
+
+    </div>
+
+    
+    <div align="start" class="content"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<p>This is a guide for setting up a <a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Raspberry Pi</a> as a Linux <a href="https://en.wikipedia.org/wiki/Print_server">Print Server</a> using <a href="https://en.wikipedia.org/wiki/CUPS">CUPS</a>.</p>
+<p>It presumes that you have a Raspberry Pi Zero 2 W running Ubuntu Server as described in a <a href="https://loopedline.com/post/setting-up-a-raspberry-pi-zero-2-w-with-ubuntu-server/">previous post</a></p>
+<p>This guide outlines a minimal path for creating a print server.  There are more comprehensive guides that you can look to if you encounter problems or if your situation is different than outlined here.  One thorough guide worth highlighting is <a href="https://www.linuxbabe.com/ubuntu/set-up-cups-print-server-ubuntu-bonjour-ipp-samba-airprint"><em>Set Up CUPS Print Server on Ubuntu</em></a> by Xiao Guoan.  I wish I had found it earlier in the process.</p>
+<p>One other note: the following approach was tested several times, but without starting with completely rebuilt systems (both print server and print client machines) it&rsquo;s difficult to ensure that some setting or configuration from a previous build wasn&rsquo;t preserved.  (Again, see <a href="https://www.linuxbabe.com/ubuntu/set-up-cups-print-server-ubuntu-bonjour-ipp-samba-airprint">Xiao Guoan&rsquo;s article</a> for further details, if needed.)  The approach outlined here seems to work and it seems to include the relevant steps.  Nevertheless, printing is still sometimes finicky - but that seems to be printing and networking generally.</p>
+<h1 id="configuring-the-raspberry-pi-as-a-print-server">Configuring the Raspberry Pi as a Print Server</h1>
+<h2 id="installing-cups">Installing CUPS</h2>
+<p><a href="https://openprinting.github.io/cups/">CUPS</a> by <a href="https://openprinting.github.io/">OpenPrinting</a> is a remarkably helpful tool for printing on Linux.  It handles many printing needs almost automatically.  We&rsquo;ll use it as our print server for this project.</p>
+<p>We need a computer to run the CUPS print server.  For this guide, we&rsquo;ll use a Raspberry Pi Zero 2 W running Ubuntu Server <a href="https://loopedline.com/post/setting-up-a-raspberry-pi-zero-2-w-with-ubuntu-server/">that we set up previously</a>.  We&rsquo;ll use that computer for the next steps.</p>
+<p>First, you&rsquo;ll need to <strong>ssh</strong> into that computer.  Once logged in, you&rsquo;ll need to install CUPS.</p>
+<p>On Ubuntu, CUPS can be installed with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install cups
+</code></pre></div><p>After installation, check the status of CUPS with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl status cups
+</code></pre></div><p>You should see something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">● cups.service - CUPS Scheduler
+     Loaded: loaded (/lib/systemd/system/cups.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2024-01-17 14:04:34 GMT; 5min ago
+TriggeredBy: ● cups.socket
+             ● cups.path
+       Docs: man:cupsd(8)
+   Main PID: 781 (cupsd)
+     Status: &#34;Scheduler is running...&#34;
+      Tasks: 2 (limit: 373)
+     Memory: 8.8M
+        CPU: 265ms
+     CGroup: /system.slice/cups.service
+             └─781 /usr/sbin/cupsd -l
+
+Jan 17 14:04:31 pi systemd[1]: Starting CUPS Scheduler...
+Jan 17 14:04:34 pi systemd[1]: Started CUPS Scheduler.
+</code></pre></div><p>CUPS is now installed and running.</p>
+<h2 id="configuring-cups">Configuring CUPS</h2>
+<p>Next we&rsquo;ll configure CUPS, but before making any changes, use the <a href="https://www.cups.org/doc/man-cupsctl.html"><strong>cupsctl</strong></a> command without any arguments to see CUPS current settings:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cupsctl
+</code></pre></div><p>You should see something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">_debug_logging=0
+_remote_admin=0
+_remote_any=0
+_share_printers=0
+_user_cancel_any=0
+BrowseLocalProtocols=dnssd
+DefaultAuthType=Basic
+ErrorPolicy=retry-job
+IdleExitTimeout=60
+JobPrivateAccess=default
+JobPrivateValues=default
+MaxLogSize=0
+PageLogFormat=
+SubscriptionPrivateAccess=default
+SubscriptionPrivateValues=default
+WebInterface=Yes
+</code></pre></div><h3 id="configuring-for-basic-access">Configuring for basic access</h3>
+<p>CUPS has a configuration file that controls its operation, typically located at <em>/etc/cups/cupsd.conf</em>.  This file can be edited directly, but for now we&rsquo;ll use the <strong>cupsctl</strong> command again to make some changes.  Later we&rsquo;ll make further edits manually.  Note that the <strong>cupsctl</strong> command reformats the <em>cupsd.conf</em> file extensively from it&rsquo;s initial structure, so make a backup of the file before running the following command if you have any settings you wish to preserve.</p>
+<p>Enter the command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cupsctl --remote-admin --remote-any --share-printers
+</code></pre></div><p>Looking at the <a href="https://www.cups.org/doc/man-cupsctl.html"><strong>cupsctl</strong> documentation</a>, you&rsquo;ll see that the above command:</p>
+<ol>
+<li>enables remote administration,</li>
+<li>enables printing from any address, and</li>
+<li>enables sharing of local printers with other computers.</li>
+</ol>
+<p>Run the bare <strong>cupsctl</strong> command again to see the updated settings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cupsctl
+</code></pre></div><p>You should see something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">_debug_logging=0
+_remote_admin=1
+_remote_any=1
+_share_printers=1
+_user_cancel_any=0
+BrowseLocalProtocols=dnssd
+DefaultAuthType=Basic
+ErrorPolicy=retry-job
+IdleExitTimeout=60
+JobPrivateAccess=default
+JobPrivateValues=default
+MaxLogSize=0
+PageLogFormat=
+SubscriptionPrivateAccess=default
+SubscriptionPrivateValues=default
+WebInterface=Yes
+</code></pre></div><p>CUPS is now updated to allow general access.</p>
+<h3 id="configuring-for-limited-access">Configuring for limited access</h3>
+<p>The updated settings will allow us to print to and administer attached printers, but the settings are too permissive for our purposes.</p>
+<p>We&rsquo;ll now manually edit the <em>cupsd.conf</em> file to restrict printing and administration to machines on our local network.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/cups/cupsd.conf
+</code></pre></div><p>We&rsquo;ll change the <code>Allow all</code> to <code>Allow @LOCAL</code> in the <strong>Location</strong> and <strong>Location /admin</strong> sections.</p>
+<p>Before the update, it should look something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&lt;Location /&gt;
+  # Allow shared printing and remote administration...
+  Order allow,deny
+<span style="display:block;width:100%;background-color:#3c3d38">  Allow all
+</span>&lt;/Location&gt;
+&lt;Location /admin&gt;
+  # Allow remote administration...
+  Order allow,deny
+<span style="display:block;width:100%;background-color:#3c3d38">  Allow all
+</span>&lt;/Location&gt;
+</code></pre></div><p>And we&rsquo;ll update it to this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&lt;Location /&gt;
+  # Allow shared printing and remote administration...
+  Order allow,deny
+<span style="display:block;width:100%;background-color:#3c3d38">  Allow @LOCAL
+</span>&lt;/Location&gt;
+&lt;Location /admin&gt;
+  # Allow remote administration...
+  Order allow,deny
+<span style="display:block;width:100%;background-color:#3c3d38">  Allow @LOCAL
+</span>&lt;/Location&gt;
+</code></pre></div><p>Save the changes and exit.</p>
+<p>Next, restart CUPS for the changes to take effect.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart cups
+</code></pre></div><h3 id="adding-user-account-to-printer-admin-group">Adding user account to printer admin group</h3>
+<p>In order to remotely administer printers, we need to add the user name of our print server to the printer admin group.</p>
+<p>For an account name of <em>pi</em> use the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo usermod --append --groups lpadmin pi
+</code></pre></div><p>Once again, restart CUPS for the change to take effect.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart cups
+</code></pre></div><h2 id="attaching-the-printer">Attaching the printer</h2>
+<p>Use the <strong>lpstat</strong> command to see information on system printers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lpstat -t
+</code></pre></div><p>You&rsquo;ll likely see output like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">scheduler is running
+no system default destination
+lpstat: No destinations added.
+lpstat: No destinations added.
+lpstat: No destinations added.
+lpstat: No destinations added.
+</code></pre></div><p>Next, connect and power on the printer you wish to add to the print server.</p>
+<p>Check <strong>lpstat</strong> again:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lpstat -t
+</code></pre></div><p>You&rsquo;ll likely see output like the following (where <em>PRINTER-NAME</em> is the name of your printer):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">scheduler is running
+no system default destination
+device for PRINTER-NAME: implicitclass://PRINTER-NAME/
+PRINTER-NAME accepting requests since Wed Jan 17 16:42:00 2024
+printer PRINTER-NAME is idle.  enabled since Wed Jan 17 16:42:00 2024
+</code></pre></div><p>If you see a message similar to this, CUPS automatically detected the printer.</p>
+<h2 id="administering-cups">Administering CUPS</h2>
+<p>At this point, you should be able to access the CUPS administration page through a web browser on any computer on the local network.</p>
+<p>First, determine the IP address of your print server or its host name if you have mDNS running.</p>
+<p>Next, open a browser on any computer in the local network.</p>
+<p>Finally, if your print server&rsquo;s IP address is 192.168.0.5 navigate to: 192.168.0.5:631</p>
+<p>You should see the CUPS administration page.</p>
+<h3 id="adding-a-printer">Adding a printer</h3>
+<p>On the CUPS administration webpage, in the very top banner, click <strong>Administration</strong>.</p>
+<p>A pop-up will prompt for a username and password.  Use the account name and password for the device running your print server.</p>
+<p>Click the <strong>Add Printer</strong> button.  (The first time you click it, it will likely briefly load a page and then send you back to the Administration page.  No idea why.  Click <strong>Add Printer</strong> again.)</p>
+<p>Your printer will likely be automatically detected and listed here.  Select your desired printer from the list and click <strong>Continue</strong>.</p>
+<p>Check the box for <strong>Share This Printer</strong> and then click <strong>Continue</strong>.</p>
+<p>In the <em>Model</em> field, chose the <em>IPP Everywhere</em> option and click <strong>Add Printer</strong>.</p>
+<p>Leave the defaults unaltered and click <strong>Set Default Options</strong>.</p>
+<p>Now, confirm that everything is working by clicking the <strong>Maintenance</strong> drop down field and selecting <strong>Print Test Page</strong>.</p>
+<p>It should print successfully.</p>
+<p>Check <strong>lpstat</strong> again to see your newly-added printer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lpstat -t
+</code></pre></div><p>You&rsquo;ll likely see output like the following (where <em>PRINTER-NAME</em> is the name of your printer):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">scheduler is running
+no system default destination
+device for PRINTER-NAME: ipp://PRINTER%20NAME%20Series%20(USB)._ipp._tcp.local/
+device for PRINTER-NAME: implicitclass://PRINTER-NAME/
+PRINTER-NAME accepting requests since Wed Jan 17 16:51:36 2024
+PRINTER-NAME accepting requests since Wed Jan 17 16:42:00 2024
+printer PRINTER-NAME is idle.  enabled since Wed Jan 17 16:51:36 2024
+printer PRINTER-NAME is idle.  enabled since Wed Jan 17 16:42:00 2024
+</code></pre></div><p>Now your printer is added to the print server and you should be able to find it from other computers on the local network.</p>
+<h1 id="using-the-printer-from-another-linux-computer">Using the Printer From Another Linux Computer</h1>
+<p>With the above settings, CUPS makes the printer available to other computers on the network and you will likely be able to use it without any additional steps.</p>
+<p>If you are having trouble locating the printer, try temporarily disabling any firewall or VPN to test if some setting in them is blocking the printer.</p>
+<p>If you need to add the printer on Ubuntu:</p>
+<ol>
+<li>Navigate to Settings -&gt; Printers -&gt; Additional Printer Settings -&gt; Add -&gt; Network Printer</li>
+<li>Select your printer and click &ldquo;Forward&rdquo;.</li>
+</ol>
+<h1 id="conclusion">Conclusion</h1>
+<p>You should now be able to use the printer any time you are connected to the local network.</p>
+<p>If you encounter further difficulties, check out the guide, <a href="https://www.linuxbabe.com/ubuntu/set-up-cups-print-server-ubuntu-bonjour-ipp-samba-airprint"><em>Set Up CUPS Print Server on Ubuntu</em></a>, mentioned earlier.</p>
+<!-- raw HTML omitted -->
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/setting-up-a-raspberry-pi-zero-2-w-with-ubuntu-server/">Setting Up a Raspberry Pi Zero 2 W with Ubuntu Server</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2024 January 04
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/">Bash and The Linux Shell - Basic Terminal Command Quick Reference</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 18
+        
+    </p>
+
+
+
+</div>
+  <div class="item">
+
+
+
+    
+    
+    <h4 id="listpage-item"><a href="/post/bash-and-the-linux-shell-02-getting-started-with-the-basics/">Bash and the Linux Shell - 02 - Getting Started with The Basics</a></h4>
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <p>
+        Published: 2023 October 15
+        
+    </p>
+
+
+
+</div>
+ 
+    
+
+</main>
+
+
+
+        <footer>
+            <p class="copyright text-muted">© LoopedLine 2020-2023. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> and <a href="https://loopedline.com/bespoke/main.html">Bespoke</a>.</p>
+
+        </footer>
+
+        
+        
+    </body>
+
+</html>

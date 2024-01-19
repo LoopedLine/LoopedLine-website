@@ -6,7 +6,18 @@
     <description>Recent content in Linux on LoopedLine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jan 2024 15:24:56 -0500</lastBuildDate><atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jan 2024 15:18:32 -0500</lastBuildDate><atom:link href="https://loopedline.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up a Raspberry Pi as a Linux Print Server with CUPS</title>
+      <link>https://loopedline.com/post/setting-up-a-raspberry-pi-as-a-linux-print-server-with-cups/</link>
+      <pubDate>Fri, 19 Jan 2024 15:18:32 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/setting-up-a-raspberry-pi-as-a-linux-print-server-with-cups/</guid>
+      <description>Introduction This is a guide for setting up a Raspberry Pi as a Linux Print Server using CUPS.
+It presumes that you have a Raspberry Pi Zero 2 W running Ubuntu Server as described in a previous post
+This guide outlines a minimal path for creating a print server. There are more comprehensive guides that you can look to if you encounter problems or if your situation is different than outlined here.</description>
+    </item>
+    
     <item>
       <title>Setting Up a Raspberry Pi Zero 2 W with Ubuntu Server</title>
       <link>https://loopedline.com/post/setting-up-a-raspberry-pi-zero-2-w-with-ubuntu-server/</link>
