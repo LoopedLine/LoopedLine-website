@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>artificial intelligence on LoopedLine</title>
+    <link>https://loopedline.com/tags/artificial-intelligence/</link>
+    <description>Recent content in artificial intelligence on LoopedLine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Jan 2024 14:52:21 -0500</lastBuildDate><atom:link href="https://loopedline.com/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Copying Directory Structure With a Bash Script - With Help From ChatGPT AI</title>
+      <link>https://loopedline.com/post/copying-directory-structure-with-a-bash-script-with-help-from-chatgpt-ai/</link>
+      <pubDate>Mon, 22 Jan 2024 14:52:21 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/copying-directory-structure-with-a-bash-script-with-help-from-chatgpt-ai/</guid>
+      <description>Introduction In this post we&amp;rsquo;ll create a Bash command for copying the directory structure of one directory into another directory using a Bash script - and we&amp;rsquo;ll use ChatGPT to generate the script.
+ChatGPT Conversation  Our Prompt
+Write a Bash command to recursively copy the directory structure of one directory to another directory.
+ChatGPT&amp;rsquo;s Response
+ To recursively copy just the directory structure (without copying the actual files), you can use the `find` command in combination with `mkdir -p` and some text manipulation.</description>
+    </item>
+    
+  </channel>
+</rss>

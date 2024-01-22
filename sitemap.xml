@@ -2,13 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://loopedline.com/tags/home-lab/</loc>
-    <lastmod>2024-01-19T15:18:32-05:00</lastmod>
+    <loc>https://loopedline.com/tags/artificial-intelligence/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
+  </url><url>
+    <loc>https://loopedline.com/tags/bash/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
+  </url><url>
+    <loc>https://loopedline.com/post/copying-directory-structure-with-a-bash-script-with-help-from-chatgpt-ai/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/tags/linux/</loc>
-    <lastmod>2024-01-19T15:18:32-05:00</lastmod>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
+  </url><url>
+    <loc>https://loopedline.com/tags/shell-script/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
+  </url><url>
+    <loc>https://loopedline.com/tags/software-development/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
+  </url><url>
+    <loc>https://loopedline.com/tags/system-administration/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
+  </url><url>
+    <loc>https://loopedline.com/tags/</loc>
+    <lastmod>2024-01-22T14:52:21-05:00</lastmod>
+  </url><url>
+    <loc>https://loopedline.com/tags/home-lab/</loc>
     <lastmod>2024-01-19T15:18:32-05:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/tags/raspberry-pi/</loc>
@@ -17,20 +38,11 @@
     <loc>https://loopedline.com/post/setting-up-a-raspberry-pi-as-a-linux-print-server-with-cups/</loc>
     <lastmod>2024-01-19T15:18:32-05:00</lastmod>
   </url><url>
-    <loc>https://loopedline.com/tags/system-administration/</loc>
-    <lastmod>2024-01-19T15:18:32-05:00</lastmod>
-  </url><url>
-    <loc>https://loopedline.com/tags/</loc>
-    <lastmod>2024-01-19T15:18:32-05:00</lastmod>
-  </url><url>
     <loc>https://loopedline.com/tags/raspberry-pi-zero-2-w/</loc>
     <lastmod>2024-01-04T15:24:56-05:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/post/setting-up-a-raspberry-pi-zero-2-w-with-ubuntu-server/</loc>
     <lastmod>2024-01-04T15:24:56-05:00</lastmod>
-  </url><url>
-    <loc>https://loopedline.com/tags/bash/</loc>
-    <lastmod>2023-10-18T23:42:59-04:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/post/bash-and-the-linux-shell-basic-terminal-command-quick-reference/</loc>
     <lastmod>2023-10-18T23:42:59-04:00</lastmod>
@@ -42,9 +54,6 @@
     <lastmod>2023-10-15T10:05:33-04:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/post/bash-and-the-linux-shell-topic/</loc>
-    <lastmod>2023-10-18T22:52:10-04:00</lastmod>
-  </url><url>
-    <loc>https://loopedline.com/tags/shell-script/</loc>
     <lastmod>2023-10-18T22:52:10-04:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/post/getting-started-with-the-neofetch-command-in-bash/</loc>
@@ -81,9 +90,6 @@
     <lastmod>2023-08-25T23:36:35-04:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/tags/git/</loc>
-    <lastmod>2023-10-26T14:26:47-04:00</lastmod>
-  </url><url>
-    <loc>https://loopedline.com/tags/software-development/</loc>
     <lastmod>2023-10-26T14:26:47-04:00</lastmod>
   </url><url>
     <loc>https://loopedline.com/post/backing-up-vs-code-settings-and-extensions-with-a-bash-script/</loc>

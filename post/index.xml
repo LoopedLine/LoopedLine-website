@@ -8,6 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Jul 2022 14:22:54 -0400</lastBuildDate><atom:link href="https://loopedline.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Copying Directory Structure With a Bash Script - With Help From ChatGPT AI</title>
+      <link>https://loopedline.com/post/copying-directory-structure-with-a-bash-script-with-help-from-chatgpt-ai/</link>
+      <pubDate>Mon, 22 Jan 2024 14:52:21 -0500</pubDate>
+      
+      <guid>https://loopedline.com/post/copying-directory-structure-with-a-bash-script-with-help-from-chatgpt-ai/</guid>
+      <description>Introduction In this post we&amp;rsquo;ll create a Bash command for copying the directory structure of one directory into another directory using a Bash script - and we&amp;rsquo;ll use ChatGPT to generate the script.
+ChatGPT Conversation  Our Prompt
+Write a Bash command to recursively copy the directory structure of one directory to another directory.
+ChatGPT&amp;rsquo;s Response
+ To recursively copy just the directory structure (without copying the actual files), you can use the `find` command in combination with `mkdir -p` and some text manipulation.</description>
+    </item>
+    
+    <item>
       <title>Setting Up a Raspberry Pi as a Linux Print Server with CUPS</title>
       <link>https://loopedline.com/post/setting-up-a-raspberry-pi-as-a-linux-print-server-with-cups/</link>
       <pubDate>Fri, 19 Jan 2024 15:18:32 -0500</pubDate>
